@@ -267,17 +267,20 @@ class levelOneVC: UIViewController {
         }
     }
     
+    // cek posisi robot
     func checkPoint(){
-        let cek = (startEntity?.position)! + simd_float3(x: 0, y: 0, z: 0.2)
-        print("a2cek\(cek)")
+        let b1check = b1position!
+        let c1check = c1position!
+        
+        print("a2cek\(b1check)")
         print("ini \((robotEntity?.position)!)")
         
-        if (robotEntity?.position)! == cek{
-            print("Get Point")
+        if (robotEntity?.position)! == b1check{
+            print("robot position at b1")
+        }else if (robotEntity?.position)! == c1check{
+            print("robot position at c1")
         }else {
             print("No Point")
-            
-            // 12<x>10
         }
     }
     
@@ -334,6 +337,4 @@ class levelOneVC: UIViewController {
         checkPoint()
         print("kanan")
     }
-
-
 }
