@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-struct FailedModel {
+struct PopUpModel {
     var id: Int!
     var image: String!
     var desc: String!

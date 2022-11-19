@@ -7,12 +7,12 @@
 
 import UIKit
 
-class FailedVC: UIViewController {
+class PopUpVC: UIViewController {
     @IBOutlet var image: UIImageView!
     @IBOutlet var text: UILabel!
     @IBOutlet var backButton: UIButton!
     
-    var data = FailedData.shared.fetchData()
+    var data = PopUpData.shared.fetchData()
     var id = 1
     
     override func viewDidLoad() {
