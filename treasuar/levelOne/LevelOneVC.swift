@@ -9,7 +9,7 @@ import UIKit
 import ARKit
 import RealityKit
 
-class levelOneVC: UIViewController {
+class LevelOneVC: UIViewController {
     
     @IBOutlet var arView: ARView!
     

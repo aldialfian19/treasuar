@@ -7,7 +7,7 @@
 
 import UIKit
 
-class levelThreeVC: UIViewController {
+class LevelThreeVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

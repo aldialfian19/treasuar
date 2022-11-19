@@ -22,16 +22,22 @@
 		CBB4118A29280B37009881DD /* merah.usdz in Resources */ = {isa = PBXBuildFile; fileRef = CBB4118629280B37009881DD /* merah.usdz */; };
 		CBB4118B29280B37009881DD /* floor.usdz in Resources */ = {isa = PBXBuildFile; fileRef = CBB4118729280B37009881DD /* floor.usdz */; };
 		CBB4118D29281664009881DD /* Experience.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = CBB4118C29281664009881DD /* Experience.rcproject */; };
-		CBB41198292907AC009881DD /* levelOneVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB41196292907AC009881DD /* levelOneVC.swift */; };
-		CBB41199292907AC009881DD /* levelOneVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBB41197292907AC009881DD /* levelOneVC.xib */; };
-		CBB4119C292907EA009881DD /* levelTwoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB4119A292907EA009881DD /* levelTwoVC.swift */; };
-		CBB4119D292907EA009881DD /* levelTwoVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBB4119B292907EA009881DD /* levelTwoVC.xib */; };
-		CBB411A029290823009881DD /* levelThreeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB4119E29290823009881DD /* levelThreeVC.swift */; };
-		CBB411A129290823009881DD /* levelThreeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBB4119F29290823009881DD /* levelThreeVC.xib */; };
-		CBB411A42929083D009881DD /* levelFourVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB411A22929083D009881DD /* levelFourVC.swift */; };
-		CBB411A52929083D009881DD /* levelFourVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBB411A32929083D009881DD /* levelFourVC.xib */; };
-		CBB411A82929086A009881DD /* levelFiveVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB411A62929086A009881DD /* levelFiveVC.swift */; };
-		CBB411A92929086A009881DD /* levelFiveVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBB411A72929086A009881DD /* levelFiveVC.xib */; };
+		CBB41198292907AC009881DD /* LevelOneVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB41196292907AC009881DD /* LevelOneVC.swift */; };
+		CBB41199292907AC009881DD /* LevelOneVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBB41197292907AC009881DD /* LevelOneVC.xib */; };
+		CBB4119C292907EA009881DD /* LevelTwoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB4119A292907EA009881DD /* LevelTwoVC.swift */; };
+		CBB4119D292907EA009881DD /* LevelTwoVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBB4119B292907EA009881DD /* LevelTwoVC.xib */; };
+		CBB411A029290823009881DD /* LevelThreeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB4119E29290823009881DD /* LevelThreeVC.swift */; };
+		CBB411A129290823009881DD /* LevelThreeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBB4119F29290823009881DD /* LevelThreeVC.xib */; };
+		CBB411A42929083D009881DD /* LevelFourVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB411A22929083D009881DD /* LevelFourVC.swift */; };
+		CBB411A52929083D009881DD /* LevelFourVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBB411A32929083D009881DD /* LevelFourVC.xib */; };
+		CBB411A82929086A009881DD /* LevelFiveVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB411A62929086A009881DD /* LevelFiveVC.swift */; };
+		CBB411A92929086A009881DD /* LevelFiveVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBB411A72929086A009881DD /* LevelFiveVC.xib */; };
+		CBB411AC292914C8009881DD /* FailedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB411AA292914C8009881DD /* FailedVC.swift */; };
+		CBB411AD292914C8009881DD /* FailedVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBB411AB292914C8009881DD /* FailedVC.xib */; };
+		CBB411AF292914FB009881DD /* FailedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB411AE292914FB009881DD /* FailedModel.swift */; };
+		CBB411B229291921009881DD /* buttonVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB411B029291921009881DD /* buttonVc.swift */; };
+		CBB411B329291921009881DD /* buttonVc.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBB411B129291921009881DD /* buttonVc.xib */; };
+		CBB411B529293BEF009881DD /* FailedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB411B429293BEF009881DD /* FailedData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,16 +77,22 @@
 		CBB4118629280B37009881DD /* merah.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = merah.usdz; sourceTree = "<group>"; };
 		CBB4118729280B37009881DD /* floor.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = floor.usdz; sourceTree = "<group>"; };
 		CBB4118C29281664009881DD /* Experience.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = Experience.rcproject; sourceTree = "<group>"; };
-		CBB41196292907AC009881DD /* levelOneVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = levelOneVC.swift; sourceTree = "<group>"; };
-		CBB41197292907AC009881DD /* levelOneVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = levelOneVC.xib; sourceTree = "<group>"; };
-		CBB4119A292907EA009881DD /* levelTwoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = levelTwoVC.swift; sourceTree = "<group>"; };
-		CBB4119B292907EA009881DD /* levelTwoVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = levelTwoVC.xib; sourceTree = "<group>"; };
-		CBB4119E29290823009881DD /* levelThreeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = levelThreeVC.swift; sourceTree = "<group>"; };
-		CBB4119F29290823009881DD /* levelThreeVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = levelThreeVC.xib; sourceTree = "<group>"; };
-		CBB411A22929083D009881DD /* levelFourVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = levelFourVC.swift; sourceTree = "<group>"; };
-		CBB411A32929083D009881DD /* levelFourVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = levelFourVC.xib; sourceTree = "<group>"; };
-		CBB411A62929086A009881DD /* levelFiveVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = levelFiveVC.swift; sourceTree = "<group>"; };
-		CBB411A72929086A009881DD /* levelFiveVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = levelFiveVC.xib; sourceTree = "<group>"; };
+		CBB41196292907AC009881DD /* LevelOneVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelOneVC.swift; sourceTree = "<group>"; };
+		CBB41197292907AC009881DD /* LevelOneVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LevelOneVC.xib; sourceTree = "<group>"; };
+		CBB4119A292907EA009881DD /* LevelTwoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelTwoVC.swift; sourceTree = "<group>"; };
+		CBB4119B292907EA009881DD /* LevelTwoVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LevelTwoVC.xib; sourceTree = "<group>"; };
+		CBB4119E29290823009881DD /* LevelThreeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelThreeVC.swift; sourceTree = "<group>"; };
+		CBB4119F29290823009881DD /* LevelThreeVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LevelThreeVC.xib; sourceTree = "<group>"; };
+		CBB411A22929083D009881DD /* LevelFourVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelFourVC.swift; sourceTree = "<group>"; };
+		CBB411A32929083D009881DD /* LevelFourVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LevelFourVC.xib; sourceTree = "<group>"; };
+		CBB411A62929086A009881DD /* LevelFiveVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelFiveVC.swift; sourceTree = "<group>"; };
+		CBB411A72929086A009881DD /* LevelFiveVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LevelFiveVC.xib; sourceTree = "<group>"; };
+		CBB411AA292914C8009881DD /* FailedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FailedVC.swift; sourceTree = "<group>"; };
+		CBB411AB292914C8009881DD /* FailedVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FailedVC.xib; sourceTree = "<group>"; };
+		CBB411AE292914FB009881DD /* FailedModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FailedModel.swift; sourceTree = "<group>"; };
+		CBB411B029291921009881DD /* buttonVc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = buttonVc.swift; sourceTree = "<group>"; };
+		CBB411B129291921009881DD /* buttonVc.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = buttonVc.xib; sourceTree = "<group>"; };
+		CBB411B429293BEF009881DD /* FailedData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FailedData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,8 +184,8 @@
 		CBB4118E292906D6009881DD /* levelOne */ = {
 			isa = PBXGroup;
 			children = (
-				CBB41196292907AC009881DD /* levelOneVC.swift */,
-				CBB41197292907AC009881DD /* levelOneVC.xib */,
+				CBB41196292907AC009881DD /* LevelOneVC.swift */,
+				CBB41197292907AC009881DD /* LevelOneVC.xib */,
 			);
 			path = levelOne;
 			sourceTree = "<group>";
@@ -181,8 +193,8 @@
 		CBB4118F292906ED009881DD /* levelTwo */ = {
 			isa = PBXGroup;
 			children = (
-				CBB4119A292907EA009881DD /* levelTwoVC.swift */,
-				CBB4119B292907EA009881DD /* levelTwoVC.xib */,
+				CBB4119A292907EA009881DD /* LevelTwoVC.swift */,
+				CBB4119B292907EA009881DD /* LevelTwoVC.xib */,
 			);
 			path = levelTwo;
 			sourceTree = "<group>";
@@ -190,8 +202,8 @@
 		CBB41190292906F5009881DD /* levelThree */ = {
 			isa = PBXGroup;
 			children = (
-				CBB4119E29290823009881DD /* levelThreeVC.swift */,
-				CBB4119F29290823009881DD /* levelThreeVC.xib */,
+				CBB4119E29290823009881DD /* LevelThreeVC.swift */,
+				CBB4119F29290823009881DD /* LevelThreeVC.xib */,
 			);
 			path = levelThree;
 			sourceTree = "<group>";
@@ -199,8 +211,8 @@
 		CBB41191292906FF009881DD /* levelFour */ = {
 			isa = PBXGroup;
 			children = (
-				CBB411A22929083D009881DD /* levelFourVC.swift */,
-				CBB411A32929083D009881DD /* levelFourVC.xib */,
+				CBB411A22929083D009881DD /* LevelFourVC.swift */,
+				CBB411A32929083D009881DD /* LevelFourVC.xib */,
 			);
 			path = levelFour;
 			sourceTree = "<group>";
@@ -208,8 +220,8 @@
 		CBB4119229290708009881DD /* levelFive */ = {
 			isa = PBXGroup;
 			children = (
-				CBB411A62929086A009881DD /* levelFiveVC.swift */,
-				CBB411A72929086A009881DD /* levelFiveVC.xib */,
+				CBB411A62929086A009881DD /* LevelFiveVC.swift */,
+				CBB411A72929086A009881DD /* LevelFiveVC.xib */,
 			);
 			path = levelFive;
 			sourceTree = "<group>";
@@ -217,6 +229,8 @@
 		CBB411932929071F009881DD /* button */ = {
 			isa = PBXGroup;
 			children = (
+				CBB411B029291921009881DD /* buttonVc.swift */,
+				CBB411B129291921009881DD /* buttonVc.xib */,
 			);
 			path = button;
 			sourceTree = "<group>";
@@ -224,6 +238,10 @@
 		CBB4119429290728009881DD /* failedScreen */ = {
 			isa = PBXGroup;
 			children = (
+				CBB411AA292914C8009881DD /* FailedVC.swift */,
+				CBB411AB292914C8009881DD /* FailedVC.xib */,
+				CBB411AE292914FB009881DD /* FailedModel.swift */,
+				CBB411B429293BEF009881DD /* FailedData.swift */,
 			);
 			path = failedScreen;
 			sourceTree = "<group>";
@@ -345,16 +363,18 @@
 			files = (
 				CBB4118829280B37009881DD /* toy.usdz in Resources */,
 				CBB4118A29280B37009881DD /* merah.usdz in Resources */,
-				CBB411A129290823009881DD /* levelThreeVC.xib in Resources */,
-				CBB41199292907AC009881DD /* levelOneVC.xib in Resources */,
+				CBB411A129290823009881DD /* LevelThreeVC.xib in Resources */,
+				CBB41199292907AC009881DD /* LevelOneVC.xib in Resources */,
 				CBB4118929280B37009881DD /* robot.usdz in Resources */,
 				CBB4116129280A6F009881DD /* LaunchScreen.storyboard in Resources */,
+				CBB411AD292914C8009881DD /* FailedVC.xib in Resources */,
 				CBB4115E29280A6F009881DD /* Assets.xcassets in Resources */,
-				CBB4119D292907EA009881DD /* levelTwoVC.xib in Resources */,
-				CBB411A52929083D009881DD /* levelFourVC.xib in Resources */,
+				CBB411B329291921009881DD /* buttonVc.xib in Resources */,
+				CBB4119D292907EA009881DD /* LevelTwoVC.xib in Resources */,
+				CBB411A52929083D009881DD /* LevelFourVC.xib in Resources */,
 				CBB4118B29280B37009881DD /* floor.usdz in Resources */,
 				CBB4115929280A6E009881DD /* Main.storyboard in Resources */,
-				CBB411A92929086A009881DD /* levelFiveVC.xib in Resources */,
+				CBB411A92929086A009881DD /* LevelFiveVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -379,15 +399,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CBB41198292907AC009881DD /* levelOneVC.swift in Sources */,
+				CBB41198292907AC009881DD /* LevelOneVC.swift in Sources */,
 				CBB4115C29280A6E009881DD /* treasuar.xcdatamodeld in Sources */,
-				CBB4119C292907EA009881DD /* levelTwoVC.swift in Sources */,
+				CBB4119C292907EA009881DD /* LevelTwoVC.swift in Sources */,
 				CBB4118D29281664009881DD /* Experience.rcproject in Sources */,
+				CBB411B229291921009881DD /* buttonVc.swift in Sources */,
 				CBB4115629280A6E009881DD /* ViewController.swift in Sources */,
-				CBB411A82929086A009881DD /* levelFiveVC.swift in Sources */,
+				CBB411A82929086A009881DD /* LevelFiveVC.swift in Sources */,
 				CBB4115229280A6E009881DD /* AppDelegate.swift in Sources */,
-				CBB411A029290823009881DD /* levelThreeVC.swift in Sources */,
-				CBB411A42929083D009881DD /* levelFourVC.swift in Sources */,
+				CBB411A029290823009881DD /* LevelThreeVC.swift in Sources */,
+				CBB411A42929083D009881DD /* LevelFourVC.swift in Sources */,
+				CBB411AC292914C8009881DD /* FailedVC.swift in Sources */,
+				CBB411AF292914FB009881DD /* FailedModel.swift in Sources */,
+				CBB411B529293BEF009881DD /* FailedData.swift in Sources */,
 				CBB4115429280A6E009881DD /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

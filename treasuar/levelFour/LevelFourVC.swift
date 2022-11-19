@@ -1,5 +1,5 @@
 //
-//  levelFiveVC.swift
+//  levelFourVC.swift
 //  treasuar
 //
 //  Created by Rinaldi Alfian on 19/11/22.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class levelFiveVC: UIViewController {
+class LevelFourVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
