@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		241C5BEB292B460400737731 /* LevelFourVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241C5BE9292B460400737731 /* LevelFourVC.swift */; };
+		241C5BEC292B460400737731 /* LevelFourVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 241C5BEA292B460400737731 /* LevelFourVC.xib */; };
 		CBB4115229280A6E009881DD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB4115129280A6E009881DD /* AppDelegate.swift */; };
 		CBB4115429280A6E009881DD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB4115329280A6E009881DD /* SceneDelegate.swift */; };
 		CBB4115629280A6E009881DD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB4115529280A6E009881DD /* ViewController.swift */; };
@@ -28,8 +30,6 @@
 		CBB4119D292907EA009881DD /* LevelTwoVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBB4119B292907EA009881DD /* LevelTwoVC.xib */; };
 		CBB411A029290823009881DD /* LevelThreeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB4119E29290823009881DD /* LevelThreeVC.swift */; };
 		CBB411A129290823009881DD /* LevelThreeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBB4119F29290823009881DD /* LevelThreeVC.xib */; };
-		CBB411A42929083D009881DD /* LevelFourVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB411A22929083D009881DD /* LevelFourVC.swift */; };
-		CBB411A52929083D009881DD /* LevelFourVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBB411A32929083D009881DD /* LevelFourVC.xib */; };
 		CBB411A82929086A009881DD /* LevelFiveVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB411A62929086A009881DD /* LevelFiveVC.swift */; };
 		CBB411A92929086A009881DD /* LevelFiveVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBB411A72929086A009881DD /* LevelFiveVC.xib */; };
 		CBB411AF292914FB009881DD /* PopUpModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB411AE292914FB009881DD /* PopUpModel.swift */; };
@@ -58,6 +58,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		241C5BE9292B460400737731 /* LevelFourVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelFourVC.swift; sourceTree = "<group>"; };
+		241C5BEA292B460400737731 /* LevelFourVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LevelFourVC.xib; sourceTree = "<group>"; };
 		CBB4114E29280A6E009881DD /* treasuar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = treasuar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBB4115129280A6E009881DD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CBB4115329280A6E009881DD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -83,8 +85,6 @@
 		CBB4119B292907EA009881DD /* LevelTwoVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LevelTwoVC.xib; sourceTree = "<group>"; };
 		CBB4119E29290823009881DD /* LevelThreeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelThreeVC.swift; sourceTree = "<group>"; };
 		CBB4119F29290823009881DD /* LevelThreeVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LevelThreeVC.xib; sourceTree = "<group>"; };
-		CBB411A22929083D009881DD /* LevelFourVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelFourVC.swift; sourceTree = "<group>"; };
-		CBB411A32929083D009881DD /* LevelFourVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LevelFourVC.xib; sourceTree = "<group>"; };
 		CBB411A62929086A009881DD /* LevelFiveVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelFiveVC.swift; sourceTree = "<group>"; };
 		CBB411A72929086A009881DD /* LevelFiveVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LevelFiveVC.xib; sourceTree = "<group>"; };
 		CBB411AE292914FB009881DD /* PopUpModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpModel.swift; sourceTree = "<group>"; };
@@ -211,8 +211,8 @@
 		CBB41191292906FF009881DD /* levelFour */ = {
 			isa = PBXGroup;
 			children = (
-				CBB411A22929083D009881DD /* LevelFourVC.swift */,
-				CBB411A32929083D009881DD /* LevelFourVC.xib */,
+				241C5BE9292B460400737731 /* LevelFourVC.swift */,
+				241C5BEA292B460400737731 /* LevelFourVC.xib */,
 			);
 			path = levelFour;
 			sourceTree = "<group>";
@@ -368,10 +368,10 @@
 				CBB41199292907AC009881DD /* LevelOneVC.xib in Resources */,
 				CBB4118929280B37009881DD /* robot.usdz in Resources */,
 				CBB4116129280A6F009881DD /* LaunchScreen.storyboard in Resources */,
+				241C5BEC292B460400737731 /* LevelFourVC.xib in Resources */,
 				CBB4115E29280A6F009881DD /* Assets.xcassets in Resources */,
 				CBB411B329291921009881DD /* buttonVc.xib in Resources */,
 				CBB4119D292907EA009881DD /* LevelTwoVC.xib in Resources */,
-				CBB411A52929083D009881DD /* LevelFourVC.xib in Resources */,
 				CBB4118B29280B37009881DD /* floor.usdz in Resources */,
 				CBB4115929280A6E009881DD /* Main.storyboard in Resources */,
 				CBB411A92929086A009881DD /* LevelFiveVC.xib in Resources */,
@@ -408,9 +408,9 @@
 				CBB411A82929086A009881DD /* LevelFiveVC.swift in Sources */,
 				CBB4115229280A6E009881DD /* AppDelegate.swift in Sources */,
 				CBB411A029290823009881DD /* LevelThreeVC.swift in Sources */,
-				CBB411A42929083D009881DD /* LevelFourVC.swift in Sources */,
 				CBB411AF292914FB009881DD /* PopUpModel.swift in Sources */,
 				CBB411B829294623009881DD /* Popup.swift in Sources */,
+				241C5BEB292B460400737731 /* LevelFourVC.swift in Sources */,
 				CBB411B529293BEF009881DD /* PopUpData.swift in Sources */,
 				CBB4115429280A6E009881DD /* SceneDelegate.swift in Sources */,
 			);
@@ -589,7 +589,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 4M5F5S23L2;
+				DEVELOPMENT_TEAM = 6R9NL6954G;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = treasuar/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -617,7 +617,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 4M5F5S23L2;
+				DEVELOPMENT_TEAM = 6R9NL6954G;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = treasuar/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
