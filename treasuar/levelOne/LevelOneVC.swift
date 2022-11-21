@@ -18,7 +18,7 @@ class LevelOneVC: UIViewController {
     var startEntity: Entity?
     
     var moveToLocation: Transform = Transform()
-    var moveDuration: Double = 3.00
+    var moveDuration: Double = 2.00
     
 
     var currentPos: SIMD3<Float>?
@@ -124,7 +124,7 @@ class LevelOneVC: UIViewController {
             
             // Place object
             placeObject(object: robotEntity!, position: worldPos)
-            placeObject(object: toyEntity!, position: worldPos + simd_float3 (x: 0.2, y: 0, z: 0))
+            placeObject(object: toyEntity!, position: worldPos + a2pos)
             placeObject(object: startEntity!, position: worldPos)
             
             placeObject(object: floorEntitya1!, position: worldPos + a1pos)
@@ -269,15 +269,18 @@ class LevelOneVC: UIViewController {
     
     // cek posisi robot
     func checkPoint(){
-        let b1check = (startEntity?.position)! + b1pos
+        let a2check = (startEntity?.position)! + a2pos
         let c1check = (startEntity?.position)! + c1pos
         
-        print("a2cek\(b1check)")
+        print("a2cek\(a2check)")
         print("ini \((robotEntity?.position)!)")
         
-        if (robotEntity?.position)! == b1check{
+        if (robotEntity?.position)! == a2check{
+            //failed page
+            robotEntity?.position = a1position!
             print("robot position at b1")
         }else if (robotEntity?.position)! == c1check{
+            //popup brhasil
             print("robot position at c1")
         }else {
             print("No Point")
