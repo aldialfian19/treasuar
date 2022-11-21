@@ -9,10 +9,22 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet var buttonSatu: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
+    func routeToLevelOne() {
+        guard let window = UIApplication.shared.keyWindow else { return }
+        let levelOneVC = LevelOneVC()
+        UIView.transition(with: window, duration: 0.3, options: .transitionCrossDissolve, animations: { [weak window] in
+            window?.rootViewController = levelOneVC
+        }, completion: nil)
+    }
+    @IBAction func oneAction(_ sender: Any) {
+        routeToLevelOne()
+    }
+    
 
 
 }

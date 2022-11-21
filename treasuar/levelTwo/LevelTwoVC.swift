@@ -14,7 +14,9 @@ class LevelTwoVC: UIViewController {
     @IBOutlet var arView: ARView!
     
     var robotEntity: Entity?
+    
     var toyEntity: Entity?
+    
     var startEntity: Entity?
     
     var moveToLocation: Transform = Transform()
@@ -124,7 +126,7 @@ class LevelTwoVC: UIViewController {
             
             // Place object
             placeObject(object: robotEntity!, position: worldPos)
-            placeObject(object: toyEntity!, position: worldPos + simd_float3 (x: 0.2, y: 0, z: 0))
+            placeObject(object: toyEntity!, position: worldPos + a2pos)
             placeObject(object: startEntity!, position: worldPos)
             
             placeObject(object: floorEntitya1!, position: worldPos + a1pos)

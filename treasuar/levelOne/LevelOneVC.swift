@@ -269,8 +269,8 @@ class LevelOneVC: UIViewController {
     
     // cek posisi robot
     func checkPoint(){
-        let b1check = b1position!
-        let c1check = c1position!
+        let b1check = (startEntity?.position)! + b1pos
+        let c1check = (startEntity?.position)! + c1pos
         
         print("a2cek\(b1check)")
         print("ini \((robotEntity?.position)!)")
