@@ -215,6 +215,7 @@ class LevelTwoVC: UIViewController {
                 robotEntity?.setOrientation(rotateAngle, relativeTo: robotEntity)
                 
                 moveToLocation.translation = (robotEntity?.transform.translation)! + simd_float3 (x: 0, y: 0, z: 20)
+                
                 robotEntity?.move(to: moveToLocation, relativeTo: robotEntity, duration: moveDuration)
                 robotEntity?.position = a2position!
                 walkAnimation(moveDuration: moveDuration)
@@ -287,10 +288,10 @@ class LevelTwoVC: UIViewController {
     
     // cek posisi robot
     func checkPoint(){
-        let b1check = b1position!
-        let c1check = c1position!
-        let c2check = c2position!
-        let c3check = c3position!
+        let b1check = (startEntity?.position)! + b1pos
+        let c1check = (startEntity?.position)! + c1pos
+        let c2check = (startEntity?.position)! + c2pos
+        let c3check = (startEntity?.position)! + c3pos
         
         print("a2cek\(b1check)")
         print("ini \((robotEntity?.position)!)")

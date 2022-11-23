@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CBAF6593292E339E0017B554 /* LevelSatuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBAF6591292E339E0017B554 /* LevelSatuVC.swift */; };
+		CBAF6594292E339E0017B554 /* LevelSatuVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBAF6592292E339E0017B554 /* LevelSatuVC.xib */; };
 		CBB4115229280A6E009881DD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB4115129280A6E009881DD /* AppDelegate.swift */; };
 		CBB4115429280A6E009881DD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB4115329280A6E009881DD /* SceneDelegate.swift */; };
 		CBB4115629280A6E009881DD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB4115529280A6E009881DD /* ViewController.swift */; };
@@ -58,6 +60,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CBAF6591292E339E0017B554 /* LevelSatuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelSatuVC.swift; sourceTree = "<group>"; };
+		CBAF6592292E339E0017B554 /* LevelSatuVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LevelSatuVC.xib; sourceTree = "<group>"; };
 		CBB4114E29280A6E009881DD /* treasuar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = treasuar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBB4115129280A6E009881DD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CBB4115329280A6E009881DD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -186,6 +190,8 @@
 			children = (
 				CBB41196292907AC009881DD /* LevelOneVC.swift */,
 				CBB41197292907AC009881DD /* LevelOneVC.xib */,
+				CBAF6591292E339E0017B554 /* LevelSatuVC.swift */,
+				CBAF6592292E339E0017B554 /* LevelSatuVC.xib */,
 			);
 			path = levelOne;
 			sourceTree = "<group>";
@@ -367,6 +373,7 @@
 				CBB411B929294623009881DD /* Popup.xib in Resources */,
 				CBB41199292907AC009881DD /* LevelOneVC.xib in Resources */,
 				CBB4118929280B37009881DD /* robot.usdz in Resources */,
+				CBAF6594292E339E0017B554 /* LevelSatuVC.xib in Resources */,
 				CBB4116129280A6F009881DD /* LaunchScreen.storyboard in Resources */,
 				CBB4115E29280A6F009881DD /* Assets.xcassets in Resources */,
 				CBB411B329291921009881DD /* buttonVc.xib in Resources */,
@@ -402,6 +409,7 @@
 				CBB41198292907AC009881DD /* LevelOneVC.swift in Sources */,
 				CBB4115C29280A6E009881DD /* treasuar.xcdatamodeld in Sources */,
 				CBB4119C292907EA009881DD /* LevelTwoVC.swift in Sources */,
+				CBAF6593292E339E0017B554 /* LevelSatuVC.swift in Sources */,
 				CBB4118D29281664009881DD /* Experience.rcproject in Sources */,
 				CBB411B229291921009881DD /* buttonVc.swift in Sources */,
 				CBB4115629280A6E009881DD /* ViewController.swift in Sources */,
