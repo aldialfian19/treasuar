@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C3234732292DD69A00303F5C /* HomeVCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3234730292DD69A00303F5C /* HomeVCViewController.swift */; };
+		C3234733292DD69A00303F5C /* HomeVCViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3234731292DD69A00303F5C /* HomeVCViewController.xib */; };
+		C3234735292DE7AA00303F5C /* ImageHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3234734292DE7AA00303F5C /* ImageHomeViewController.swift */; };
 		CBB4115229280A6E009881DD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB4115129280A6E009881DD /* AppDelegate.swift */; };
 		CBB4115429280A6E009881DD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB4115329280A6E009881DD /* SceneDelegate.swift */; };
 		CBB4115629280A6E009881DD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB4115529280A6E009881DD /* ViewController.swift */; };
@@ -58,6 +61,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C3234730292DD69A00303F5C /* HomeVCViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVCViewController.swift; sourceTree = "<group>"; };
+		C3234731292DD69A00303F5C /* HomeVCViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeVCViewController.xib; sourceTree = "<group>"; };
+		C3234734292DE7AA00303F5C /* ImageHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageHomeViewController.swift; sourceTree = "<group>"; };
 		CBB4114E29280A6E009881DD /* treasuar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = treasuar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBB4115129280A6E009881DD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CBB4115329280A6E009881DD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -120,6 +126,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C323472B292DD4FD00303F5C /* HomeView */ = {
+			isa = PBXGroup;
+			children = (
+				C3234730292DD69A00303F5C /* HomeVCViewController.swift */,
+				C3234731292DD69A00303F5C /* HomeVCViewController.xib */,
+				C3234734292DE7AA00303F5C /* ImageHomeViewController.swift */,
+			);
+			path = HomeView;
+			sourceTree = "<group>";
+		};
 		CBB4114529280A6E009881DD = {
 			isa = PBXGroup;
 			children = (
@@ -143,6 +159,7 @@
 		CBB4115029280A6E009881DD /* treasuar */ = {
 			isa = PBXGroup;
 			children = (
+				C323472B292DD4FD00303F5C /* HomeView */,
 				CBB411952929076B009881DD /* 3D Asset */,
 				CBB4119429290728009881DD /* failedScreen */,
 				CBB411932929071F009881DD /* button */,
@@ -364,6 +381,7 @@
 				CBB4118829280B37009881DD /* toy.usdz in Resources */,
 				CBB4118A29280B37009881DD /* merah.usdz in Resources */,
 				CBB411A129290823009881DD /* LevelThreeVC.xib in Resources */,
+				C3234733292DD69A00303F5C /* HomeVCViewController.xib in Resources */,
 				CBB411B929294623009881DD /* Popup.xib in Resources */,
 				CBB41199292907AC009881DD /* LevelOneVC.xib in Resources */,
 				CBB4118929280B37009881DD /* robot.usdz in Resources */,
@@ -402,10 +420,12 @@
 				CBB41198292907AC009881DD /* LevelOneVC.swift in Sources */,
 				CBB4115C29280A6E009881DD /* treasuar.xcdatamodeld in Sources */,
 				CBB4119C292907EA009881DD /* LevelTwoVC.swift in Sources */,
+				C3234735292DE7AA00303F5C /* ImageHomeViewController.swift in Sources */,
 				CBB4118D29281664009881DD /* Experience.rcproject in Sources */,
 				CBB411B229291921009881DD /* buttonVc.swift in Sources */,
 				CBB4115629280A6E009881DD /* ViewController.swift in Sources */,
 				CBB411A82929086A009881DD /* LevelFiveVC.swift in Sources */,
+				C3234732292DD69A00303F5C /* HomeVCViewController.swift in Sources */,
 				CBB4115229280A6E009881DD /* AppDelegate.swift in Sources */,
 				CBB411A029290823009881DD /* LevelThreeVC.swift in Sources */,
 				CBB411A42929083D009881DD /* LevelFourVC.swift in Sources */,
