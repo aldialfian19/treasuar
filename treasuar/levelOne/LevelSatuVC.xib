@@ -60,7 +60,7 @@
                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                             <state key="normal">
                                 <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <imageReference key="image" image="arrow.left" catalog="system" symbolScale="medium" renderingMode="hierarchical-single">
+                                <imageReference key="image" image="arrow.counterclockwise" catalog="system" symbolScale="medium" renderingMode="hierarchical-single">
                                     <hierarchicalColors>
                                         <color systemColor="labelColor"/>
                                         <color systemColor="secondaryLabelColor"/>
@@ -84,7 +84,7 @@
                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                             <state key="normal">
                                 <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <imageReference key="image" image="arrow.right" catalog="system" symbolScale="medium" renderingMode="hierarchical-single">
+                                <imageReference key="image" image="arrow.clockwise" catalog="system" symbolScale="medium" renderingMode="hierarchical-single">
                                     <hierarchicalColors>
                                         <color systemColor="labelColor"/>
                                         <color systemColor="secondaryLabelColor"/>
@@ -117,18 +117,36 @@
                         <action selector="runAction:" destination="-1" eventType="touchUpInside" id="wwa-o9-bp0"/>
                     </connections>
                 </button>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="instruksi" translatesAutoresizingMaskIntoConstraints="NO" id="WkH-HE-Xxt">
+                    <rect key="frame" x="395" y="69" width="576" height="132"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="576" id="5pI-2O-4vw"/>
+                        <constraint firstAttribute="height" constant="132" id="w8H-00-qTx"/>
+                    </constraints>
+                </imageView>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="majuInstru" translatesAutoresizingMaskIntoConstraints="NO" id="Hig-sQ-EVG">
+                    <rect key="frame" x="199" y="284" width="413" height="75"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="413" id="L8R-L0-JTU"/>
+                        <constraint firstAttribute="height" constant="75" id="qez-qt-c1t"/>
+                    </constraints>
+                </imageView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="secondaryLabelColor"/>
             <constraints>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="JnI-Eq-NtD" secondAttribute="bottom" constant="120" id="5jk-t1-brZ"/>
+                <constraint firstItem="Hig-sQ-EVG" firstAttribute="leading" secondItem="QM4-IA-jZJ" secondAttribute="trailing" constant="30" id="8mJ-3E-cWh"/>
                 <constraint firstItem="QM4-IA-jZJ" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="240" id="EzC-qg-mz0"/>
                 <constraint firstAttribute="trailing" secondItem="Rkc-hJ-bwY" secondAttribute="trailing" id="FNC-su-WnR"/>
                 <constraint firstAttribute="bottom" secondItem="Rkc-hJ-bwY" secondAttribute="bottom" id="Her-T1-Xap"/>
                 <constraint firstItem="Rkc-hJ-bwY" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="KS8-ha-d6O"/>
                 <constraint firstItem="Rkc-hJ-bwY" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="MwR-2L-Vzy"/>
                 <constraint firstItem="QM4-IA-jZJ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="69" id="T7g-0g-M6x"/>
+                <constraint firstItem="WkH-HE-Xxt" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="395" id="TOs-4D-VC4"/>
                 <constraint firstItem="6m8-Z4-ish" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="69" id="Z6Y-Tm-6o4"/>
+                <constraint firstItem="WkH-HE-Xxt" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="69" id="ax9-Zm-Uet"/>
+                <constraint firstItem="Hig-sQ-EVG" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="284" id="fnN-2B-275"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="6m8-Z4-ish" secondAttribute="bottom" constant="120" id="kIj-i0-baC"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="JnI-Eq-NtD" secondAttribute="trailing" constant="80" id="lWQ-Bv-Zqs"/>
             </constraints>
@@ -137,9 +155,11 @@
     </objects>
     <resources>
         <image name="Onboarding" width="1366" height="1024"/>
-        <image name="arrow.left" catalog="system" width="128" height="98"/>
-        <image name="arrow.right" catalog="system" width="128" height="98"/>
+        <image name="arrow.clockwise" catalog="system" width="115" height="128"/>
+        <image name="arrow.counterclockwise" catalog="system" width="115" height="128"/>
         <image name="arrow.up" catalog="system" width="120" height="128"/>
+        <image name="instruksi" width="588" height="144"/>
+        <image name="majuInstru" width="414" height="75"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

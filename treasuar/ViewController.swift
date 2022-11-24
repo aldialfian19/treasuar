@@ -19,7 +19,7 @@ class ViewController: UIViewController {
     }
     func routeToLevelOne() {
         guard let window = UIApplication.shared.keyWindow else { return }
-        let levelOneVC = LevelSatuVC()
+        let levelOneVC = LevelTigaVC()
         UIView.transition(with: window, duration: 0.3, options: .transitionCrossDissolve, animations: { [weak window] in
             window?.rootViewController = levelOneVC
         }, completion: nil)

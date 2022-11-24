@@ -7,8 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CB65D408292FA4900040FF8A /* LevelTigaVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB65D406292FA4900040FF8A /* LevelTigaVC.swift */; };
+		CB65D409292FA4900040FF8A /* LevelTigaVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB65D407292FA4900040FF8A /* LevelTigaVC.xib */; };
 		CBAF6593292E339E0017B554 /* LevelSatuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBAF6591292E339E0017B554 /* LevelSatuVC.swift */; };
 		CBAF6594292E339E0017B554 /* LevelSatuVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBAF6592292E339E0017B554 /* LevelSatuVC.xib */; };
+		CBAF6597292F232B0017B554 /* LevelDuaVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBAF6595292F232B0017B554 /* LevelDuaVC.swift */; };
+		CBAF6598292F232B0017B554 /* LevelDuaVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBAF6596292F232B0017B554 /* LevelDuaVC.xib */; };
 		CBB4115229280A6E009881DD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB4115129280A6E009881DD /* AppDelegate.swift */; };
 		CBB4115429280A6E009881DD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB4115329280A6E009881DD /* SceneDelegate.swift */; };
 		CBB4115629280A6E009881DD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB4115529280A6E009881DD /* ViewController.swift */; };
@@ -60,8 +64,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CB65D406292FA4900040FF8A /* LevelTigaVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelTigaVC.swift; sourceTree = "<group>"; };
+		CB65D407292FA4900040FF8A /* LevelTigaVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LevelTigaVC.xib; sourceTree = "<group>"; };
 		CBAF6591292E339E0017B554 /* LevelSatuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelSatuVC.swift; sourceTree = "<group>"; };
 		CBAF6592292E339E0017B554 /* LevelSatuVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LevelSatuVC.xib; sourceTree = "<group>"; };
+		CBAF6595292F232B0017B554 /* LevelDuaVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelDuaVC.swift; sourceTree = "<group>"; };
+		CBAF6596292F232B0017B554 /* LevelDuaVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LevelDuaVC.xib; sourceTree = "<group>"; };
 		CBB4114E29280A6E009881DD /* treasuar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = treasuar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBB4115129280A6E009881DD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CBB4115329280A6E009881DD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -201,6 +209,8 @@
 			children = (
 				CBB4119A292907EA009881DD /* LevelTwoVC.swift */,
 				CBB4119B292907EA009881DD /* LevelTwoVC.xib */,
+				CBAF6595292F232B0017B554 /* LevelDuaVC.swift */,
+				CBAF6596292F232B0017B554 /* LevelDuaVC.xib */,
 			);
 			path = levelTwo;
 			sourceTree = "<group>";
@@ -210,6 +220,8 @@
 			children = (
 				CBB4119E29290823009881DD /* LevelThreeVC.swift */,
 				CBB4119F29290823009881DD /* LevelThreeVC.xib */,
+				CB65D406292FA4900040FF8A /* LevelTigaVC.swift */,
+				CB65D407292FA4900040FF8A /* LevelTigaVC.xib */,
 			);
 			path = levelThree;
 			sourceTree = "<group>";
@@ -367,6 +379,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB65D409292FA4900040FF8A /* LevelTigaVC.xib in Resources */,
 				CBB4118829280B37009881DD /* toy.usdz in Resources */,
 				CBB4118A29280B37009881DD /* merah.usdz in Resources */,
 				CBB411A129290823009881DD /* LevelThreeVC.xib in Resources */,
@@ -377,6 +390,7 @@
 				CBB4116129280A6F009881DD /* LaunchScreen.storyboard in Resources */,
 				CBB4115E29280A6F009881DD /* Assets.xcassets in Resources */,
 				CBB411B329291921009881DD /* buttonVc.xib in Resources */,
+				CBAF6598292F232B0017B554 /* LevelDuaVC.xib in Resources */,
 				CBB4119D292907EA009881DD /* LevelTwoVC.xib in Resources */,
 				CBB411A52929083D009881DD /* LevelFourVC.xib in Resources */,
 				CBB4118B29280B37009881DD /* floor.usdz in Resources */,
@@ -412,6 +426,7 @@
 				CBAF6593292E339E0017B554 /* LevelSatuVC.swift in Sources */,
 				CBB4118D29281664009881DD /* Experience.rcproject in Sources */,
 				CBB411B229291921009881DD /* buttonVc.swift in Sources */,
+				CBAF6597292F232B0017B554 /* LevelDuaVC.swift in Sources */,
 				CBB4115629280A6E009881DD /* ViewController.swift in Sources */,
 				CBB411A82929086A009881DD /* LevelFiveVC.swift in Sources */,
 				CBB4115229280A6E009881DD /* AppDelegate.swift in Sources */,
@@ -420,6 +435,7 @@
 				CBB411AF292914FB009881DD /* PopUpModel.swift in Sources */,
 				CBB411B829294623009881DD /* Popup.swift in Sources */,
 				CBB411B529293BEF009881DD /* PopUpData.swift in Sources */,
+				CB65D408292FA4900040FF8A /* LevelTigaVC.swift in Sources */,
 				CBB4115429280A6E009881DD /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

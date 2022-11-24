@@ -16,7 +16,9 @@ class LevelSatuVC: UIViewController {
     @IBOutlet var trashButton: UIButton!
     @IBOutlet var runButton: UIButton!
     
-    var action = ["forward", "forward", "left"]
+    var action = ["forward", "forward", "left", "forward"]
+    var gambar = ["1", "2"]
+    var intGambar: Int = 2
     
     var robot: UIImageView?
     
@@ -35,7 +37,7 @@ class LevelSatuVC: UIViewController {
         addRectangle()
         addImage()
         move(direction: "")
-        //        yAnimate()
+        
         
         
     }
@@ -82,7 +84,7 @@ class LevelSatuVC: UIViewController {
     }
     
     func addImage() {
-        robot = UIImageView(image: UIImage(named: "robot2d.png")!)
+        robot = UIImageView(image: UIImage(named: "2.png"))
         robot!.frame = a1loc
         self.view.addSubview(robot!)
         self.view.bringSubviewToFront(robot!)
@@ -90,8 +92,9 @@ class LevelSatuVC: UIViewController {
     }
     
     //MARK: -Object movement
-    func move (direction: String) -> CGRect {
-        let robotpos = robot!.frame
+    // -> CGRect
+    func move (direction: String)  {
+//        let robotpos = robot!.frame
         var result: CGRect?
         switch direction {
             
@@ -100,48 +103,49 @@ class LevelSatuVC: UIViewController {
             //                self.robot?.frame = self.b1loc
             //            })
             
-            if robotpos == a1loc {
+            if robot?.image == UIImage(named: "2.png") {
 //                UIView.animate(withDuration: 1, delay: 0.5) {
 //                    self.robot?.frame = self.b1loc
 //                }
-                result = self.b1loc
+//                result = self.b1loc
+                UIView.animate(
+                    withDuration: 2, delay: 0, usingSpringWithDamping: 1.9, initialSpringVelocity: 3.0, options: [], animations: {
+
+
+                        self.robot?.transform = (self.robot?.transform.translatedBy(x: 0, y: -180))!
+
+
+                            })
                 
-            }else if robotpos == b1loc {
-//                UIView.animate(withDuration: 1.00, animations: {
-//                    self.robot?.frame = self.c1loc
-//                })
-                result = self.c1loc
+            }else if self.robot?.image == UIImage(named: "1.png") {
+                UIView.animate(
+                    withDuration: 2, delay: 0, usingSpringWithDamping: 1.9, initialSpringVelocity: 3.0, options: [], animations: {
+
+
+                        self.robot?.transform = (self.robot?.transform.translatedBy(x: -180, y: 0))!
+
+
+                            })
             }
-            
-        case "left":
-            if robotpos == a1loc {
-//                UIView.animate(withDuration: 1.00, animations: {
-//                    self.robot?.frame = self.a2loc
-//                })
-                robot = UIImageView(image: UIImage(named: "Group.png")!)
-                result = self.a1loc
                 
 //            }else if robotpos == b1loc {
-//                UIView.animate(withDuration: 1.00, animations: {
-//                    self.robot?.frame = self.b2loc
-//                })
-            }else if robotpos == c1loc {
-//                UIView.animate(withDuration: 1.00, animations: {
-//                    self.robot?.frame = self.c2loc
-//                })
-                result = self.c2loc
-                
-            }else if robotpos == c2loc {
-//                UIView.animate(withDuration: 1.00, animations: {
-//                    self.robot?.frame = self.c3loc
-//                })
-                result = self.c3loc
+////                UIView.animate(withDuration: 1.00, animations: {
+//                    self.robot?.frame = self.c1loc
+////                })
+////                result = self.c1loc
+//            }
+            
+        case "left":
+            if robot?.image == UIImage(named: "2.png"){
+                self.robot?.image = UIImage(named: "1.png")
+            }else if robot?.image == UIImage(named: "3.png"){
+                self.robot?.image = UIImage(named: "2.png")
             }
             
         default:
             result = robot?.frame
         }
-        return result ?? robot!.frame
+//        return result ?? robot!.frame
     }
     
     //    func
@@ -158,40 +162,40 @@ class LevelSatuVC: UIViewController {
     @IBAction func runAction(_ sender: Any) {
         //[1,2,3, 4,5] => 3 detik => 100%, 1-. index 0 -> 0; 2- index 1 -> 20/100 , [0.0, 0.3, 0.6]
         //0,1,2,3,4
-        UIView.animateKeyframes(withDuration: Double(self.action.count), delay: 0.0, options: [], animations: {
-            for (index, actionSheet) in self.action.enumerated() {
-                UIView.addKeyframe(withRelativeStartTime: Double(index) * (1.0 / Double(self.action.count)), relativeDuration: 1, animations: {
-                    //1.Expansion + button label alpha
-                    self.robot?.frame = self.move(direction: actionSheet)
-                })
-                
-            }
-        }) { (completed) in
-            //Completion of whole animation sequence
-        }
+//        UIView.animateKeyframes(withDuration: Double(self.action.count), delay: 0.0, options: [], animations: {
+//            for (index, actionSheet) in self.action.enumerated() {
+//                UIView.addKeyframe(withRelativeStartTime: Double(index) * (1.0 / Double(self.action.count)), relativeDuration: 1, animations: {
+//                    //1.Expansion + button label alpha
+//                    self.robot?.frame = self.move(direction: actionSheet)
+//                })
+//
+//            }
+//        }) { (completed) in
+//            //Completion of whole animation sequence
+//        }
         
         //        for actionSheet in action{
-        //            UIView.animate(withDuration: 1, delay: 0) {
-        //                self.robot?.frame = self.b1loc
-        //            } completion: { isTrue in
-        //                UIView.animate(withDuration: 1, delay: 0) {
-        //                    self.robot?.frame = self.c1loc
-        //                } completion: { isTrue2 in
-        //                    UIView.animate(withDuration: 1, delay: 0) {
-        //                        self.robot?.frame = self.c2loc
-        //                    } completion: { isTrue3 in
-        //
-        //                    }
-        //                }
-        //            }
+                    UIView.animate(withDuration: 1, delay: 0) {
+                        self.robot?.transform = (self.robot?.transform.translatedBy(x: 0, y: -180))!
+                    } completion: { isTrue in
+                        UIView.animate(withDuration: 1, delay: 0) {
+                            self.robot?.transform = (self.robot?.transform.translatedBy(x: 0, y: -180))!
+                        } completion: { isTrue2 in
+                            UIView.animate(withDuration: 1, delay: 0) {
+                                self.robot?.image = UIImage(named: "1.png")
+
+                            } completion: { isTrue3 in
+                                UIView.animate(withDuration: 1, delay: 0) {
+                                    self.robot?.transform = (self.robot?.transform.translatedBy(x: -180, y: 0))!
+                                }
+                            }
+                        }
+                    }
         
-        //        }
-        //        move(direction: "\(action.first ?? nil)")
+//        for actionSheet in action {
+//                self.move(direction: actionSheet)
+//        }
         
-        //        move(direction: "\(action[0])")
-        //        move(direction: "\(action[1])")
-        
-        //        move(direction: "\(action[2] ?? nil)")
         
     }
     
