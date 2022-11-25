@@ -14,19 +14,21 @@ class LevelTigaVC: UIViewController {
     @IBOutlet var rightButton: UIButton!
     @IBOutlet var trashButton: UIButton!
     @IBOutlet var runButton: UIButton!
+    @IBOutlet var tableView: UITableView!
     
     var robot: UIImageView?
-    var action = ["kosong","forward", "forward", "left", "forward"]
+    var action = ["kosong"]
+    var actionBox = [""]
     
-    var c3loc: CGRect = CGRect(x: 780, y: 700, width: 178, height: 178)
-    var c2loc: CGRect = CGRect(x: 600, y: 700, width: 178, height: 178)
-    var c1loc: CGRect = CGRect(x: 420, y: 700, width: 178, height: 178)
-    var b3loc: CGRect = CGRect(x: 780, y: 520, width: 178, height: 178)
-    var b2loc: CGRect = CGRect(x: 600, y: 520, width: 178, height: 178)
-    var b1loc: CGRect = CGRect(x: 420, y: 520, width: 178, height: 178)
-    var a3loc: CGRect = CGRect(x: 780, y: 340, width: 178, height: 178)
-    var a2loc: CGRect = CGRect(x: 600, y: 340, width: 178, height: 178)
-    var a1loc: CGRect = CGRect(x: 420, y: 340, width: 178, height: 178)
+    var c3loc: CGRect = CGRect(x: 1015.25, y: 602.25, width: 142.5, height: 142.5)
+    var c2loc: CGRect = CGRect(x: 872.75, y: 602.25, width: 142.5, height: 142.5)
+    var c1loc: CGRect = CGRect(x: 730.25, y: 602.25, width: 142.5, height: 142.5)
+    var b3loc: CGRect = CGRect(x: 1015.25, y: 459.75, width: 142.5, height: 142.5)
+    var b2loc: CGRect = CGRect(x: 872.75, y: 459.75, width: 142.5, height: 142.5)
+    var b1loc: CGRect = CGRect(x: 730.25, y: 459.75, width: 142.5, height: 142.5)
+    var a3loc: CGRect = CGRect(x: 1015.25, y: 317.25, width: 142.5, height: 142.5)
+    var a2loc: CGRect = CGRect(x: 872.75, y: 317.25, width: 142.5, height: 142.5)
+    var a1loc: CGRect = CGRect(x: 730.25, y: 317.25, width: 142.5, height: 142.5)
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,6 +36,8 @@ class LevelTigaVC: UIViewController {
         addRectangle()
         addImage()
         move(direction: "")
+        updateTable()
+//        addActionImage()
 
         // Do any additional setup after loading the view.
     }
@@ -83,6 +87,13 @@ class LevelTigaVC: UIViewController {
         robot!.frame = a1loc
         self.view.addSubview(robot!)
         self.view.bringSubviewToFront(robot!)
+        
+        
+    }
+    
+    func addActionImage() {
+        
+       
     }
     
     //MARK: -created movement
@@ -95,10 +106,10 @@ class LevelTigaVC: UIViewController {
         case "forward":
           
             if robot?.image == UIImage(named: "2.png") {
-                self.robot?.transform = (self.robot?.transform.translatedBy(x: 0, y: 180))!
+                self.robot?.transform = (self.robot?.transform.translatedBy(x: 0, y: 142.5))!
                 
             }else if self.robot?.image == UIImage(named: "1.png") {
-                self.robot?.transform = (self.robot?.transform.translatedBy(x: 180, y: 0))!
+                self.robot?.transform = (self.robot?.transform.translatedBy(x: 142.5, y: 0))!
                 
             }
 
@@ -126,7 +137,7 @@ class LevelTigaVC: UIViewController {
 
             
         default:
-            result = robot?.frame
+            print("no move")
         }
     }
     // MARK: -run move
@@ -181,14 +192,82 @@ class LevelTigaVC: UIViewController {
 // MARK: -Created button
     
     @IBAction func forwardAction(_ sender: Any) {
+        action.append("forward")
+        actionBox.append("Maju")
+        
+        tableView.reloadData()
+//        addActionImage()
     }
     @IBAction func leftAction(_ sender: Any) {
+        action.append("left")
+        actionBox.append("Balik Kiri")
+        
+        tableView.reloadData()
+//        addActionImage()
     }
     @IBAction func rightAction(_ sender: Any) {
+        action.append("right")
+        actionBox.append("Balik Kanan")
+        
+        tableView.reloadData()
+//        addActionImage()
     }
     @IBAction func trashAction(_ sender: Any) {
+        action.removeAll()
+        action.append("kosong")
+        actionBox.removeAll()
+        actionBox.append("")
+        
+        tableView.reloadData()
+        robot?.frame = a1loc
     }
     @IBAction func runAction(_ sender: Any) {
-        runMove()
+        
+       runMove()
+        if robot?.frame == c3loc {
+            print("robot in c3")
+            
+        }else {
+            self.robot?.frame = a1loc
+            print("no point")
+        }
+        
+    }
+    
+    //MARK: -checkpoint
+    func finishPoint() {
+        let robotPosition = robot?.frame
+        
+        if robotPosition == c3loc {
+            print("robot in c3")
+            
+        }else {
+            self.robot?.frame = a1loc
+            print("no point")
+        }
+    }
+    
+    //MARK: -Update cell
+    
+    func updateTable() {
+        tableView.dataSource = self
+        tableView.delegate = self
+        tableView.register(UINib(nibName: "LevelTigaCell", bundle: nil), forCellReuseIdentifier: "cell")
+    }
+}
+
+extension LevelTigaVC: UITableViewDataSource, UITableViewDelegate {
+    
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.action.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "cell")! as? LevelTigaCell {
+            cell.cellLabel.text = self.actionBox[indexPath.row]
+            return cell
+        }
+        return UITableViewCell()
     }
 }
