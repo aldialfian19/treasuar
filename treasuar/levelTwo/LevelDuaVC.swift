@@ -88,6 +88,16 @@ class LevelDuaVC: UIViewController {
         robot!.frame = a1loc
         self.view.addSubview(robot!)
         self.view.bringSubviewToFront(robot!)
+        
+        self.view.addSubview(kiriInstruksi!)
+        self.view.bringSubviewToFront(kiriInstruksi!)
+        
+        self.view.addSubview(kananInstruksi!)
+        self.view.bringSubviewToFront(kananInstruksi!)
+    }
+    func hiddenImage() {
+        kiriInstruksi.isHidden = true
+        kananInstruksi.isHidden = true
     }
     
     //MARK: -created movement
@@ -162,10 +172,9 @@ class LevelDuaVC: UIViewController {
         hiddenImage()
     }
     
-    func hiddenImage() {
-        kiriInstruksi.isHidden = true
-        kananInstruksi.isHidden = true
+    @IBAction func homeAction(_ sender: Any) {
     }
+    
     
     //MARK: - CEK POINT
     

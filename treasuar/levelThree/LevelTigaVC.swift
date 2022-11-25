@@ -182,6 +182,30 @@ class LevelTigaVC: UIViewController {
                                 }else {
                                     self.move(direction: "\(self.action[0])")
                                 }
+                            } completion: { isTrue6 in
+                                UIView.animate(withDuration: 1, delay: 0) {
+                                    if self.action.count >= 7 {
+                                        self.move(direction: "\(self.action[6])")
+                                    }else {
+                                        self.move(direction: "\(self.action[0])")
+                                    }
+                                } completion: { isTrue7 in
+                                    UIView.animate(withDuration: 1, delay: 0) {
+                                        if self.action.count >= 8 {
+                                            self.move(direction: "\(self.action[7])")
+                                        }else {
+                                            self.move(direction: "\(self.action[0])")
+                                        }
+                                    } completion: { isTrue8 in
+                                        UIView.animate(withDuration: 1, delay: 0) {
+                                            if self.action.count >= 9 {
+                                                self.move(direction: "\(self.action[8])")
+                                            }else {
+                                                self.move(direction: "\(self.action[0])")
+                                            }
+                                        }
+                                    }
+                                }
                             }
                         }
                     }
@@ -213,6 +237,7 @@ class LevelTigaVC: UIViewController {
 //        addActionImage()
     }
     @IBAction func trashAction(_ sender: Any) {
+        robot?.image = UIImage(named: "2.png")
         action.removeAll()
         action.append("kosong")
         actionBox.removeAll()
@@ -229,21 +254,25 @@ class LevelTigaVC: UIViewController {
             
         }else {
             self.robot?.frame = a1loc
+            robot?.image = UIImage(named: "2.png")
             print("no point")
         }
         
     }
+    @IBAction func homeAction(_ sender: Any) {
+    }
     
     //MARK: -checkpoint
     func finishPoint() {
-        let robotPosition = robot?.frame
+        var robotPosition = robot?.frame
         
         if robotPosition == c3loc {
             print("robot in c3")
             
-        }else {
-            self.robot?.frame = a1loc
-            print("no point")
+        }else if robotPosition == b2loc {
+            robotPosition = a1loc
+            robot?.image = UIImage(named: "2.png")
+            print("get point")
         }
     }
     

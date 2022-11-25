@@ -30,12 +30,18 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="dua"/>
+                                <connections>
+                                    <action selector="twoAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2Z7-73-haI"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8LD-x8-Oys">
                                 <rect key="frame" x="183" y="408" width="49" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="tiga"/>
+                                <connections>
+                                    <action selector="threeAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dQE-3d-yPJ"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Csd-Za-POM">
                                 <rect key="frame" x="175" y="500" width="65" height="31"/>
@@ -54,7 +60,9 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <connections>
+                        <outlet property="buttonDua" destination="w1Z-lz-k1l" id="2rb-b5-8i6"/>
                         <outlet property="buttonSatu" destination="Idk-Mo-zuO" id="w7F-6P-kw2"/>
+                        <outlet property="buttonTiga" destination="8LD-x8-Oys" id="xW3-sg-bUp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

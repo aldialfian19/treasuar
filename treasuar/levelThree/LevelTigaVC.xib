@@ -122,19 +122,34 @@
                         <constraint firstAttribute="height" constant="132" id="I8B-gB-4hz"/>
                     </constraints>
                 </imageView>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="lrX-8l-hTe">
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" estimatedSectionHeaderHeight="-1" sectionFooterHeight="28" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="lrX-8l-hTe">
                     <rect key="frame" x="245" y="268" width="240" height="592"/>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="240" id="1qx-Xq-oFP"/>
                         <constraint firstAttribute="height" constant="592" id="Tmq-b0-tIg"/>
                     </constraints>
                 </tableView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uqn-kA-haW">
+                    <rect key="frame" x="69" y="69" width="120" height="120"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="120" id="Js4-fr-eot"/>
+                        <constraint firstAttribute="width" constant="120" id="OhT-Ij-RPT"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain">
+                        <backgroundConfiguration key="background" image="home"/>
+                    </buttonConfiguration>
+                    <connections>
+                        <action selector="homeAction:" destination="-1" eventType="touchUpInside" id="8gr-ny-UVb"/>
+                    </connections>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
+                <constraint firstItem="uqn-kA-haW" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="69" id="0Hm-m1-dPI"/>
                 <constraint firstItem="b6a-vE-G5N" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="3cB-GZ-mFh"/>
+                <constraint firstItem="uqn-kA-haW" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="69" id="4EJ-3G-rq2"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="C2b-35-SER" secondAttribute="trailing" constant="69" id="7EJ-Kv-v2Q"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="C2b-35-SER" secondAttribute="bottom" constant="130" id="7zb-cT-E1c"/>
                 <constraint firstItem="lrX-8l-hTe" firstAttribute="top" secondItem="d8r-Cd-8PG" secondAttribute="bottom" constant="67" id="Cpl-Hy-kIQ"/>
@@ -164,6 +179,7 @@
         <image name="arrow.counterclockwise" catalog="system" width="115" height="128"/>
         <image name="arrow.up" catalog="system" width="120" height="128"/>
         <image name="box" width="313" height="657"/>
+        <image name="home" width="149" height="149"/>
         <image name="instruksi" width="588" height="144"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

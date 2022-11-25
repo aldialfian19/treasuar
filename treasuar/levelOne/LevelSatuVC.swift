@@ -14,26 +14,27 @@ class LevelSatuVC: UIViewController {
     @IBOutlet var rightButton: UIButton!
     
     @IBOutlet var trashButton: UIButton!
-    @IBOutlet var runButton: UIButton!
+    @IBOutlet var majuInstruksi: UIImageView!
     
     var action = ["forward", "forward", "left", "forward"]
-    var gambar = ["1", "2"]
-    var intGambar: Int = 2
     
     var robot: UIImageView?
     
-    var a1loc: CGRect = CGRect(x: 780, y: 700, width: 178, height: 178)
-    var a2loc: CGRect = CGRect(x: 600, y: 700, width: 178, height: 178)
-    var a3loc: CGRect = CGRect(x: 420, y: 700, width: 178, height: 178)
-    var b1loc: CGRect = CGRect(x: 780, y: 520, width: 178, height: 178)
+    var c3loc: CGRect = CGRect(x: 780, y: 700, width: 178, height: 178)
+    var c2loc: CGRect = CGRect(x: 600, y: 700, width: 178, height: 178)
+    var c1loc: CGRect = CGRect(x: 420, y: 700, width: 178, height: 178)
+    var b3loc: CGRect = CGRect(x: 780, y: 520, width: 178, height: 178)
     var b2loc: CGRect = CGRect(x: 600, y: 520, width: 178, height: 178)
-    var b3loc: CGRect = CGRect(x: 420, y: 520, width: 178, height: 178)
-    var c1loc: CGRect = CGRect(x: 780, y: 340, width: 178, height: 178)
-    var c2loc: CGRect = CGRect(x: 600, y: 340, width: 178, height: 178)
-    var c3loc: CGRect = CGRect(x: 420, y: 340, width: 178, height: 178)
+    var b1loc: CGRect = CGRect(x: 420, y: 520, width: 178, height: 178)
+    var a3loc: CGRect = CGRect(x: 780, y: 340, width: 178, height: 178)
+    var a2loc: CGRect = CGRect(x: 600, y: 340, width: 178, height: 178)
+    var a1loc: CGRect = CGRect(x: 420, y: 340, width: 178, height: 178)
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        majuInstruksi.isHidden = false
+        
         addRectangle()
         addImage()
         move(direction: "")
@@ -89,51 +90,39 @@ class LevelSatuVC: UIViewController {
         self.view.addSubview(robot!)
         self.view.bringSubviewToFront(robot!)
         
+        self.view.addSubview(majuInstruksi!)
+        self.view.bringSubviewToFront(majuInstruksi!)
+        
+    }
+    func removeImage() {
+        majuInstruksi.isHidden = true
     }
     
+    
     //MARK: -Object movement
-    // -> CGRect
+    
     func move (direction: String)  {
 //        let robotpos = robot!.frame
         var result: CGRect?
         switch direction {
             
         case "forward":
-            //            UIView.animate(withDuration: 1.00, animations: {
-            //                self.robot?.frame = self.b1loc
-            //            })
-            
+          
             if robot?.image == UIImage(named: "2.png") {
-//                UIView.animate(withDuration: 1, delay: 0.5) {
-//                    self.robot?.frame = self.b1loc
-//                }
-//                result = self.b1loc
                 UIView.animate(
                     withDuration: 2, delay: 0, usingSpringWithDamping: 1.9, initialSpringVelocity: 3.0, options: [], animations: {
-
-
-                        self.robot?.transform = (self.robot?.transform.translatedBy(x: 0, y: -180))!
-
-
-                            })
+                        self.robot?.transform = (self.robot?.transform.translatedBy(x: 0, y: 180))!
+                        
+                    })
                 
             }else if self.robot?.image == UIImage(named: "1.png") {
                 UIView.animate(
                     withDuration: 2, delay: 0, usingSpringWithDamping: 1.9, initialSpringVelocity: 3.0, options: [], animations: {
-
-
-                        self.robot?.transform = (self.robot?.transform.translatedBy(x: -180, y: 0))!
-
-
-                            })
+                        self.robot?.transform = (self.robot?.transform.translatedBy(x: 180, y: 0))!
+                        
+                    })
             }
-                
-//            }else if robotpos == b1loc {
-////                UIView.animate(withDuration: 1.00, animations: {
-//                    self.robot?.frame = self.c1loc
-////                })
-////                result = self.c1loc
-//            }
+
             
         case "left":
             if robot?.image == UIImage(named: "2.png"){
@@ -142,62 +131,67 @@ class LevelSatuVC: UIViewController {
                 self.robot?.image = UIImage(named: "2.png")
             }
             
+        case "right":
+            if robot?.image == UIImage(named: "2.png"){
+                self.robot?.image = UIImage(named: "3.png")
+            }else if robot?.image == UIImage(named: "1.png"){
+                self.robot?.image = UIImage(named: "2.png")
+            }
+            
+        case "restart":
+            self.robot?.image = UIImage(named: "2.png")
+            self.robot?.frame = a1loc
+
+            
         default:
             result = robot?.frame
         }
-//        return result ?? robot!.frame
     }
     
-    //    func
+    //MARK: -button
     
     @IBAction func oneAction(_ sender: Any) {
         move(direction: "forward")
-        //        action.append("forward")
-        //        yAnimate()
+        removeImage()
+
     }
     @IBAction func leftAction(_ sender: Any) {
         move(direction: "left")
     }
     
-    @IBAction func runAction(_ sender: Any) {
-        //[1,2,3, 4,5] => 3 detik => 100%, 1-. index 0 -> 0; 2- index 1 -> 20/100 , [0.0, 0.3, 0.6]
-        //0,1,2,3,4
-//        UIView.animateKeyframes(withDuration: Double(self.action.count), delay: 0.0, options: [], animations: {
-//            for (index, actionSheet) in self.action.enumerated() {
-//                UIView.addKeyframe(withRelativeStartTime: Double(index) * (1.0 / Double(self.action.count)), relativeDuration: 1, animations: {
-//                    //1.Expansion + button label alpha
-//                    self.robot?.frame = self.move(direction: actionSheet)
-//                })
-//
-//            }
-//        }) { (completed) in
-//            //Completion of whole animation sequence
-//        }
-        
-        //        for actionSheet in action{
-                    UIView.animate(withDuration: 1, delay: 0) {
-                        self.robot?.transform = (self.robot?.transform.translatedBy(x: 0, y: -180))!
-                    } completion: { isTrue in
-                        UIView.animate(withDuration: 1, delay: 0) {
-                            self.robot?.transform = (self.robot?.transform.translatedBy(x: 0, y: -180))!
-                        } completion: { isTrue2 in
-                            UIView.animate(withDuration: 1, delay: 0) {
-                                self.robot?.image = UIImage(named: "1.png")
-
-                            } completion: { isTrue3 in
-                                UIView.animate(withDuration: 1, delay: 0) {
-                                    self.robot?.transform = (self.robot?.transform.translatedBy(x: -180, y: 0))!
-                                }
-                            }
-                        }
-                    }
-        
-//        for actionSheet in action {
-//                self.move(direction: actionSheet)
-//        }
-        
-        
+    @IBAction func rightAction(_ sender: Any) {
+        move(direction: "right")
     }
     
+    @IBAction func restartAction(_ sender: Any) {
+        move(direction: "restart")
+    }
+    
+    @IBAction func homeAction(_ sender: Any) {
+    }
+    
+    //MARK: -Checkpoint
+    func checkPoint() {
+        let robotPosition = robot?.frame
+        
+        if robotPosition == a1loc {
+            majuInstruksi.isHidden = false
+            print("robot in a1")
+        }else if robotPosition == a2loc{
+            print("robot in a2")
+        }else if robotPosition == b1loc{
+            print("robot in b1")
+        }else if robotPosition == b2loc{
+            print("robot in b2")
+        }else if robotPosition == c1loc{
+            print("robot in c1")
+        }else if robotPosition == c2loc{
+            print("robot in c2")
+        }else if robotPosition == c3loc{
+            print("robot in c3")
+        }else {
+            print("no point")
+        }
+    }
     
 }

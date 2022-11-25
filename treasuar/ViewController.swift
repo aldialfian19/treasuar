@@ -19,25 +19,25 @@ class ViewController: UIViewController {
     }
     func routeToLevelOne() {
         guard let window = UIApplication.shared.keyWindow else { return }
-        let levelOneVC = LevelTigaVC()
+        let levelSatuVC = LevelSatuVC()
         UIView.transition(with: window, duration: 0.3, options: .transitionCrossDissolve, animations: { [weak window] in
-            window?.rootViewController = levelOneVC
+            window?.rootViewController = levelSatuVC
         }, completion: nil)
     }
     
     func routeToLevelTwo() {
         guard let window = UIApplication.shared.keyWindow else { return }
-        let levelTwoVC = LevelTwoVC()
+        let levelDuaVC = LevelDuaVC()
         UIView.transition(with: window, duration: 0.3, options: .transitionCrossDissolve, animations: { [weak window] in
-            window?.rootViewController = levelTwoVC
+            window?.rootViewController = levelDuaVC
         }, completion: nil)
     }
     
     func routeToLevelThree() {
         guard let window = UIApplication.shared.keyWindow else { return }
-        let levelOneVC = LevelThreeVC()
+        let levelTigaVC = LevelTigaVC()
         UIView.transition(with: window, duration: 0.3, options: .transitionCrossDissolve, animations: { [weak window] in
-            window?.rootViewController = levelOneVC
+            window?.rootViewController = levelTigaVC
         }, completion: nil)
     }
     
