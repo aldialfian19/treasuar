@@ -10,6 +10,10 @@
 		C3234732292DD69A00303F5C /* HomeVCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3234730292DD69A00303F5C /* HomeVCViewController.swift */; };
 		C3234733292DD69A00303F5C /* HomeVCViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3234731292DD69A00303F5C /* HomeVCViewController.xib */; };
 		C3234735292DE7AA00303F5C /* ImageHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3234734292DE7AA00303F5C /* ImageHomeViewController.swift */; };
+		C386AEFC292DF13D0081AD5B /* Boldhead.otf in Resources */ = {isa = PBXBuildFile; fileRef = C386AEFA292DF13D0081AD5B /* Boldhead.otf */; };
+		C386AEFD292DF13D0081AD5B /* Boldhead License.txt in Resources */ = {isa = PBXBuildFile; fileRef = C386AEFB292DF13D0081AD5B /* Boldhead License.txt */; };
+		C392723B292E6114008ECA6A /* OnBoardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3927239292E6114008ECA6A /* OnBoardingViewController.swift */; };
+		C392723C292E6114008ECA6A /* OnBoardingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C392723A292E6114008ECA6A /* OnBoardingViewController.xib */; };
 		CBB4115229280A6E009881DD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB4115129280A6E009881DD /* AppDelegate.swift */; };
 		CBB4115429280A6E009881DD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB4115329280A6E009881DD /* SceneDelegate.swift */; };
 		CBB4115629280A6E009881DD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB4115529280A6E009881DD /* ViewController.swift */; };
@@ -64,6 +68,10 @@
 		C3234730292DD69A00303F5C /* HomeVCViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVCViewController.swift; sourceTree = "<group>"; };
 		C3234731292DD69A00303F5C /* HomeVCViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeVCViewController.xib; sourceTree = "<group>"; };
 		C3234734292DE7AA00303F5C /* ImageHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageHomeViewController.swift; sourceTree = "<group>"; };
+		C386AEFA292DF13D0081AD5B /* Boldhead.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Boldhead.otf; sourceTree = "<group>"; };
+		C386AEFB292DF13D0081AD5B /* Boldhead License.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Boldhead License.txt"; sourceTree = "<group>"; };
+		C3927239292E6114008ECA6A /* OnBoardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingViewController.swift; sourceTree = "<group>"; };
+		C392723A292E6114008ECA6A /* OnBoardingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OnBoardingViewController.xib; sourceTree = "<group>"; };
 		CBB4114E29280A6E009881DD /* treasuar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = treasuar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBB4115129280A6E009881DD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CBB4115329280A6E009881DD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -130,15 +138,34 @@
 			isa = PBXGroup;
 			children = (
 				C3234730292DD69A00303F5C /* HomeVCViewController.swift */,
-				C3234731292DD69A00303F5C /* HomeVCViewController.xib */,
 				C3234734292DE7AA00303F5C /* ImageHomeViewController.swift */,
+				C3234731292DD69A00303F5C /* HomeVCViewController.xib */,
 			);
 			path = HomeView;
+			sourceTree = "<group>";
+		};
+		C386AEF9292DF13D0081AD5B /* Boldhead */ = {
+			isa = PBXGroup;
+			children = (
+				C386AEFA292DF13D0081AD5B /* Boldhead.otf */,
+				C386AEFB292DF13D0081AD5B /* Boldhead License.txt */,
+			);
+			path = Boldhead;
+			sourceTree = "<group>";
+		};
+		C3927238292E60C4008ECA6A /* OnboardView */ = {
+			isa = PBXGroup;
+			children = (
+				C3927239292E6114008ECA6A /* OnBoardingViewController.swift */,
+				C392723A292E6114008ECA6A /* OnBoardingViewController.xib */,
+			);
+			path = OnboardView;
 			sourceTree = "<group>";
 		};
 		CBB4114529280A6E009881DD = {
 			isa = PBXGroup;
 			children = (
+				C386AEF9292DF13D0081AD5B /* Boldhead */,
 				CBB4115029280A6E009881DD /* treasuar */,
 				CBB4116A29280A6F009881DD /* treasuarTests */,
 				CBB4117429280A6F009881DD /* treasuarUITests */,
@@ -159,6 +186,7 @@
 		CBB4115029280A6E009881DD /* treasuar */ = {
 			isa = PBXGroup;
 			children = (
+				C3927238292E60C4008ECA6A /* OnboardView */,
 				C323472B292DD4FD00303F5C /* HomeView */,
 				CBB411952929076B009881DD /* 3D Asset */,
 				CBB4119429290728009881DD /* failedScreen */,
@@ -384,13 +412,16 @@
 				C3234733292DD69A00303F5C /* HomeVCViewController.xib in Resources */,
 				CBB411B929294623009881DD /* Popup.xib in Resources */,
 				CBB41199292907AC009881DD /* LevelOneVC.xib in Resources */,
+				C386AEFC292DF13D0081AD5B /* Boldhead.otf in Resources */,
 				CBB4118929280B37009881DD /* robot.usdz in Resources */,
 				CBB4116129280A6F009881DD /* LaunchScreen.storyboard in Resources */,
 				CBB4115E29280A6F009881DD /* Assets.xcassets in Resources */,
 				CBB411B329291921009881DD /* buttonVc.xib in Resources */,
 				CBB4119D292907EA009881DD /* LevelTwoVC.xib in Resources */,
+				C386AEFD292DF13D0081AD5B /* Boldhead License.txt in Resources */,
 				CBB411A52929083D009881DD /* LevelFourVC.xib in Resources */,
 				CBB4118B29280B37009881DD /* floor.usdz in Resources */,
+				C392723C292E6114008ECA6A /* OnBoardingViewController.xib in Resources */,
 				CBB4115929280A6E009881DD /* Main.storyboard in Resources */,
 				CBB411A92929086A009881DD /* LevelFiveVC.xib in Resources */,
 			);
@@ -433,6 +464,7 @@
 				CBB411B829294623009881DD /* Popup.swift in Sources */,
 				CBB411B529293BEF009881DD /* PopUpData.swift in Sources */,
 				CBB4115429280A6E009881DD /* SceneDelegate.swift in Sources */,
+				C392723B292E6114008ECA6A /* OnBoardingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -609,9 +641,10 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 4M5F5S23L2;
+				DEVELOPMENT_TEAM = JY4LC4DV9B;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = treasuar/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Use Camera";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -637,9 +670,10 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 4M5F5S23L2;
+				DEVELOPMENT_TEAM = JY4LC4DV9B;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = treasuar/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Use Camera";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -665,6 +699,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = JY4LC4DV9B;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
 				MARKETING_VERSION = 1.0;
@@ -702,6 +737,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = JY4LC4DV9B;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = aldi.treasuarUITests;

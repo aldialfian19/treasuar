@@ -16,7 +16,7 @@ class ViewController: UIViewController {
     }
     func routeToLevelOne() {
         guard let window = UIApplication.shared.keyWindow else { return }
-        let levelOneVC = LevelOneVC()
+        let levelOneVC = OnBoardingViewController()
         UIView.transition(with: window, duration: 0.3, options: .transitionCrossDissolve, animations: { [weak window] in
             window?.rootViewController = levelOneVC
         }, completion: nil)

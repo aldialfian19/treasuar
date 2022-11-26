@@ -8,21 +8,12 @@
 import UIKit
 
 class HomeVCViewController: UIViewController {
-
-    @IBOutlet weak var bgImage: UIImageView!
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
     }
-    
-    func addImage() {
-        let imageName = "bg"
-        let image = UIImage(named: imageName)
-    }
-
 
     /*
     // MARK: - Navigation
@@ -35,3 +26,4 @@ class HomeVCViewController: UIViewController {
     */
 
 }
+

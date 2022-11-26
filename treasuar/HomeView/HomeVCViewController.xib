@@ -20,7 +20,7 @@
             <rect key="frame" x="0.0" y="0.0" width="1366" height="1024"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="P0u-Uz-MaA">
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="P0u-Uz-MaA">
                     <rect key="frame" x="0.0" y="-24" width="1366" height="1073"/>
                 </imageView>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="yGr-7E-UHO">
@@ -51,9 +51,9 @@
                         <constraint firstAttribute="height" constant="109" id="v7l-ah-91L"/>
                     </constraints>
                 </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hi, Steve" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n9R-LV-oQK">
-                    <rect key="frame" x="69" y="243" width="253" height="80"/>
-                    <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="64"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hi, Steve" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n9R-LV-oQK">
+                    <rect key="frame" x="69" y="243" width="231.5" height="77"/>
+                    <fontDescription key="fontDescription" name="BodoniSvtyTwoSCITCTT-Book" family="Bodoni 72 Smallcaps" pointSize="64"/>
                     <color key="textColor" red="0.89411764705882346" green="0.27843137254901962" blue="0.20392156862745098" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
@@ -63,30 +63,13 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="P2r-Gj-N3Y">
-                    <rect key="frame" x="69" y="460" width="1228" height="400"/>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="D61-zt-dam">
-                        <size key="itemSize" width="128" height="128"/>
-                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                    </collectionViewFlowLayout>
-                </collectionView>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="abk-sc-Pzh">
-                    <rect key="frame" x="69" y="460" width="315" height="302"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="356.31" id="DWh-B1-MFa"/>
-                    </constraints>
-                </imageView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="fdP-PX-INs" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="48" id="0PP-GG-dyc"/>
-                <constraint firstItem="P2r-Gj-N3Y" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="436" id="0RK-e9-OQe"/>
                 <constraint firstItem="9Vj-Sc-3d5" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="48" id="1am-5V-3Pr"/>
-                <constraint firstItem="P0u-Uz-MaA" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="22g-wU-7bq"/>
+                <constraint firstItem="P0u-Uz-MaA" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="-48" id="22g-wU-7bq"/>
                 <constraint firstItem="P0u-Uz-MaA" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="293-Pa-Snp"/>
                 <constraint firstItem="yGr-7E-UHO" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="69" id="2x1-oQ-4Gj"/>
                 <constraint firstItem="fdP-PX-INs" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="1040" id="6HM-3s-v8c"/>
@@ -94,25 +77,17 @@
                 <constraint firstItem="n9R-LV-oQK" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="69" id="Fkz-Uo-pK4"/>
                 <constraint firstItem="iLg-OE-0zy" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="893" id="FpL-jq-osB"/>
                 <constraint firstItem="9Vj-Sc-3d5" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="1188.6600000000001" id="LMh-GS-Scm"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="P0u-Uz-MaA" secondAttribute="bottom" id="NCK-mb-jQB"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="P0u-Uz-MaA" secondAttribute="bottom" constant="-45" id="NCK-mb-jQB"/>
                 <constraint firstItem="5Qm-8A-WBC" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="69" id="Om3-1p-lKr"/>
-                <constraint firstItem="P2r-Gj-N3Y" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="69" id="PLM-XB-E5u"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="P2r-Gj-N3Y" secondAttribute="bottom" constant="144" id="Q0n-5v-VMg"/>
-                <constraint firstItem="abk-sc-Pzh" firstAttribute="top" secondItem="P2r-Gj-N3Y" secondAttribute="top" id="Q3t-kb-pze"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="P0u-Uz-MaA" secondAttribute="trailing" id="Xwe-c5-A6K"/>
-                <constraint firstItem="abk-sc-Pzh" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="iPh-Gu-QYB"/>
                 <constraint firstItem="5Qm-8A-WBC" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="299" id="kUv-6B-1QS"/>
-                <constraint firstItem="P2r-Gj-N3Y" firstAttribute="top" secondItem="abk-sc-Pzh" secondAttribute="bottom" constant="-544" id="oxo-zy-5hU"/>
                 <constraint firstItem="iLg-OE-0zy" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="48" id="rMZ-TS-SGO"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="P2r-Gj-N3Y" secondAttribute="trailing" constant="69" id="um4-qy-wM7"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="abk-sc-Pzh" secondAttribute="trailing" id="xhm-T3-VJc"/>
                 <constraint firstItem="n9R-LV-oQK" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="219" id="y64-nN-OgN"/>
             </constraints>
-            <point key="canvasLocation" x="130.89311859443629" y="-11.1328125"/>
+            <point key="canvasLocation" x="142.75256222547583" y="-153.515625"/>
         </view>
     </objects>
     <resources>
-        <image name="1" width="357" height="333"/>
         <image name="bg" width="1366" height="1024"/>
         <image name="logo" width="143" height="103"/>
         <image name="setting" width="148" height="149"/>
