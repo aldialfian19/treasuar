@@ -8,15 +8,26 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    private let imageView: UIImageView = {
+        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 460, height: 431))
+        imageView.image = UIImage(named: "SplashLogo")
+        return imageView
+    }()
+   
+    
     @IBOutlet var buttonSatu: UIButton!
     @IBOutlet var buttonDua: UIButton!
     @IBOutlet var buttonTiga: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.addSubview(imageView)
+        
         // Do any additional setup after loading the view.
     }
+    
+    
     func routeToLevelOne() {
         guard let window = UIApplication.shared.keyWindow else { return }
         let levelOneVC = LevelOneVC()
@@ -51,7 +62,33 @@ class ViewController: UIViewController {
         routeToLevelThree()
     }
     
-
-
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        imageView.center = view.center
+        animate()
+        
+        DispatchQueue.main.asyncAfter(deadline: .now()+0, execute: {
+            self.animate()
+        })
+    }
+    private func animate(){
+        UIView.animate(withDuration: 2, animations: {
+            let size = self.view.frame.size.width * 1.5
+            let diffX = size - self.view.frame.size.width
+            let diffY = size - self.view.frame.size.height - size
+            
+            self.imageView.frame = CGRect(
+                x: -(diffX/2),
+                y: diffY/2,
+                width: size,
+                height: size)
+        })
+        
+        UIView.animate(withDuration: 2, animations: {
+             
+            
+            self.imageView.alpha = 0
+        })
+    }
+    
 }
-
