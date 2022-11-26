@@ -16,6 +16,7 @@ class LevelSatuVC: UIViewController {
     @IBOutlet var trashButton: UIButton!
     @IBOutlet var majuInstruksi: UIImageView!
     
+    
     var action = ["forward", "forward", "left", "forward"]
     
     var robot: UIImageView?
@@ -151,8 +152,18 @@ class LevelSatuVC: UIViewController {
     //MARK: -button
     
     @IBAction func oneAction(_ sender: Any) {
-        move(direction: "forward")
-        removeImage()
+        
+        UIView.animate(withDuration: 1, delay: 0) {
+            self.move(direction: "forward")
+            self.removeImage()
+        } completion: { isTrue in
+            UIView.animate(withDuration: 2, delay: 1) {
+                self.checkPoint()
+            }
+        }
+//        move(direction: "forward")
+//        removeImage()
+//        checkPoint()
 
     }
     @IBAction func leftAction(_ sender: Any) {
@@ -178,10 +189,12 @@ class LevelSatuVC: UIViewController {
             majuInstruksi.isHidden = false
             print("robot in a1")
         }else if robotPosition == a2loc{
+            routeToFalse()
             print("robot in a2")
         }else if robotPosition == b1loc{
             print("robot in b1")
         }else if robotPosition == b2loc{
+            routeToFalse()
             print("robot in b2")
         }else if robotPosition == c1loc{
             print("robot in c1")
@@ -192,6 +205,14 @@ class LevelSatuVC: UIViewController {
         }else {
             print("no point")
         }
+    }
+    
+    func routeToFalse() {
+        guard let window = UIApplication.shared.keyWindow else { return }
+        let falseVC = Popup()
+        UIView.transition(with: window, duration: 0.3, options: .transitionCrossDissolve, animations: { [weak window] in
+            window?.rootViewController = falseVC
+        }, completion: nil)
     }
     
 }

@@ -153,8 +153,13 @@ class LevelDuaVC: UIViewController {
     
     
     @IBAction func forwardAction(_ sender: Any) {
-        move(direction: "forward")
-        checkPoint()
+        UIView.animate(withDuration: 1, delay: 0) {
+            self.move(direction: "forward")
+        } completion: { isTrue in
+            UIView.animate(withDuration: 2, delay: 1) {
+                self.checkPoint()
+            }
+        }
     }
     @IBAction func leftAction(_ sender: Any) {
         move(direction: "left")
@@ -184,22 +189,36 @@ class LevelDuaVC: UIViewController {
         if robotPosition == a1loc {
             print("robot in a1")
         }else if robotPosition == a2loc{
+            routeToFalse()
             print("robot in a2")
+        }else if robotPosition == a3loc{
+            print("robot in a3")
         }else if robotPosition == b1loc{
             kiriInstruksi.isHidden = false
             print("robot in b1")
         }else if robotPosition == b2loc{
             kananInstruksi.isHidden = false
             print("robot in b2")
+        }else if robotPosition == b3loc{
+            routeToFalse()
+            print("robot in b3")
         }else if robotPosition == c1loc{
             print("robot in c1")
         }else if robotPosition == c2loc{
             print("robot in c2")
         }else if robotPosition == c3loc{
+            routeToFalse()
             print("robot in c3")
         }else {
             print("no point")
         }
+    }
+    func routeToFalse() {
+        guard let window = UIApplication.shared.keyWindow else { return }
+        let falseVC = Popup()
+        UIView.transition(with: window, duration: 0.3, options: .transitionCrossDissolve, animations: { [weak window] in
+            window?.rootViewController = falseVC
+        }, completion: nil)
     }
     
 }

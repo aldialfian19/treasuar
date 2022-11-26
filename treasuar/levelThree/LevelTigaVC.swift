@@ -17,6 +17,7 @@ class LevelTigaVC: UIViewController {
     @IBOutlet var tableView: UITableView!
     
     var robot: UIImageView?
+    var point: UIImageView?
     var action = ["kosong"]
     var actionBox = [""]
     
@@ -140,6 +141,8 @@ class LevelTigaVC: UIViewController {
             print("no move")
         }
     }
+    
+    
     // MARK: -run move
     func runMove() {
         UIView.animate(withDuration: 1, delay: 0) {
@@ -213,6 +216,7 @@ class LevelTigaVC: UIViewController {
             }
         }
     }
+    
 // MARK: -Created button
     
     @IBAction func forwardAction(_ sender: Any) {
@@ -220,13 +224,14 @@ class LevelTigaVC: UIViewController {
         actionBox.append("Maju")
         
         tableView.reloadData()
-//        addActionImage()
+        
     }
     @IBAction func leftAction(_ sender: Any) {
         action.append("left")
         actionBox.append("Balik Kiri")
         
         tableView.reloadData()
+        
 //        addActionImage()
     }
     @IBAction func rightAction(_ sender: Any) {
@@ -234,6 +239,7 @@ class LevelTigaVC: UIViewController {
         actionBox.append("Balik Kanan")
         
         tableView.reloadData()
+        
 //        addActionImage()
     }
     @IBAction func trashAction(_ sender: Any) {
@@ -248,15 +254,19 @@ class LevelTigaVC: UIViewController {
     }
     @IBAction func runAction(_ sender: Any) {
         
-       runMove()
-        if robot?.frame == c3loc {
-            print("robot in c3")
-            
-        }else {
-            self.robot?.frame = a1loc
-            robot?.image = UIImage(named: "2.png")
-            print("no point")
-        }
+//        runMove()
+//
+//        if robot?.frame == c1loc {
+//            print("robot in c3")
+//
+//        }else {
+//            self.robot?.frame = a1loc
+//            robot?.image = UIImage(named: "2.png")
+//            print("no point")
+//        }
+        
+       
+        
         
     }
     @IBAction func homeAction(_ sender: Any) {
@@ -264,16 +274,31 @@ class LevelTigaVC: UIViewController {
     
     //MARK: -checkpoint
     func finishPoint() {
-        var robotPosition = robot?.frame
+        let robotPosition = robot?.frame
         
         if robotPosition == c3loc {
             print("robot in c3")
+        }else if robotPosition == a2loc {
+            routeToFalse()
+            print("obstacle point")
+        }else if robotPosition == c1loc {
+            routeToFalse()
+            print("obstacle point")
+        }else if robotPosition == b3loc {
+            routeToFalse()
+            print("obstacle point")
+        }else {
             
-        }else if robotPosition == b2loc {
-            robotPosition = a1loc
-            robot?.image = UIImage(named: "2.png")
-            print("get point")
         }
+    }
+    
+    
+    func routeToFalse() {
+        guard let window = UIApplication.shared.keyWindow else { return }
+        let falseVC = Popup()
+        UIView.transition(with: window, duration: 0.3, options: .transitionCrossDissolve, animations: { [weak window] in
+            window?.rootViewController = falseVC
+        }, completion: nil)
     }
     
     //MARK: -Update cell

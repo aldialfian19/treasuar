@@ -40,10 +40,8 @@
 		CBB411A52929083D009881DD /* LevelFourVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBB411A32929083D009881DD /* LevelFourVC.xib */; };
 		CBB411A82929086A009881DD /* LevelFiveVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB411A62929086A009881DD /* LevelFiveVC.swift */; };
 		CBB411A92929086A009881DD /* LevelFiveVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBB411A72929086A009881DD /* LevelFiveVC.xib */; };
-		CBB411AF292914FB009881DD /* PopUpModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB411AE292914FB009881DD /* PopUpModel.swift */; };
 		CBB411B229291921009881DD /* buttonVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB411B029291921009881DD /* buttonVc.swift */; };
 		CBB411B329291921009881DD /* buttonVc.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBB411B129291921009881DD /* buttonVc.xib */; };
-		CBB411B529293BEF009881DD /* PopUpData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB411B429293BEF009881DD /* PopUpData.swift */; };
 		CBB411B829294623009881DD /* Popup.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB411B629294623009881DD /* Popup.swift */; };
 		CBB411B929294623009881DD /* Popup.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBB411B729294623009881DD /* Popup.xib */; };
 /* End PBXBuildFile section */
@@ -103,10 +101,8 @@
 		CBB411A32929083D009881DD /* LevelFourVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LevelFourVC.xib; sourceTree = "<group>"; };
 		CBB411A62929086A009881DD /* LevelFiveVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelFiveVC.swift; sourceTree = "<group>"; };
 		CBB411A72929086A009881DD /* LevelFiveVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LevelFiveVC.xib; sourceTree = "<group>"; };
-		CBB411AE292914FB009881DD /* PopUpModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpModel.swift; sourceTree = "<group>"; };
 		CBB411B029291921009881DD /* buttonVc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = buttonVc.swift; sourceTree = "<group>"; };
 		CBB411B129291921009881DD /* buttonVc.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = buttonVc.xib; sourceTree = "<group>"; };
-		CBB411B429293BEF009881DD /* PopUpData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpData.swift; sourceTree = "<group>"; };
 		CBB411B629294623009881DD /* Popup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Popup.swift; sourceTree = "<group>"; };
 		CBB411B729294623009881DD /* Popup.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Popup.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -262,8 +258,6 @@
 		CBB4119429290728009881DD /* failedScreen */ = {
 			isa = PBXGroup;
 			children = (
-				CBB411AE292914FB009881DD /* PopUpModel.swift */,
-				CBB411B429293BEF009881DD /* PopUpData.swift */,
 				CBB411B629294623009881DD /* Popup.swift */,
 				CBB411B729294623009881DD /* Popup.xib */,
 			);
@@ -440,9 +434,7 @@
 				CBB4115229280A6E009881DD /* AppDelegate.swift in Sources */,
 				CBB411A029290823009881DD /* LevelThreeVC.swift in Sources */,
 				CBB411A42929083D009881DD /* LevelFourVC.swift in Sources */,
-				CBB411AF292914FB009881DD /* PopUpModel.swift in Sources */,
 				CBB411B829294623009881DD /* Popup.swift in Sources */,
-				CBB411B529293BEF009881DD /* PopUpData.swift in Sources */,
 				CB65D408292FA4900040FF8A /* LevelTigaVC.swift in Sources */,
 				CBB4115429280A6E009881DD /* SceneDelegate.swift in Sources */,
 			);
