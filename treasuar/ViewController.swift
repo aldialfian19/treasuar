@@ -19,11 +19,17 @@ class ViewController: UIViewController {
     @IBOutlet var buttonSatu: UIButton!
     @IBOutlet var buttonDua: UIButton!
     @IBOutlet var buttonTiga: UIButton!
+    @IBOutlet var buttonEmpat: UIButton!
+    @IBOutlet var buttonLima: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view.addSubview(imageView)
-        
+        buttonSatu.isHidden = true
+        buttonDua.isHidden = true
+        buttonTiga.isHidden = true
+        buttonEmpat.isHidden = true
+        buttonLima.isHidden = true
         // Do any additional setup after loading the view.
     }
     
@@ -72,7 +78,7 @@ class ViewController: UIViewController {
         })
     }
     private func animate(){
-        UIView.animate(withDuration: 2, animations: {
+        UIView.animate(withDuration: 3){
             let size = self.view.frame.size.width * 1.5
             let diffX = size - self.view.frame.size.width
             let diffY = size - self.view.frame.size.height - size
@@ -82,13 +88,23 @@ class ViewController: UIViewController {
                 y: diffY/2,
                 width: size,
                 height: size)
-        })
-        
-        UIView.animate(withDuration: 2, animations: {
-             
+        } completion: { isComplete in
+            if isComplete{
+                self.imageView.alpha = 0
+                self.buttonSatu.isHidden = false
+                self.buttonDua.isHidden = false
+                self.buttonTiga.isHidden = false
+                self.buttonEmpat.isHidden = false
+                self.buttonLima.isHidden = false
+            }
             
-            self.imageView.alpha = 0
-        })
+        }
+        
+//        UIView.animate(withDuration: 2, animations: {
+//
+//
+//            self.imageView.alpha = 0
+//        })
     }
     
 }
