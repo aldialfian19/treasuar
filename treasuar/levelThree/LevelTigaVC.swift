@@ -38,6 +38,8 @@ class LevelTigaVC: UIViewController {
         addImage()
         move(direction: "")
         updateTable()
+        
+//        runButton.isExclusiveTouch = false
 //        addActionImage()
 
         // Do any additional setup after loading the view.
@@ -144,7 +146,122 @@ class LevelTigaVC: UIViewController {
     
     
     // MARK: -run move
-    func runMove() {
+//    func runMove() {
+//        UIView.animate(withDuration: 1, delay: 0) {
+//            self.move(direction: "\(self.action[0])")
+//        } completion: { isTrue in
+//            UIView.animate(withDuration: 1, delay: 0) {
+//                if self.action.count >= 2 {
+//                    self.move(direction: "\(self.action[1])")
+//                }else {
+//                    self.move(direction: "\(self.action[0])")
+//                }
+//
+//            } completion: { isTrue2 in
+//                UIView.animate(withDuration: 1, delay: 0) {
+//                    if self.action.count >= 3 {
+//                        self.move(direction: "\(self.action[2])")
+//                    }else {
+//                        self.move(direction: "\(self.action[0])")
+//                    }
+//
+//                } completion: { isTrue3 in
+//                    UIView.animate(withDuration: 1, delay: 0) {
+//                        if self.action.count >= 4 {
+//                            self.move(direction: "\(self.action[3])")
+//                        }else {
+//                            self.move(direction: "\(self.action[0])")
+//                        }
+//
+//                    } completion: { isTrue4 in
+//                        UIView.animate(withDuration: 1, delay: 0) {
+//                            if self.action.count >= 5 {
+//                                self.move(direction: "\(self.action[4])")
+//                            }else {
+//                                self.move(direction: "\(self.action[0])")
+//                            }
+//                        } completion: { isTrue5 in
+//                            UIView.animate(withDuration: 1, delay: 0) {
+//                                if self.action.count >= 6 {
+//                                    self.move(direction: "\(self.action[5])")
+//                                }else {
+//                                    self.move(direction: "\(self.action[0])")
+//                                }
+//                            } completion: { isTrue6 in
+//                                UIView.animate(withDuration: 1, delay: 0) {
+//                                    if self.action.count >= 7 {
+//                                        self.move(direction: "\(self.action[6])")
+//                                    }else {
+//                                        self.move(direction: "\(self.action[0])")
+//                                    }
+//                                } completion: { isTrue7 in
+//                                    UIView.animate(withDuration: 1, delay: 0) {
+//                                        if self.action.count >= 8 {
+//                                            self.move(direction: "\(self.action[7])")
+//                                        }else {
+//                                            self.move(direction: "\(self.action[0])")
+//                                        }
+//                                    } completion: { isTrue8 in
+//                                        UIView.animate(withDuration: 1, delay: 0) {
+//                                            if self.action.count >= 9 {
+//                                                self.move(direction: "\(self.action[8])")
+//                                            }else {
+//                                                self.move(direction: "\(self.action[0])")
+//                                            }
+//                                        }
+//                                    }
+//                                }
+//                            }
+//                        }
+//                    }
+//                }
+//            }
+//        }
+//    }
+    
+// MARK: -Created button
+    
+    @IBAction func forwardAction(_ sender: Any) {
+        action.append("forward")
+        actionBox.append("Maju")
+        
+        tableView.reloadData()
+        
+    }
+    @IBAction func leftAction(_ sender: Any) {
+        action.append("left")
+        actionBox.append("Balik Kiri")
+        
+        tableView.reloadData()
+        
+//        addActionImage()
+    }
+    @IBAction func rightAction(_ sender: Any) {
+        action.append("right")
+        actionBox.append("Balik Kanan")
+        
+        tableView.reloadData()
+        
+//        addActionImage()
+    }
+    @IBAction func trashAction(_ sender: Any) {
+        robot?.image = UIImage(named: "2.png")
+        action.removeAll()
+        action.append("kosong")
+        actionBox.removeAll()
+        actionBox.append("")
+        
+        tableView.reloadData()
+        robot?.frame = a1loc
+        
+        runButton.isEnabled = true
+    }
+    @IBAction func runAction(_ sender: Any) {
+        
+        runButton.isEnabled = false
+//        self.robot?.frame = a1loc
+//        robot?.image = UIImage(named: "2.png")
+        
         UIView.animate(withDuration: 1, delay: 0) {
             self.move(direction: "\(self.action[0])")
         } completion: { isTrue in
@@ -206,6 +323,11 @@ class LevelTigaVC: UIViewController {
                                             }else {
                                                 self.move(direction: "\(self.action[0])")
                                             }
+                                        } completion: { isTrue9 in
+                                            UIView.animate(withDuration: 1, delay: 0) {
+                                                self.finishPoint()
+                                                
+                                            }
                                         }
                                     }
                                 }
@@ -215,55 +337,7 @@ class LevelTigaVC: UIViewController {
                 }
             }
         }
-    }
-    
-// MARK: -Created button
-    
-    @IBAction func forwardAction(_ sender: Any) {
-        action.append("forward")
-        actionBox.append("Maju")
-        
-        tableView.reloadData()
-        
-    }
-    @IBAction func leftAction(_ sender: Any) {
-        action.append("left")
-        actionBox.append("Balik Kiri")
-        
-        tableView.reloadData()
-        
-//        addActionImage()
-    }
-    @IBAction func rightAction(_ sender: Any) {
-        action.append("right")
-        actionBox.append("Balik Kanan")
-        
-        tableView.reloadData()
-        
-//        addActionImage()
-    }
-    @IBAction func trashAction(_ sender: Any) {
-        robot?.image = UIImage(named: "2.png")
-        action.removeAll()
-        action.append("kosong")
-        actionBox.removeAll()
-        actionBox.append("")
-        
-        tableView.reloadData()
-        robot?.frame = a1loc
-    }
-    @IBAction func runAction(_ sender: Any) {
-        
-//        runMove()
-//
-//        if robot?.frame == c1loc {
-//            print("robot in c3")
-//
-//        }else {
-//            self.robot?.frame = a1loc
-//            robot?.image = UIImage(named: "2.png")
-//            print("no point")
-//        }
+            
         
        
         
