@@ -366,5 +366,29 @@ class LevelTwoVC: UIViewController {
         checkPoint()
         print("kanan")
     }
+    
+    func routeToFalse() {
+        guard let window = UIApplication.shared.keyWindow else { return }
+        let falseVC = arFailedVC()
+        UIView.transition(with: window, duration: 0.3, options: .transitionCrossDissolve, animations: { [weak window] in
+            window?.rootViewController = falseVC
+        }, completion: nil)
+    }
+    
+    func routeToMain() {
+        guard let window = UIApplication.shared.keyWindow else { return }
+        let mainVC = arMainVC()
+        UIView.transition(with: window, duration: 0.3, options: .transitionCrossDissolve, animations: { [weak window] in
+            window?.rootViewController = mainVC
+        }, completion: nil)
+    }
+    
+    func routeToSucces() {
+        guard let window = UIApplication.shared.keyWindow else { return }
+        let succedVC = arSuccesVC()
+        UIView.transition(with: window, duration: 0.3, options: .transitionCrossDissolve, animations: { [weak window] in
+            window?.rootViewController = succedVC
+        }, completion: nil)
+    }
 
 }

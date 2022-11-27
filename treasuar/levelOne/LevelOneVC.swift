@@ -12,10 +12,12 @@ import RealityKit
 class LevelOneVC: UIViewController {
     
     @IBOutlet var arView: ARView!
+    @IBOutlet var popUp: UIImageView!
     
     var robotEntity: Entity?
     var toyEntity: Entity?
     var startEntity: Entity?
+    
     
     var moveToLocation: Transform = Transform()
     var moveDuration: Double = 2.00
@@ -77,9 +79,7 @@ class LevelOneVC: UIViewController {
         //add button
         createdButton()
         
-        move(direction: "")
-        
-        checkPoint()
+        self.popUp.alpha = 0
     }
     
     @objc
@@ -155,7 +155,6 @@ class LevelOneVC: UIViewController {
     
     func move (direction: String) {
         
-    
         
         switch direction {
             
@@ -164,13 +163,18 @@ class LevelOneVC: UIViewController {
             
             moveToLocation.translation = (robotEntity?.transform.translation)! + simd_float3 (x: 0, y: 0, z: 20)
             robotEntity?.move(to: moveToLocation, relativeTo: robotEntity, duration: moveDuration)
+            
+            
             walkAnimation(moveDuration: moveDuration)
+            
+            
             
             
             case "left":
             //create sudut berputar
             let rotateAngle = simd_quatf(angle: GLKMathDegreesToRadians(90), axis: SIMD3(x: 0, y: 1, z: 0))
             robotEntity?.setOrientation(rotateAngle, relativeTo: robotEntity)
+            
             
             
             case "right":
@@ -218,11 +222,15 @@ class LevelOneVC: UIViewController {
             robotEntity.position = ((startEntity?.position)! + b1pos)
             print("robot in b1")
         }else if roundedValue1 == 0.0 && roundedValue2 == 0.4 {
-            routeToSucces()
+            UIView.animate(withDuration: 2.0, delay: 0, options: UIView.AnimationOptions.showHideTransitionViews, animations: { () -> Void in
+                 self.popUp.alpha = 1
+                 }, completion: { (Bool) -> Void in    }
+            )
+//            routeToSucces()
             robotEntity.position = ((startEntity?.position)! + c1pos)
             print("robot in c1")
         }else {
-            routeToFalse()
+//            routeToFalse()
             print("no point")
         }
         
@@ -263,7 +271,7 @@ class LevelOneVC: UIViewController {
         
         move(direction: "forward")
         checkPoint()
-        print("maju")
+         
     }
     @objc func kiriAction(sender: UIButton!) {
         move(direction: "left")

@@ -11,7 +11,6 @@ class ViewController: UIViewController {
 
     @IBOutlet var buttonSatu: UIButton!
     @IBOutlet var buttonDua: UIButton!
-    @IBOutlet var buttonTiga: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,13 +32,6 @@ class ViewController: UIViewController {
         }, completion: nil)
     }
     
-    func routeToLevelThree() {
-        guard let window = UIApplication.shared.keyWindow else { return }
-        let levelTigaVC = LevelTigaVC()
-        UIView.transition(with: window, duration: 0.3, options: .transitionCrossDissolve, animations: { [weak window] in
-            window?.rootViewController = levelTigaVC
-        }, completion: nil)
-    }
     
     @IBAction func oneAction(_ sender: Any) {
         routeToLevelOne()
@@ -47,9 +39,7 @@ class ViewController: UIViewController {
     @IBAction func twoAction(_ sender: Any) {
         routeToLevelTwo()
     }
-    @IBAction func threeAction(_ sender: Any) {
-        routeToLevelThree()
-    }
+    
     
 
 
