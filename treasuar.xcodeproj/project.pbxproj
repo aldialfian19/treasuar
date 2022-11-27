@@ -11,6 +11,10 @@
 		CB65D409292FA4900040FF8A /* LevelTigaVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB65D407292FA4900040FF8A /* LevelTigaVC.xib */; };
 		CB65D4142930FA2C0040FF8A /* LevelTigaCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB65D4122930FA2C0040FF8A /* LevelTigaCell.swift */; };
 		CB65D4152930FA2C0040FF8A /* LevelTigaCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB65D4132930FA2C0040FF8A /* LevelTigaCell.xib */; };
+		CB65D41829334F770040FF8A /* successVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB65D41629334F770040FF8A /* successVC.swift */; };
+		CB65D41929334F770040FF8A /* successVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB65D41729334F770040FF8A /* successVC.xib */; };
+		CB65D41C293354350040FF8A /* mainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB65D41A293354350040FF8A /* mainVC.swift */; };
+		CB65D41D293354350040FF8A /* mainVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB65D41B293354350040FF8A /* mainVC.xib */; };
 		CBAF6593292E339E0017B554 /* LevelSatuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBAF6591292E339E0017B554 /* LevelSatuVC.swift */; };
 		CBAF6594292E339E0017B554 /* LevelSatuVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBAF6592292E339E0017B554 /* LevelSatuVC.xib */; };
 		CBAF6597292F232B0017B554 /* LevelDuaVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBAF6595292F232B0017B554 /* LevelDuaVC.swift */; };
@@ -68,6 +72,10 @@
 		CB65D407292FA4900040FF8A /* LevelTigaVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LevelTigaVC.xib; sourceTree = "<group>"; };
 		CB65D4122930FA2C0040FF8A /* LevelTigaCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelTigaCell.swift; sourceTree = "<group>"; };
 		CB65D4132930FA2C0040FF8A /* LevelTigaCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LevelTigaCell.xib; sourceTree = "<group>"; };
+		CB65D41629334F770040FF8A /* successVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = successVC.swift; sourceTree = "<group>"; };
+		CB65D41729334F770040FF8A /* successVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = successVC.xib; sourceTree = "<group>"; };
+		CB65D41A293354350040FF8A /* mainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mainVC.swift; sourceTree = "<group>"; };
+		CB65D41B293354350040FF8A /* mainVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = mainVC.xib; sourceTree = "<group>"; };
 		CBAF6591292E339E0017B554 /* LevelSatuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelSatuVC.swift; sourceTree = "<group>"; };
 		CBAF6592292E339E0017B554 /* LevelSatuVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LevelSatuVC.xib; sourceTree = "<group>"; };
 		CBAF6595292F232B0017B554 /* LevelDuaVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelDuaVC.swift; sourceTree = "<group>"; };
@@ -251,6 +259,8 @@
 			children = (
 				CBB411B029291921009881DD /* buttonVc.swift */,
 				CBB411B129291921009881DD /* buttonVc.xib */,
+				CB65D41A293354350040FF8A /* mainVC.swift */,
+				CB65D41B293354350040FF8A /* mainVC.xib */,
 			);
 			path = button;
 			sourceTree = "<group>";
@@ -260,6 +270,8 @@
 			children = (
 				CBB411B629294623009881DD /* Popup.swift */,
 				CBB411B729294623009881DD /* Popup.xib */,
+				CB65D41629334F770040FF8A /* successVC.swift */,
+				CB65D41729334F770040FF8A /* successVC.xib */,
 			);
 			path = failedScreen;
 			sourceTree = "<group>";
@@ -380,6 +392,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CB65D409292FA4900040FF8A /* LevelTigaVC.xib in Resources */,
+				CB65D41D293354350040FF8A /* mainVC.xib in Resources */,
 				CBB4118829280B37009881DD /* toy.usdz in Resources */,
 				CBB4118A29280B37009881DD /* merah.usdz in Resources */,
 				CBB411A129290823009881DD /* LevelThreeVC.xib in Resources */,
@@ -389,6 +402,7 @@
 				CBAF6594292E339E0017B554 /* LevelSatuVC.xib in Resources */,
 				CBB4116129280A6F009881DD /* LaunchScreen.storyboard in Resources */,
 				CBB4115E29280A6F009881DD /* Assets.xcassets in Resources */,
+				CB65D41929334F770040FF8A /* successVC.xib in Resources */,
 				CBB411B329291921009881DD /* buttonVc.xib in Resources */,
 				CBAF6598292F232B0017B554 /* LevelDuaVC.xib in Resources */,
 				CBB4119D292907EA009881DD /* LevelTwoVC.xib in Resources */,
@@ -433,10 +447,12 @@
 				CBB411A82929086A009881DD /* LevelFiveVC.swift in Sources */,
 				CBB4115229280A6E009881DD /* AppDelegate.swift in Sources */,
 				CBB411A029290823009881DD /* LevelThreeVC.swift in Sources */,
+				CB65D41829334F770040FF8A /* successVC.swift in Sources */,
 				CBB411A42929083D009881DD /* LevelFourVC.swift in Sources */,
 				CBB411B829294623009881DD /* Popup.swift in Sources */,
 				CB65D408292FA4900040FF8A /* LevelTigaVC.swift in Sources */,
 				CBB4115429280A6E009881DD /* SceneDelegate.swift in Sources */,
+				CB65D41C293354350040FF8A /* mainVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

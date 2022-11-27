@@ -91,8 +91,24 @@ class LevelSatuVC: UIViewController {
         self.view.addSubview(robot!)
         self.view.bringSubviewToFront(robot!)
         
+        //instruksi
         self.view.addSubview(majuInstruksi!)
         self.view.bringSubviewToFront(majuInstruksi!)
+        
+        //obstacle
+        let a2Obs = UIImageView(image: UIImage(named: "obstacle.png")!)
+        a2Obs.frame = a2loc
+        self.view.addSubview(a2Obs)
+        
+        let b2Obs = UIImageView(image: UIImage(named: "obstacle.png")!)
+        b2Obs.frame = b2loc
+        self.view.addSubview(b2Obs)
+        
+        
+        //treasure
+        let treasure = UIImageView(image: UIImage(named: "treasure.png")!)
+        treasure.frame = c1loc
+        self.view.addSubview(treasure)
         
     }
     func removeImage() {
@@ -120,6 +136,12 @@ class LevelSatuVC: UIViewController {
                 UIView.animate(
                     withDuration: 2, delay: 0, usingSpringWithDamping: 1.9, initialSpringVelocity: 3.0, options: [], animations: {
                         self.robot?.transform = (self.robot?.transform.translatedBy(x: 180, y: 0))!
+                        
+                    })
+            }else if self.robot?.image == UIImage(named: "3.png") {
+                UIView.animate(
+                    withDuration: 2, delay: 0, usingSpringWithDamping: 1.9, initialSpringVelocity: 3.0, options: [], animations: {
+                        self.robot?.transform = (self.robot?.transform.translatedBy(x: -180, y: 0))!
                         
                     })
             }
@@ -179,6 +201,7 @@ class LevelSatuVC: UIViewController {
     }
     
     @IBAction func homeAction(_ sender: Any) {
+        routeToMain()
     }
     
     //MARK: -Checkpoint
@@ -197,12 +220,10 @@ class LevelSatuVC: UIViewController {
             routeToFalse()
             print("robot in b2")
         }else if robotPosition == c1loc{
+            routeToSucces()
             print("robot in c1")
-        }else if robotPosition == c2loc{
-            print("robot in c2")
-        }else if robotPosition == c3loc{
-            print("robot in c3")
         }else {
+            routeToFalse()
             print("no point")
         }
     }
@@ -212,6 +233,21 @@ class LevelSatuVC: UIViewController {
         let falseVC = Popup()
         UIView.transition(with: window, duration: 0.3, options: .transitionCrossDissolve, animations: { [weak window] in
             window?.rootViewController = falseVC
+        }, completion: nil)
+    }
+    func routeToMain() {
+        guard let window = UIApplication.shared.keyWindow else { return }
+        let mainVC = mainVC()
+        UIView.transition(with: window, duration: 0.3, options: .transitionCrossDissolve, animations: { [weak window] in
+            window?.rootViewController = mainVC
+        }, completion: nil)
+    }
+    
+    func routeToSucces() {
+        guard let window = UIApplication.shared.keyWindow else { return }
+        let succedVC = successVC()
+        UIView.transition(with: window, duration: 0.3, options: .transitionCrossDissolve, animations: { [weak window] in
+            window?.rootViewController = succedVC
         }, completion: nil)
     }
     

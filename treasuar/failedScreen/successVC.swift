@@ -1,23 +1,22 @@
 //
-//  Popup.swift
+//  successVC.swift
 //  treasuar
 //
-//  Created by Rinaldi Alfian on 20/11/22.
+//  Created by Rinaldi Alfian on 27/11/22.
 //
 
 import UIKit
 
-class Popup: UIViewController {
-    @IBOutlet var popupButton: UIButton!
-    @IBOutlet var popupImage: UIImageView!
-    
+class successVC: UIViewController {
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
 
+        // Do any additional setup after loading the view.
     }
 
-    @IBAction func mainButton(_ sender: Any) {
+
+    @IBAction func mainAction(_ sender: Any) {
         routeToMain()
     }
     
@@ -28,4 +27,6 @@ class Popup: UIViewController {
             window?.rootViewController = mainVC
         }, completion: nil)
     }
+    
+
 }

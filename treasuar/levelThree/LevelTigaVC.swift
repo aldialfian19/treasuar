@@ -39,6 +39,9 @@ class LevelTigaVC: UIViewController {
         move(direction: "")
         updateTable()
         
+        
+        
+        
 //        runButton.isExclusiveTouch = false
 //        addActionImage()
 
@@ -91,7 +94,24 @@ class LevelTigaVC: UIViewController {
         self.view.addSubview(robot!)
         self.view.bringSubviewToFront(robot!)
         
+        //obstacle
+        let a2Obs = UIImageView(image: UIImage(named: "obstacle.png")!)
+        a2Obs.frame = a2loc
+        self.view.addSubview(a2Obs)
         
+        let c1Obs = UIImageView(image: UIImage(named: "obstacle.png")!)
+        c1Obs.frame = c1loc
+        self.view.addSubview(c1Obs)
+        
+        let b3Obs = UIImageView(image: UIImage(named: "obstacle.png")!)
+        b3Obs.frame = b3loc
+        self.view.addSubview(b3Obs)
+        
+        
+        //treasure
+        let treasure = UIImageView(image: UIImage(named: "treasure.png")!)
+        treasure.frame = c3loc
+        self.view.addSubview(treasure)
     }
     
     func addActionImage() {
@@ -114,6 +134,12 @@ class LevelTigaVC: UIViewController {
             }else if self.robot?.image == UIImage(named: "1.png") {
                 self.robot?.transform = (self.robot?.transform.translatedBy(x: 142.5, y: 0))!
                 
+            }else if self.robot?.image == UIImage(named: "3.png") {
+                UIView.animate(
+                    withDuration: 2, delay: 0, usingSpringWithDamping: 1.9, initialSpringVelocity: 3.0, options: [], animations: {
+                        self.robot?.transform = (self.robot?.transform.translatedBy(x: -180, y: 0))!
+                        
+                    })
             }
 
             
@@ -227,6 +253,7 @@ class LevelTigaVC: UIViewController {
         
         tableView.reloadData()
         
+        
     }
     @IBAction func leftAction(_ sender: Any) {
         action.append("left")
@@ -262,24 +289,23 @@ class LevelTigaVC: UIViewController {
 //        self.robot?.frame = a1loc
 //        robot?.image = UIImage(named: "2.png")
         
+        
         UIView.animate(withDuration: 1, delay: 0) {
-            self.move(direction: "\(self.action[0])")
+            if self.action.count >= 2 {
+                self.move(direction: "\(self.action[1])")
+            }else {
+                self.move(direction: "\(self.action[0])")
+            }
         } completion: { isTrue in
             UIView.animate(withDuration: 1, delay: 0) {
-                if self.action.count >= 2 {
-                    self.move(direction: "\(self.action[1])")
+                if self.action.count >= 3 {
+                    self.move(direction: "\(self.action[2])")
                 }else {
                     self.move(direction: "\(self.action[0])")
                 }
-
             } completion: { isTrue2 in
                 UIView.animate(withDuration: 1, delay: 0) {
-                    if self.action.count >= 3 {
-                        self.move(direction: "\(self.action[2])")
-                    }else {
-                        self.move(direction: "\(self.action[0])")
-                    }
-
+                    self.finishPoint()
                 } completion: { isTrue3 in
                     UIView.animate(withDuration: 1, delay: 0) {
                         if self.action.count >= 4 {
@@ -287,46 +313,64 @@ class LevelTigaVC: UIViewController {
                         }else {
                             self.move(direction: "\(self.action[0])")
                         }
-
                     } completion: { isTrue4 in
                         UIView.animate(withDuration: 1, delay: 0) {
-                            if self.action.count >= 5 {
-                                self.move(direction: "\(self.action[4])")
-                            }else {
-                                self.move(direction: "\(self.action[0])")
-                            }
+                            self.finishPoint()
                         } completion: { isTrue5 in
                             UIView.animate(withDuration: 1, delay: 0) {
-                                if self.action.count >= 6 {
-                                    self.move(direction: "\(self.action[5])")
+                                if self.action.count >= 5 {
+                                    self.move(direction: "\(self.action[4])")
                                 }else {
                                     self.move(direction: "\(self.action[0])")
                                 }
                             } completion: { isTrue6 in
                                 UIView.animate(withDuration: 1, delay: 0) {
-                                    if self.action.count >= 7 {
-                                        self.move(direction: "\(self.action[6])")
-                                    }else {
-                                        self.move(direction: "\(self.action[0])")
-                                    }
+                                    self.finishPoint()
                                 } completion: { isTrue7 in
                                     UIView.animate(withDuration: 1, delay: 0) {
-                                        if self.action.count >= 8 {
-                                            self.move(direction: "\(self.action[7])")
+                                        if self.action.count >= 6 {
+                                            self.move(direction: "\(self.action[5])")
                                         }else {
                                             self.move(direction: "\(self.action[0])")
                                         }
                                     } completion: { isTrue8 in
                                         UIView.animate(withDuration: 1, delay: 0) {
-                                            if self.action.count >= 9 {
-                                                self.move(direction: "\(self.action[8])")
-                                            }else {
-                                                self.move(direction: "\(self.action[0])")
-                                            }
+                                            self.finishPoint()
                                         } completion: { isTrue9 in
                                             UIView.animate(withDuration: 1, delay: 0) {
-                                                self.finishPoint()
-                                                
+                                                if self.action.count >= 7 {
+                                                    self.move(direction: "\(self.action[6])")
+                                                }else {
+                                                    self.move(direction: "\(self.action[0])")
+                                                }
+                                            } completion: { isTrue10 in
+                                                UIView.animate(withDuration: 1, delay: 0) {
+                                                    self.finishPoint()
+                                                } completion: { isTrue11 in
+                                                    UIView.animate(withDuration: 1, delay: 0) {
+                                                        if self.action.count >= 8 {
+                                                            self.move(direction: "\(self.action[7])")
+                                                        }else {
+                                                            self.move(direction: "\(self.action[0])")
+                                                        }
+                                                    } completion: { isTrue12 in
+                                                        UIView.animate(withDuration: 1, delay: 0) {
+                                                            self.finishPoint()
+                                                        } completion: { isTrue13 in
+                                                            UIView.animate(withDuration: 1, delay: 0) {
+                                                                if self.action.count >= 9 {
+                                                                    self.move(direction: "\(self.action[8])")
+                                                                }else {
+                                                                    self.move(direction: "\(self.action[0])")
+                                                                }
+                                                            } completion: { isTrue14 in
+                                                                UIView.animate(withDuration: 1, delay: 0) {
+                                                                    self.finishPoint()
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
                                             }
                                         }
                                     }
@@ -337,32 +381,41 @@ class LevelTigaVC: UIViewController {
                 }
             }
         }
-            
-        
-       
-        
+
         
     }
     @IBAction func homeAction(_ sender: Any) {
+        routeToMain()
     }
     
     //MARK: -checkpoint
     func finishPoint() {
         let robotPosition = robot?.frame
         
-        if robotPosition == c3loc {
+        if robotPosition == a1loc {
+            print("robot in a1")
+        }else if robotPosition == a2loc{
+            routeToFalse()
+            print("robot in a2")
+        }else if robotPosition == a3loc{
+            print("robot in a3")
+        }else if robotPosition == b1loc{
+            print("robot in b1")
+        }else if robotPosition == b2loc{
+            print("robot in b2")
+        }else if robotPosition == b3loc{
+            routeToFalse()
+            print("robot in b3")
+        }else if robotPosition == c1loc{
+            routeToFalse()
+            print("robot in c1")
+        }else if robotPosition == c2loc{
+            print("robot in c2")
+        }else if robotPosition == c3loc{
+            routeToSucces()
             print("robot in c3")
-        }else if robotPosition == a2loc {
-            routeToFalse()
-            print("obstacle point")
-        }else if robotPosition == c1loc {
-            routeToFalse()
-            print("obstacle point")
-        }else if robotPosition == b3loc {
-            routeToFalse()
-            print("obstacle point")
         }else {
-            
+            routeToFalse()
         }
     }
     
@@ -375,6 +428,22 @@ class LevelTigaVC: UIViewController {
         }, completion: nil)
     }
     
+    func routeToMain() {
+        guard let window = UIApplication.shared.keyWindow else { return }
+        let mainVC = mainVC()
+        UIView.transition(with: window, duration: 0.3, options: .transitionCrossDissolve, animations: { [weak window] in
+            window?.rootViewController = mainVC
+        }, completion: nil)
+    }
+    
+    func routeToSucces() {
+        guard let window = UIApplication.shared.keyWindow else { return }
+        let succedVC = successVC()
+        UIView.transition(with: window, duration: 0.3, options: .transitionCrossDissolve, animations: { [weak window] in
+            window?.rootViewController = succedVC
+        }, completion: nil)
+    }
+    
     //MARK: -Update cell
     
     func updateTable() {
@@ -383,6 +452,7 @@ class LevelTigaVC: UIViewController {
         tableView.register(UINib(nibName: "LevelTigaCell", bundle: nil), forCellReuseIdentifier: "cell")
     }
 }
+
 
 extension LevelTigaVC: UITableViewDataSource, UITableViewDelegate {
     

@@ -94,6 +94,25 @@ class LevelDuaVC: UIViewController {
         
         self.view.addSubview(kananInstruksi!)
         self.view.bringSubviewToFront(kananInstruksi!)
+        
+        //obstacle
+        let a2Obs = UIImageView(image: UIImage(named: "obstacle.png")!)
+        a2Obs.frame = a2loc
+        self.view.addSubview(a2Obs)
+        
+        let c1Obs = UIImageView(image: UIImage(named: "obstacle.png")!)
+        c1Obs.frame = c1loc
+        self.view.addSubview(c1Obs)
+        
+        let b3Obs = UIImageView(image: UIImage(named: "obstacle.png")!)
+        b3Obs.frame = b3loc
+        self.view.addSubview(b3Obs)
+        
+        
+        //treasure
+        let treasure = UIImageView(image: UIImage(named: "treasure.png")!)
+        treasure.frame = c3loc
+        self.view.addSubview(treasure)
     }
     func hiddenImage() {
         kiriInstruksi.isHidden = true
@@ -120,6 +139,12 @@ class LevelDuaVC: UIViewController {
                 UIView.animate(
                     withDuration: 2, delay: 0, usingSpringWithDamping: 1.9, initialSpringVelocity: 3.0, options: [], animations: {
                         self.robot?.transform = (self.robot?.transform.translatedBy(x: 180, y: 0))!
+                        
+                    })
+            }else if self.robot?.image == UIImage(named: "3.png") {
+                UIView.animate(
+                    withDuration: 2, delay: 0, usingSpringWithDamping: 1.9, initialSpringVelocity: 3.0, options: [], animations: {
+                        self.robot?.transform = (self.robot?.transform.translatedBy(x: -180, y: 0))!
                         
                     })
             }
@@ -153,6 +178,7 @@ class LevelDuaVC: UIViewController {
     
     
     @IBAction func forwardAction(_ sender: Any) {
+        hiddenImage()
         UIView.animate(withDuration: 1, delay: 0) {
             self.move(direction: "forward")
         } completion: { isTrue in
@@ -178,6 +204,7 @@ class LevelDuaVC: UIViewController {
     }
     
     @IBAction func homeAction(_ sender: Any) {
+        routeToMain()
     }
     
     
@@ -203,14 +230,15 @@ class LevelDuaVC: UIViewController {
             routeToFalse()
             print("robot in b3")
         }else if robotPosition == c1loc{
+            routeToFalse()
             print("robot in c1")
         }else if robotPosition == c2loc{
             print("robot in c2")
         }else if robotPosition == c3loc{
-            routeToFalse()
+            routeToSucces()
             print("robot in c3")
         }else {
-            print("no point")
+            routeToFalse()
         }
     }
     func routeToFalse() {
@@ -218,6 +246,22 @@ class LevelDuaVC: UIViewController {
         let falseVC = Popup()
         UIView.transition(with: window, duration: 0.3, options: .transitionCrossDissolve, animations: { [weak window] in
             window?.rootViewController = falseVC
+        }, completion: nil)
+    }
+    
+    func routeToMain() {
+        guard let window = UIApplication.shared.keyWindow else { return }
+        let mainVC = mainVC()
+        UIView.transition(with: window, duration: 0.3, options: .transitionCrossDissolve, animations: { [weak window] in
+            window?.rootViewController = mainVC
+        }, completion: nil)
+    }
+    
+    func routeToSucces() {
+        guard let window = UIApplication.shared.keyWindow else { return }
+        let succedVC = successVC()
+        UIView.transition(with: window, duration: 0.3, options: .transitionCrossDissolve, animations: { [weak window] in
+            window?.rootViewController = succedVC
         }, completion: nil)
     }
     
