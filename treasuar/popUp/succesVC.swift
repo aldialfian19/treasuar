@@ -1,5 +1,5 @@
 //
-//  successVC.swift
+//  succesVC.swift
 //  treasuar
 //
 //  Created by Rinaldi Alfian on 27/11/22.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class successVC: UIViewController {
+class succesVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -15,10 +15,13 @@ class successVC: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-
+    @IBAction func nextAction(_ sender: Any) {
+    }
+    
     @IBAction func mainAction(_ sender: Any) {
         routeToMain()
     }
+    
     
     func routeToMain() {
         guard let window = UIApplication.shared.keyWindow else { return }
@@ -27,6 +30,5 @@ class successVC: UIViewController {
             window?.rootViewController = mainVC
         }, completion: nil)
     }
-    
 
 }

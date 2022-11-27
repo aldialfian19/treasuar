@@ -230,7 +230,7 @@ class LevelSatuVC: UIViewController {
     
     func routeToFalse() {
         guard let window = UIApplication.shared.keyWindow else { return }
-        let falseVC = Popup()
+        let falseVC = failedVC()
         UIView.transition(with: window, duration: 0.3, options: .transitionCrossDissolve, animations: { [weak window] in
             window?.rootViewController = falseVC
         }, completion: nil)
@@ -245,7 +245,7 @@ class LevelSatuVC: UIViewController {
     
     func routeToSucces() {
         guard let window = UIApplication.shared.keyWindow else { return }
-        let succedVC = successVC()
+        let succedVC = succesVC()
         UIView.transition(with: window, duration: 0.3, options: .transitionCrossDissolve, animations: { [weak window] in
             window?.rootViewController = succedVC
         }, completion: nil)
