@@ -288,29 +288,31 @@ class LevelTwoVC: UIViewController {
     
     // cek posisi robot
     func checkPoint(){
-        let b1check = (startEntity?.position)! + b1pos
-        let c1check = (startEntity?.position)! + c1pos
-        let c2check = (startEntity?.position)! + c2pos
-        let c3check = (startEntity?.position)! + c3pos
         
-        print("a2cek\(b1check)")
-        print("ini \((robotEntity?.position)!)")
-        
-        if (robotEntity?.position)! == b1check{
-            print("robot position at b1")
-            
-        }else if (robotEntity?.position)! == c1check{
-            print("robot position at c1")
-            
-        }else if (robotEntity?.position)! == c2check{
-            print("robot position at c2")
-            
-        }else if (robotEntity?.position)! == c3check{
-            print("robot position at c3")
-            
-        }else {
-            print("No Point")
+        guard let robotEntity = robotEntity else {
+            return
         }
+        let roundedValue1 = (robotEntity.position.x * 10).rounded() / 10
+        let roundedValue2 = (robotEntity.position.z * 10).rounded() / 10
+        
+        if roundedValue1 == 0.0 && roundedValue2 == 0.0{
+            print("robot in a1")
+        }else if roundedValue1 == 0.0 && roundedValue2 == 0.2 {
+            print("robot in b1")
+        }else if roundedValue1 == 0.2 && roundedValue2 == 0.2 {
+            print("robot in b2")
+        }else if roundedValue1 == 0.2 && roundedValue2 == 0.4 {
+            print("robot in c2")
+        }else if roundedValue1 == 0.4 && roundedValue2 == 0.0 {
+            print("robot in a3")
+        }else if roundedValue1 == 0.4 && roundedValue2 == 0.4 {
+            print("robot in c3")
+        }else {
+            routeToFalse()
+            print("no point")
+        }
+        
+        
     }
     
     //MARK: -Create Button
@@ -323,11 +325,6 @@ class LevelTwoVC: UIViewController {
         maju.setTitle("maju", for: .normal)
         maju.addTarget(self, action: #selector(majuAction), for: .touchUpInside)
         
-//        let mundur = UIButton(type: .system)
-//        mundur.frame = CGRect(x: 90, y: 300, width: 80, height: 50)
-//        mundur.backgroundColor = .blue
-//        mundur.setTitle("mundur", for: .normal)
-//        mundur.addTarget(self, action: #selector(mundurAction), for: .touchUpInside)
         
         let kiri = UIButton(type: .system)
         kiri.frame = CGRect(x: 180, y: 300, width: 80, height: 50)
@@ -344,7 +341,6 @@ class LevelTwoVC: UIViewController {
         
         
         self.view.addSubview(maju)
-//        self.view.addSubview(mundur)
         self.view.addSubview(kiri)
         self.view.addSubview(kanan)
     }

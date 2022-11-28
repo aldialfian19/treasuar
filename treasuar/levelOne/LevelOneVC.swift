@@ -210,6 +210,11 @@ class LevelOneVC: UIViewController {
         }
     }
     
+    func delay(_ delay:Double, closure:@escaping () -> ()) {
+        let when = DispatchTime.now() + delay
+        DispatchQueue.main.asyncAfter(deadline: when, execute: closure)
+    }
+    
     //MARK: - cek posisi robot
     func checkPoint(){
         
@@ -225,15 +230,12 @@ class LevelOneVC: UIViewController {
             robotEntity.position = ((startEntity?.position)! + b1pos)
             print("robot in b1")
         }else if roundedValue1 == 0.0 && roundedValue2 == 0.4 {
-            UIView.animate(withDuration: 2.0, delay: 0, options: UIView.AnimationOptions.showHideTransitionViews, animations: { () -> Void in
-                 self.popUp.alpha = 1
-                 }, completion: { (Bool) -> Void in    }
-            )
-//            routeToSucces()
+            
+            routeToSucces()
             robotEntity.position = ((startEntity?.position)! + c1pos)
             print("robot in c1")
         }else {
-//            routeToFalse()
+            routeToFalse()
             print("no point")
         }
         
@@ -272,18 +274,9 @@ class LevelOneVC: UIViewController {
     
     @objc func majuAction(sender: UIButton!) {
         
-        UIView.animate(withDuration: 1, delay: 0) { [self] in
-            moveToLocation.translation = (robotEntity?.transform.translation)! + simd_float3 (x: 0, y: 0, z: 20)
-            robotEntity?.move(to: moveToLocation, relativeTo: robotEntity, duration: moveDuration)
-            walkAnimation(moveDuration: moveDuration)
-        } completion: { isTrue in
-            UIView.animate(withDuration: 1, delay: 1.5) { [self] in
-                moveToLocation.translation = (robotEntity?.transform.translation)! + simd_float3 (x: 0, y: 0, z: 20)
-                robotEntity?.move(to: moveToLocation, relativeTo: robotEntity, duration: moveDuration)
-                walkAnimation(moveDuration: moveDuration)
-                
-                print("\(isTrue)")
-            }
+       move(direction: "forward")
+        delay(4.5) {
+            self.checkPoint()
         }
         
         
@@ -304,7 +297,7 @@ class LevelOneVC: UIViewController {
     func routeToFalse() {
         guard let window = UIApplication.shared.keyWindow else { return }
         let falseVC = arFailedVC()
-        UIView.transition(with: window, duration: 0.3, options: .transitionCrossDissolve, animations: { [weak window] in
+        UIView.transition(with: window, duration: 0.1, options: .transitionCrossDissolve, animations: { [weak window] in
             window?.rootViewController = falseVC
         }, completion: nil)
     }
