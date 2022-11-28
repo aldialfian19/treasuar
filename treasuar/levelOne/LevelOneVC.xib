@@ -11,6 +11,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LevelOneVC" customModule="treasuar" customModuleProvider="target">
             <connections>
                 <outlet property="arView" destination="62j-0Z-BgN" id="ncZ-dW-lVi"/>
+                <outlet property="popUp" destination="Qjd-rp-WTl" id="qHK-9k-ILP"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -22,6 +23,10 @@
                 <arView multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="62j-0Z-BgN">
                     <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                 </arView>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Onboarding" translatesAutoresizingMaskIntoConstraints="NO" id="Qjd-rp-WTl">
+                    <rect key="frame" x="41" y="335" width="332" height="237"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -31,10 +36,11 @@
                 <constraint firstItem="62j-0Z-BgN" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="dY6-lD-iaz"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="62j-0Z-BgN" secondAttribute="trailing" id="jom-Zw-rHD"/>
             </constraints>
-            <point key="canvasLocation" x="139" y="80"/>
+            <point key="canvasLocation" x="137.68115942028987" y="79.6875"/>
         </view>
     </objects>
     <resources>
+        <image name="Onboarding" width="1366" height="1024"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
