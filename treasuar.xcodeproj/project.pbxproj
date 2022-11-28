@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CB564D5C2934899100460BEF /* mainnVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB564D5B2934899100460BEF /* mainnVC.swift */; };
+		CB564D5E293489A500460BEF /* mainnVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB564D5D293489A500460BEF /* mainnVC.storyboard */; };
 		CB65D408292FA4900040FF8A /* LevelTigaVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB65D406292FA4900040FF8A /* LevelTigaVC.swift */; };
 		CB65D409292FA4900040FF8A /* LevelTigaVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB65D407292FA4900040FF8A /* LevelTigaVC.xib */; };
 		CB65D4142930FA2C0040FF8A /* LevelTigaCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB65D4122930FA2C0040FF8A /* LevelTigaCell.swift */; };
@@ -74,6 +76,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CB564D5B2934899100460BEF /* mainnVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mainnVC.swift; sourceTree = "<group>"; };
+		CB564D5D293489A500460BEF /* mainnVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = mainnVC.storyboard; sourceTree = "<group>"; };
 		CB65D406292FA4900040FF8A /* LevelTigaVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelTigaVC.swift; sourceTree = "<group>"; };
 		CB65D407292FA4900040FF8A /* LevelTigaVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LevelTigaVC.xib; sourceTree = "<group>"; };
 		CB65D4122930FA2C0040FF8A /* LevelTigaCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelTigaCell.swift; sourceTree = "<group>"; };
@@ -298,6 +302,8 @@
 				CB65D41B293354350040FF8A /* mainVC.xib */,
 				CB65D430293394B50040FF8A /* arMainVC.swift */,
 				CB65D431293394B50040FF8A /* arMainVC.xib */,
+				CB564D5B2934899100460BEF /* mainnVC.swift */,
+				CB564D5D293489A500460BEF /* mainnVC.storyboard */,
 			);
 			path = button;
 			sourceTree = "<group>";
@@ -430,6 +436,7 @@
 				CBB4118929280B37009881DD /* robot.usdz in Resources */,
 				CBAF6594292E339E0017B554 /* LevelSatuVC.xib in Resources */,
 				CBB4116129280A6F009881DD /* LaunchScreen.storyboard in Resources */,
+				CB564D5E293489A500460BEF /* mainnVC.storyboard in Resources */,
 				CBB4115E29280A6F009881DD /* Assets.xcassets in Resources */,
 				CBB411B329291921009881DD /* buttonVc.xib in Resources */,
 				CBAF6598292F232B0017B554 /* LevelDuaVC.xib in Resources */,
@@ -474,6 +481,7 @@
 				CBB411B229291921009881DD /* buttonVc.swift in Sources */,
 				CBAF6597292F232B0017B554 /* LevelDuaVC.swift in Sources */,
 				CB65D42E2933940E0040FF8A /* arFailedVC.swift in Sources */,
+				CB564D5C2934899100460BEF /* mainnVC.swift in Sources */,
 				CBB4115629280A6E009881DD /* ViewController.swift in Sources */,
 				CBB411A82929086A009881DD /* LevelFiveVC.swift in Sources */,
 				CBB4115229280A6E009881DD /* AppDelegate.swift in Sources */,
