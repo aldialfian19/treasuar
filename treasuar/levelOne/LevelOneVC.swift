@@ -14,6 +14,8 @@ class LevelOneVC: UIViewController {
     @IBOutlet var arView: ARView!
     @IBOutlet var popUp: UIImageView!
     
+    var action = ["forward", "forward"]
+    
     var robotEntity: Entity?
     var toyEntity: Entity?
     var startEntity: Entity?
@@ -165,6 +167,7 @@ class LevelOneVC: UIViewController {
             robotEntity?.move(to: moveToLocation, relativeTo: robotEntity, duration: moveDuration)
             
             
+            
             walkAnimation(moveDuration: moveDuration)
             
             
@@ -269,13 +272,26 @@ class LevelOneVC: UIViewController {
     
     @objc func majuAction(sender: UIButton!) {
         
-        move(direction: "forward")
-        checkPoint()
+        UIView.animate(withDuration: 1, delay: 0) { [self] in
+            moveToLocation.translation = (robotEntity?.transform.translation)! + simd_float3 (x: 0, y: 0, z: 20)
+            robotEntity?.move(to: moveToLocation, relativeTo: robotEntity, duration: moveDuration)
+            walkAnimation(moveDuration: moveDuration)
+        } completion: { isTrue in
+            UIView.animate(withDuration: 1, delay: 1.5) { [self] in
+                moveToLocation.translation = (robotEntity?.transform.translation)! + simd_float3 (x: 0, y: 0, z: 20)
+                robotEntity?.move(to: moveToLocation, relativeTo: robotEntity, duration: moveDuration)
+                walkAnimation(moveDuration: moveDuration)
+                
+                print("\(isTrue)")
+            }
+        }
+        
+        
          
     }
     @objc func kiriAction(sender: UIButton!) {
         move(direction: "left")
-        checkPoint()
+        
         print("kiri")
     }
     @objc func kananAction(sender: UIButton!) {
