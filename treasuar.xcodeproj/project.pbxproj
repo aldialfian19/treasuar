@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		249CC8BD2935407C00457D0B /* Boldhead.otf in Resources */ = {isa = PBXBuildFile; fileRef = 249CC8BC2935407C00457D0B /* Boldhead.otf */; };
+		249CC8C02935ADF700457D0B /* ARVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249CC8BF2935ADF700457D0B /* ARVC.swift */; };
+		24AADE8D29347D9D0061C9FE /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AADE8B29347D9D0061C9FE /* MainVC.swift */; };
+		24AADE8E29347D9D0061C9FE /* MainVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24AADE8C29347D9D0061C9FE /* MainVC.xib */; };
 		CBB4115229280A6E009881DD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB4115129280A6E009881DD /* AppDelegate.swift */; };
 		CBB4115429280A6E009881DD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB4115329280A6E009881DD /* SceneDelegate.swift */; };
 		CBB4115629280A6E009881DD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB4115529280A6E009881DD /* ViewController.swift */; };
@@ -58,6 +62,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		249CC8BC2935407C00457D0B /* Boldhead.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Boldhead.otf; sourceTree = "<group>"; };
+		249CC8BF2935ADF700457D0B /* ARVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARVC.swift; sourceTree = "<group>"; };
+		24AADE8B29347D9D0061C9FE /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
+		24AADE8C29347D9D0061C9FE /* MainVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainVC.xib; sourceTree = "<group>"; };
 		CBB4114E29280A6E009881DD /* treasuar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = treasuar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBB4115129280A6E009881DD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CBB4115329280A6E009881DD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -120,6 +128,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		249CC8BB2935402400457D0B /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				249CC8BC2935407C00457D0B /* Boldhead.otf */,
+			);
+			path = fonts;
+			sourceTree = "<group>";
+		};
+		24AADE8A29347D890061C9FE /* MainVC */ = {
+			isa = PBXGroup;
+			children = (
+				24AADE8B29347D9D0061C9FE /* MainVC.swift */,
+				24AADE8C29347D9D0061C9FE /* MainVC.xib */,
+			);
+			path = MainVC;
+			sourceTree = "<group>";
+		};
 		CBB4114529280A6E009881DD = {
 			isa = PBXGroup;
 			children = (
@@ -143,6 +168,8 @@
 		CBB4115029280A6E009881DD /* treasuar */ = {
 			isa = PBXGroup;
 			children = (
+				249CC8BB2935402400457D0B /* fonts */,
+				24AADE8A29347D890061C9FE /* MainVC */,
 				CBB411952929076B009881DD /* 3D Asset */,
 				CBB4119429290728009881DD /* failedScreen */,
 				CBB411932929071F009881DD /* button */,
@@ -160,6 +187,7 @@
 				CBB4115F29280A6F009881DD /* LaunchScreen.storyboard */,
 				CBB4116229280A6F009881DD /* Info.plist */,
 				CBB4115A29280A6E009881DD /* treasuar.xcdatamodeld */,
+				249CC8BF2935ADF700457D0B /* ARVC.swift */,
 			);
 			path = treasuar;
 			sourceTree = "<group>";
@@ -361,11 +389,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24AADE8E29347D9D0061C9FE /* MainVC.xib in Resources */,
 				CBB4118829280B37009881DD /* toy.usdz in Resources */,
 				CBB4118A29280B37009881DD /* merah.usdz in Resources */,
 				CBB411A129290823009881DD /* LevelThreeVC.xib in Resources */,
 				CBB411B929294623009881DD /* Popup.xib in Resources */,
 				CBB41199292907AC009881DD /* LevelOneVC.xib in Resources */,
+				249CC8BD2935407C00457D0B /* Boldhead.otf in Resources */,
 				CBB4118929280B37009881DD /* robot.usdz in Resources */,
 				CBB4116129280A6F009881DD /* LaunchScreen.storyboard in Resources */,
 				CBB4115E29280A6F009881DD /* Assets.xcassets in Resources */,
@@ -400,6 +430,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				CBB41198292907AC009881DD /* LevelOneVC.swift in Sources */,
+				249CC8C02935ADF700457D0B /* ARVC.swift in Sources */,
+				24AADE8D29347D9D0061C9FE /* MainVC.swift in Sources */,
 				CBB4115C29280A6E009881DD /* treasuar.xcdatamodeld in Sources */,
 				CBB4119C292907EA009881DD /* LevelTwoVC.swift in Sources */,
 				CBB4118D29281664009881DD /* Experience.rcproject in Sources */,
