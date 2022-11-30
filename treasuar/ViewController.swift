@@ -32,13 +32,13 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    func routeToARVC() {
-        guard let window = UIApplication.shared.keyWindow else { return }
-        let ARVC = ARVC()
-        UIView.transition(with: window, duration: 0.3, options: .transitionCrossDissolve, animations: { [weak window] in
-            window?.rootViewController = ARVC
-        }, completion: nil)
-    }
+//    func routeToARVC() {
+//        guard let window = UIApplication.shared.keyWindow else { return }
+//        let ARVC = ARVC()
+//        UIView.transition(with: window, duration: 0.3, options: .transitionCrossDissolve, animations: { [weak window] in
+//            window?.rootViewController = ARVC
+//        }, completion: nil)
+//    }
     
     
     
@@ -73,9 +73,9 @@ class ViewController: UIViewController {
         
     }
     
-    @IBAction func ARVCAction(_ sender: Any) {
-        routeToARVC()
-    }
+//    @IBAction func ARVCAction(_ sender: Any) {
+//        routeToARVC()
+//    }
     
     
     

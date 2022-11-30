@@ -35,7 +35,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="Rectangle 42"/>
                                 <connections>
-                                    <action selector="ARVCAction:" destination="3k7-DE-fsl" eventType="touchUpInside" id="7JE-Gz-JUf"/>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" modalPresentationStyle="fullScreen" id="p4b-ZE-kES"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ULn-48-onM">
@@ -88,7 +88,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceHorizontal="YES" showsVerticalScrollIndicator="NO" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="olX-pO-jWL">
-                                <rect key="frame" x="0.0" y="444" width="1366" height="460"/>
+                                <rect key="frame" x="0.0" y="430" width="1366" height="460"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fKe-8w-joI">
                                         <rect key="frame" x="0.0" y="0.0" width="2132" height="604"/>
@@ -164,14 +164,14 @@
                                 <viewLayoutGuide key="frameLayoutGuide" id="hkr-Bn-G2e"/>
                             </scrollView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="DKg-sk-Uqi">
-                                <rect key="frame" x="70" y="67" width="143" height="103"/>
+                                <rect key="frame" x="70" y="47" width="143" height="109"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="143" id="BoW-kE-G7U"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="102" id="Ctq-qF-sK3"/>
                                 </constraints>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="setting" translatesAutoresizingMaskIntoConstraints="NO" id="FP1-th-ueP">
-                                <rect key="frame" x="1197" y="55" width="109" height="109"/>
+                                <rect key="frame" x="1197" y="35" width="109" height="109"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="109" id="Fza-HL-rUd"/>
                                     <constraint firstAttribute="width" relation="lessThanOrEqual" constant="109" id="H4v-YN-gOw"/>
@@ -179,7 +179,7 @@
                                 </constraints>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="achievement" translatesAutoresizingMaskIntoConstraints="NO" id="mg0-St-EfC">
-                                <rect key="frame" x="1080" y="55" width="109" height="109"/>
+                                <rect key="frame" x="1080" y="35" width="109" height="109"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="109" id="TXW-gp-bw5"/>
                                     <constraint firstAttribute="height" constant="109" id="mDj-BA-VX5"/>
@@ -187,7 +187,7 @@
                                 </constraints>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sound" translatesAutoresizingMaskIntoConstraints="NO" id="9Sw-Tl-xIM">
-                                <rect key="frame" x="963" y="55" width="109" height="109"/>
+                                <rect key="frame" x="963" y="35" width="109" height="109"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="109" id="9DV-pc-Cn2"/>
                                     <constraint firstAttribute="width" relation="lessThanOrEqual" constant="109" id="r9E-ut-bip"/>
@@ -195,7 +195,7 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hi, Roger!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ASJ-jZ-AVv">
-                                <rect key="frame" x="70" y="237" width="542" height="80"/>
+                                <rect key="frame" x="70" y="223" width="542" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="CvY-ja-not"/>
                                 </constraints>
@@ -204,7 +204,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Let's Start Hunting!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ydX-Wb-Lyq">
-                                <rect key="frame" x="70" y="337" width="418.5" height="56"/>
+                                <rect key="frame" x="70" y="323" width="418.5" height="56"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="56" id="iME-Vv-6M9"/>
                                 </constraints>
@@ -236,6 +236,7 @@
                             <constraint firstItem="DKg-sk-Uqi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="70" id="uGH-rH-xuL"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="6Oz-XZ-P3j"/>
                     <connections>
                         <outlet property="buttonDua" destination="iFG-Ac-PUv" id="4Ti-yl-NGC"/>
                         <outlet property="buttonEmpat" destination="bmG-WI-Pg9" id="WqF-YP-WSh"/>
