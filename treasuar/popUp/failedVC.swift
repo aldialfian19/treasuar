@@ -12,7 +12,7 @@ class failedVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        // Do any additihonal setup after loading the view.
     }
     @IBAction func ulangiAction(_ sender: Any) {
     }
