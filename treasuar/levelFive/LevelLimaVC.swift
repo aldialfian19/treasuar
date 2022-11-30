@@ -7,7 +7,7 @@
 
 import UIKit
 
-class LevelTigaVC: UIViewController {
+class LevelLimaVC: UIViewController {
     
     @IBOutlet var forwardButton: UIButton!
     @IBOutlet var leftButton: UIButton!
@@ -15,6 +15,7 @@ class LevelTigaVC: UIViewController {
     @IBOutlet var trashButton: UIButton!
     @IBOutlet var runButton: UIButton!
     @IBOutlet var tableView: UITableView!
+    @IBOutlet var loopButton: UIButton!
     
     var robot: UIImageView?
     var point: UIImageView?
@@ -38,6 +39,11 @@ class LevelTigaVC: UIViewController {
         addImage()
         move(direction: "")
         updateTable()
+        
+        loopButton.showsMenuAsPrimaryAction = true
+        loopButton.menu = addMenu()
+        
+        
         
         
         
@@ -171,79 +177,6 @@ class LevelTigaVC: UIViewController {
     }
     
     
-    // MARK: -run move
-//    func runMove() {
-//        UIView.animate(withDuration: 1, delay: 0) {
-//            self.move(direction: "\(self.action[0])")
-//        } completion: { isTrue in
-//            UIView.animate(withDuration: 1, delay: 0) {
-//                if self.action.count >= 2 {
-//                    self.move(direction: "\(self.action[1])")
-//                }else {
-//                    self.move(direction: "\(self.action[0])")
-//                }
-//
-//            } completion: { isTrue2 in
-//                UIView.animate(withDuration: 1, delay: 0) {
-//                    if self.action.count >= 3 {
-//                        self.move(direction: "\(self.action[2])")
-//                    }else {
-//                        self.move(direction: "\(self.action[0])")
-//                    }
-//
-//                } completion: { isTrue3 in
-//                    UIView.animate(withDuration: 1, delay: 0) {
-//                        if self.action.count >= 4 {
-//                            self.move(direction: "\(self.action[3])")
-//                        }else {
-//                            self.move(direction: "\(self.action[0])")
-//                        }
-//
-//                    } completion: { isTrue4 in
-//                        UIView.animate(withDuration: 1, delay: 0) {
-//                            if self.action.count >= 5 {
-//                                self.move(direction: "\(self.action[4])")
-//                            }else {
-//                                self.move(direction: "\(self.action[0])")
-//                            }
-//                        } completion: { isTrue5 in
-//                            UIView.animate(withDuration: 1, delay: 0) {
-//                                if self.action.count >= 6 {
-//                                    self.move(direction: "\(self.action[5])")
-//                                }else {
-//                                    self.move(direction: "\(self.action[0])")
-//                                }
-//                            } completion: { isTrue6 in
-//                                UIView.animate(withDuration: 1, delay: 0) {
-//                                    if self.action.count >= 7 {
-//                                        self.move(direction: "\(self.action[6])")
-//                                    }else {
-//                                        self.move(direction: "\(self.action[0])")
-//                                    }
-//                                } completion: { isTrue7 in
-//                                    UIView.animate(withDuration: 1, delay: 0) {
-//                                        if self.action.count >= 8 {
-//                                            self.move(direction: "\(self.action[7])")
-//                                        }else {
-//                                            self.move(direction: "\(self.action[0])")
-//                                        }
-//                                    } completion: { isTrue8 in
-//                                        UIView.animate(withDuration: 1, delay: 0) {
-//                                            if self.action.count >= 9 {
-//                                                self.move(direction: "\(self.action[8])")
-//                                            }else {
-//                                                self.move(direction: "\(self.action[0])")
-//                                            }
-//                                        }
-//                                    }
-//                                }
-//                            }
-//                        }
-//                    }
-//                }
-//            }
-//        }
-//    }
     
 // MARK: -Created button
     
@@ -253,8 +186,6 @@ class LevelTigaVC: UIViewController {
         
         tableView.reloadData()
         
-        offButton()
-        
         
     }
     @IBAction func leftAction(_ sender: Any) {
@@ -263,9 +194,7 @@ class LevelTigaVC: UIViewController {
         
         tableView.reloadData()
         
-        offButton()
-        
-
+//        addActionImage()
     }
     @IBAction func rightAction(_ sender: Any) {
         actionRobot.append("right")
@@ -273,9 +202,7 @@ class LevelTigaVC: UIViewController {
         
         tableView.reloadData()
         
-        offButton()
-        
-
+//        addActionImage()
     }
     @IBAction func trashAction(_ sender: Any) {
         robot?.image = UIImage(named: "2.png")
@@ -287,12 +214,14 @@ class LevelTigaVC: UIViewController {
         tableView.reloadData()
         robot?.frame = a1loc
         
-        onButton()
+        runButton.isEnabled = true
     }
     @IBAction func runAction(_ sender: Any) {
         
         runButton.isEnabled = false
-        offButton()        
+//        self.robot?.frame = a1loc
+//        robot?.image = UIImage(named: "2.png")
+        
         
         UIView.animate(withDuration: 1, delay: 0) {
             if self.actionRobot.count >= 2 {
@@ -392,24 +321,37 @@ class LevelTigaVC: UIViewController {
         routeToMain()
     }
     
+    func addMenu() -> UIMenu {
+
+
+        let lima = UIAction(title: "Ulangi Maju 5 Kali") { action  in
+                print("menu 1")
+                self.actionRobot.append(contentsOf: ["forward","forward","forward","forward","forward"])
+                self.actionBox.append("Ulangi Maju 4 Kali")
+                self.tableView.reloadData()
+                
+            }
+        let empat = UIAction(title: "Ulangi Maju 4 Kali") { action  in
+                print("menu 2")
+                self.actionRobot.append(contentsOf: ["forward","forward","forward","forward"])
+                self.actionBox.append("Ulangi Maju 4 Kali")
+                self.tableView.reloadData()
+            }
+        let tiga = UIAction(title: "Ulangi Maju 3 Kali"){ action  in
+                print("menu 3")
+                self.actionRobot.append(contentsOf: ["forward","forward","forward"])
+                self.actionBox.append("Ulangi Maju 3 Kali")
+                self.tableView.reloadData()
+            }
+        let menuItem = UIMenu(title: "", options: .displayInline, children: [tiga, empat, lima])
+        
+        return menuItem
+    }
+    
+    
+    
+    
     //MARK: -checkpoint
-    
-    func offButton() {
-        if actionRobot.count >= 9 {
-            forwardButton.isEnabled = false
-            leftButton.isEnabled = false
-            rightButton.isEnabled = false
-        }
-    }
-    
-    func onButton() {
-        forwardButton.isEnabled = true
-        leftButton.isEnabled = true
-        rightButton.isEnabled = true
-        runButton.isEnabled = true
-    }
-    
-    
     func finishPoint() {
         let robotPosition = robot?.frame
         
@@ -440,7 +382,6 @@ class LevelTigaVC: UIViewController {
         }
     }
     
-    // MARK: - NAVIGATION
     
     func routeToFalse() {
         guard let window = UIApplication.shared.keyWindow else { return }
@@ -476,7 +417,7 @@ class LevelTigaVC: UIViewController {
 }
 
 
-extension LevelTigaVC: UITableViewDataSource, UITableViewDelegate {
+extension LevelLimaVC: UITableViewDataSource, UITableViewDelegate {
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -491,3 +432,4 @@ extension LevelTigaVC: UITableViewDataSource, UITableViewDelegate {
         return UITableViewCell()
     }
 }
+

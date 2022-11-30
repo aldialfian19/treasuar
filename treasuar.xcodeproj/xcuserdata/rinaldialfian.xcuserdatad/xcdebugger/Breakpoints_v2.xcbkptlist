@@ -14,8 +14,8 @@
             filePath = "treasuar/levelOne/LevelOneVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "166"
-            endingLineNumber = "166"
+            startingLineNumber = "163"
+            endingLineNumber = "163"
             landmarkName = "move(direction:)"
             landmarkType = "7">
          </BreakpointContent>

@@ -37,7 +37,7 @@ class mainVC: UIViewController {
     
     func routeToDua() {
         guard let window = UIApplication.shared.keyWindow else { return }
-        let duaVC = LevelDuaVC()
+        let duaVC = LevelTigaVC()
         UIView.transition(with: window, duration: 0.3, options: .transitionCrossDissolve, animations: { [weak window] in
             window?.rootViewController = duaVC
         }, completion: nil)
@@ -45,7 +45,7 @@ class mainVC: UIViewController {
     
     func routeToTiga() {
         guard let window = UIApplication.shared.keyWindow else { return }
-        let tigaVC = LevelTigaVC()
+        let tigaVC = LevelLimaVC()
         UIView.transition(with: window, duration: 0.3, options: .transitionCrossDissolve, animations: { [weak window] in
             window?.rootViewController = tigaVC
         }, completion: nil)

@@ -12,9 +12,7 @@ import RealityKit
 class LevelOneVC: UIViewController {
     
     @IBOutlet var arView: ARView!
-    @IBOutlet var popUp: UIImageView!
     
-    var action = ["forward", "forward"]
     
     var robotEntity: Entity?
     var toyEntity: Entity?
@@ -81,7 +79,6 @@ class LevelOneVC: UIViewController {
         //add button
         createdButton()
         
-        self.popUp.alpha = 0
     }
     
     @objc
@@ -227,12 +224,9 @@ class LevelOneVC: UIViewController {
         if roundedValue1 == 0.0 && roundedValue2 == 0.0{
             print("robot in a1")
         }else if roundedValue1 == 0.0 && roundedValue2 == 0.2 {
-            robotEntity.position = ((startEntity?.position)! + b1pos)
             print("robot in b1")
         }else if roundedValue1 == 0.0 && roundedValue2 == 0.4 {
-            
             routeToSucces()
-            robotEntity.position = ((startEntity?.position)! + c1pos)
             print("robot in c1")
         }else {
             routeToFalse()
@@ -275,11 +269,9 @@ class LevelOneVC: UIViewController {
     @objc func majuAction(sender: UIButton!) {
         
        move(direction: "forward")
-        delay(4.5) {
+        delay(2) {
             self.checkPoint()
         }
-        
-        
          
     }
     @objc func kiriAction(sender: UIButton!) {
@@ -297,7 +289,7 @@ class LevelOneVC: UIViewController {
     func routeToFalse() {
         guard let window = UIApplication.shared.keyWindow else { return }
         let falseVC = arFailedVC()
-        UIView.transition(with: window, duration: 0.1, options: .transitionCrossDissolve, animations: { [weak window] in
+        UIView.transition(with: window, duration: 0.0, options: .transitionCrossDissolve, animations: { [weak window] in
             window?.rootViewController = falseVC
         }, completion: nil)
     }
@@ -305,7 +297,7 @@ class LevelOneVC: UIViewController {
     func routeToMain() {
         guard let window = UIApplication.shared.keyWindow else { return }
         let mainVC = arMainVC()
-        UIView.transition(with: window, duration: 0.3, options: .transitionCrossDissolve, animations: { [weak window] in
+        UIView.transition(with: window, duration: 0.0, options: .transitionCrossDissolve, animations: { [weak window] in
             window?.rootViewController = mainVC
         }, completion: nil)
     }
@@ -313,7 +305,7 @@ class LevelOneVC: UIViewController {
     func routeToSucces() {
         guard let window = UIApplication.shared.keyWindow else { return }
         let succedVC = arSuccesVC()
-        UIView.transition(with: window, duration: 0.3, options: .transitionCrossDissolve, animations: { [weak window] in
+        UIView.transition(with: window, duration: 0.0, options: .transitionCrossDissolve, animations: { [weak window] in
             window?.rootViewController = succedVC
         }, completion: nil)
     }
