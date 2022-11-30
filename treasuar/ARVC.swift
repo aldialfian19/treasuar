@@ -20,9 +20,9 @@ class ARVC : UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-                nameLabel.text = "Hi, Steve!"
-                nameLabel.textAlignment = .left
-                nameLabel.font = UIFont(name: "Boldhead", size: 64)
+//                nameLabel.text = "Hi, Steve!"
+//                nameLabel.textAlignment = .left
+//                nameLabel.font = UIFont(name: "Boldhead", size: 64)
     }
     
     func routeToLevelOne() {

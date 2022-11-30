@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3k7-DE-fsl">
     <device id="ipad12_9" orientation="landscape" layout="fullscreen" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -34,12 +34,15 @@
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="Rectangle 42"/>
+                                <connections>
+                                    <action selector="ARVCAction:" destination="3k7-DE-fsl" eventType="touchUpInside" id="7JE-Gz-JUf"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oIt-bj-d09">
-                                <rect key="frame" x="742" y="297" width="454" height="430"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ULn-48-onM">
+                                <rect key="frame" x="742" y="309.5" width="454" height="430"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="430" id="QHP-S7-tOG"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="430" id="YZF-hE-BIZ"/>
+                                    <constraint firstAttribute="height" constant="430" id="2y6-x6-31J"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="430" id="smI-cu-cRD"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="Rectangle 42"/>
@@ -48,24 +51,23 @@
                         <viewLayoutGuide key="safeArea" id="aIV-Oc-VWb"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="oIt-bj-d09" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="zPS-eU-iN1" secondAttribute="trailing" constant="8" symbolic="YES" id="5oE-3U-lRN"/>
+                            <constraint firstItem="ULn-48-onM" firstAttribute="centerY" secondItem="zPS-eU-iN1" secondAttribute="centerY" id="0PC-N0-BkI"/>
                             <constraint firstItem="Epd-tr-q32" firstAttribute="top" secondItem="aIV-Oc-VWb" secondAttribute="top" constant="-37" id="BsL-Ah-e0b"/>
                             <constraint firstItem="aIV-Oc-VWb" firstAttribute="trailing" secondItem="Epd-tr-q32" secondAttribute="trailing" constant="-33" id="JFl-d3-Vwf"/>
                             <constraint firstItem="aIV-Oc-VWb" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="zPS-eU-iN1" secondAttribute="trailing" symbolic="YES" id="Mvq-sv-XV4"/>
                             <constraint firstItem="mUa-QK-E5Y" firstAttribute="leading" secondItem="aIV-Oc-VWb" secondAttribute="leading" constant="587" id="OWl-Gm-2l8"/>
                             <constraint firstItem="zPS-eU-iN1" firstAttribute="centerY" secondItem="Epd-tr-q32" secondAttribute="centerY" id="PJo-JL-XjA"/>
+                            <constraint firstItem="ULn-48-onM" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="zPS-eU-iN1" secondAttribute="trailing" constant="8" symbolic="YES" id="RpU-8L-HbY"/>
                             <constraint firstItem="aIV-Oc-VWb" firstAttribute="bottom" secondItem="Epd-tr-q32" secondAttribute="bottom" constant="-42" id="SGc-EK-FOY"/>
-                            <constraint firstItem="aIV-Oc-VWb" firstAttribute="trailing" secondItem="oIt-bj-d09" secondAttribute="trailing" constant="170" id="U0T-W2-O3b"/>
-                            <constraint firstItem="oIt-bj-d09" firstAttribute="centerY" secondItem="2R6-XS-lta" secondAttribute="centerY" id="bXr-OX-81Y"/>
+                            <constraint firstItem="aIV-Oc-VWb" firstAttribute="trailing" secondItem="ULn-48-onM" secondAttribute="trailing" constant="170" id="aG0-lQ-zmZ"/>
                             <constraint firstItem="mUa-QK-E5Y" firstAttribute="centerX" secondItem="Epd-tr-q32" secondAttribute="centerX" id="eNk-TG-Kr9"/>
                             <constraint firstItem="Epd-tr-q32" firstAttribute="leading" secondItem="aIV-Oc-VWb" secondAttribute="leading" constant="-18" id="o9q-LC-NmN"/>
-                            <constraint firstItem="oIt-bj-d09" firstAttribute="width" secondItem="zPS-eU-iN1" secondAttribute="width" id="vfS-yh-Lrt"/>
                             <constraint firstItem="mUa-QK-E5Y" firstAttribute="top" secondItem="aIV-Oc-VWb" secondAttribute="top" constant="109" id="yRJ-1b-T5b"/>
                             <constraint firstItem="zPS-eU-iN1" firstAttribute="leading" secondItem="aIV-Oc-VWb" secondAttribute="leading" constant="170" id="zn1-XP-dKp"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="ARView" destination="2R6-XS-lta" id="VBm-jN-pKf"/>
+                        <outlet property="Button2D" destination="2R6-XS-lta" id="51R-3p-61H"/>
                         <outlet property="view" destination="2R6-XS-lta" id="bSZ-Hk-uDq"/>
                     </connections>
                 </viewController>
@@ -103,7 +105,7 @@
                                                 <rect key="frame" x="463" y="8" width="389" height="466"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" image="level1"/>
+                                                <buttonConfiguration key="configuration" style="plain" image="level2"/>
                                                 <connections>
                                                     <action selector="oneAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YvB-wu-bWp"/>
                                                     <action selector="twoAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HAe-gd-YHj"/>
@@ -113,7 +115,7 @@
                                                 <rect key="frame" x="860" y="8" width="389" height="466"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" image="level1"/>
+                                                <buttonConfiguration key="configuration" style="plain" image="Level3"/>
                                                 <connections>
                                                     <action selector="oneAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lKa-gv-Suo"/>
                                                     <action selector="threeAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wFW-69-8Hb"/>
@@ -241,7 +243,6 @@
                         <outlet property="buttonSatu" destination="tMA-lc-EjH" id="yeB-o9-Plf"/>
                         <outlet property="buttonTiga" destination="P2u-N5-Ulh" id="zEf-qK-CJJ"/>
                         <outlet property="nameLabel" destination="ASJ-jZ-AVv" id="1uq-dc-FbQ"/>
-                        <outlet property="scrollPage" destination="olX-pO-jWL" id="uVx-cr-dd1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -250,11 +251,13 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Level3" width="357" height="444"/>
         <image name="Rectangle 42" width="430" height="430"/>
         <image name="achievement" width="149" height="149"/>
         <image name="bg" width="1366" height="1024"/>
         <image name="bg2" width="1366" height="1024"/>
         <image name="level1" width="365" height="452"/>
+        <image name="level2" width="357" height="444"/>
         <image name="logo" width="143" height="103"/>
         <image name="setting" width="148" height="149"/>
         <image name="sound" width="149" height="149"/>
