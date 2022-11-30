@@ -12,6 +12,14 @@ import ARKit
 class LevelTwoVC: UIViewController {
 
     @IBOutlet var arView: ARView!
+    @IBOutlet var homeButton: UIButton!
+    @IBOutlet var trashButton: UIButton!
+    
+    @IBOutlet var forwardButton: UIButton!
+    @IBOutlet var leftButton: UIButton!
+    @IBOutlet var rightButton: UIButton!
+    
+    
     
     var robotEntity: Entity?
     
@@ -20,20 +28,10 @@ class LevelTwoVC: UIViewController {
     var startEntity: Entity?
     
     var moveToLocation: Transform = Transform()
-    var moveDuration: Double = 3.00
+    var moveDuration: Double = 2.00
     
 
     var currentPos: SIMD3<Float>?
-    
-    var a1position: SIMD3<Float>?
-    var a2position: SIMD3<Float>?
-    var a3position: SIMD3<Float>?
-    var b1position: SIMD3<Float>?
-    var b2position: SIMD3<Float>?
-    var b3position: SIMD3<Float>?
-    var c1position: SIMD3<Float>?
-    var c2position: SIMD3<Float>?
-    var c3position: SIMD3<Float>?
 
     var floorEntitya1: Entity?
     var floorEntitya2: Entity?
@@ -86,14 +84,13 @@ class LevelTwoVC: UIViewController {
         //Tap detector
         arView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleTap(recognizer:))))
         
-        //add button
-        createdButton()
-        
         move(direction: "")
         
         checkPoint()
         
     }
+    
+    //MARK: -Load Object
     @objc
     func handleTap(recognizer: UITapGestureRecognizer) {
         
@@ -113,15 +110,6 @@ class LevelTwoVC: UIViewController {
 //            print("world\(worldPos)")
             
 //            print("\(a2pos)")
-            a1position = (startEntity?.position)!
-            a2position = ((startEntity?.position)! + a2pos)
-            a3position = ((startEntity?.position)! + a3pos)
-            b1position = ((startEntity?.position)! + b1pos)
-            b2position = ((startEntity?.position)! + b2pos)
-            b3position = ((startEntity?.position)! + b3pos)
-            c1position = ((startEntity?.position)! + c1pos)
-            c2position = ((startEntity?.position)! + c2pos)
-            c3position = ((startEntity?.position)! + c3pos)
             
             
             // Place object
@@ -140,12 +128,14 @@ class LevelTwoVC: UIViewController {
             placeObject(object: floorEntityc3!, position: worldPos + c3pos)
             
             // Move Object
-            move(direction: "")
+//            move(direction: "")
             
             toyAnimation()
             
         }
     }
+    
+    //MARK: -SETTING AR
     
     func startARSession() {
         
@@ -177,88 +167,28 @@ class LevelTwoVC: UIViewController {
     
     func move (direction: String) {
         
-        let robotPos = robotEntity?.position
-    
         
         switch direction {
             
             
             case "forward":
             
-            if robotPos == startEntity?.position {
-                moveToLocation.translation = (robotEntity?.transform.translation)! + simd_float3 (x: 0, y: 0, z: 20)
-                robotEntity?.move(to: moveToLocation, relativeTo: robotEntity, duration: moveDuration)
-                robotEntity?.position = b1position!
-                walkAnimation(moveDuration: moveDuration)
-
-            }else if robotPos == b1position {
-                moveToLocation.translation = (robotEntity?.transform.translation)! + simd_float3 (x: 0, y: 0, z: 20)
-                robotEntity?.move(to: moveToLocation, relativeTo: robotEntity, duration: moveDuration)
-                robotEntity?.position = c1position!
-                walkAnimation(moveDuration: moveDuration)
-                
-            }else if robotPos == c2position {
-                moveToLocation.translation = (robotEntity?.transform.translation)! + simd_float3 (x: 0, y: 0, z: 20)
-                robotEntity?.move(to: moveToLocation, relativeTo: robotEntity, duration: moveDuration)
-                robotEntity?.position = c3position!
-                walkAnimation(moveDuration: moveDuration)
-                
-            }else {
-                print("no move")
-            }
+            moveToLocation.translation = (robotEntity?.transform.translation)! + simd_float3 (x: 0, y: 0, z: 20)
+            robotEntity?.move(to: moveToLocation, relativeTo: robotEntity, duration: moveDuration)
             
+            walkAnimation(moveDuration: moveDuration)
             
             case "left":
             //create sudut berputar
-            if robotPos == startEntity?.position {
-                let rotateAngle = simd_quatf(angle: GLKMathDegreesToRadians(90), axis: SIMD3(x: 0, y: 1, z: 0))
-                robotEntity?.setOrientation(rotateAngle, relativeTo: robotEntity)
-                
-                moveToLocation.translation = (robotEntity?.transform.translation)! + simd_float3 (x: 0, y: 0, z: 20)
-                robotEntity?.move(to: moveToLocation, relativeTo: robotEntity, duration: moveDuration)
-                robotEntity?.position = a2position!
-                walkAnimation(moveDuration: moveDuration)
-
-            }else if robotPos == b1position {
-                let rotateAngle = simd_quatf(angle: GLKMathDegreesToRadians(90), axis: SIMD3(x: 0, y: 1, z: 0))
-                robotEntity?.setOrientation(rotateAngle, relativeTo: robotEntity)
-                
-                moveToLocation.translation = (robotEntity?.transform.translation)! + simd_float3 (x: 0, y: 0, z: 20)
-                robotEntity?.move(to: moveToLocation, relativeTo: robotEntity, duration: moveDuration)
-                robotEntity?.position = b2position!
-                walkAnimation(moveDuration: moveDuration)
-                
-            }else if robotPos == c1position {
-                let rotateAngle = simd_quatf(angle: GLKMathDegreesToRadians(90), axis: SIMD3(x: 0, y: 1, z: 0))
-                robotEntity?.setOrientation(rotateAngle, relativeTo: robotEntity)
-                
-                moveToLocation.translation = (robotEntity?.transform.translation)! + simd_float3 (x: 0, y: 0, z: 20)
-                robotEntity?.move(to: moveToLocation, relativeTo: robotEntity, duration: moveDuration)
-                robotEntity?.position = c2position!
-                walkAnimation(moveDuration: moveDuration)
-                
-            }else if robotPos == c2position {
-                let rotateAngle = simd_quatf(angle: GLKMathDegreesToRadians(90), axis: SIMD3(x: 0, y: 1, z: 0))
-                robotEntity?.setOrientation(rotateAngle, relativeTo: robotEntity)
-                    
-                moveToLocation.translation = (robotEntity?.transform.translation)! + simd_float3 (x: 0, y: 0, z: 20)
-                robotEntity?.move(to: moveToLocation, relativeTo: robotEntity, duration: moveDuration)
-                robotEntity?.position = b2position!
-                walkAnimation(moveDuration: moveDuration)
-                
-            }else {
-                print("no move")
-            }
+            let rotateAngle = simd_quatf(angle: GLKMathDegreesToRadians(90), axis: SIMD3(x: 0, y: 1, z: 0))
+            robotEntity?.setOrientation(rotateAngle, relativeTo: robotEntity)
             
-//            let rotateAngle = simd_quatf(angle: GLKMathDegreesToRadians(90), axis: SIMD3(x: 0, y: 1, z: 0))
-//            robotEntity?.setOrientation(rotateAngle, relativeTo: robotEntity)
-//            walkAnimation(moveDuration: moveDuration)
             
-            case "right":
             
-            print("turn right")
-//            let rotateAngle = simd_quatf(angle: GLKMathDegreesToRadians(90), axis: SIMD3(x: 0, y: 1, z: 0))
-//            robotEntity?.setOrientation(rotateAngle, relativeTo: robotEntity)
+              case "right":
+            //create sudut berputar
+            let rotateAngle = simd_quatf(angle: GLKMathDegreesToRadians(90), axis: SIMD3(x: 0, y: -1, z: 0))
+            robotEntity?.setOrientation(rotateAngle, relativeTo: robotEntity)
             
         default:
             print("No Movement")
@@ -285,85 +215,87 @@ class LevelTwoVC: UIViewController {
         }
     }
     
+    func delay(_ delay:Double, closure:@escaping () -> ()) {
+        let when = DispatchTime.now() + delay
+        DispatchQueue.main.asyncAfter(deadline: when, execute: closure)
+    }
+    
+    //MARK: -CHECKPOINT
+    
     // cek posisi robot
     func checkPoint(){
-        let b1check = b1position!
-        let c1check = c1position!
-        let c2check = c2position!
-        let c3check = c3position!
         
-        print("a2cek\(b1check)")
-        print("ini \((robotEntity?.position)!)")
-        
-        if (robotEntity?.position)! == b1check{
-            print("robot position at b1")
-            
-        }else if (robotEntity?.position)! == c1check{
-            print("robot position at c1")
-            
-        }else if (robotEntity?.position)! == c2check{
-            print("robot position at c2")
-            
-        }else if (robotEntity?.position)! == c3check{
-            print("robot position at c3")
-            
-        }else {
-            print("No Point")
+        guard let robotEntity = robotEntity else {
+            return
         }
+        let roundedValue1 = (robotEntity.position.x * 10).rounded() / 10
+        let roundedValue2 = (robotEntity.position.z * 10).rounded() / 10
+        
+        if roundedValue1 == 0.0 && roundedValue2 == 0.0{
+            print("robot in a1")
+        }else if roundedValue1 == 0.0 && roundedValue2 == 0.2 {
+            print("robot in b1")
+        }else if roundedValue1 == 0.2 && roundedValue2 == 0.2 {
+            print("robot in b2")
+        }else if roundedValue1 == 0.2 && roundedValue2 == 0.4 {
+            print("robot in c2")
+        }else if roundedValue1 == 0.4 && roundedValue2 == 0.0 {
+            print("robot in a3")
+        }else if roundedValue1 == 0.4 && roundedValue2 == 0.4 {
+            print("robot in c3")
+        }else {
+            routeToFalse()
+            print("no point")
+        }
+        
+        
     }
     
     //MARK: -Create Button
     
-    func createdButton() {
-        
-        let maju = UIButton(type: .system)
-        maju.frame = CGRect(x: 0, y: 300, width: 80, height: 50)
-        maju.backgroundColor = .blue
-        maju.setTitle("maju", for: .normal)
-        maju.addTarget(self, action: #selector(majuAction), for: .touchUpInside)
-        
-//        let mundur = UIButton(type: .system)
-//        mundur.frame = CGRect(x: 90, y: 300, width: 80, height: 50)
-//        mundur.backgroundColor = .blue
-//        mundur.setTitle("mundur", for: .normal)
-//        mundur.addTarget(self, action: #selector(mundurAction), for: .touchUpInside)
-        
-        let kiri = UIButton(type: .system)
-        kiri.frame = CGRect(x: 180, y: 300, width: 80, height: 50)
-        kiri.backgroundColor = .blue
-        kiri.setTitle("kiri", for: .normal)
-        kiri.addTarget(self, action: #selector(kiriAction), for: .touchUpInside)
-        
-        let kanan = UIButton(type: .system)
-        kanan.frame = CGRect(x: 270, y: 300, width: 80, height: 50)
-        kanan.backgroundColor = .blue
-        kanan.setTitle("kanan", for: .normal)
-        kanan.addTarget(self, action: #selector(kananAction), for: .touchUpInside)
-        
-        
-        
-        self.view.addSubview(maju)
-//        self.view.addSubview(mundur)
-        self.view.addSubview(kiri)
-        self.view.addSubview(kanan)
+    @IBAction func forwardAction(_ sender: Any) {
+        move(direction: "forward")
+        delay(2) {
+             self.checkPoint()
+         }
     }
     
-    @objc func majuAction(sender: UIButton!) {
-        
-        move(direction: "forward")
-        checkPoint()
-        print("maju")
-    }
-    @objc func kiriAction(sender: UIButton!) {
+    @IBAction func leftAction(_ sender: Any) {
         move(direction: "left")
-        checkPoint()
         print("kiri")
-        // tambah array kiri ke action
     }
-    @objc func kananAction(sender: UIButton!) {
-        move(direction: "right")
-        checkPoint()
-        print("kanan")
+    
+    @IBAction func rightAction(_ sender: Any) {
+            move(direction: "right")
+            print("kanan")
+    }
+
+    @IBAction func trashAction(_ sender: Any) {
+    }
+    
+    //MARK: -route to popup
+    func routeToFalse() {
+        guard let window = UIApplication.shared.keyWindow else { return }
+        let falseVC = arFailedVC()
+        UIView.transition(with: window, duration: 0.0, options: .transitionCrossDissolve, animations: { [weak window] in
+            window?.rootViewController = falseVC
+        }, completion: nil)
+    }
+    
+    func routeToMain() {
+        guard let window = UIApplication.shared.keyWindow else { return }
+        let mainVC = UIViewController()
+        UIView.transition(with: window, duration: 0.0, options: .transitionCrossDissolve, animations: { [weak window] in
+            window?.rootViewController = mainVC
+        }, completion: nil)
+    }
+    
+    func routeToSucces() {
+        guard let window = UIApplication.shared.keyWindow else { return }
+        let succedVC = arSuccesVC()
+        UIView.transition(with: window, duration: 0.0, options: .transitionCrossDissolve, animations: { [weak window] in
+            window?.rootViewController = succedVC
+        }, completion: nil)
     }
 
 }

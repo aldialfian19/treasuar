@@ -27,7 +27,7 @@ class ARVC : UIViewController{
     
     func routeToLevelOne() {
         guard let window = UIApplication.shared.keyWindow else { return }
-        let levelOneVC = LevelOneVC()
+        let levelOneVC = LevelSatuVC()
         UIView.transition(with: window, duration: 0.3, options: .transitionCrossDissolve, animations: { [weak window] in
             window?.rootViewController = levelOneVC
         }, completion: nil)
@@ -35,7 +35,7 @@ class ARVC : UIViewController{
     
     func routeToLevelTwo() {
         guard let window = UIApplication.shared.keyWindow else { return }
-        let levelOneVC = LevelTwoVC()
+        let levelOneVC = LevelDuaVC()
         UIView.transition(with: window, duration: 0.3, options: .transitionCrossDissolve, animations: { [weak window] in
             window?.rootViewController = levelOneVC
         }, completion: nil)
@@ -43,7 +43,7 @@ class ARVC : UIViewController{
     
     func routeToLevelThree() {
         guard let window = UIApplication.shared.keyWindow else { return }
-        let levelOneVC = LevelThreeVC()
+        let levelOneVC = LevelTigaVC()
         UIView.transition(with: window, duration: 0.3, options: .transitionCrossDissolve, animations: { [weak window] in
             window?.rootViewController = levelOneVC
         }, completion: nil)
