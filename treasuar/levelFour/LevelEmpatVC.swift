@@ -437,33 +437,27 @@ class LevelEmpatVC: UIViewController {
         
         if robotPosition == a1loc {
             print("robot in a1")
-        }else if robotPosition == a2loc{
-            
-            delay(1) {
-                self.failedView.isHidden = false
-             }
-            print("robot in a2")
         }else if robotPosition == a3loc{
             print("robot in a3")
         }else if robotPosition == b1loc{
             print("robot in b1")
-        }else if robotPosition == b2loc{
-            print("robot in b2")
-        }else if robotPosition == b3loc{
-            delay(1) {
-                self.failedView.isHidden = false
-             }
-            print("robot in b3")
+        }else if robotPosition == b4loc{
+            print("robot in b4")
         }else if robotPosition == c1loc{
-            delay(1) {
-                self.failedView.isHidden = false
-             }
             print("robot in c1")
-        }else if robotPosition == c2loc{
-            print("robot in c2")
-        }else if robotPosition == c3loc{
+        }else if robotPosition == c4loc{
+            print("robot in c4")
+        }else if robotPosition == d1loc{
+            print("robot in d1")
+        }else if robotPosition == d2loc{
+            print("robot in d2")
+        }else if robotPosition == d3loc{
+            print("robot in d3")
+        }else if robotPosition == d4loc{
+            print("robot in d4")
+        }else if robotPosition == b3loc{
             routeToSucces()
-            print("robot in c3")
+            print("robot in b3")
         }else {
             delay(1) {
                 self.failedView.isHidden = false

@@ -52,8 +52,6 @@
 		CBB4118A29280B37009881DD /* merah.usdz in Resources */ = {isa = PBXBuildFile; fileRef = CBB4118629280B37009881DD /* merah.usdz */; };
 		CBB4118B29280B37009881DD /* floor.usdz in Resources */ = {isa = PBXBuildFile; fileRef = CBB4118729280B37009881DD /* floor.usdz */; };
 		CBB4118D29281664009881DD /* Experience.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = CBB4118C29281664009881DD /* Experience.rcproject */; };
-		CBB41198292907AC009881DD /* LevelOneVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB41196292907AC009881DD /* LevelOneVC.swift */; };
-		CBB41199292907AC009881DD /* LevelOneVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBB41197292907AC009881DD /* LevelOneVC.xib */; };
 		CBB4119C292907EA009881DD /* LevelTwoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB4119A292907EA009881DD /* LevelTwoVC.swift */; };
 		CBB4119D292907EA009881DD /* LevelTwoVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBB4119B292907EA009881DD /* LevelTwoVC.xib */; };
 		CBB411A029290823009881DD /* LevelThreeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB4119E29290823009881DD /* LevelThreeVC.swift */; };
@@ -129,8 +127,6 @@
 		CBB4118629280B37009881DD /* merah.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = merah.usdz; sourceTree = "<group>"; };
 		CBB4118729280B37009881DD /* floor.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = floor.usdz; sourceTree = "<group>"; };
 		CBB4118C29281664009881DD /* Experience.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = Experience.rcproject; sourceTree = "<group>"; };
-		CBB41196292907AC009881DD /* LevelOneVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelOneVC.swift; sourceTree = "<group>"; };
-		CBB41197292907AC009881DD /* LevelOneVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LevelOneVC.xib; sourceTree = "<group>"; };
 		CBB4119A292907EA009881DD /* LevelTwoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelTwoVC.swift; sourceTree = "<group>"; };
 		CBB4119B292907EA009881DD /* LevelTwoVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LevelTwoVC.xib; sourceTree = "<group>"; };
 		CBB4119E29290823009881DD /* LevelThreeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelThreeVC.swift; sourceTree = "<group>"; };
@@ -251,8 +247,6 @@
 		CBB4118E292906D6009881DD /* levelOne */ = {
 			isa = PBXGroup;
 			children = (
-				CBB41196292907AC009881DD /* LevelOneVC.swift */,
-				CBB41197292907AC009881DD /* LevelOneVC.xib */,
 				CBAF6591292E339E0017B554 /* LevelSatuVC.swift */,
 				CBAF6592292E339E0017B554 /* LevelSatuVC.xib */,
 			);
@@ -444,7 +438,6 @@
 				CBB4118A29280B37009881DD /* merah.usdz in Resources */,
 				CB65D422293390030040FF8A /* succesVC.xib in Resources */,
 				CBB411A129290823009881DD /* LevelThreeVC.xib in Resources */,
-				CBB41199292907AC009881DD /* LevelOneVC.xib in Resources */,
 				CB564D662936482100460BEF /* LevelLimaVC.xib in Resources */,
 				CBB4118929280B37009881DD /* robot.usdz in Resources */,
 				CBAF6594292E339E0017B554 /* LevelSatuVC.xib in Resources */,
@@ -485,7 +478,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CBB41198292907AC009881DD /* LevelOneVC.swift in Sources */,
 				CBB4115C29280A6E009881DD /* treasuar.xcdatamodeld in Sources */,
 				CB65D432293394B50040FF8A /* arMainVC.swift in Sources */,
 				CBB4119C292907EA009881DD /* LevelTwoVC.swift in Sources */,

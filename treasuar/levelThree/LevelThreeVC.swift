@@ -62,6 +62,8 @@ class LevelThreeVC: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
+        tableView.isHidden = true
+        
         // start and initialize
         startARSession()
         
@@ -90,6 +92,9 @@ class LevelThreeVC: UIViewController {
         //add button
         
         move(direction: "")
+        
+        //box action
+        updateTable()
         
     }
     
@@ -134,6 +139,8 @@ class LevelThreeVC: UIViewController {
             move(direction: "")
             
             toyAnimation()
+            
+            tableView.isHidden = false
             
         }
     }
@@ -258,11 +265,12 @@ class LevelThreeVC: UIViewController {
     }
     
     func offButton() {
-        runButton.isEnabled = false
         if actionRobot.count >= 9 {
             forwardButton.isEnabled = false
             leftButton.isEnabled = false
             rightButton.isEnabled = false
+            
+            runButton.isEnabled = false
         }
     }
     
@@ -305,7 +313,7 @@ class LevelThreeVC: UIViewController {
     }
     
     @IBAction func trashAction(_ sender: Any) {
-        robotEntity?.position = (startEntity?.position)!
+        
         actionRobot.removeAll()
         actionRobot.append("kosong")
         actionBox.removeAll()
@@ -313,6 +321,7 @@ class LevelThreeVC: UIViewController {
         
         tableView.reloadData()
         robotEntity?.orientation = (startEntity?.orientation)!
+        robotEntity?.position = (startEntity?.position)!
         
         
         onButton()

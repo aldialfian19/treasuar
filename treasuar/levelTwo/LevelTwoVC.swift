@@ -19,6 +19,7 @@ class LevelTwoVC: UIViewController {
     @IBOutlet var leftButton: UIButton!
     @IBOutlet var rightButton: UIButton!
     
+    @IBOutlet var failedView: UIView!
     
     
     var robotEntity: Entity?
@@ -87,6 +88,8 @@ class LevelTwoVC: UIViewController {
         move(direction: "")
         
         checkPoint()
+        
+        failedView.isHidden = true
         
     }
     
@@ -242,9 +245,10 @@ class LevelTwoVC: UIViewController {
         }else if roundedValue1 == 0.4 && roundedValue2 == 0.0 {
             print("robot in a3")
         }else if roundedValue1 == 0.4 && roundedValue2 == 0.4 {
+            routeToSucces()
             print("robot in c3")
         }else {
-            routeToFalse()
+            failedView.isHidden = false
             print("no point")
         }
         
@@ -271,6 +275,20 @@ class LevelTwoVC: UIViewController {
     }
 
     @IBAction func trashAction(_ sender: Any) {
+        robotEntity?.orientation = (startEntity?.orientation)!
+        robotEntity?.position = (startEntity?.position)!
+        
+    }
+    
+    @IBAction func homeAction(_ sender: Any) {
+        routeToMain()
+    }
+    
+    @IBAction func ulangiAction(_ sender: Any) {
+        robotEntity?.orientation = (startEntity?.orientation)!
+        robotEntity?.position = (startEntity?.position)!
+        
+        failedView.isHidden = true
     }
     
     //MARK: -route to popup
@@ -299,3 +317,26 @@ class LevelTwoVC: UIViewController {
     }
 
 }
+
+//func checkPoint(){
+//    
+//    guard let robotEntity = robotEntity else {
+//        return
+//    }
+//    let roundedValue1 = (robotEntity.position.x * 10).rounded() / 10
+//    let roundedValue2 = (robotEntity.position.z * 10).rounded() / 10
+//    
+//    if roundedValue1 == 0.0 && roundedValue2 == 0.0{
+//        print("robot in a1")
+//    }else if roundedValue1 == 0.0 && roundedValue2 == 0.2 {
+//        print("robot in b1")
+//    }else if roundedValue1 == 0.0 && roundedValue2 == 0.4 {
+//        routeToSucces()
+//        print("robot in c1")
+//    }else {
+//        routeToFalse()
+//        print("no point")
+//    }
+//    
+//    
+//}
