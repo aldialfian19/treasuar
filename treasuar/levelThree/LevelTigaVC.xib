@@ -87,25 +87,38 @@
                         <action selector="rightAction:" destination="-1" eventType="touchUpInside" id="dQi-2m-TzW"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MZW-fM-NlS">
-                    <rect key="frame" x="69" y="774" width="100" height="100"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MZW-fM-NlS">
+                    <rect key="frame" x="69" y="866" width="120" height="120"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="100" id="5Vp-I2-ozi"/>
-                        <constraint firstAttribute="height" constant="100" id="cLt-m8-Nau"/>
+                        <constraint firstAttribute="width" constant="120" id="5Vp-I2-ozi"/>
+                        <constraint firstAttribute="height" constant="120" id="cLt-m8-Nau"/>
                     </constraints>
-                    <state key="normal" title="Button"/>
-                    <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" title="Button" image="trash">
+                        <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <buttonConfiguration key="configuration" style="plain">
+                        <backgroundConfiguration key="background" image="trash" imageContentMode="scaleToFill"/>
+                    </buttonConfiguration>
                     <connections>
                         <action selector="trashAction:" destination="-1" eventType="touchUpInside" id="OG5-IN-UWh"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C2b-35-SER">
-                    <rect key="frame" x="1197" y="774" width="100" height="100"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C2b-35-SER">
+                    <rect key="frame" x="1177" y="866" width="120" height="120"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="100" id="Rmg-s8-Ugy"/>
-                        <constraint firstAttribute="height" constant="100" id="xfe-JT-zJM"/>
+                        <constraint firstAttribute="width" constant="120" id="Rmg-s8-Ugy"/>
+                        <constraint firstAttribute="height" constant="120" id="xfe-JT-zJM"/>
                     </constraints>
-                    <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" title="Button" image="play.fill" catalog="system"/>
+                    <buttonConfiguration key="configuration" style="plain">
+                        <imageReference key="image" image="play.fill" catalog="system" symbolScale="default" renderingMode="original"/>
+                        <backgroundConfiguration key="background"/>
+                        <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="62"/>
+                    </buttonConfiguration>
                     <connections>
                         <action selector="runAction:" destination="-1" eventType="touchUpInside" id="cho-fM-c5p"/>
                     </connections>
@@ -214,8 +227,7 @@
                 <constraint firstItem="uqn-kA-haW" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="69" id="0Hm-m1-dPI"/>
                 <constraint firstItem="b6a-vE-G5N" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="3cB-GZ-mFh"/>
                 <constraint firstItem="uqn-kA-haW" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="69" id="4EJ-3G-rq2"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="C2b-35-SER" secondAttribute="trailing" constant="69" id="7EJ-Kv-v2Q"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="C2b-35-SER" secondAttribute="bottom" constant="130" id="7zb-cT-E1c"/>
+                <constraint firstItem="MZW-fM-NlS" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="866" id="6J0-rC-aiX"/>
                 <constraint firstItem="lrX-8l-hTe" firstAttribute="top" secondItem="d8r-Cd-8PG" secondAttribute="bottom" constant="67" id="Cpl-Hy-kIQ"/>
                 <constraint firstItem="JB4-We-9E4" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="69" id="DVg-mf-um8"/>
                 <constraint firstAttribute="trailing" secondItem="b6a-vE-G5N" secondAttribute="trailing" id="LDM-xN-JQf"/>
@@ -223,15 +235,16 @@
                 <constraint firstItem="JB4-We-9E4" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="528" id="Mie-CF-pLz"/>
                 <constraint firstItem="d8r-Cd-8PG" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="395" id="Nkx-p4-6mV"/>
                 <constraint firstItem="b5o-Xt-tZ1" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="69" id="OCB-nK-pl6"/>
+                <constraint firstItem="C2b-35-SER" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="866" id="ONn-6Q-0v8"/>
                 <constraint firstItem="bFm-go-Cbg" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="69" id="ORt-U5-ACg"/>
                 <constraint firstItem="fmS-9k-d64" firstAttribute="leading" secondItem="bFm-go-Cbg" secondAttribute="trailing" constant="44" id="SEH-dl-Ibk"/>
                 <constraint firstItem="d8r-Cd-8PG" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="69" id="U2h-Y7-cJ4"/>
+                <constraint firstItem="MZW-fM-NlS" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="69" id="VQC-Re-BBk"/>
                 <constraint firstItem="xES-Wv-ZUW" firstAttribute="top" secondItem="b6a-vE-G5N" secondAttribute="top" id="WDO-OM-NRa"/>
                 <constraint firstItem="xES-Wv-ZUW" firstAttribute="leading" secondItem="b6a-vE-G5N" secondAttribute="leading" id="YLP-fy-5PY"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="MZW-fM-NlS" secondAttribute="bottom" constant="130" id="cGg-ds-pv9"/>
+                <constraint firstAttribute="trailing" secondItem="C2b-35-SER" secondAttribute="trailing" constant="69" id="fct-sO-W7b"/>
                 <constraint firstItem="bFm-go-Cbg" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="240" id="ftM-Hy-64J"/>
                 <constraint firstAttribute="bottom" secondItem="b6a-vE-G5N" secondAttribute="bottom" id="g9p-kO-JVs"/>
-                <constraint firstItem="MZW-fM-NlS" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="69" id="gKa-65-eaJ"/>
                 <constraint firstItem="fmS-9k-d64" firstAttribute="top" secondItem="bFm-go-Cbg" secondAttribute="top" id="hwh-Dk-jUO"/>
                 <constraint firstItem="b5o-Xt-tZ1" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="384" id="neL-Ri-Nag"/>
                 <constraint firstItem="lrX-8l-hTe" firstAttribute="leading" secondItem="bFm-go-Cbg" secondAttribute="trailing" constant="76" id="tKi-pk-8Fp"/>
@@ -247,7 +260,9 @@
         <image name="box" width="313" height="657"/>
         <image name="home" width="149" height="149"/>
         <image name="instruksi" width="588" height="144"/>
+        <image name="play.fill" catalog="system" width="116" height="128"/>
         <image name="popUpFailed" width="1011" height="646"/>
+        <image name="trash" width="98" height="98"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

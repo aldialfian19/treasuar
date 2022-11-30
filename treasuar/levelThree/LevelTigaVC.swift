@@ -34,6 +34,8 @@ class LevelTigaVC: UIViewController {
     var a3loc: CGRect = CGRect(x: 1015.25, y: 317.25, width: 142.5, height: 142.5)
     var a2loc: CGRect = CGRect(x: 872.75, y: 317.25, width: 142.5, height: 142.5)
     var a1loc: CGRect = CGRect(x: 730.25, y: 317.25, width: 142.5, height: 142.5)
+    
+    var tembokLoc: CGRect = CGRect(x: 634, y: 221, width: 613, height: 618)
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -92,6 +94,8 @@ class LevelTigaVC: UIViewController {
         let c3tile = UIImageView(image: UIImage(named: "tile2d.png")!)
         c3tile.frame = c3loc
         self.view.addSubview(c3tile)
+        
+       
     }
     
     func addImage() {
@@ -99,6 +103,10 @@ class LevelTigaVC: UIViewController {
         robot!.frame = a1loc
         self.view.addSubview(robot!)
         self.view.bringSubviewToFront(robot!)
+        
+        let tembok = UIImageView(image: UIImage(named: "tembok.png")!)
+        tembok.frame = tembokLoc
+        self.view.addSubview(tembok)
         
         //obstacle
         let a2Obs = UIImageView(image: UIImage(named: "obstacle.png")!)

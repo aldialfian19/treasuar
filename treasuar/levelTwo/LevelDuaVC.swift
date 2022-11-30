@@ -23,15 +23,17 @@ class LevelDuaVC: UIViewController {
     
     var robot: UIImageView?
     
-    var c3loc: CGRect = CGRect(x: 780, y: 700, width: 178, height: 178)
-    var c2loc: CGRect = CGRect(x: 600, y: 700, width: 178, height: 178)
-    var c1loc: CGRect = CGRect(x: 420, y: 700, width: 178, height: 178)
-    var b3loc: CGRect = CGRect(x: 780, y: 520, width: 178, height: 178)
-    var b2loc: CGRect = CGRect(x: 600, y: 520, width: 178, height: 178)
-    var b1loc: CGRect = CGRect(x: 420, y: 520, width: 178, height: 178)
-    var a3loc: CGRect = CGRect(x: 780, y: 340, width: 178, height: 178)
-    var a2loc: CGRect = CGRect(x: 600, y: 340, width: 178, height: 178)
-    var a1loc: CGRect = CGRect(x: 420, y: 340, width: 178, height: 178)
+    var c3loc: CGRect = CGRect(x: 780, y: 700, width: 180, height: 180)
+    var c2loc: CGRect = CGRect(x: 600, y: 700, width: 180, height: 180)
+    var c1loc: CGRect = CGRect(x: 420, y: 700, width: 180, height: 180)
+    var b3loc: CGRect = CGRect(x: 780, y: 520, width: 180, height: 180)
+    var b2loc: CGRect = CGRect(x: 600, y: 520, width: 180, height: 180)
+    var b1loc: CGRect = CGRect(x: 420, y: 520, width: 180, height: 180)
+    var a3loc: CGRect = CGRect(x: 780, y: 340, width: 180, height: 180)
+    var a2loc: CGRect = CGRect(x: 600, y: 340, width: 180, height: 180)
+    var a1loc: CGRect = CGRect(x: 420, y: 340, width: 180, height: 180)
+    
+    var tembokLoc: CGRect = CGRect(x: 303, y: 220, width: 770, height: 775)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -84,13 +86,21 @@ class LevelDuaVC: UIViewController {
         let c3tile = UIImageView(image: UIImage(named: "tile2d.png")!)
         c3tile.frame = c3loc
         self.view.addSubview(c3tile)
+        
+        
     }
     
     func addImage() {
+        
+        
         robot = UIImageView(image: UIImage(named: "2.png"))
         robot!.frame = a1loc
         self.view.addSubview(robot!)
         self.view.bringSubviewToFront(robot!)
+        
+        let tembok = UIImageView(image: UIImage(named: "tembok.png")!)
+        tembok.frame = tembokLoc
+        self.view.addSubview(tembok)
         
         self.view.addSubview(kiriInstruksi!)
         self.view.bringSubviewToFront(kiriInstruksi!)
