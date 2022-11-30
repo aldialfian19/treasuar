@@ -249,78 +249,7 @@ class LevelEmpatVC: UIViewController {
     
     
     // MARK: -run move
-//    func runMove() {
-//        UIView.animate(withDuration: 1, delay: 0) {
-//            self.move(direction: "\(self.action[0])")
-//        } completion: { isTrue in
-//            UIView.animate(withDuration: 1, delay: 0) {
-//                if self.action.count >= 2 {
-//                    self.move(direction: "\(self.action[1])")
-//                }else {
-//                    self.move(direction: "\(self.action[0])")
-//                }
 //
-//            } completion: { isTrue2 in
-//                UIView.animate(withDuration: 1, delay: 0) {
-//                    if self.action.count >= 3 {
-//                        self.move(direction: "\(self.action[2])")
-//                    }else {
-//                        self.move(direction: "\(self.action[0])")
-//                    }
-//
-//                } completion: { isTrue3 in
-//                    UIView.animate(withDuration: 1, delay: 0) {
-//                        if self.action.count >= 4 {
-//                            self.move(direction: "\(self.action[3])")
-//                        }else {
-//                            self.move(direction: "\(self.action[0])")
-//                        }
-//
-//                    } completion: { isTrue4 in
-//                        UIView.animate(withDuration: 1, delay: 0) {
-//                            if self.action.count >= 5 {
-//                                self.move(direction: "\(self.action[4])")
-//                            }else {
-//                                self.move(direction: "\(self.action[0])")
-//                            }
-//                        } completion: { isTrue5 in
-//                            UIView.animate(withDuration: 1, delay: 0) {
-//                                if self.action.count >= 6 {
-//                                    self.move(direction: "\(self.action[5])")
-//                                }else {
-//                                    self.move(direction: "\(self.action[0])")
-//                                }
-//                            } completion: { isTrue6 in
-//                                UIView.animate(withDuration: 1, delay: 0) {
-//                                    if self.action.count >= 7 {
-//                                        self.move(direction: "\(self.action[6])")
-//                                    }else {
-//                                        self.move(direction: "\(self.action[0])")
-//                                    }
-//                                } completion: { isTrue7 in
-//                                    UIView.animate(withDuration: 1, delay: 0) {
-//                                        if self.action.count >= 8 {
-//                                            self.move(direction: "\(self.action[7])")
-//                                        }else {
-//                                            self.move(direction: "\(self.action[0])")
-//                                        }
-//                                    } completion: { isTrue8 in
-//                                        UIView.animate(withDuration: 1, delay: 0) {
-//                                            if self.action.count >= 9 {
-//                                                self.move(direction: "\(self.action[8])")
-//                                            }else {
-//                                                self.move(direction: "\(self.action[0])")
-//                                            }
-//                                        }
-//                                    }
-//                                }
-//                            }
-//                        }
-//                    }
-//                }
-//            }
-//        }
-//    }
     
 // MARK: -Created button
     
