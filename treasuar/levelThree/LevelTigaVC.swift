@@ -16,6 +16,10 @@ class LevelTigaVC: UIViewController {
     @IBOutlet var runButton: UIButton!
     @IBOutlet var tableView: UITableView!
     
+    @IBOutlet var failedView: UIView!
+    @IBOutlet var ulangiButton: UIButton!
+    
+    
     var robot: UIImageView?
     var point: UIImageView?
     var actionRobot = ["kosong"]
@@ -38,6 +42,8 @@ class LevelTigaVC: UIViewController {
         addImage()
         move(direction: "")
         updateTable()
+        
+        failedView.isHidden = true
         
         
         
@@ -112,6 +118,10 @@ class LevelTigaVC: UIViewController {
         let treasure = UIImageView(image: UIImage(named: "treasure.png")!)
         treasure.frame = c3loc
         self.view.addSubview(treasure)
+        
+        //failed
+        self.view.addSubview(failedView!)
+        self.view.bringSubviewToFront(failedView!)
     }
     
     func addActionImage() {
@@ -168,6 +178,11 @@ class LevelTigaVC: UIViewController {
         default:
             print("no move")
         }
+    }
+    
+    func delay(_ delay:Double, closure:@escaping () -> ()) {
+        let when = DispatchTime.now() + delay
+        DispatchQueue.main.asyncAfter(deadline: when, execute: closure)
     }
     
     
@@ -392,6 +407,22 @@ class LevelTigaVC: UIViewController {
         routeToMain()
     }
     
+    @IBAction func ulangiAction(_ sender: Any) {
+        robot?.image = UIImage(named: "2.png")
+        actionRobot.removeAll()
+        actionRobot.append("kosong")
+        actionBox.removeAll()
+        actionBox.append("")
+        
+        tableView.reloadData()
+        robot?.frame = a1loc
+        
+        onButton()
+        
+        failedView.isHidden = true
+    }
+    
+    
     //MARK: -checkpoint
     
     func offButton() {
@@ -416,7 +447,10 @@ class LevelTigaVC: UIViewController {
         if robotPosition == a1loc {
             print("robot in a1")
         }else if robotPosition == a2loc{
-            routeToFalse()
+            
+            delay(1) {
+                self.failedView.isHidden = false
+             }
             print("robot in a2")
         }else if robotPosition == a3loc{
             print("robot in a3")
@@ -425,10 +459,14 @@ class LevelTigaVC: UIViewController {
         }else if robotPosition == b2loc{
             print("robot in b2")
         }else if robotPosition == b3loc{
-            routeToFalse()
+            delay(1) {
+                self.failedView.isHidden = false
+             }
             print("robot in b3")
         }else if robotPosition == c1loc{
-            routeToFalse()
+            delay(1) {
+                self.failedView.isHidden = false
+             }
             print("robot in c1")
         }else if robotPosition == c2loc{
             print("robot in c2")
@@ -436,7 +474,9 @@ class LevelTigaVC: UIViewController {
             routeToSucces()
             print("robot in c3")
         }else {
-            routeToFalse()
+            delay(1) {
+                self.failedView.isHidden = false
+             }
         }
     }
     

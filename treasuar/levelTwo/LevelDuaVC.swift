@@ -16,6 +16,8 @@ class LevelDuaVC: UIViewController {
     @IBOutlet var kiriInstruksi: UIImageView!
     @IBOutlet var kananInstruksi: UIImageView!
     
+    @IBOutlet var failedView: UIView!
+    @IBOutlet var ulangiButton: UIButton!
     
     
     
@@ -36,6 +38,7 @@ class LevelDuaVC: UIViewController {
         
         kiriInstruksi.isHidden = true
         kananInstruksi.isHidden = true
+        failedView.isHidden = true
 
         addRectangle()
         addImage()
@@ -113,6 +116,10 @@ class LevelDuaVC: UIViewController {
         let treasure = UIImageView(image: UIImage(named: "treasure.png")!)
         treasure.frame = c3loc
         self.view.addSubview(treasure)
+        
+        //failed
+        self.view.addSubview(failedView!)
+        self.view.bringSubviewToFront(failedView!)
     }
     func hiddenImage() {
         kiriInstruksi.isHidden = true
@@ -174,18 +181,20 @@ class LevelDuaVC: UIViewController {
         }
     }
     
+    func delay(_ delay:Double, closure:@escaping () -> ()) {
+        let when = DispatchTime.now() + delay
+        DispatchQueue.main.asyncAfter(deadline: when, execute: closure)
+    }
+    
     //MARK: -created button
     
     
     @IBAction func forwardAction(_ sender: Any) {
         hiddenImage()
-        UIView.animate(withDuration: 1, delay: 0) {
-            self.move(direction: "forward")
-        } completion: { isTrue in
-            UIView.animate(withDuration: 2, delay: 1) {
-                self.checkPoint()
-            }
-        }
+        move(direction: "forward")
+        delay(1.2) {
+             self.checkPoint()
+         }
     }
     @IBAction func leftAction(_ sender: Any) {
         move(direction: "left")
@@ -207,6 +216,13 @@ class LevelDuaVC: UIViewController {
         routeToMain()
     }
     
+    @IBAction func ulangiAction(_ sender: Any) {
+        move(direction: "restart")
+        hiddenImage()
+        failedView.isHidden = true
+    }
+    
+    
     
     //MARK: - CEK POINT
     
@@ -216,7 +232,7 @@ class LevelDuaVC: UIViewController {
         if robotPosition == a1loc {
             print("robot in a1")
         }else if robotPosition == a2loc{
-            routeToFalse()
+            failedView.isHidden = false
             print("robot in a2")
         }else if robotPosition == a3loc{
             print("robot in a3")
@@ -227,10 +243,10 @@ class LevelDuaVC: UIViewController {
             kananInstruksi.isHidden = false
             print("robot in b2")
         }else if robotPosition == b3loc{
-            routeToFalse()
+            failedView.isHidden = false
             print("robot in b3")
         }else if robotPosition == c1loc{
-            routeToFalse()
+            failedView.isHidden = false
             print("robot in c1")
         }else if robotPosition == c2loc{
             print("robot in c2")
@@ -238,15 +254,8 @@ class LevelDuaVC: UIViewController {
             routeToSucces()
             print("robot in c3")
         }else {
-            routeToFalse()
+            failedView.isHidden = false
         }
-    }
-    func routeToFalse() {
-        guard let window = UIApplication.shared.keyWindow else { return }
-        let falseVC = failedVC()
-        UIView.transition(with: window, duration: 0.3, options: .transitionCrossDissolve, animations: { [weak window] in
-            window?.rootViewController = falseVC
-        }, completion: nil)
     }
     
     func routeToMain() {

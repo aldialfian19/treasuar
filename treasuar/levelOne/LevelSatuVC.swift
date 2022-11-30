@@ -16,6 +16,8 @@ class LevelSatuVC: UIViewController {
     @IBOutlet var trashButton: UIButton!
     @IBOutlet var majuInstruksi: UIImageView!
     
+    @IBOutlet var ulangiButton: UIButton!
+    @IBOutlet var failedView: UIView!
     
     var action = ["forward", "forward", "left", "forward"]
     
@@ -35,10 +37,16 @@ class LevelSatuVC: UIViewController {
         super.viewDidLoad()
         
         majuInstruksi.isHidden = false
+        failedView.isHidden = true
+        
+//        YourView.bringSubview(toFront: yourelementA)
+        
+
         
         addRectangle()
         addImage()
         move(direction: "")
+        
         
         
         
@@ -95,6 +103,8 @@ class LevelSatuVC: UIViewController {
         self.view.addSubview(majuInstruksi!)
         self.view.bringSubviewToFront(majuInstruksi!)
         
+        
+        
         //obstacle
         let a2Obs = UIImageView(image: UIImage(named: "obstacle.png")!)
         a2Obs.frame = a2loc
@@ -109,6 +119,10 @@ class LevelSatuVC: UIViewController {
         let treasure = UIImageView(image: UIImage(named: "treasure.png")!)
         treasure.frame = c1loc
         self.view.addSubview(treasure)
+        
+        //failed
+        self.view.addSubview(failedView!)
+        self.view.bringSubviewToFront(failedView!)
         
     }
     func removeImage() {
@@ -171,21 +185,22 @@ class LevelSatuVC: UIViewController {
         }
     }
     
+    func delay(_ delay:Double, closure:@escaping () -> ()) {
+        let when = DispatchTime.now() + delay
+        DispatchQueue.main.asyncAfter(deadline: when, execute: closure)
+    }
+    
     //MARK: -button
     
     @IBAction func oneAction(_ sender: Any) {
         
-        UIView.animate(withDuration: 1, delay: 0) {
-            self.move(direction: "forward")
-            self.removeImage()
-        } completion: { isTrue in
-            UIView.animate(withDuration: 2, delay: 1) {
-                self.checkPoint()
-            }
-        }
-//        move(direction: "forward")
-//        removeImage()
-//        checkPoint()
+        move(direction: "forward")
+        delay(1.2) {
+             self.checkPoint()
+         }
+
+        removeImage()
+
 
     }
     @IBAction func leftAction(_ sender: Any) {
@@ -198,11 +213,18 @@ class LevelSatuVC: UIViewController {
     
     @IBAction func restartAction(_ sender: Any) {
         move(direction: "restart")
+        failedView.isHidden = true
     }
     
     @IBAction func homeAction(_ sender: Any) {
         routeToMain()
     }
+    
+    @IBAction func ulangiAction(_ sender: Any) {
+        move(direction: "restart")
+        failedView.isHidden = true
+    }
+    
     
     //MARK: -Checkpoint
     func checkPoint() {
@@ -212,29 +234,31 @@ class LevelSatuVC: UIViewController {
             majuInstruksi.isHidden = false
             print("robot in a1")
         }else if robotPosition == a2loc{
-            routeToFalse()
+            failedView.isHidden = false
             print("robot in a2")
         }else if robotPosition == b1loc{
             print("robot in b1")
         }else if robotPosition == b2loc{
-            routeToFalse()
+            failedView.isHidden = false
             print("robot in b2")
         }else if robotPosition == c1loc{
             routeToSucces()
             print("robot in c1")
         }else {
-            routeToFalse()
+            failedView.isHidden = false
             print("no point")
         }
     }
     
-    func routeToFalse() {
-        guard let window = UIApplication.shared.keyWindow else { return }
-        let falseVC = failedVC()
-        UIView.transition(with: window, duration: 0.3, options: .transitionCrossDissolve, animations: { [weak window] in
-            window?.rootViewController = falseVC
-        }, completion: nil)
-    }
+    
+    
+//    func routeToFalse() {
+//        guard let window = UIApplication.shared.keyWindow else { return }
+//        let falseVC = failedVC()
+//        UIView.transition(with: window, duration: 0.3, options: .transitionCrossDissolve, animations: { [weak window] in
+//            window?.rootViewController = falseVC
+//        }, completion: nil)
+//    }
     func routeToMain() {
         guard let window = UIApplication.shared.keyWindow else { return }
         let mainVC = mainVC()
