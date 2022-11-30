@@ -95,7 +95,7 @@ class LevelLimaVC: UIViewController {
     }
     
     func addImage() {
-        robot = UIImageView(image: UIImage(named: "2.png"))
+        robot = UIImageView(image: UIImage(named: "depan.png"))
         robot!.frame = a1loc
         self.view.addSubview(robot!)
         self.view.bringSubviewToFront(robot!)

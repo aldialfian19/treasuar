@@ -93,7 +93,7 @@ class LevelDuaVC: UIViewController {
     func addImage() {
         
         
-        robot = UIImageView(image: UIImage(named: "2.png"))
+        robot = UIImageView(image: UIImage(named: "depan.png"))
         robot!.frame = a1loc
         self.view.addSubview(robot!)
         self.view.bringSubviewToFront(robot!)
@@ -145,20 +145,20 @@ class LevelDuaVC: UIViewController {
             
         case "forward":
           
-            if robot?.image == UIImage(named: "2.png") {
+            if robot?.image == UIImage(named: "depan.png") {
                 UIView.animate(
                     withDuration: 2, delay: 0, usingSpringWithDamping: 1.9, initialSpringVelocity: 3.0, options: [], animations: {
                         self.robot?.transform = (self.robot?.transform.translatedBy(x: 0, y: 180))!
                         
                     })
                 
-            }else if self.robot?.image == UIImage(named: "1.png") {
+            }else if self.robot?.image == UIImage(named: "kiri.png") {
                 UIView.animate(
                     withDuration: 2, delay: 0, usingSpringWithDamping: 1.9, initialSpringVelocity: 3.0, options: [], animations: {
                         self.robot?.transform = (self.robot?.transform.translatedBy(x: 180, y: 0))!
                         
                     })
-            }else if self.robot?.image == UIImage(named: "3.png") {
+            }else if self.robot?.image == UIImage(named: "kanan.png") {
                 UIView.animate(
                     withDuration: 2, delay: 0, usingSpringWithDamping: 1.9, initialSpringVelocity: 3.0, options: [], animations: {
                         self.robot?.transform = (self.robot?.transform.translatedBy(x: -180, y: 0))!
@@ -168,21 +168,22 @@ class LevelDuaVC: UIViewController {
 
             
         case "left":
-            if robot?.image == UIImage(named: "2.png"){
-                self.robot?.image = UIImage(named: "1.png")
-            }else if robot?.image == UIImage(named: "3.png"){
-                self.robot?.image = UIImage(named: "2.png")
+            if robot?.image == UIImage(named: "depan.png"){
+                self.robot?.image = UIImage(named: "kiri.png")
+            }else if robot?.image == UIImage(named: "kanan.png"){
+                self.robot?.image = UIImage(named: "depan.png")
             }
             
         case "right":
-            if robot?.image == UIImage(named: "2.png"){
-                self.robot?.image = UIImage(named: "3.png")
-            }else if robot?.image == UIImage(named: "1.png"){
-                self.robot?.image = UIImage(named: "2.png")
+            if robot?.image == UIImage(named: "depan.png"){
+                self.robot?.image = UIImage(named: "kanan.png")
+            }else if robot?.image == UIImage(named: "kiri.png"){
+                self.robot?.image = UIImage(named: "depan.png")
             }
+
             
         case "restart":
-            self.robot?.image = UIImage(named: "2.png")
+            self.robot?.image = UIImage(named: "depan.png")
             self.robot?.frame = a1loc
 
             

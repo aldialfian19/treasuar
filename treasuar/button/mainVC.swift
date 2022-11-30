@@ -29,7 +29,7 @@ class mainVC: UIViewController {
     
     func routeToSatu() {
         guard let window = UIApplication.shared.keyWindow else { return }
-        let satuVC = LevelSatuVC()
+        let satuVC = LevelEmpatVC()
         UIView.transition(with: window, duration: 0.3, options: .transitionCrossDissolve, animations: { [weak window] in
             window?.rootViewController = satuVC
         }, completion: nil)
