@@ -22,7 +22,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" alwaysBounceHorizontal="YES" showsVerticalScrollIndicator="NO" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="olX-pO-jWL">
-                                <rect key="frame" x="0.0" y="446" width="1366" height="444"/>
+                                <rect key="frame" x="0.0" y="426" width="1366" height="444"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fKe-8w-joI">
                                         <rect key="frame" x="0.0" y="0.0" width="2132" height="444"/>
@@ -89,11 +89,12 @@
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="1366" id="7qZ-FN-ogs"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="1366" id="BKh-Du-jtu"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="444" id="Nra-w7-tQd"/>
                                     <constraint firstItem="fKe-8w-joI" firstAttribute="top" secondItem="olX-pO-jWL" secondAttribute="top" id="QiC-ds-74J"/>
                                     <constraint firstItem="fKe-8w-joI" firstAttribute="leading" secondItem="olX-pO-jWL" secondAttribute="leading" id="a4g-sR-9zD"/>
                                     <constraint firstAttribute="trailing" secondItem="fKe-8w-joI" secondAttribute="trailing" id="jUP-qV-mYO"/>
                                     <constraint firstAttribute="height" constant="444" id="qhd-66-flA"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="444" id="qqx-bA-4A7"/>
                                 </constraints>
                                 <viewLayoutGuide key="contentLayoutGuide" id="R4f-cY-WGl"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="hkr-Bn-G2e"/>

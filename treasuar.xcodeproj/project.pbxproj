@@ -21,8 +21,6 @@
 		24606F7929385D58004FFAD0 /* OptionFiveVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24606F7729385D58004FFAD0 /* OptionFiveVC.xib */; };
 		249CC8BD2935407C00457D0B /* Boldhead.otf in Resources */ = {isa = PBXBuildFile; fileRef = 249CC8BC2935407C00457D0B /* Boldhead.otf */; };
 		249CC8C02935ADF700457D0B /* ARVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249CC8BF2935ADF700457D0B /* ARVC.swift */; };
-		24AADE8D29347D9D0061C9FE /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AADE8B29347D9D0061C9FE /* MainVC.swift */; };
-		24AADE8E29347D9D0061C9FE /* MainVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24AADE8C29347D9D0061C9FE /* MainVC.xib */; };
 		CBB4115229280A6E009881DD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB4115129280A6E009881DD /* AppDelegate.swift */; };
 		CBB4115429280A6E009881DD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB4115329280A6E009881DD /* SceneDelegate.swift */; };
 		CBB4115629280A6E009881DD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB4115529280A6E009881DD /* ViewController.swift */; };
@@ -38,22 +36,6 @@
 		CBB4118A29280B37009881DD /* merah.usdz in Resources */ = {isa = PBXBuildFile; fileRef = CBB4118629280B37009881DD /* merah.usdz */; };
 		CBB4118B29280B37009881DD /* floor.usdz in Resources */ = {isa = PBXBuildFile; fileRef = CBB4118729280B37009881DD /* floor.usdz */; };
 		CBB4118D29281664009881DD /* Experience.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = CBB4118C29281664009881DD /* Experience.rcproject */; };
-		CBB41198292907AC009881DD /* LevelOneVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB41196292907AC009881DD /* LevelOneVC.swift */; };
-		CBB41199292907AC009881DD /* LevelOneVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBB41197292907AC009881DD /* LevelOneVC.xib */; };
-		CBB4119C292907EA009881DD /* LevelTwoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB4119A292907EA009881DD /* LevelTwoVC.swift */; };
-		CBB4119D292907EA009881DD /* LevelTwoVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBB4119B292907EA009881DD /* LevelTwoVC.xib */; };
-		CBB411A029290823009881DD /* LevelThreeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB4119E29290823009881DD /* LevelThreeVC.swift */; };
-		CBB411A129290823009881DD /* LevelThreeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBB4119F29290823009881DD /* LevelThreeVC.xib */; };
-		CBB411A42929083D009881DD /* LevelFourVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB411A22929083D009881DD /* LevelFourVC.swift */; };
-		CBB411A52929083D009881DD /* LevelFourVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBB411A32929083D009881DD /* LevelFourVC.xib */; };
-		CBB411A82929086A009881DD /* LevelFiveVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB411A62929086A009881DD /* LevelFiveVC.swift */; };
-		CBB411A92929086A009881DD /* LevelFiveVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBB411A72929086A009881DD /* LevelFiveVC.xib */; };
-		CBB411AF292914FB009881DD /* PopUpModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB411AE292914FB009881DD /* PopUpModel.swift */; };
-		CBB411B229291921009881DD /* buttonVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB411B029291921009881DD /* buttonVc.swift */; };
-		CBB411B329291921009881DD /* buttonVc.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBB411B129291921009881DD /* buttonVc.xib */; };
-		CBB411B529293BEF009881DD /* PopUpData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB411B429293BEF009881DD /* PopUpData.swift */; };
-		CBB411B829294623009881DD /* Popup.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB411B629294623009881DD /* Popup.swift */; };
-		CBB411B929294623009881DD /* Popup.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBB411B729294623009881DD /* Popup.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,8 +70,6 @@
 		24606F7729385D58004FFAD0 /* OptionFiveVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OptionFiveVC.xib; sourceTree = "<group>"; };
 		249CC8BC2935407C00457D0B /* Boldhead.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Boldhead.otf; sourceTree = "<group>"; };
 		249CC8BF2935ADF700457D0B /* ARVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARVC.swift; sourceTree = "<group>"; };
-		24AADE8B29347D9D0061C9FE /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
-		24AADE8C29347D9D0061C9FE /* MainVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainVC.xib; sourceTree = "<group>"; };
 		CBB4114E29280A6E009881DD /* treasuar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = treasuar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBB4115129280A6E009881DD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CBB4115329280A6E009881DD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -109,22 +89,6 @@
 		CBB4118629280B37009881DD /* merah.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = merah.usdz; sourceTree = "<group>"; };
 		CBB4118729280B37009881DD /* floor.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = floor.usdz; sourceTree = "<group>"; };
 		CBB4118C29281664009881DD /* Experience.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = Experience.rcproject; sourceTree = "<group>"; };
-		CBB41196292907AC009881DD /* LevelOneVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelOneVC.swift; sourceTree = "<group>"; };
-		CBB41197292907AC009881DD /* LevelOneVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LevelOneVC.xib; sourceTree = "<group>"; };
-		CBB4119A292907EA009881DD /* LevelTwoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelTwoVC.swift; sourceTree = "<group>"; };
-		CBB4119B292907EA009881DD /* LevelTwoVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LevelTwoVC.xib; sourceTree = "<group>"; };
-		CBB4119E29290823009881DD /* LevelThreeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelThreeVC.swift; sourceTree = "<group>"; };
-		CBB4119F29290823009881DD /* LevelThreeVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LevelThreeVC.xib; sourceTree = "<group>"; };
-		CBB411A22929083D009881DD /* LevelFourVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelFourVC.swift; sourceTree = "<group>"; };
-		CBB411A32929083D009881DD /* LevelFourVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LevelFourVC.xib; sourceTree = "<group>"; };
-		CBB411A62929086A009881DD /* LevelFiveVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelFiveVC.swift; sourceTree = "<group>"; };
-		CBB411A72929086A009881DD /* LevelFiveVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LevelFiveVC.xib; sourceTree = "<group>"; };
-		CBB411AE292914FB009881DD /* PopUpModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpModel.swift; sourceTree = "<group>"; };
-		CBB411B029291921009881DD /* buttonVc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = buttonVc.swift; sourceTree = "<group>"; };
-		CBB411B129291921009881DD /* buttonVc.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = buttonVc.xib; sourceTree = "<group>"; };
-		CBB411B429293BEF009881DD /* PopUpData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpData.swift; sourceTree = "<group>"; };
-		CBB411B629294623009881DD /* Popup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Popup.swift; sourceTree = "<group>"; };
-		CBB411B729294623009881DD /* Popup.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Popup.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,15 +133,6 @@
 			path = fonts;
 			sourceTree = "<group>";
 		};
-		24AADE8A29347D890061C9FE /* MainVC */ = {
-			isa = PBXGroup;
-			children = (
-				24AADE8B29347D9D0061C9FE /* MainVC.swift */,
-				24AADE8C29347D9D0061C9FE /* MainVC.xib */,
-			);
-			path = MainVC;
-			sourceTree = "<group>";
-		};
 		CBB4114529280A6E009881DD = {
 			isa = PBXGroup;
 			children = (
@@ -203,10 +158,7 @@
 			children = (
 				24606F65293839CC004FFAD0 /* onboarding */,
 				249CC8BB2935402400457D0B /* fonts */,
-				24AADE8A29347D890061C9FE /* MainVC */,
 				CBB411952929076B009881DD /* 3D Asset */,
-				CBB4119429290728009881DD /* failedScreen */,
-				CBB411932929071F009881DD /* button */,
 				CBB4119229290708009881DD /* levelFive */,
 				CBB41191292906FF009881DD /* levelFour */,
 				CBB41190292906F5009881DD /* levelThree */,
@@ -246,8 +198,6 @@
 		CBB4118E292906D6009881DD /* levelOne */ = {
 			isa = PBXGroup;
 			children = (
-				CBB41196292907AC009881DD /* LevelOneVC.swift */,
-				CBB41197292907AC009881DD /* LevelOneVC.xib */,
 				24606F6129372297004FFAD0 /* OptionSatuVC.swift */,
 				24606F6229372297004FFAD0 /* OptionSatuVC.xib */,
 			);
@@ -259,8 +209,6 @@
 			children = (
 				24606F6B29385B61004FFAD0 /* OptionDuaVC.swift */,
 				24606F6A29385B61004FFAD0 /* OptionDuaVC.xib */,
-				CBB4119A292907EA009881DD /* LevelTwoVC.swift */,
-				CBB4119B292907EA009881DD /* LevelTwoVC.xib */,
 			);
 			path = levelTwo;
 			sourceTree = "<group>";
@@ -270,8 +218,6 @@
 			children = (
 				24606F6E29385C95004FFAD0 /* OptionThreeVC.swift */,
 				24606F6F29385C95004FFAD0 /* OptionThreeVC.xib */,
-				CBB4119E29290823009881DD /* LevelThreeVC.swift */,
-				CBB4119F29290823009881DD /* LevelThreeVC.xib */,
 			);
 			path = levelThree;
 			sourceTree = "<group>";
@@ -281,8 +227,6 @@
 			children = (
 				24606F7329385CFC004FFAD0 /* OptionFourVC.swift */,
 				24606F7229385CFC004FFAD0 /* OptionFourVC.xib */,
-				CBB411A22929083D009881DD /* LevelFourVC.swift */,
-				CBB411A32929083D009881DD /* LevelFourVC.xib */,
 			);
 			path = levelFour;
 			sourceTree = "<group>";
@@ -292,30 +236,8 @@
 			children = (
 				24606F7629385D57004FFAD0 /* OptionFiveVC.swift */,
 				24606F7729385D58004FFAD0 /* OptionFiveVC.xib */,
-				CBB411A62929086A009881DD /* LevelFiveVC.swift */,
-				CBB411A72929086A009881DD /* LevelFiveVC.xib */,
 			);
 			path = levelFive;
-			sourceTree = "<group>";
-		};
-		CBB411932929071F009881DD /* button */ = {
-			isa = PBXGroup;
-			children = (
-				CBB411B029291921009881DD /* buttonVc.swift */,
-				CBB411B129291921009881DD /* buttonVc.xib */,
-			);
-			path = button;
-			sourceTree = "<group>";
-		};
-		CBB4119429290728009881DD /* failedScreen */ = {
-			isa = PBXGroup;
-			children = (
-				CBB411AE292914FB009881DD /* PopUpModel.swift */,
-				CBB411B429293BEF009881DD /* PopUpData.swift */,
-				CBB411B629294623009881DD /* Popup.swift */,
-				CBB411B729294623009881DD /* Popup.xib */,
-			);
-			path = failedScreen;
 			sourceTree = "<group>";
 		};
 		CBB411952929076B009881DD /* 3D Asset */ = {
@@ -433,28 +355,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				24AADE8E29347D9D0061C9FE /* MainVC.xib in Resources */,
 				24606F6429372297004FFAD0 /* OptionSatuVC.xib in Resources */,
 				CBB4118829280B37009881DD /* toy.usdz in Resources */,
 				CBB4118A29280B37009881DD /* merah.usdz in Resources */,
 				24606F7429385CFC004FFAD0 /* OptionFourVC.xib in Resources */,
-				CBB411A129290823009881DD /* LevelThreeVC.xib in Resources */,
-				CBB411B929294623009881DD /* Popup.xib in Resources */,
-				CBB41199292907AC009881DD /* LevelOneVC.xib in Resources */,
 				249CC8BD2935407C00457D0B /* Boldhead.otf in Resources */,
 				24606F7129385C95004FFAD0 /* OptionThreeVC.xib in Resources */,
 				24606F6929383A06004FFAD0 /* onBoardingVC.storyboard in Resources */,
 				CBB4118929280B37009881DD /* robot.usdz in Resources */,
 				CBB4116129280A6F009881DD /* LaunchScreen.storyboard in Resources */,
 				CBB4115E29280A6F009881DD /* Assets.xcassets in Resources */,
-				CBB411B329291921009881DD /* buttonVc.xib in Resources */,
 				24606F7929385D58004FFAD0 /* OptionFiveVC.xib in Resources */,
 				24606F6C29385B61004FFAD0 /* OptionDuaVC.xib in Resources */,
-				CBB4119D292907EA009881DD /* LevelTwoVC.xib in Resources */,
-				CBB411A52929083D009881DD /* LevelFourVC.xib in Resources */,
 				CBB4118B29280B37009881DD /* floor.usdz in Resources */,
 				CBB4115929280A6E009881DD /* Main.storyboard in Resources */,
-				CBB411A92929086A009881DD /* LevelFiveVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -479,27 +393,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CBB41198292907AC009881DD /* LevelOneVC.swift in Sources */,
 				249CC8C02935ADF700457D0B /* ARVC.swift in Sources */,
-				24AADE8D29347D9D0061C9FE /* MainVC.swift in Sources */,
 				CBB4115C29280A6E009881DD /* treasuar.xcdatamodeld in Sources */,
-				CBB4119C292907EA009881DD /* LevelTwoVC.swift in Sources */,
 				24606F67293839F2004FFAD0 /* onBoardingVC.swift in Sources */,
 				CBB4118D29281664009881DD /* Experience.rcproject in Sources */,
 				24606F6D29385B61004FFAD0 /* OptionDuaVC.swift in Sources */,
 				24606F7529385CFC004FFAD0 /* OptionFourVC.swift in Sources */,
 				24606F7829385D58004FFAD0 /* OptionFiveVC.swift in Sources */,
 				24606F6329372297004FFAD0 /* OptionSatuVC.swift in Sources */,
-				CBB411B229291921009881DD /* buttonVc.swift in Sources */,
 				CBB4115629280A6E009881DD /* ViewController.swift in Sources */,
-				CBB411A82929086A009881DD /* LevelFiveVC.swift in Sources */,
 				24606F7029385C95004FFAD0 /* OptionThreeVC.swift in Sources */,
 				CBB4115229280A6E009881DD /* AppDelegate.swift in Sources */,
-				CBB411A029290823009881DD /* LevelThreeVC.swift in Sources */,
-				CBB411A42929083D009881DD /* LevelFourVC.swift in Sources */,
-				CBB411AF292914FB009881DD /* PopUpModel.swift in Sources */,
-				CBB411B829294623009881DD /* Popup.swift in Sources */,
-				CBB411B529293BEF009881DD /* PopUpData.swift in Sources */,
 				CBB4115429280A6E009881DD /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
