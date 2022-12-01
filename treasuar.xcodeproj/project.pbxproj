@@ -58,6 +58,16 @@
 		CBCB905929381F8D00D089D5 /* LevelOneVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBCB905729381F8D00D089D5 /* LevelOneVC.xib */; };
 		CBCB905D2938785500D089D5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBCB905C2938785500D089D5 /* ViewController.swift */; };
 		CBCB90602938786600D089D5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBCB905E2938786600D089D5 /* Main.storyboard */; };
+		CBCB90632938D12900D089D5 /* OptionSatuVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBCB90612938D12900D089D5 /* OptionSatuVC.xib */; };
+		CBCB90642938D12900D089D5 /* OptionSatuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBCB90622938D12900D089D5 /* OptionSatuVC.swift */; };
+		CBCB90672938D13300D089D5 /* OptionDuaVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBCB90652938D13300D089D5 /* OptionDuaVC.xib */; };
+		CBCB90682938D13300D089D5 /* OptionDuaVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBCB90662938D13300D089D5 /* OptionDuaVC.swift */; };
+		CBCB906B2938D13C00D089D5 /* OptionThreeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBCB90692938D13C00D089D5 /* OptionThreeVC.swift */; };
+		CBCB906C2938D13C00D089D5 /* OptionThreeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBCB906A2938D13C00D089D5 /* OptionThreeVC.xib */; };
+		CBCB906F2938D14600D089D5 /* OptionFourVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBCB906D2938D14600D089D5 /* OptionFourVC.swift */; };
+		CBCB90702938D14600D089D5 /* OptionFourVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBCB906E2938D14600D089D5 /* OptionFourVC.xib */; };
+		CBCB90732938D15300D089D5 /* OptionFiveVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBCB90712938D15200D089D5 /* OptionFiveVC.swift */; };
+		CBCB90742938D15300D089D5 /* OptionFiveVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBCB90722938D15200D089D5 /* OptionFiveVC.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -133,6 +143,16 @@
 		CBCB905729381F8D00D089D5 /* LevelOneVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LevelOneVC.xib; sourceTree = "<group>"; };
 		CBCB905C2938785500D089D5 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CBCB905F2938786600D089D5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CBCB90612938D12900D089D5 /* OptionSatuVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OptionSatuVC.xib; sourceTree = "<group>"; };
+		CBCB90622938D12900D089D5 /* OptionSatuVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionSatuVC.swift; sourceTree = "<group>"; };
+		CBCB90652938D13300D089D5 /* OptionDuaVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OptionDuaVC.xib; sourceTree = "<group>"; };
+		CBCB90662938D13300D089D5 /* OptionDuaVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionDuaVC.swift; sourceTree = "<group>"; };
+		CBCB90692938D13C00D089D5 /* OptionThreeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionThreeVC.swift; sourceTree = "<group>"; };
+		CBCB906A2938D13C00D089D5 /* OptionThreeVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OptionThreeVC.xib; sourceTree = "<group>"; };
+		CBCB906D2938D14600D089D5 /* OptionFourVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionFourVC.swift; sourceTree = "<group>"; };
+		CBCB906E2938D14600D089D5 /* OptionFourVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OptionFourVC.xib; sourceTree = "<group>"; };
+		CBCB90712938D15200D089D5 /* OptionFiveVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionFiveVC.swift; sourceTree = "<group>"; };
+		CBCB90722938D15200D089D5 /* OptionFiveVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OptionFiveVC.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -247,6 +267,8 @@
 		CBB4118E292906D6009881DD /* levelOne */ = {
 			isa = PBXGroup;
 			children = (
+				CBCB90622938D12900D089D5 /* OptionSatuVC.swift */,
+				CBCB90612938D12900D089D5 /* OptionSatuVC.xib */,
 				CBCB905629381F8D00D089D5 /* LevelOneVC.swift */,
 				CBCB905729381F8D00D089D5 /* LevelOneVC.xib */,
 				CBAF6591292E339E0017B554 /* LevelSatuVC.swift */,
@@ -258,6 +280,8 @@
 		CBB4118F292906ED009881DD /* levelTwo */ = {
 			isa = PBXGroup;
 			children = (
+				CBCB90662938D13300D089D5 /* OptionDuaVC.swift */,
+				CBCB90652938D13300D089D5 /* OptionDuaVC.xib */,
 				CBB4119A292907EA009881DD /* LevelTwoVC.swift */,
 				CBB4119B292907EA009881DD /* LevelTwoVC.xib */,
 				CBAF6595292F232B0017B554 /* LevelDuaVC.swift */,
@@ -269,6 +293,8 @@
 		CBB41190292906F5009881DD /* levelThree */ = {
 			isa = PBXGroup;
 			children = (
+				CBCB90692938D13C00D089D5 /* OptionThreeVC.swift */,
+				CBCB906A2938D13C00D089D5 /* OptionThreeVC.xib */,
 				CBB4119E29290823009881DD /* LevelThreeVC.swift */,
 				CBB4119F29290823009881DD /* LevelThreeVC.xib */,
 				CB65D406292FA4900040FF8A /* LevelTigaVC.swift */,
@@ -282,6 +308,8 @@
 		CBB41191292906FF009881DD /* levelFour */ = {
 			isa = PBXGroup;
 			children = (
+				CBCB906D2938D14600D089D5 /* OptionFourVC.swift */,
+				CBCB906E2938D14600D089D5 /* OptionFourVC.xib */,
 				CB9343AA2937EE2C0030D24E /* LevelEmpatVC.swift */,
 				CB9343A92937EE2C0030D24E /* LevelEmpatVC.xib */,
 				CB9343A82937EE2C0030D24E /* LevelFourVC.swift */,
@@ -293,6 +321,8 @@
 		CBB4119229290708009881DD /* levelFive */ = {
 			isa = PBXGroup;
 			children = (
+				CBCB90712938D15200D089D5 /* OptionFiveVC.swift */,
+				CBCB90722938D15200D089D5 /* OptionFiveVC.xib */,
 				CB564D5F2936482100460BEF /* LevelFiveVC.swift */,
 				CB564D612936482100460BEF /* LevelFiveVC.xib */,
 				CB564D602936482100460BEF /* LevelLimaVC.swift */,
@@ -437,6 +467,10 @@
 				CB65D433293394B50040FF8A /* arMainVC.xib in Resources */,
 				CBB4118A29280B37009881DD /* merah.usdz in Resources */,
 				CBCB90602938786600D089D5 /* Main.storyboard in Resources */,
+				CBCB906C2938D13C00D089D5 /* OptionThreeVC.xib in Resources */,
+				CBCB90672938D13300D089D5 /* OptionDuaVC.xib in Resources */,
+				CBCB90632938D12900D089D5 /* OptionSatuVC.xib in Resources */,
+				CBCB90742938D15300D089D5 /* OptionFiveVC.xib in Resources */,
 				CB65D422293390030040FF8A /* succesVC.xib in Resources */,
 				CBB411A129290823009881DD /* LevelThreeVC.xib in Resources */,
 				CB564D662936482100460BEF /* LevelLimaVC.xib in Resources */,
@@ -444,6 +478,7 @@
 				CBAF6594292E339E0017B554 /* LevelSatuVC.xib in Resources */,
 				CBB4116129280A6F009881DD /* LaunchScreen.storyboard in Resources */,
 				CB564D5E293489A500460BEF /* mainnVC.storyboard in Resources */,
+				CBCB90702938D14600D089D5 /* OptionFourVC.xib in Resources */,
 				CBB4115E29280A6F009881DD /* Assets.xcassets in Resources */,
 				CB9343AB2937EE2C0030D24E /* LevelFourVC.xib in Resources */,
 				CBCB905929381F8D00D089D5 /* LevelOneVC.xib in Resources */,
@@ -478,7 +513,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CBCB90682938D13300D089D5 /* OptionDuaVC.swift in Sources */,
 				CBB4115C29280A6E009881DD /* treasuar.xcdatamodeld in Sources */,
+				CBCB906B2938D13C00D089D5 /* OptionThreeVC.swift in Sources */,
 				CB65D432293394B50040FF8A /* arMainVC.swift in Sources */,
 				CBB4119C292907EA009881DD /* LevelTwoVC.swift in Sources */,
 				CBAF6593292E339E0017B554 /* LevelSatuVC.swift in Sources */,
@@ -487,9 +524,11 @@
 				CBCB905D2938785500D089D5 /* ViewController.swift in Sources */,
 				CBAF6597292F232B0017B554 /* LevelDuaVC.swift in Sources */,
 				CB65D42E2933940E0040FF8A /* arFailedVC.swift in Sources */,
+				CBCB906F2938D14600D089D5 /* OptionFourVC.swift in Sources */,
 				CB564D5C2934899100460BEF /* mainnVC.swift in Sources */,
 				CBB4115229280A6E009881DD /* AppDelegate.swift in Sources */,
 				CB65D42A293393F90040FF8A /* arSuccesVC.swift in Sources */,
+				CBCB90642938D12900D089D5 /* OptionSatuVC.swift in Sources */,
 				CB564D642936482100460BEF /* LevelLimaVC.swift in Sources */,
 				CBB411A029290823009881DD /* LevelThreeVC.swift in Sources */,
 				CB564D632936482100460BEF /* LevelFiveVC.swift in Sources */,
@@ -499,6 +538,7 @@
 				CB65D408292FA4900040FF8A /* LevelTigaVC.swift in Sources */,
 				CB9343AE2937EE2C0030D24E /* LevelEmpatVC.swift in Sources */,
 				CBB4115429280A6E009881DD /* SceneDelegate.swift in Sources */,
+				CBCB90732938D15300D089D5 /* OptionFiveVC.swift in Sources */,
 				CBCB905829381F8D00D089D5 /* LevelOneVC.swift in Sources */,
 				CB65D41C293354350040FF8A /* mainVC.swift in Sources */,
 			);
