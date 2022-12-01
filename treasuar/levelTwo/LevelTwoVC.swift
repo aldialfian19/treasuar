@@ -20,6 +20,8 @@ class LevelTwoVC: UIViewController {
     @IBOutlet var rightButton: UIButton!
     
     @IBOutlet var failedView: UIView!
+    @IBOutlet var instruksiSatu: UIImageView!
+    @IBOutlet var instruksiDua: UIImageView!
     
     
     var robotEntity: Entity?
@@ -90,6 +92,7 @@ class LevelTwoVC: UIViewController {
         checkPoint()
         
         failedView.isHidden = true
+        instruksiSatu.isHidden = true
         
     }
     
@@ -134,6 +137,9 @@ class LevelTwoVC: UIViewController {
 //            move(direction: "")
             
             toyAnimation()
+            
+            instruksiDua.isHidden = true
+            instruksiSatu.isHidden = false
             
         }
     }
@@ -318,25 +324,3 @@ class LevelTwoVC: UIViewController {
 
 }
 
-//func checkPoint(){
-//    
-//    guard let robotEntity = robotEntity else {
-//        return
-//    }
-//    let roundedValue1 = (robotEntity.position.x * 10).rounded() / 10
-//    let roundedValue2 = (robotEntity.position.z * 10).rounded() / 10
-//    
-//    if roundedValue1 == 0.0 && roundedValue2 == 0.0{
-//        print("robot in a1")
-//    }else if roundedValue1 == 0.0 && roundedValue2 == 0.2 {
-//        print("robot in b1")
-//    }else if roundedValue1 == 0.0 && roundedValue2 == 0.4 {
-//        routeToSucces()
-//        print("robot in c1")
-//    }else {
-//        routeToFalse()
-//        print("no point")
-//    }
-//    
-//    
-//}
