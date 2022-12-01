@@ -26,9 +26,9 @@ class OptionSatuVC: UIViewController {
     
     func toModeSatu() {
         guard let window = UIApplication.shared.keyWindow else { return }
-        let levelOneVC = LevelOneVC()
+        let levelSatuVC = LevelSatuVC()
         UIView.transition(with: window, duration: 0.3, options: .transitionCrossDissolve, animations: { [weak window] in
-            window?.rootViewController = levelOneVC
+            window?.rootViewController = levelSatuVC
         }, completion: nil)
     }
 

@@ -19,6 +19,11 @@ class LevelFourVC: UIViewController {
     @IBOutlet var rightButton: UIButton!
     
     
+    @IBOutlet var instruksiSatu: UIImageView!
+    @IBOutlet var instruksiDua: UIImageView!
+    
+    @IBOutlet var failedView: UIView!
+    
     
     
     var actionRobot = ["kosong"]
@@ -91,6 +96,10 @@ class LevelFourVC: UIViewController {
         
         move(direction: "")
         
+        failedView.isHidden = true
+        tableView.isHidden = true
+        instruksiSatu.isHidden = true
+        
     }
     
     //MARK: -Load Object
@@ -134,6 +143,10 @@ class LevelFourVC: UIViewController {
             move(direction: "")
             
             toyAnimation()
+            
+            instruksiDua.isHidden = true
+            instruksiSatu.isHidden = false
+            tableView.isHidden = false
             
         }
     }
@@ -283,11 +296,10 @@ class LevelFourVC: UIViewController {
     }
     
     func routeToMain() {
-        guard let window = UIApplication.shared.keyWindow else { return }
-        let mainVC = arMainVC()
-        UIView.transition(with: window, duration: 0.0, options: .transitionCrossDissolve, animations: { [weak window] in
-            window?.rootViewController = mainVC
-        }, completion: nil)
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let ViewController = storyboard.instantiateViewController(withIdentifier: "ViewController") as! ViewController
+        ViewController.modalPresentationStyle = .fullScreen
+        self.present(ViewController, animated: false, completion: nil)
     }
     
     func routeToSucces() {
@@ -302,7 +314,25 @@ class LevelFourVC: UIViewController {
     //MARK: -CREATED BUTTON
 
     @IBAction func homeAction(_ sender: Any) {
+        routeToMain()
     }
+    
+    @IBAction func ulangiAction(_ sender: Any) {
+        robotEntity?.position = (startEntity?.position)!
+        actionRobot.removeAll()
+        actionRobot.append("kosong")
+        actionBox.removeAll()
+        actionBox.append("")
+        
+        tableView.reloadData()
+        robotEntity?.orientation = (startEntity?.orientation)!
+        
+        
+        onButton()
+        
+        failedView.isHidden = true
+    }
+    
     
     @IBAction func trashAction(_ sender: Any) {
         robotEntity?.position = (startEntity?.position)!

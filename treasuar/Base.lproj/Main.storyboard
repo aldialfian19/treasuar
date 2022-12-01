@@ -12,7 +12,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="treasuar" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="ViewController" customModule="treasuar" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="1366" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -51,7 +51,7 @@
                                                 <rect key="frame" x="1257" y="4" width="356" height="444"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" image="level1"/>
+                                                <buttonConfiguration key="configuration" style="plain" image="level4"/>
                                                 <connections>
                                                     <action selector="fourAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ufb-d4-Vpc"/>
                                                     <action selector="oneAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CQO-bA-wGa"/>
@@ -61,7 +61,7 @@
                                                 <rect key="frame" x="1654" y="4" width="356" height="444"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" image="level1"/>
+                                                <buttonConfiguration key="configuration" style="plain" image="level5"/>
                                                 <connections>
                                                     <action selector="fiveAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AkN-tX-KP9"/>
                                                     <action selector="oneAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Jte-7K-vZc"/>
@@ -128,12 +128,12 @@
                                     <constraint firstAttribute="height" constant="109" id="utB-hj-qPp"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hi, Roger!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ASJ-jZ-AVv">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hallo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ASJ-jZ-AVv">
                                 <rect key="frame" x="70" y="239" width="542" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="CvY-ja-not"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="64"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="64"/>
                                 <color key="textColor" red="0.89411771299999998" green="0.27843138579999999" blue="0.20392158630000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -190,11 +190,13 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Level3" width="357" height="444"/>
+        <image name="Level3" width="365" height="452"/>
         <image name="achievement" width="149" height="149"/>
         <image name="bg" width="1366" height="1024"/>
         <image name="level1" width="365" height="452"/>
-        <image name="level2" width="357" height="444"/>
+        <image name="level2" width="365" height="452"/>
+        <image name="level4" width="365" height="452"/>
+        <image name="level5" width="365" height="452"/>
         <image name="logo" width="143" height="103"/>
         <image name="setting" width="148" height="149"/>
         <image name="sound" width="149" height="149"/>

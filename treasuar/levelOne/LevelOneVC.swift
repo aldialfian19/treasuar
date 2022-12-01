@@ -302,11 +302,10 @@ class LevelOneVC: UIViewController {
     }
     
     func routeToMain() {
-        guard let window = UIApplication.shared.keyWindow else { return }
-        let mainVC = arMainVC()
-        UIView.transition(with: window, duration: 0.0, options: .transitionCrossDissolve, animations: { [weak window] in
-            window?.rootViewController = mainVC
-        }, completion: nil)
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let ViewController = storyboard.instantiateViewController(withIdentifier: "ViewController") as! ViewController
+        ViewController.modalPresentationStyle = .fullScreen
+        self.present(ViewController, animated: false, completion: nil)
     }
     
     func routeToSucces() {

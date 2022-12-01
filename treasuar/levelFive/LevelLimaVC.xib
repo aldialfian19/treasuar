@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="ipad12_9rounded" orientation="landscape" layout="fullscreen" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -93,7 +94,10 @@
                         <constraint firstAttribute="height" constant="100" id="cLt-m8-Nau"/>
                     </constraints>
                     <state key="normal" title="Button"/>
-                    <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                    <buttonConfiguration key="configuration" style="filled">
+                        <backgroundConfiguration key="background" image="trash"/>
+                        <color key="baseBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </buttonConfiguration>
                     <connections>
                         <action selector="trashAction:" destination="-1" eventType="touchUpInside" id="OG5-IN-UWh"/>
                     </connections>
@@ -104,18 +108,16 @@
                         <constraint firstAttribute="width" constant="100" id="Rmg-s8-Ugy"/>
                         <constraint firstAttribute="height" constant="100" id="xfe-JT-zJM"/>
                     </constraints>
-                    <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                    <buttonConfiguration key="configuration" style="filled" image="play.fill" catalog="system">
+                        <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="60" weight="bold"/>
+                        <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </buttonConfiguration>
                     <connections>
                         <action selector="runAction:" destination="-1" eventType="touchUpInside" id="cho-fM-c5p"/>
                     </connections>
                 </button>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="box" translatesAutoresizingMaskIntoConstraints="NO" id="fmS-9k-d64">
-                    <rect key="frame" x="213" y="240" width="305" height="657"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="305" id="YLr-gX-b55"/>
-                    </constraints>
-                </imageView>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="instruksi" translatesAutoresizingMaskIntoConstraints="NO" id="d8r-Cd-8PG">
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="instruksi1" translatesAutoresizingMaskIntoConstraints="NO" id="d8r-Cd-8PG">
                     <rect key="frame" x="395" y="69" width="576" height="132"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="576" id="2MP-6P-Idm"/>
@@ -124,10 +126,12 @@
                 </imageView>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceHorizontal="YES" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" estimatedSectionHeaderHeight="-1" sectionFooterHeight="28" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="lrX-8l-hTe">
                     <rect key="frame" x="245" y="268" width="240" height="592"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="240" id="1qx-Xq-oFP"/>
                         <constraint firstAttribute="height" constant="592" id="Tmq-b0-tIg"/>
                     </constraints>
+                    <color key="sectionIndexBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </tableView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uqn-kA-haW">
                     <rect key="frame" x="69" y="69" width="120" height="120"/>
@@ -175,14 +179,12 @@
                 <constraint firstItem="d8r-Cd-8PG" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="395" id="Nkx-p4-6mV"/>
                 <constraint firstItem="b5o-Xt-tZ1" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="69" id="OCB-nK-pl6"/>
                 <constraint firstItem="bFm-go-Cbg" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="69" id="ORt-U5-ACg"/>
-                <constraint firstItem="fmS-9k-d64" firstAttribute="leading" secondItem="bFm-go-Cbg" secondAttribute="trailing" constant="44" id="SEH-dl-Ibk"/>
                 <constraint firstItem="d8r-Cd-8PG" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="69" id="U2h-Y7-cJ4"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="MZW-fM-NlS" secondAttribute="bottom" constant="130" id="cGg-ds-pv9"/>
                 <constraint firstItem="POH-0H-XDe" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="69" id="f8K-Mm-cIp"/>
                 <constraint firstItem="bFm-go-Cbg" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="240" id="ftM-Hy-64J"/>
                 <constraint firstAttribute="bottom" secondItem="b6a-vE-G5N" secondAttribute="bottom" id="g9p-kO-JVs"/>
                 <constraint firstItem="MZW-fM-NlS" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="69" id="gKa-65-eaJ"/>
-                <constraint firstItem="fmS-9k-d64" firstAttribute="top" secondItem="bFm-go-Cbg" secondAttribute="top" id="hwh-Dk-jUO"/>
                 <constraint firstItem="POH-0H-XDe" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="596" id="l0H-Da-ya8"/>
                 <constraint firstItem="b5o-Xt-tZ1" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="358" id="neL-Ri-Nag"/>
                 <constraint firstItem="lrX-8l-hTe" firstAttribute="leading" secondItem="bFm-go-Cbg" secondAttribute="trailing" constant="76" id="tKi-pk-8Fp"/>
@@ -192,13 +194,14 @@
     </objects>
     <resources>
         <image name="Onboarding" width="1366" height="1024"/>
-        <image name="arrow.clockwise" catalog="system" width="115" height="128"/>
-        <image name="arrow.counterclockwise" catalog="system" width="115" height="128"/>
-        <image name="arrow.up" catalog="system" width="120" height="128"/>
-        <image name="box" width="313" height="657"/>
+        <image name="arrow.clockwise" catalog="system" width="113" height="128"/>
+        <image name="arrow.counterclockwise" catalog="system" width="113" height="128"/>
+        <image name="arrow.up" catalog="system" width="118" height="128"/>
         <image name="home" width="149" height="149"/>
-        <image name="instruksi" width="588" height="144"/>
+        <image name="instruksi1" width="588" height="144"/>
         <image name="loop" width="200" height="200"/>
+        <image name="play.fill" catalog="system" width="117" height="128"/>
+        <image name="trash" width="98" height="98"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

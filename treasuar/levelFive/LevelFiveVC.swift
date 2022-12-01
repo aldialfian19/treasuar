@@ -13,8 +13,21 @@ class LevelFiveVC: UIViewController {
 
     @IBOutlet var arView: ARView!
     @IBOutlet var tableView: UITableView!
+    @IBOutlet var runButton: UIButton!
+    @IBOutlet var forwardButton: UIButton!
+    @IBOutlet var leftButton: UIButton!
+    @IBOutlet var rightButton: UIButton!
     
-    var action = ["kosong"]
+    
+    @IBOutlet var instruksiSatu: UIImageView!
+    @IBOutlet var instruksiDua: UIImageView!
+    
+    @IBOutlet var failedView: UIView!
+    
+    
+    
+    var actionRobot = ["kosong"]
+    var actionBox = [""]
     
     var robotEntity: Entity?
     
@@ -83,6 +96,10 @@ class LevelFiveVC: UIViewController {
         
         move(direction: "")
         
+        failedView.isHidden = true
+        tableView.isHidden = true
+        instruksiSatu.isHidden = true
+        
     }
     
     //MARK: -Load Object
@@ -126,6 +143,10 @@ class LevelFiveVC: UIViewController {
             move(direction: "")
             
             toyAnimation()
+            
+            instruksiDua.isHidden = true
+            instruksiSatu.isHidden = false
+            tableView.isHidden = false
             
         }
     }
@@ -183,6 +204,9 @@ class LevelFiveVC: UIViewController {
             //create sudut berputar
             let rotateAngle = simd_quatf(angle: GLKMathDegreesToRadians(270), axis: SIMD3(x: 0, y: 1, z: 0))
             robotEntity?.setOrientation(rotateAngle, relativeTo: robotEntity)
+            
+            case "kosong":
+            print("no move")
             
         default:
             print("No Movement")
@@ -246,6 +270,22 @@ class LevelFiveVC: UIViewController {
         
     }
     
+    func offButton() {
+        runButton.isEnabled = false
+        if actionRobot.count >= 9 {
+            forwardButton.isEnabled = false
+            leftButton.isEnabled = false
+            rightButton.isEnabled = false
+        }
+    }
+    
+    func onButton() {
+        forwardButton.isEnabled = true
+        leftButton.isEnabled = true
+        rightButton.isEnabled = true
+        runButton.isEnabled = true
+    }
+    
     //MARK: -route to popup
     func routeToFalse() {
         guard let window = UIApplication.shared.keyWindow else { return }
@@ -256,11 +296,10 @@ class LevelFiveVC: UIViewController {
     }
     
     func routeToMain() {
-        guard let window = UIApplication.shared.keyWindow else { return }
-        let mainVC = arMainVC()
-        UIView.transition(with: window, duration: 0.0, options: .transitionCrossDissolve, animations: { [weak window] in
-            window?.rootViewController = mainVC
-        }, completion: nil)
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let ViewController = storyboard.instantiateViewController(withIdentifier: "ViewController") as! ViewController
+        ViewController.modalPresentationStyle = .fullScreen
+        self.present(ViewController, animated: false, completion: nil)
     }
     
     func routeToSucces() {
@@ -275,34 +314,168 @@ class LevelFiveVC: UIViewController {
     //MARK: -CREATED BUTTON
 
     @IBAction func homeAction(_ sender: Any) {
+        routeToMain()
     }
     
+    @IBAction func ulangiAction(_ sender: Any) {
+        robotEntity?.position = (startEntity?.position)!
+        actionRobot.removeAll()
+        actionRobot.append("kosong")
+        actionBox.removeAll()
+        actionBox.append("")
+        
+        tableView.reloadData()
+        robotEntity?.orientation = (startEntity?.orientation)!
+        
+        
+        onButton()
+        
+        failedView.isHidden = true
+    }
+    
+    
     @IBAction func trashAction(_ sender: Any) {
+        robotEntity?.position = (startEntity?.position)!
+        actionRobot.removeAll()
+        actionRobot.append("kosong")
+        actionBox.removeAll()
+        actionBox.append("")
+        
+        tableView.reloadData()
+        robotEntity?.orientation = (startEntity?.orientation)!
+        
+        
+        onButton()
     }
     
     @IBAction func forwardAction(_ sender: Any) {
+        actionRobot.append("forward")
+        actionBox.append("Maju")
+        
+        tableView.reloadData()
+        
+        offButton()
+        
     }
     
     @IBAction func leftAction(_ sender: Any) {
+        actionRobot.append("left")
+        actionBox.append("Balik Kiri")
+        
+        tableView.reloadData()
+        
+        offButton()
     }
     
     @IBAction func rightAction(_ sender: Any) {
+        actionRobot.append("right")
+        actionBox.append("Balik Kanan")
+        
+        tableView.reloadData()
+        
+        offButton()
     }
     
     @IBAction func runAction(_ sender: Any) {
+        offButton()
         
-        move(direction: "forward")
+        if actionRobot.count >= 2 {
+            move(direction: "\(actionRobot[1])")
+        }else {
+            move(direction: "\(actionRobot[0])")
+        }
         delay(2) {
-             self.move(direction: "left")
+            if self.actionRobot.count >= 3 {
+                self.move(direction: "\(self.actionRobot[2])")
+            }else {
+                self.move(direction: "\(self.actionRobot[0])")
+            }
             self.delay(2) {
-                 self.move(direction: "forward")
-                self.delay(2) {
-                     self.move(direction: "right")
+                 self.checkPoint()
+                self.delay(0.1) {
+                    if self.actionRobot.count >= 4 {
+                        self.move(direction: "\(self.actionRobot[3])")
+                    }else {
+                        self.move(direction: "\(self.actionRobot[0])")
+                    }
+                    self.delay(2) {
+                         self.checkPoint()
+                        self.delay(0.1) {
+                            if self.actionRobot.count >= 5 {
+                                self.move(direction: "\(self.actionRobot[4])")
+                            }else {
+                                self.move(direction: "\(self.actionRobot[0])")
+                            }
+                            self.delay(2) {
+                                 self.checkPoint()
+                                self.delay(0.1) {
+                                    if self.actionRobot.count >= 6 {
+                                        self.move(direction: "\(self.actionRobot[5])")
+                                    }else {
+                                        self.move(direction: "\(self.actionRobot[0])")
+                                    }
+                                    self.delay(2) {
+                                         self.checkPoint()
+                                        self.delay(0.1) {
+                                            if self.actionRobot.count >= 7 {
+                                                self.move(direction: "\(self.actionRobot[6])")
+                                            }else {
+                                                self.move(direction: "\(self.actionRobot[0])")
+                                            }
+                                            self.delay(2) {
+                                                 self.checkPoint()
+                                                self.delay(0.1) {
+                                                    if self.actionRobot.count >= 8 {
+                                                        self.move(direction: "\(self.actionRobot[7])")
+                                                    }else {
+                                                        self.move(direction: "\(self.actionRobot[0])")
+                                                    }
+                                                    self.delay(2) {
+                                                         self.checkPoint()
+                                                        self.delay(0.1) {
+                                                            if self.actionRobot.count >= 9 {
+                                                                self.move(direction: "\(self.actionRobot[8])")
+                                                            }else {
+                                                                self.move(direction: "\(self.actionRobot[0])")
+                                                            }
+                                                            self.delay(2) {
+                                                                 self.checkPoint()
+                                                             }
+                                                         }
+                                                     }
+                                                 }
+                                             }
+                                         }
+                                     }
+                                 }
+                             }
+                         }
+                     }
                  }
              }
          }
     }
     
+    func updateTable() {
+        tableView.dataSource = self
+        tableView.delegate = self
+        tableView.register(UINib(nibName: "LevelTigaCell", bundle: nil), forCellReuseIdentifier: "cell")
+    }
+}
+
+
+extension LevelFiveVC: UITableViewDataSource, UITableViewDelegate {
     
     
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.actionBox.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "cell")! as? LevelTigaCell {
+            cell.cellLabel.text = self.actionBox[indexPath.row]
+            return cell
+        }
+        return UITableViewCell()
+    }
 }

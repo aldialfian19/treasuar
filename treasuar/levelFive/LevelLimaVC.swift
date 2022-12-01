@@ -318,6 +318,7 @@ class LevelLimaVC: UIViewController {
         
     }
     @IBAction func homeAction(_ sender: Any) {
+        
         routeToMain()
     }
     
@@ -392,11 +393,10 @@ class LevelLimaVC: UIViewController {
     }
     
     func routeToMain() {
-        guard let window = UIApplication.shared.keyWindow else { return }
-        let mainVC = mainVC()
-        UIView.transition(with: window, duration: 0.3, options: .transitionCrossDissolve, animations: { [weak window] in
-            window?.rootViewController = mainVC
-        }, completion: nil)
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let ViewController = storyboard.instantiateViewController(withIdentifier: "ViewController") as! ViewController
+        ViewController.modalPresentationStyle = .fullScreen
+        self.present(ViewController, animated: false, completion: nil)
     }
     
     func routeToSucces() {

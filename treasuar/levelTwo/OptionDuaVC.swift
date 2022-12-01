@@ -26,9 +26,9 @@ class OptionDuaVC: UIViewController {
     
     func toModeDua() {
         guard let window = UIApplication.shared.keyWindow else { return }
-        let levelTwoVC = LevelTwoVC()
+        let levelDuaVC = LevelDuaVC()
         UIView.transition(with: window, duration: 0.3, options: .transitionCrossDissolve, animations: { [weak window] in
-            window?.rootViewController = levelTwoVC
+            window?.rootViewController = levelDuaVC
         }, completion: nil)
     }
 

@@ -26,9 +26,9 @@ class OptionThreeVC: UIViewController {
     
     func toModeTiga() {
         guard let window = UIApplication.shared.keyWindow else { return }
-        let levelThreeVC = LevelThreeVC()
+        let levelTigaVC = LevelTigaVC()
         UIView.transition(with: window, duration: 0.3, options: .transitionCrossDissolve, animations: { [weak window] in
-            window?.rootViewController = levelThreeVC
+            window?.rootViewController = levelTigaVC
         }, completion: nil)
     }
 

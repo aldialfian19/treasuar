@@ -23,7 +23,7 @@
                     <rect key="frame" x="-14" y="0.0" width="1401" height="1040"/>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pick One!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="98n-lt-kSe">
-                    <rect key="frame" x="583" y="129" width="207" height="33.666666666666657"/>
+                    <rect key="frame" x="583" y="153" width="207" height="33.5"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="33.5" id="nYT-7M-lQj"/>
                     </constraints>
@@ -31,7 +31,7 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bZj-0v-Bdv">
+                <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="OptionSatuVC" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bZj-0v-Bdv">
                     <rect key="frame" x="178" y="297" width="430" height="430"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="430" id="fdP-ei-2Mu"/>

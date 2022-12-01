@@ -26,9 +26,9 @@ class OptionFiveVC: UIViewController {
     
     func toModeLima() {
         guard let window = UIApplication.shared.keyWindow else { return }
-        let levelFiveVC = LevelFiveVC()
+        let levelLimaVC = LevelLimaVC()
         UIView.transition(with: window, duration: 0.3, options: .transitionCrossDissolve, animations: { [weak window] in
-            window?.rootViewController = levelFiveVC
+            window?.rootViewController = levelLimaVC
         }, completion: nil)
     }
 

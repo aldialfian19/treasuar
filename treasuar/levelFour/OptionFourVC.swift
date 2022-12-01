@@ -26,9 +26,9 @@ class OptionFourVC: UIViewController {
     
     func toModeEmpat() {
         guard let window = UIApplication.shared.keyWindow else { return }
-        let levelFourVC = LevelFourVC()
+        let levelEmpatVC = LevelEmpatVC()
         UIView.transition(with: window, duration: 0.3, options: .transitionCrossDissolve, animations: { [weak window] in
-            window?.rootViewController = levelFourVC
+            window?.rootViewController = levelEmpatVC
         }, completion: nil)
     }
 

@@ -74,33 +74,43 @@ class ViewController: UIViewController {
     }
     
     func routeToLevelOne() {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let OptionSatuVC = storyboard.instantiateViewController(withIdentifier: "OptionSatuVC") as! OptionSatuVC
-        self.present(OptionSatuVC, animated: true, completion: nil)
+        guard let window = UIApplication.shared.keyWindow else { return }
+        let OptionSatuVC = OptionSatuVC()
+        UIView.transition(with: window, duration: 0.0, options: .transitionCrossDissolve, animations: { [weak window] in
+            window?.rootViewController = OptionSatuVC
+        }, completion: nil)
     }
     
     func routeToLevelTwo() {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let OptionDuaVC = storyboard.instantiateViewController(withIdentifier: "OptionDuaVC") as! OptionDuaVC
-        self.present(OptionDuaVC, animated: true, completion: nil)
+        guard let window = UIApplication.shared.keyWindow else { return }
+        let OptionDuaVC = OptionDuaVC()
+        UIView.transition(with: window, duration: 0.0, options: .transitionCrossDissolve, animations: { [weak window] in
+            window?.rootViewController = OptionDuaVC
+        }, completion: nil)
     }
     
     func routeToLevelThree() {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let OptionThreeVC = storyboard.instantiateViewController(withIdentifier: "OptionThreeVC") as! OptionThreeVC
-        self.present(OptionThreeVC, animated: true, completion: nil)
+        guard let window = UIApplication.shared.keyWindow else { return }
+        let OptionTigaVC = OptionThreeVC()
+        UIView.transition(with: window, duration: 0.0, options: .transitionCrossDissolve, animations: { [weak window] in
+            window?.rootViewController = OptionTigaVC
+        }, completion: nil)
     }
     
     func routeToLevelFour() {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let OptionFourVC = storyboard.instantiateViewController(withIdentifier: "OptionFourVC") as! OptionFourVC
-        self.present(OptionFourVC, animated: true, completion: nil)
+        guard let window = UIApplication.shared.keyWindow else { return }
+        let OptionEmpatVC = OptionFourVC()
+        UIView.transition(with: window, duration: 0.0, options: .transitionCrossDissolve, animations: { [weak window] in
+            window?.rootViewController = OptionEmpatVC
+        }, completion: nil)
     }
     
     func routeToLevelFive() {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let OptionFiveVC = storyboard.instantiateViewController(withIdentifier: "OptionFiveVC") as! OptionFiveVC
-        self.present(OptionFiveVC, animated: true, completion: nil)
+        guard let window = UIApplication.shared.keyWindow else { return }
+        let OptionLimaVC = OptionFiveVC()
+        UIView.transition(with: window, duration: 0.0, options: .transitionCrossDissolve, animations: { [weak window] in
+            window?.rootViewController = OptionLimaVC
+        }, completion: nil)
     }
     
 
@@ -123,4 +133,9 @@ class ViewController: UIViewController {
         routeToLevelFive()
     }
     
+//    func routeToLevelTwo() {
+//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//        let OptionDuaVC = storyboard.instantiateViewController(withIdentifier: "OptionDuaVC") as! OptionDuaVC()
+//        self.present(OptionDuaVC, animated: true, completion: nil)
+//    }
 }
