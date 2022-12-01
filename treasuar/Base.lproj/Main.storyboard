@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="ipad12_9" orientation="landscape" layout="fullscreen" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -25,7 +25,7 @@
                                 <rect key="frame" x="0.0" y="446" width="1366" height="444"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fKe-8w-joI">
-                                        <rect key="frame" x="0.0" y="0.0" width="2132" height="588"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="2132" height="444"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tMA-lc-EjH">
                                                 <rect key="frame" x="66" y="4" width="356" height="444"/>
@@ -88,13 +88,12 @@
                                     </view>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="fKe-8w-joI" firstAttribute="bottom" secondItem="hkr-Bn-G2e" secondAttribute="bottom" constant="144" id="2Uy-tQ-0xL"/>
+                                    <constraint firstAttribute="width" constant="1366" id="7qZ-FN-ogs"/>
                                     <constraint firstItem="fKe-8w-joI" firstAttribute="top" secondItem="olX-pO-jWL" secondAttribute="top" id="QiC-ds-74J"/>
-                                    <constraint firstItem="fKe-8w-joI" firstAttribute="height" secondItem="R4f-cY-WGl" secondAttribute="height" id="VIR-p1-fJE"/>
                                     <constraint firstItem="fKe-8w-joI" firstAttribute="leading" secondItem="olX-pO-jWL" secondAttribute="leading" id="a4g-sR-9zD"/>
-                                    <constraint firstAttribute="bottom" secondItem="fKe-8w-joI" secondAttribute="bottom" id="fxd-dz-ve0"/>
                                     <constraint firstAttribute="trailing" secondItem="fKe-8w-joI" secondAttribute="trailing" id="jUP-qV-mYO"/>
                                     <constraint firstAttribute="height" constant="444" id="qhd-66-flA"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="444" id="qqx-bA-4A7"/>
                                 </constraints>
                                 <viewLayoutGuide key="contentLayoutGuide" id="R4f-cY-WGl"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="hkr-Bn-G2e"/>

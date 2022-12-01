@@ -36,50 +36,10 @@ class ViewController: UIViewController {
         nameLabel.textAlignment = .left
         nameLabel.font = UIFont(name: "Boldhead", size: 64)
         
-        
+      
         // Do any additional setup after loading the view.
     }
     
-    func routeToLevelOne() {
-        guard let window = UIApplication.shared.keyWindow else { return }
-        let levelOneVC = OptionSatuVC()
-        UIView.transition(with: window, duration: 0.3, options: .transitionCrossDissolve, animations: { [weak window] in
-            window?.rootViewController = levelOneVC
-        }, completion: nil)
-    }
-    
-    func routeToLevelTwo() {
-        guard let window = UIApplication.shared.keyWindow else { return }
-        let levelOneVC = OptionDuaVC()
-        UIView.transition(with: window, duration: 0.3, options: .transitionCrossDissolve, animations: { [weak window] in
-            window?.rootViewController = levelOneVC
-        }, completion: nil)
-    }
-    
-    func routeToLevelThree() {
-        guard let window = UIApplication.shared.keyWindow else { return }
-        let levelOneVC = OptionThreeVC()
-        UIView.transition(with: window, duration: 0.3, options: .transitionCrossDissolve, animations: { [weak window] in
-            window?.rootViewController = levelOneVC
-        }, completion: nil)
-    }
-
-    func routeToLevelFour() {
-        guard let window = UIApplication.shared.keyWindow else { return }
-        let levelOneVC = OptionFourVC()
-        UIView.transition(with: window, duration: 0.3, options: .transitionCrossDissolve, animations: { [weak window] in
-            window?.rootViewController = levelOneVC
-        }, completion: nil)
-    }
-    
-    func routeToLevelFive() {
-        guard let window = UIApplication.shared.keyWindow else { return }
-        let levelOneVC = OptionFiveVC()
-        UIView.transition(with: window, duration: 0.3, options: .transitionCrossDissolve, animations: { [weak window] in
-            window?.rootViewController = levelOneVC
-        }, completion: nil)
-    }
-
 
     
     override func viewDidLayoutSubviews() {
@@ -111,6 +71,46 @@ class ViewController: UIViewController {
         }
         
         
+    }
+    
+    func routeToLevelOne() {
+        guard let window = UIApplication.shared.keyWindow else { return }
+        let levelThreeVC = OptionSatuVC()
+        UIView.transition(with: window, duration: 0.3, options: .transitionCrossDissolve, animations: { [weak window] in
+            window?.rootViewController = levelThreeVC
+        }, completion: nil)
+    }
+    
+    func routeToLevelTwo() {
+        guard let window = UIApplication.shared.keyWindow else { return }
+        let levelThreeVC = OptionDuaVC()
+        UIView.transition(with: window, duration: 0.3, options: .transitionCrossDissolve, animations: { [weak window] in
+            window?.rootViewController = levelThreeVC
+        }, completion: nil)
+    }
+    
+    func routeToLevelThree() {
+        guard let window = UIApplication.shared.keyWindow else { return }
+        let levelThreeVC = OptionThreeVC()
+        UIView.transition(with: window, duration: 0.3, options: .transitionCrossDissolve, animations: { [weak window] in
+            window?.rootViewController = levelThreeVC
+        }, completion: nil)
+    }
+    
+    func routeToLevelFour() {
+        guard let window = UIApplication.shared.keyWindow else { return }
+        let levelThreeVC = OptionFourVC()
+        UIView.transition(with: window, duration: 0.3, options: .transitionCrossDissolve, animations: { [weak window] in
+            window?.rootViewController = levelThreeVC
+        }, completion: nil)
+    }
+    
+    func routeToLevelFive() {
+        guard let window = UIApplication.shared.keyWindow else { return }
+        let levelThreeVC = OptionFiveVC()
+        UIView.transition(with: window, duration: 0.3, options: .transitionCrossDissolve, animations: { [weak window] in
+            window?.rootViewController = levelThreeVC
+        }, completion: nil)
     }
     
 
