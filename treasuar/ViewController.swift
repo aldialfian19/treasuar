@@ -42,7 +42,7 @@ class ViewController: UIViewController {
     
     func routeToLevelOne() {
         guard let window = UIApplication.shared.keyWindow else { return }
-        let levelOneVC = LevelOneVC()
+        let levelOneVC = OptionSatuVC()
         UIView.transition(with: window, duration: 0.3, options: .transitionCrossDissolve, animations: { [weak window] in
             window?.rootViewController = levelOneVC
         }, completion: nil)
@@ -50,7 +50,7 @@ class ViewController: UIViewController {
     
     func routeToLevelTwo() {
         guard let window = UIApplication.shared.keyWindow else { return }
-        let levelOneVC = LevelTwoVC()
+        let levelOneVC = OptionDuaVC()
         UIView.transition(with: window, duration: 0.3, options: .transitionCrossDissolve, animations: { [weak window] in
             window?.rootViewController = levelOneVC
         }, completion: nil)
@@ -58,7 +58,7 @@ class ViewController: UIViewController {
     
     func routeToLevelThree() {
         guard let window = UIApplication.shared.keyWindow else { return }
-        let levelOneVC = LevelThreeVC()
+        let levelOneVC = OptionThreeVC()
         UIView.transition(with: window, duration: 0.3, options: .transitionCrossDissolve, animations: { [weak window] in
             window?.rootViewController = levelOneVC
         }, completion: nil)
@@ -66,7 +66,7 @@ class ViewController: UIViewController {
 
     func routeToLevelFour() {
         guard let window = UIApplication.shared.keyWindow else { return }
-        let levelOneVC = LevelFourVC()
+        let levelOneVC = OptionFourVC()
         UIView.transition(with: window, duration: 0.3, options: .transitionCrossDissolve, animations: { [weak window] in
             window?.rootViewController = levelOneVC
         }, completion: nil)
@@ -74,7 +74,7 @@ class ViewController: UIViewController {
     
     func routeToLevelFive() {
         guard let window = UIApplication.shared.keyWindow else { return }
-        let levelOneVC = LevelFiveVC()
+        let levelOneVC = OptionFiveVC()
         UIView.transition(with: window, duration: 0.3, options: .transitionCrossDissolve, animations: { [weak window] in
             window?.rootViewController = levelOneVC
         }, completion: nil)
@@ -115,22 +115,22 @@ class ViewController: UIViewController {
     
 
     @IBAction func oneAction(_ sender: Any) {
-        OptionSatuVC()
+        routeToLevelOne()
     }
     
     @IBAction func twoAction(_ sender: Any) {
-        OptionDuaVC()
+        routeToLevelTwo()
     }
     @IBAction func threeAction(_ sender: Any) {
-        OptionThreeVC()
+        routeToLevelThree()
     }
     
     @IBAction func fourAction(_ sender: Any) {
-        OptionFourVC()
+        routeToLevelFour()
     }
     
     @IBAction func fiveAction(_ sender: Any) {
-        OptionFiveVC()
+        routeToLevelFive()
     }
     
 }
