@@ -297,8 +297,7 @@ class LevelEmpatVC: UIViewController {
     }
     @IBAction func runAction(_ sender: Any) {
         
-        runButton.isEnabled = false
-        offButton()        
+        runButton.isEnabled = false       
         
         UIView.animate(withDuration: 1, delay: 0) {
             if self.actionRobot.count >= 2 {

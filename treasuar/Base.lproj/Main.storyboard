@@ -54,7 +54,6 @@
                                                 <buttonConfiguration key="configuration" style="plain" image="level4"/>
                                                 <connections>
                                                     <action selector="fourAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ufb-d4-Vpc"/>
-                                                    <action selector="oneAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CQO-bA-wGa"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="TKV-zK-cNF">
@@ -64,7 +63,6 @@
                                                 <buttonConfiguration key="configuration" style="plain" image="level5"/>
                                                 <connections>
                                                     <action selector="fiveAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AkN-tX-KP9"/>
-                                                    <action selector="oneAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Jte-7K-vZc"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="iFG-Ac-PUv">

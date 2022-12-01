@@ -45,24 +45,46 @@ class LevelFiveVC: UIViewController {
     var floorEntitya1: Entity?
     var floorEntitya2: Entity?
     var floorEntitya3: Entity?
+    var floorEntitya4: Entity?
     var floorEntityb1: Entity?
     var floorEntityb2: Entity?
     var floorEntityb3: Entity?
+    var floorEntityb4: Entity?
     var floorEntityc1: Entity?
     var floorEntityc2: Entity?
     var floorEntityc3: Entity?
+    var floorEntityc4: Entity?
     
     var a1pos: SIMD3<Float> = simd_float3(x: 0, y: 0, z: 0)
     var a2pos: SIMD3<Float> = simd_float3(x: 0.2, y: 0, z: 0)
     var a3pos: SIMD3<Float> = simd_float3(x: 0.4, y: 0, z: 0)
     var a4pos: SIMD3<Float> = simd_float3(x: 0.6, y: 0, z: 0)
+    
     var b1pos: SIMD3<Float> = simd_float3(x: 0, y: 0, z: 0.2)
     var b2pos: SIMD3<Float> = simd_float3(x: 0.2, y: 0, z: 0.2)
     var b3pos: SIMD3<Float> = simd_float3(x: 0.4, y: 0, z: 0.2)
     var b4pos: SIMD3<Float> = simd_float3(x: 0.6, y: 0, z: 0.2)
+    
     var c1pos: SIMD3<Float> = simd_float3(x: 0, y: 0, z: 0.4)
     var c2pos: SIMD3<Float> = simd_float3(x: 0.2, y: 0, z: 0.4)
     var c3pos: SIMD3<Float> = simd_float3(x: 0.4, y: 0, z: 0.4)
+    var c4pos: SIMD3<Float> = simd_float3(x: 0.6, y: 0, z: 0.4)
+    
+    var d1pos: SIMD3<Float> = simd_float3(x: 0, y: 0, z: 0.6)
+    var d2pos: SIMD3<Float> = simd_float3(x: 0.2, y: 0, z: 0.6)
+    var d3pos: SIMD3<Float> = simd_float3(x: 0.4, y: 0, z: 0.6)
+    var d4pos: SIMD3<Float> = simd_float3(x: 0.6, y: 0, z: 0.6)
+    
+    var a5pos: SIMD3<Float> = simd_float3(x: 0.8, y: 0, z: 0)
+    var b5pos: SIMD3<Float> = simd_float3(x: 0.8, y: 0, z: 0.2)
+    var c5pos: SIMD3<Float> = simd_float3(x: 0.8, y: 0, z: 0.4)
+    var d5pos: SIMD3<Float> = simd_float3(x: 0.8, y: 0, z: 0.6)
+    
+    var aMinPos: SIMD3<Float> = simd_float3(x: -0.2, y: 0, z: 0)
+    var bMinPos: SIMD3<Float> = simd_float3(x: -0.2, y: 0, z: 0.2)
+    var cMinPos: SIMD3<Float> = simd_float3(x: -0.2, y: 0, z: 0.4)
+    var dMinPos: SIMD3<Float> = simd_float3(x: -0.2, y: 0, z: 0.6)
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()

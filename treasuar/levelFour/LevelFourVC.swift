@@ -62,6 +62,7 @@ class LevelFourVC: UIViewController {
     var c1pos: SIMD3<Float> = simd_float3(x: 0, y: 0, z: 0.4)
     var c2pos: SIMD3<Float> = simd_float3(x: 0.2, y: 0, z: 0.4)
     var c3pos: SIMD3<Float> = simd_float3(x: 0.4, y: 0, z: 0.4)
+    var c4pos: SIMD3<Float> = simd_float3(x: 0.6, y: 0, z: 0.4)
     
     override func viewDidLoad() {
         super.viewDidLoad()

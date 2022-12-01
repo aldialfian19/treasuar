@@ -17,20 +17,32 @@ class LevelLimaVC: UIViewController {
     @IBOutlet var tableView: UITableView!
     @IBOutlet var loopButton: UIButton!
     
+    @IBOutlet var failedView: UIView!
+    
+    
     var robot: UIImageView?
     var point: UIImageView?
     var actionRobot = ["kosong"]
     var actionBox = [""]
     
-    var c3loc: CGRect = CGRect(x: 1015.25, y: 602.25, width: 142.5, height: 142.5)
-    var c2loc: CGRect = CGRect(x: 872.75, y: 602.25, width: 142.5, height: 142.5)
-    var c1loc: CGRect = CGRect(x: 730.25, y: 602.25, width: 142.5, height: 142.5)
-    var b3loc: CGRect = CGRect(x: 1015.25, y: 459.75, width: 142.5, height: 142.5)
-    var b2loc: CGRect = CGRect(x: 872.75, y: 459.75, width: 142.5, height: 142.5)
-    var b1loc: CGRect = CGRect(x: 730.25, y: 459.75, width: 142.5, height: 142.5)
-    var a3loc: CGRect = CGRect(x: 1015.25, y: 317.25, width: 142.5, height: 142.5)
-    var a2loc: CGRect = CGRect(x: 872.75, y: 317.25, width: 142.5, height: 142.5)
-    var a1loc: CGRect = CGRect(x: 730.25, y: 317.25, width: 142.5, height: 142.5)
+    var d4loc: CGRect = CGRect(x: 1016, y: 652,width: 105, height: 105)
+    var d3loc: CGRect = CGRect(x: 911, y: 652, width: 105, height: 105)
+    var d2loc: CGRect = CGRect(x: 806, y: 652, width: 105, height: 105)
+    var d1loc: CGRect = CGRect(x: 701, y: 652, width: 105, height: 105)
+    var c4loc: CGRect = CGRect(x: 1016, y: 547, width: 105, height: 105)
+    var c3loc: CGRect = CGRect(x: 911, y: 547, width: 105, height: 105)
+    var c2loc: CGRect = CGRect(x: 806, y: 547, width: 105, height: 105)
+    var c1loc: CGRect = CGRect(x: 701, y: 547, width: 105, height: 105)
+    var b4loc: CGRect = CGRect(x: 1016, y: 442, width: 105, height: 105)
+    var b3loc: CGRect = CGRect(x: 911, y: 442, width: 105, height: 105)
+    var b2loc: CGRect = CGRect(x: 806, y: 442, width: 105, height: 105)
+    var b1loc: CGRect = CGRect(x: 701, y: 442, width: 105, height: 105)
+    var a4loc: CGRect = CGRect(x: 1016, y: 337, width: 105, height: 105)
+    var a3loc: CGRect = CGRect(x: 911, y: 337, width: 105, height: 105)
+    var a2loc: CGRect = CGRect(x: 806, y: 337, width: 105, height: 105)
+    var a1loc: CGRect = CGRect(x: 701, y: 337, width: 105, height: 105)
+    
+    var tembokLoc: CGRect = CGRect(x: 611, y: 246, width: 600, height: 600)
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,6 +51,8 @@ class LevelLimaVC: UIViewController {
         addImage()
         move(direction: "")
         updateTable()
+        
+        failedView.isHidden = true
         
         loopButton.showsMenuAsPrimaryAction = true
         loopButton.menu = addMenu()
@@ -69,6 +83,10 @@ class LevelLimaVC: UIViewController {
         a3tile.frame = a3loc
         self.view.addSubview(a3tile)
         
+        let a4tile = UIImageView(image: UIImage(named: "tile2d.png")!)
+        a4tile.frame = a4loc
+        self.view.addSubview(a4tile)
+        
         let b1tile = UIImageView(image: UIImage(named: "tile2d.png")!)
         b1tile.frame = b1loc
         self.view.addSubview(b1tile)
@@ -81,6 +99,10 @@ class LevelLimaVC: UIViewController {
         b3tile.frame = b3loc
         self.view.addSubview(b3tile)
         
+        let b4tile = UIImageView(image: UIImage(named: "tile2d.png")!)
+        b4tile.frame = b4loc
+        self.view.addSubview(b4tile)
+        
         let c1tile = UIImageView(image: UIImage(named: "tile2d.png")!)
         c1tile.frame = c1loc
         self.view.addSubview(c1tile)
@@ -92,6 +114,28 @@ class LevelLimaVC: UIViewController {
         let c3tile = UIImageView(image: UIImage(named: "tile2d.png")!)
         c3tile.frame = c3loc
         self.view.addSubview(c3tile)
+        
+        let c4tile = UIImageView(image: UIImage(named: "tile2d.png")!)
+        c4tile.frame = c4loc
+        self.view.addSubview(c4tile)
+        
+        let d1tile = UIImageView(image: UIImage(named: "tile2d.png")!)
+        d1tile.frame = d1loc
+        self.view.addSubview(d1tile)
+        
+        let d2tile = UIImageView(image: UIImage(named: "tile2d.png")!)
+        d2tile.frame = d2loc
+        self.view.addSubview(d2tile)
+        
+        let d3tile = UIImageView(image: UIImage(named: "tile2d.png")!)
+        d3tile.frame = d3loc
+        self.view.addSubview(d3tile)
+        
+        let d4tile = UIImageView(image: UIImage(named: "tile2d.png")!)
+        d4tile.frame = d4loc
+        self.view.addSubview(d4tile)
+        
+       
     }
     
     func addImage() {
@@ -100,23 +144,35 @@ class LevelLimaVC: UIViewController {
         self.view.addSubview(robot!)
         self.view.bringSubviewToFront(robot!)
         
+        let tembok = UIImageView(image: UIImage(named: "tembok2.png")!)
+        tembok.frame = tembokLoc
+        self.view.addSubview(tembok)
+        
         //obstacle
         let a2Obs = UIImageView(image: UIImage(named: "obstacle.png")!)
         a2Obs.frame = a2loc
         self.view.addSubview(a2Obs)
         
-        let c1Obs = UIImageView(image: UIImage(named: "obstacle.png")!)
-        c1Obs.frame = c1loc
-        self.view.addSubview(c1Obs)
+        let a4Obs = UIImageView(image: UIImage(named: "obstacle.png")!)
+        a4Obs.frame = a4loc
+        self.view.addSubview(a4Obs)
         
-        let b3Obs = UIImageView(image: UIImage(named: "obstacle.png")!)
-        b3Obs.frame = b3loc
-        self.view.addSubview(b3Obs)
+        let b2Obs = UIImageView(image: UIImage(named: "obstacle.png")!)
+        b2Obs.frame = b2loc
+        self.view.addSubview(b2Obs)
+        
+        let c2Obs = UIImageView(image: UIImage(named: "obstacle.png")!)
+        c2Obs.frame = c2loc
+        self.view.addSubview(c2Obs)
+        
+        let c3Obs = UIImageView(image: UIImage(named: "obstacle.png")!)
+        c3Obs.frame = c3loc
+        self.view.addSubview(c3Obs)
         
         
         //treasure
         let treasure = UIImageView(image: UIImage(named: "treasure.png")!)
-        treasure.frame = c3loc
+        treasure.frame = b3loc
         self.view.addSubview(treasure)
         
         //failed
@@ -138,37 +194,51 @@ class LevelLimaVC: UIViewController {
             
         case "forward":
           
-            if robot?.image == UIImage(named: "2.png") {
-                self.robot?.transform = (self.robot?.transform.translatedBy(x: 0, y: 142.5))!
+            if robot?.image == UIImage(named: "depan.png") {
+                self.robot?.transform = (self.robot?.transform.translatedBy(x: 0, y: 105))!
                 
-            }else if self.robot?.image == UIImage(named: "1.png") {
-                self.robot?.transform = (self.robot?.transform.translatedBy(x: 142.5, y: 0))!
+            }else if self.robot?.image == UIImage(named: "kiri.png") {
+                self.robot?.transform = (self.robot?.transform.translatedBy(x: 105, y: 0))!
                 
-            }else if self.robot?.image == UIImage(named: "3.png") {
+            }else if self.robot?.image == UIImage(named: "kanan.png") {
                 UIView.animate(
                     withDuration: 2, delay: 0, usingSpringWithDamping: 1.9, initialSpringVelocity: 3.0, options: [], animations: {
-                        self.robot?.transform = (self.robot?.transform.translatedBy(x: -180, y: 0))!
+                        self.robot?.transform = (self.robot?.transform.translatedBy(x: -105, y: 0))!
+                        
+                    })
+            }else if self.robot?.image == UIImage(named: "belakang.png") {
+                UIView.animate(
+                    withDuration: 2, delay: 0, usingSpringWithDamping: 1.9, initialSpringVelocity: 3.0, options: [], animations: {
+                        self.robot?.transform = (self.robot?.transform.translatedBy(x: 0, y: -105))!
                         
                     })
             }
 
             
         case "left":
-            if robot?.image == UIImage(named: "2.png"){
-                self.robot?.image = UIImage(named: "1.png")
-            }else if robot?.image == UIImage(named: "3.png"){
-                self.robot?.image = UIImage(named: "2.png")
+            if robot?.image == UIImage(named: "depan.png"){
+                self.robot?.image = UIImage(named: "kiri.png")
+            }else if robot?.image == UIImage(named: "kanan.png"){
+                self.robot?.image = UIImage(named: "depan.png")
+            }else if robot?.image == UIImage(named: "kiri.png"){
+                self.robot?.image = UIImage(named: "belakang.png")
+            }else if robot?.image == UIImage(named: "belakang.png"){
+                self.robot?.image = UIImage(named: "kanan.png")
             }
             
         case "right":
-            if robot?.image == UIImage(named: "2.png"){
-                self.robot?.image = UIImage(named: "3.png")
-            }else if robot?.image == UIImage(named: "1.png"){
-                self.robot?.image = UIImage(named: "2.png")
+            if robot?.image == UIImage(named: "depan.png"){
+                self.robot?.image = UIImage(named: "kanan.png")
+            }else if robot?.image == UIImage(named: "kiri.png"){
+                self.robot?.image = UIImage(named: "depan.png")
+            }else if robot?.image == UIImage(named: "kanan.png"){
+                self.robot?.image = UIImage(named: "belakang.png")
+            }else if robot?.image == UIImage(named: "belakang.png"){
+                self.robot?.image = UIImage(named: "kiri.png")
             }
             
         case "restart":
-            self.robot?.image = UIImage(named: "2.png")
+            self.robot?.image = UIImage(named: "depan.png")
             self.robot?.frame = a1loc
             
         case "kosong":
@@ -178,6 +248,11 @@ class LevelLimaVC: UIViewController {
         default:
             print("no move")
         }
+    }
+    
+    func delay(_ delay:Double, closure:@escaping () -> ()) {
+        let when = DispatchTime.now() + delay
+        DispatchQueue.main.asyncAfter(deadline: when, execute: closure)
     }
     
     
@@ -190,7 +265,7 @@ class LevelLimaVC: UIViewController {
         
         tableView.reloadData()
         
-        
+        offButton()
     }
     @IBAction func leftAction(_ sender: Any) {
         actionRobot.append("left")
@@ -198,6 +273,7 @@ class LevelLimaVC: UIViewController {
         
         tableView.reloadData()
         
+        offButton()
 //        addActionImage()
     }
     @IBAction func rightAction(_ sender: Any) {
@@ -206,6 +282,7 @@ class LevelLimaVC: UIViewController {
         
         tableView.reloadData()
         
+        offButton()
 //        addActionImage()
     }
     @IBAction func trashAction(_ sender: Any) {
@@ -218,7 +295,8 @@ class LevelLimaVC: UIViewController {
         tableView.reloadData()
         robot?.frame = a1loc
         
-        runButton.isEnabled = true
+        onButton()
+        
     }
     @IBAction func runAction(_ sender: Any) {
         
@@ -321,6 +399,23 @@ class LevelLimaVC: UIViewController {
 
         
     }
+    
+    
+    @IBAction func ulangiAction(_ sender: Any) {
+        robot?.image = UIImage(named: "depan.png")
+        actionRobot.removeAll()
+        actionRobot.append("kosong")
+        actionBox.removeAll()
+        actionBox.append("")
+        
+        tableView.reloadData()
+        robot?.frame = a1loc
+        
+        onButton()
+        
+        failedView.isHidden = true
+    }
+    
     @IBAction func homeAction(_ sender: Any) {
         
         routeToMain()
@@ -357,36 +452,55 @@ class LevelLimaVC: UIViewController {
     
     
     //MARK: -checkpoint
+    
+    func offButton() {
+        if actionRobot.count >= 9 {
+            forwardButton.isEnabled = false
+            leftButton.isEnabled = false
+            rightButton.isEnabled = false
+        }
+    }
+    
+    func onButton() {
+        forwardButton.isEnabled = true
+        leftButton.isEnabled = true
+        rightButton.isEnabled = true
+        runButton.isEnabled = true
+    }
+    
     func finishPoint() {
         let robotPosition = robot?.frame
         
         if robotPosition == a1loc {
             print("robot in a1")
-        }else if robotPosition == a2loc{
-            routeToFalse()
-            print("robot in a2")
         }else if robotPosition == a3loc{
             print("robot in a3")
         }else if robotPosition == b1loc{
             print("robot in b1")
-        }else if robotPosition == b2loc{
-            print("robot in b2")
-        }else if robotPosition == b3loc{
-            routeToFalse()
-            print("robot in b3")
+        }else if robotPosition == b4loc{
+            print("robot in b4")
         }else if robotPosition == c1loc{
-            routeToFalse()
             print("robot in c1")
-        }else if robotPosition == c2loc{
-            print("robot in c2")
-        }else if robotPosition == c3loc{
+        }else if robotPosition == c4loc{
+            print("robot in c4")
+        }else if robotPosition == d1loc{
+            print("robot in d1")
+        }else if robotPosition == d2loc{
+            print("robot in d2")
+        }else if robotPosition == d3loc{
+            print("robot in d3")
+        }else if robotPosition == d4loc{
+            print("robot in d4")
+        }else if robotPosition == b3loc{
             routeToSucces()
-            print("robot in c3")
+            print("robot in b3")
         }else {
-            routeToFalse()
+            delay(1) {
+                self.failedView.isHidden = false
+             }
         }
     }
-    
+    // MARK: -NAVIGATION
     
     func routeToFalse() {
         guard let window = UIApplication.shared.keyWindow else { return }

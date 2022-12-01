@@ -35,12 +35,12 @@ class OptionFiveVC: UIViewController {
 
 
 
-    @IBAction func modeOneAction(_ sender: Any) {
+    @IBAction func modeFiveAction(_ sender: Any) {
         toModeLima()
     }
     
 
-    @IBAction func arOneAction(_ sender: Any) {
+    @IBAction func arFiveAction(_ sender: Any) {
         toARLima()
         
     }
