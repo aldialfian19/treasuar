@@ -87,32 +87,26 @@
                                 <rect key="frame" x="-28" y="-10" width="1407" height="1048"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceHorizontal="YES" showsVerticalScrollIndicator="NO" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="olX-pO-jWL">
-                                <rect key="frame" x="0.0" y="430" width="1366" height="460"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" alwaysBounceHorizontal="YES" showsVerticalScrollIndicator="NO" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="olX-pO-jWL">
+                                <rect key="frame" x="0.0" y="446" width="1366" height="444"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fKe-8w-joI">
-                                        <rect key="frame" x="0.0" y="0.0" width="2132" height="604"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="2132" height="588"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tMA-lc-EjH">
-                                                <rect key="frame" x="66" y="8" width="389" height="466"/>
+                                                <rect key="frame" x="66" y="4" width="356" height="444"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="444" id="Mbd-7w-sqx"/>
+                                                    <constraint firstAttribute="width" constant="356" id="QP2-7n-bW7"/>
+                                                </constraints>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" image="level1"/>
                                                 <connections>
                                                     <action selector="oneAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ay0-qb-6te"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="iFG-Ac-PUv">
-                                                <rect key="frame" x="463" y="8" width="389" height="466"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" image="level2"/>
-                                                <connections>
-                                                    <action selector="oneAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YvB-wu-bWp"/>
-                                                    <action selector="twoAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HAe-gd-YHj"/>
-                                                </connections>
-                                            </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="P2u-N5-Ulh">
-                                                <rect key="frame" x="860" y="8" width="389" height="466"/>
+                                                <rect key="frame" x="860" y="0.0" width="356" height="444"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" image="Level3"/>
@@ -122,7 +116,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="bmG-WI-Pg9">
-                                                <rect key="frame" x="1257" y="8" width="389" height="466"/>
+                                                <rect key="frame" x="1257" y="4" width="356" height="444"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" image="level1"/>
@@ -131,7 +125,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="TKV-zK-cNF">
-                                                <rect key="frame" x="1654" y="8" width="389" height="466"/>
+                                                <rect key="frame" x="1654" y="4" width="356" height="444"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" image="level1"/>
@@ -139,14 +133,22 @@
                                                     <action selector="oneAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Jte-7K-vZc"/>
                                                 </connections>
                                             </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="iFG-Ac-PUv">
+                                                <rect key="frame" x="463" y="0.0" width="356" height="444"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" image="level2"/>
+                                                <connections>
+                                                    <action selector="oneAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YvB-wu-bWp"/>
+                                                    <action selector="twoAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HAe-gd-YHj"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
-                                            <constraint firstItem="P2u-N5-Ulh" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="iFG-Ac-PUv" secondAttribute="trailing" constant="8" symbolic="YES" id="DwU-2f-b1Q"/>
                                             <constraint firstItem="tMA-lc-EjH" firstAttribute="leading" secondItem="fKe-8w-joI" secondAttribute="leading" constant="66" id="EWV-Ht-YeW"/>
-                                            <constraint firstAttribute="height" constant="460" id="Jlf-H3-GTy"/>
-                                            <constraint firstItem="iFG-Ac-PUv" firstAttribute="leading" secondItem="tMA-lc-EjH" secondAttribute="trailing" constant="8" symbolic="YES" id="X98-T0-wY4"/>
-                                            <constraint firstItem="tMA-lc-EjH" firstAttribute="top" secondItem="fKe-8w-joI" secondAttribute="top" constant="8" id="cuA-gx-TXa"/>
+                                            <constraint firstAttribute="height" constant="444" id="Jlf-H3-GTy"/>
+                                            <constraint firstItem="tMA-lc-EjH" firstAttribute="top" secondItem="fKe-8w-joI" secondAttribute="top" constant="4" id="cuA-gx-TXa"/>
                                             <constraint firstAttribute="width" constant="2132" id="zbK-gZ-RJ8"/>
                                         </constraints>
                                     </view>
@@ -158,13 +160,13 @@
                                     <constraint firstItem="fKe-8w-joI" firstAttribute="leading" secondItem="olX-pO-jWL" secondAttribute="leading" id="a4g-sR-9zD"/>
                                     <constraint firstAttribute="bottom" secondItem="fKe-8w-joI" secondAttribute="bottom" id="fxd-dz-ve0"/>
                                     <constraint firstAttribute="trailing" secondItem="fKe-8w-joI" secondAttribute="trailing" id="jUP-qV-mYO"/>
-                                    <constraint firstAttribute="height" constant="460" id="qhd-66-flA"/>
+                                    <constraint firstAttribute="height" constant="444" id="qhd-66-flA"/>
                                 </constraints>
                                 <viewLayoutGuide key="contentLayoutGuide" id="R4f-cY-WGl"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="hkr-Bn-G2e"/>
                             </scrollView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="DKg-sk-Uqi">
-                                <rect key="frame" x="70" y="47" width="143" height="109"/>
+                                <rect key="frame" x="70" y="47" width="143" height="125"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="143" id="BoW-kE-G7U"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="102" id="Ctq-qF-sK3"/>
@@ -195,7 +197,7 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hi, Roger!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ASJ-jZ-AVv">
-                                <rect key="frame" x="70" y="223" width="542" height="80"/>
+                                <rect key="frame" x="70" y="239" width="542" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="CvY-ja-not"/>
                                 </constraints>
@@ -204,7 +206,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Let's Start Hunting!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ydX-Wb-Lyq">
-                                <rect key="frame" x="70" y="323" width="418.5" height="56"/>
+                                <rect key="frame" x="70" y="339" width="418.5" height="56"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="56" id="iME-Vv-6M9"/>
                                 </constraints>
