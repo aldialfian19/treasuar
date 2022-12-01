@@ -7,7 +7,7 @@
 
 import UIKit
 
-class OptionSatuVC: UIViewController {
+class OptionThreeVC: UIViewController {
 
     
     
@@ -16,19 +16,19 @@ class OptionSatuVC: UIViewController {
 
         // Do any additional setup after loading the view.
     }
-    func toARSatu() {
+    func toARTiga() {
         guard let window = UIApplication.shared.keyWindow else { return }
-        let levelOneVC = LevelOneVC()
+        let levelThreeVC = LevelThreeVC()
         UIView.transition(with: window, duration: 0.3, options: .transitionCrossDissolve, animations: { [weak window] in
-            window?.rootViewController = levelOneVC
+            window?.rootViewController = levelThreeVC
         }, completion: nil)
     }
     
-    func toModeSatu() {
+    func toModeTiga() {
         guard let window = UIApplication.shared.keyWindow else { return }
-        let levelOneVC = LevelOneVC()
+        let levelThreeVC = LevelThreeVC()
         UIView.transition(with: window, duration: 0.3, options: .transitionCrossDissolve, animations: { [weak window] in
-            window?.rootViewController = levelOneVC
+            window?.rootViewController = levelThreeVC
         }, completion: nil)
     }
 
@@ -36,12 +36,12 @@ class OptionSatuVC: UIViewController {
 
 
     @IBAction func modeOneAction(_ sender: Any) {
-        toModeSatu()
+        toModeTiga()
     }
     
 
     @IBAction func arOneAction(_ sender: Any) {
-        toARSatu()
+        toARTiga()
         
     }
 }

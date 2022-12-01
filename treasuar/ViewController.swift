@@ -11,9 +11,15 @@ class ViewController: UIViewController {
     
     
 //    @IBOutlet var ARButton: UIButton!
+    @IBOutlet var nameLabel: UILabel!
     
+    @IBOutlet var buttonSatu: UIButton!
+    @IBOutlet var buttonDua: UIButton!
+    @IBOutlet var buttonTiga: UIButton!
+    @IBOutlet var buttonEmpat: UIButton!
+    @IBOutlet var buttonLima: UIButton!
     
-    @IBOutlet var Button2D: UIView!
+   
     private let imageView: UIImageView = {
         let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 460, height: 431))
         imageView.image = UIImage(named: "SplashLogo")
@@ -26,21 +32,55 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.addSubview(imageView)
-        
+        nameLabel.text = "Hi, Steve!"
+        nameLabel.textAlignment = .left
+        nameLabel.font = UIFont(name: "Boldhead", size: 64)
         
         
         // Do any additional setup after loading the view.
     }
     
-//    func routeToARVC() {
-//        guard let window = UIApplication.shared.keyWindow else { return }
-//        let ARVC = ARVC()
-//        UIView.transition(with: window, duration: 0.3, options: .transitionCrossDissolve, animations: { [weak window] in
-//            window?.rootViewController = ARVC
-//        }, completion: nil)
-//    }
+    func routeToLevelOne() {
+        guard let window = UIApplication.shared.keyWindow else { return }
+        let levelOneVC = LevelOneVC()
+        UIView.transition(with: window, duration: 0.3, options: .transitionCrossDissolve, animations: { [weak window] in
+            window?.rootViewController = levelOneVC
+        }, completion: nil)
+    }
     
+    func routeToLevelTwo() {
+        guard let window = UIApplication.shared.keyWindow else { return }
+        let levelOneVC = LevelTwoVC()
+        UIView.transition(with: window, duration: 0.3, options: .transitionCrossDissolve, animations: { [weak window] in
+            window?.rootViewController = levelOneVC
+        }, completion: nil)
+    }
     
+    func routeToLevelThree() {
+        guard let window = UIApplication.shared.keyWindow else { return }
+        let levelOneVC = LevelThreeVC()
+        UIView.transition(with: window, duration: 0.3, options: .transitionCrossDissolve, animations: { [weak window] in
+            window?.rootViewController = levelOneVC
+        }, completion: nil)
+    }
+
+    func routeToLevelFour() {
+        guard let window = UIApplication.shared.keyWindow else { return }
+        let levelOneVC = LevelFourVC()
+        UIView.transition(with: window, duration: 0.3, options: .transitionCrossDissolve, animations: { [weak window] in
+            window?.rootViewController = levelOneVC
+        }, completion: nil)
+    }
+    
+    func routeToLevelFive() {
+        guard let window = UIApplication.shared.keyWindow else { return }
+        let levelOneVC = LevelFiveVC()
+        UIView.transition(with: window, duration: 0.3, options: .transitionCrossDissolve, animations: { [weak window] in
+            window?.rootViewController = levelOneVC
+        }, completion: nil)
+    }
+
+
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
@@ -73,11 +113,24 @@ class ViewController: UIViewController {
         
     }
     
-//    @IBAction func ARVCAction(_ sender: Any) {
-//        routeToARVC()
-//    }
+
+    @IBAction func oneAction(_ sender: Any) {
+        OptionSatuVC()
+    }
     
+    @IBAction func twoAction(_ sender: Any) {
+        OptionDuaVC()
+    }
+    @IBAction func threeAction(_ sender: Any) {
+        OptionThreeVC()
+    }
     
+    @IBAction func fourAction(_ sender: Any) {
+        OptionFourVC()
+    }
     
+    @IBAction func fiveAction(_ sender: Any) {
+        OptionFiveVC()
+    }
     
 }

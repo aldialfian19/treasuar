@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3k7-DE-fsl">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="ipad12_9" orientation="landscape" layout="fullscreen" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -10,75 +10,9 @@
     </dependencies>
     <scenes>
         <!--View Controller-->
-        <scene sceneID="ido-zX-gFf">
-            <objects>
-                <viewController id="3k7-DE-fsl" customClass="ViewController" customModule="treasuar" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="2R6-XS-lta">
-                        <rect key="frame" x="0.0" y="0.0" width="1366" height="1024"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg2" translatesAutoresizingMaskIntoConstraints="NO" id="Epd-tr-q32">
-                                <rect key="frame" x="-18" y="-17" width="1417" height="1083"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pick One!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mUa-QK-E5Y">
-                                <rect key="frame" x="587" y="129" width="207" height="58"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="48"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zPS-eU-iN1">
-                                <rect key="frame" x="170" y="309.5" width="454" height="430"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="430" id="Tai-ew-5pw"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="430" id="d6d-TM-vYt"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="Rectangle 42"/>
-                                <connections>
-                                    <segue destination="BYZ-38-t0r" kind="presentation" modalPresentationStyle="fullScreen" id="p4b-ZE-kES"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ULn-48-onM">
-                                <rect key="frame" x="742" y="309.5" width="454" height="430"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="430" id="2y6-x6-31J"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="430" id="smI-cu-cRD"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="Rectangle 42"/>
-                            </button>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="aIV-Oc-VWb"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="ULn-48-onM" firstAttribute="centerY" secondItem="zPS-eU-iN1" secondAttribute="centerY" id="0PC-N0-BkI"/>
-                            <constraint firstItem="Epd-tr-q32" firstAttribute="top" secondItem="aIV-Oc-VWb" secondAttribute="top" constant="-37" id="BsL-Ah-e0b"/>
-                            <constraint firstItem="aIV-Oc-VWb" firstAttribute="trailing" secondItem="Epd-tr-q32" secondAttribute="trailing" constant="-33" id="JFl-d3-Vwf"/>
-                            <constraint firstItem="aIV-Oc-VWb" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="zPS-eU-iN1" secondAttribute="trailing" symbolic="YES" id="Mvq-sv-XV4"/>
-                            <constraint firstItem="mUa-QK-E5Y" firstAttribute="leading" secondItem="aIV-Oc-VWb" secondAttribute="leading" constant="587" id="OWl-Gm-2l8"/>
-                            <constraint firstItem="zPS-eU-iN1" firstAttribute="centerY" secondItem="Epd-tr-q32" secondAttribute="centerY" id="PJo-JL-XjA"/>
-                            <constraint firstItem="ULn-48-onM" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="zPS-eU-iN1" secondAttribute="trailing" constant="8" symbolic="YES" id="RpU-8L-HbY"/>
-                            <constraint firstItem="aIV-Oc-VWb" firstAttribute="bottom" secondItem="Epd-tr-q32" secondAttribute="bottom" constant="-42" id="SGc-EK-FOY"/>
-                            <constraint firstItem="aIV-Oc-VWb" firstAttribute="trailing" secondItem="ULn-48-onM" secondAttribute="trailing" constant="170" id="aG0-lQ-zmZ"/>
-                            <constraint firstItem="mUa-QK-E5Y" firstAttribute="centerX" secondItem="Epd-tr-q32" secondAttribute="centerX" id="eNk-TG-Kr9"/>
-                            <constraint firstItem="Epd-tr-q32" firstAttribute="leading" secondItem="aIV-Oc-VWb" secondAttribute="leading" constant="-18" id="o9q-LC-NmN"/>
-                            <constraint firstItem="mUa-QK-E5Y" firstAttribute="top" secondItem="aIV-Oc-VWb" secondAttribute="top" constant="109" id="yRJ-1b-T5b"/>
-                            <constraint firstItem="zPS-eU-iN1" firstAttribute="leading" secondItem="aIV-Oc-VWb" secondAttribute="leading" constant="170" id="zn1-XP-dKp"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <outlet property="Button2D" destination="2R6-XS-lta" id="51R-3p-61H"/>
-                        <outlet property="view" destination="2R6-XS-lta" id="bSZ-Hk-uDq"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="x5r-Gh-onF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-720.35139092240115" y="66.796875"/>
-        </scene>
-        <!--ARVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ARVC" customModule="treasuar" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="treasuar" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="1366" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -111,7 +45,6 @@
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" image="Level3"/>
                                                 <connections>
-                                                    <action selector="oneAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lKa-gv-Suo"/>
                                                     <action selector="threeAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wFW-69-8Hb"/>
                                                 </connections>
                                             </button>
@@ -121,6 +54,7 @@
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" image="level1"/>
                                                 <connections>
+                                                    <action selector="fourAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ufb-d4-Vpc"/>
                                                     <action selector="oneAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CQO-bA-wGa"/>
                                                 </connections>
                                             </button>
@@ -130,6 +64,7 @@
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" image="level1"/>
                                                 <connections>
+                                                    <action selector="fiveAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AkN-tX-KP9"/>
                                                     <action selector="oneAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Jte-7K-vZc"/>
                                                 </connections>
                                             </button>
@@ -139,7 +74,6 @@
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" image="level2"/>
                                                 <connections>
-                                                    <action selector="oneAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YvB-wu-bWp"/>
                                                     <action selector="twoAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HAe-gd-YHj"/>
                                                 </connections>
                                             </button>
@@ -166,14 +100,14 @@
                                 <viewLayoutGuide key="frameLayoutGuide" id="hkr-Bn-G2e"/>
                             </scrollView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="DKg-sk-Uqi">
-                                <rect key="frame" x="70" y="47" width="143" height="125"/>
+                                <rect key="frame" x="70" y="67" width="143" height="105"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="143" id="BoW-kE-G7U"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="102" id="Ctq-qF-sK3"/>
                                 </constraints>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="setting" translatesAutoresizingMaskIntoConstraints="NO" id="FP1-th-ueP">
-                                <rect key="frame" x="1197" y="35" width="109" height="109"/>
+                                <rect key="frame" x="1197" y="55" width="109" height="109"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="109" id="Fza-HL-rUd"/>
                                     <constraint firstAttribute="width" relation="lessThanOrEqual" constant="109" id="H4v-YN-gOw"/>
@@ -181,7 +115,7 @@
                                 </constraints>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="achievement" translatesAutoresizingMaskIntoConstraints="NO" id="mg0-St-EfC">
-                                <rect key="frame" x="1080" y="35" width="109" height="109"/>
+                                <rect key="frame" x="1080" y="55" width="109" height="109"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="109" id="TXW-gp-bw5"/>
                                     <constraint firstAttribute="height" constant="109" id="mDj-BA-VX5"/>
@@ -189,7 +123,7 @@
                                 </constraints>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sound" translatesAutoresizingMaskIntoConstraints="NO" id="9Sw-Tl-xIM">
-                                <rect key="frame" x="963" y="35" width="109" height="109"/>
+                                <rect key="frame" x="963" y="55" width="109" height="109"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="109" id="9DV-pc-Cn2"/>
                                     <constraint firstAttribute="width" relation="lessThanOrEqual" constant="109" id="r9E-ut-bip"/>
@@ -255,10 +189,8 @@
     </scenes>
     <resources>
         <image name="Level3" width="357" height="444"/>
-        <image name="Rectangle 42" width="430" height="430"/>
         <image name="achievement" width="149" height="149"/>
         <image name="bg" width="1366" height="1024"/>
-        <image name="bg2" width="1366" height="1024"/>
         <image name="level1" width="365" height="452"/>
         <image name="level2" width="357" height="444"/>
         <image name="logo" width="143" height="103"/>

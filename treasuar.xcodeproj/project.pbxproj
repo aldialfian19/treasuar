@@ -11,6 +11,14 @@
 		24606F6429372297004FFAD0 /* OptionSatuVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24606F6229372297004FFAD0 /* OptionSatuVC.xib */; };
 		24606F67293839F2004FFAD0 /* onBoardingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24606F66293839F2004FFAD0 /* onBoardingVC.swift */; };
 		24606F6929383A06004FFAD0 /* onBoardingVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24606F6829383A06004FFAD0 /* onBoardingVC.storyboard */; };
+		24606F6C29385B61004FFAD0 /* OptionDuaVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24606F6A29385B61004FFAD0 /* OptionDuaVC.xib */; };
+		24606F6D29385B61004FFAD0 /* OptionDuaVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24606F6B29385B61004FFAD0 /* OptionDuaVC.swift */; };
+		24606F7029385C95004FFAD0 /* OptionThreeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24606F6E29385C95004FFAD0 /* OptionThreeVC.swift */; };
+		24606F7129385C95004FFAD0 /* OptionThreeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24606F6F29385C95004FFAD0 /* OptionThreeVC.xib */; };
+		24606F7429385CFC004FFAD0 /* OptionFourVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24606F7229385CFC004FFAD0 /* OptionFourVC.xib */; };
+		24606F7529385CFC004FFAD0 /* OptionFourVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24606F7329385CFC004FFAD0 /* OptionFourVC.swift */; };
+		24606F7829385D58004FFAD0 /* OptionFiveVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24606F7629385D57004FFAD0 /* OptionFiveVC.swift */; };
+		24606F7929385D58004FFAD0 /* OptionFiveVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24606F7729385D58004FFAD0 /* OptionFiveVC.xib */; };
 		249CC8BD2935407C00457D0B /* Boldhead.otf in Resources */ = {isa = PBXBuildFile; fileRef = 249CC8BC2935407C00457D0B /* Boldhead.otf */; };
 		249CC8C02935ADF700457D0B /* ARVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249CC8BF2935ADF700457D0B /* ARVC.swift */; };
 		24AADE8D29347D9D0061C9FE /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AADE8B29347D9D0061C9FE /* MainVC.swift */; };
@@ -70,6 +78,14 @@
 		24606F6229372297004FFAD0 /* OptionSatuVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OptionSatuVC.xib; sourceTree = "<group>"; };
 		24606F66293839F2004FFAD0 /* onBoardingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = onBoardingVC.swift; sourceTree = "<group>"; };
 		24606F6829383A06004FFAD0 /* onBoardingVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = onBoardingVC.storyboard; sourceTree = "<group>"; };
+		24606F6A29385B61004FFAD0 /* OptionDuaVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OptionDuaVC.xib; sourceTree = "<group>"; };
+		24606F6B29385B61004FFAD0 /* OptionDuaVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionDuaVC.swift; sourceTree = "<group>"; };
+		24606F6E29385C95004FFAD0 /* OptionThreeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionThreeVC.swift; sourceTree = "<group>"; };
+		24606F6F29385C95004FFAD0 /* OptionThreeVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OptionThreeVC.xib; sourceTree = "<group>"; };
+		24606F7229385CFC004FFAD0 /* OptionFourVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OptionFourVC.xib; sourceTree = "<group>"; };
+		24606F7329385CFC004FFAD0 /* OptionFourVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionFourVC.swift; sourceTree = "<group>"; };
+		24606F7629385D57004FFAD0 /* OptionFiveVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionFiveVC.swift; sourceTree = "<group>"; };
+		24606F7729385D58004FFAD0 /* OptionFiveVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OptionFiveVC.xib; sourceTree = "<group>"; };
 		249CC8BC2935407C00457D0B /* Boldhead.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Boldhead.otf; sourceTree = "<group>"; };
 		249CC8BF2935ADF700457D0B /* ARVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARVC.swift; sourceTree = "<group>"; };
 		24AADE8B29347D9D0061C9FE /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
@@ -241,6 +257,8 @@
 		CBB4118F292906ED009881DD /* levelTwo */ = {
 			isa = PBXGroup;
 			children = (
+				24606F6B29385B61004FFAD0 /* OptionDuaVC.swift */,
+				24606F6A29385B61004FFAD0 /* OptionDuaVC.xib */,
 				CBB4119A292907EA009881DD /* LevelTwoVC.swift */,
 				CBB4119B292907EA009881DD /* LevelTwoVC.xib */,
 			);
@@ -250,6 +268,8 @@
 		CBB41190292906F5009881DD /* levelThree */ = {
 			isa = PBXGroup;
 			children = (
+				24606F6E29385C95004FFAD0 /* OptionThreeVC.swift */,
+				24606F6F29385C95004FFAD0 /* OptionThreeVC.xib */,
 				CBB4119E29290823009881DD /* LevelThreeVC.swift */,
 				CBB4119F29290823009881DD /* LevelThreeVC.xib */,
 			);
@@ -259,6 +279,8 @@
 		CBB41191292906FF009881DD /* levelFour */ = {
 			isa = PBXGroup;
 			children = (
+				24606F7329385CFC004FFAD0 /* OptionFourVC.swift */,
+				24606F7229385CFC004FFAD0 /* OptionFourVC.xib */,
 				CBB411A22929083D009881DD /* LevelFourVC.swift */,
 				CBB411A32929083D009881DD /* LevelFourVC.xib */,
 			);
@@ -268,6 +290,8 @@
 		CBB4119229290708009881DD /* levelFive */ = {
 			isa = PBXGroup;
 			children = (
+				24606F7629385D57004FFAD0 /* OptionFiveVC.swift */,
+				24606F7729385D58004FFAD0 /* OptionFiveVC.xib */,
 				CBB411A62929086A009881DD /* LevelFiveVC.swift */,
 				CBB411A72929086A009881DD /* LevelFiveVC.xib */,
 			);
@@ -413,15 +437,19 @@
 				24606F6429372297004FFAD0 /* OptionSatuVC.xib in Resources */,
 				CBB4118829280B37009881DD /* toy.usdz in Resources */,
 				CBB4118A29280B37009881DD /* merah.usdz in Resources */,
+				24606F7429385CFC004FFAD0 /* OptionFourVC.xib in Resources */,
 				CBB411A129290823009881DD /* LevelThreeVC.xib in Resources */,
 				CBB411B929294623009881DD /* Popup.xib in Resources */,
 				CBB41199292907AC009881DD /* LevelOneVC.xib in Resources */,
 				249CC8BD2935407C00457D0B /* Boldhead.otf in Resources */,
+				24606F7129385C95004FFAD0 /* OptionThreeVC.xib in Resources */,
 				24606F6929383A06004FFAD0 /* onBoardingVC.storyboard in Resources */,
 				CBB4118929280B37009881DD /* robot.usdz in Resources */,
 				CBB4116129280A6F009881DD /* LaunchScreen.storyboard in Resources */,
 				CBB4115E29280A6F009881DD /* Assets.xcassets in Resources */,
 				CBB411B329291921009881DD /* buttonVc.xib in Resources */,
+				24606F7929385D58004FFAD0 /* OptionFiveVC.xib in Resources */,
+				24606F6C29385B61004FFAD0 /* OptionDuaVC.xib in Resources */,
 				CBB4119D292907EA009881DD /* LevelTwoVC.xib in Resources */,
 				CBB411A52929083D009881DD /* LevelFourVC.xib in Resources */,
 				CBB4118B29280B37009881DD /* floor.usdz in Resources */,
@@ -458,10 +486,14 @@
 				CBB4119C292907EA009881DD /* LevelTwoVC.swift in Sources */,
 				24606F67293839F2004FFAD0 /* onBoardingVC.swift in Sources */,
 				CBB4118D29281664009881DD /* Experience.rcproject in Sources */,
+				24606F6D29385B61004FFAD0 /* OptionDuaVC.swift in Sources */,
+				24606F7529385CFC004FFAD0 /* OptionFourVC.swift in Sources */,
+				24606F7829385D58004FFAD0 /* OptionFiveVC.swift in Sources */,
 				24606F6329372297004FFAD0 /* OptionSatuVC.swift in Sources */,
 				CBB411B229291921009881DD /* buttonVc.swift in Sources */,
 				CBB4115629280A6E009881DD /* ViewController.swift in Sources */,
 				CBB411A82929086A009881DD /* LevelFiveVC.swift in Sources */,
+				24606F7029385C95004FFAD0 /* OptionThreeVC.swift in Sources */,
 				CBB4115229280A6E009881DD /* AppDelegate.swift in Sources */,
 				CBB411A029290823009881DD /* LevelThreeVC.swift in Sources */,
 				CBB411A42929083D009881DD /* LevelFourVC.swift in Sources */,
