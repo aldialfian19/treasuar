@@ -118,6 +118,10 @@ class LevelLimaVC: UIViewController {
         let treasure = UIImageView(image: UIImage(named: "treasure.png")!)
         treasure.frame = c3loc
         self.view.addSubview(treasure)
+        
+        //failed
+        self.view.addSubview(failedView!)
+        self.view.bringSubviewToFront(failedView!)
     }
     
     func addActionImage() {

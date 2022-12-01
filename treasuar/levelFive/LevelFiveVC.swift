@@ -17,6 +17,7 @@ class LevelFiveVC: UIViewController {
     @IBOutlet var forwardButton: UIButton!
     @IBOutlet var leftButton: UIButton!
     @IBOutlet var rightButton: UIButton!
+    @IBOutlet var loopButton: UIButton!
     
     
     @IBOutlet var instruksiSatu: UIImageView!
@@ -99,6 +100,9 @@ class LevelFiveVC: UIViewController {
         failedView.isHidden = true
         tableView.isHidden = true
         instruksiSatu.isHidden = true
+        
+        loopButton.showsMenuAsPrimaryAction = true
+        loopButton.menu = addMenu()
         
     }
     
@@ -263,7 +267,7 @@ class LevelFiveVC: UIViewController {
             routeToSucces()
             print("robot in c3")
         }else {
-            routeToFalse()
+            failedView.isHidden = false
             print("no point")
         }
         
@@ -271,7 +275,7 @@ class LevelFiveVC: UIViewController {
     }
     
     func offButton() {
-        runButton.isEnabled = false
+        
         if actionRobot.count >= 9 {
             forwardButton.isEnabled = false
             leftButton.isEnabled = false
@@ -284,6 +288,33 @@ class LevelFiveVC: UIViewController {
         leftButton.isEnabled = true
         rightButton.isEnabled = true
         runButton.isEnabled = true
+    }
+    
+    func addMenu() -> UIMenu {
+
+
+        let lima = UIAction(title: "Ulangi Maju 5 Kali") { action  in
+                print("menu 1")
+                self.actionRobot.append(contentsOf: ["forward","forward","forward","forward","forward"])
+                self.actionBox.append("Ulangi Maju 4 Kali")
+                self.tableView.reloadData()
+                
+            }
+        let empat = UIAction(title: "Ulangi Maju 4 Kali") { action  in
+                print("menu 2")
+                self.actionRobot.append(contentsOf: ["forward","forward","forward","forward"])
+                self.actionBox.append("Ulangi Maju 4 Kali")
+                self.tableView.reloadData()
+            }
+        let tiga = UIAction(title: "Ulangi Maju 3 Kali"){ action  in
+                print("menu 3")
+                self.actionRobot.append(contentsOf: ["forward","forward","forward"])
+                self.actionBox.append("Ulangi Maju 3 Kali")
+                self.tableView.reloadData()
+            }
+        let menuItem = UIMenu(title: "", options: .displayInline, children: [tiga, empat, lima])
+        
+        return menuItem
     }
     
     //MARK: -route to popup
@@ -344,7 +375,6 @@ class LevelFiveVC: UIViewController {
         tableView.reloadData()
         robotEntity?.orientation = (startEntity?.orientation)!
         
-        
         onButton()
     }
     
@@ -376,8 +406,12 @@ class LevelFiveVC: UIViewController {
         offButton()
     }
     
+//    @IBAction func loopAction(_ sender: Any) {
+//    }
+    
+    
     @IBAction func runAction(_ sender: Any) {
-        offButton()
+        runButton.isEnabled = false
         
         if actionRobot.count >= 2 {
             move(direction: "\(actionRobot[1])")

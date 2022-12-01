@@ -263,7 +263,7 @@ class LevelFourVC: UIViewController {
             routeToSucces()
             print("robot in c3")
         }else {
-            routeToFalse()
+            failedView.isHidden = false
             print("no point")
         }
         
@@ -271,7 +271,7 @@ class LevelFourVC: UIViewController {
     }
     
     func offButton() {
-        runButton.isEnabled = false
+        
         if actionRobot.count >= 9 {
             forwardButton.isEnabled = false
             leftButton.isEnabled = false
@@ -377,7 +377,7 @@ class LevelFourVC: UIViewController {
     }
     
     @IBAction func runAction(_ sender: Any) {
-        offButton()
+        runButton.isEnabled = false
         
         if actionRobot.count >= 2 {
             move(direction: "\(actionRobot[1])")
