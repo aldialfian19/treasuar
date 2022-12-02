@@ -16,29 +16,39 @@ class LevelSatuVC: UIViewController {
     @IBOutlet var trashButton: UIButton!
     @IBOutlet var majuInstruksi: UIImageView!
     
+    @IBOutlet var ulangiButton: UIButton!
+    @IBOutlet var failedView: UIView!
     
     var action = ["forward", "forward", "left", "forward"]
     
     var robot: UIImageView?
     
-    var c3loc: CGRect = CGRect(x: 780, y: 700, width: 178, height: 178)
-    var c2loc: CGRect = CGRect(x: 600, y: 700, width: 178, height: 178)
-    var c1loc: CGRect = CGRect(x: 420, y: 700, width: 178, height: 178)
-    var b3loc: CGRect = CGRect(x: 780, y: 520, width: 178, height: 178)
-    var b2loc: CGRect = CGRect(x: 600, y: 520, width: 178, height: 178)
-    var b1loc: CGRect = CGRect(x: 420, y: 520, width: 178, height: 178)
-    var a3loc: CGRect = CGRect(x: 780, y: 340, width: 178, height: 178)
-    var a2loc: CGRect = CGRect(x: 600, y: 340, width: 178, height: 178)
-    var a1loc: CGRect = CGRect(x: 420, y: 340, width: 178, height: 178)
+    var c3loc: CGRect = CGRect(x: 780, y: 700, width: 180, height: 180)
+    var c2loc: CGRect = CGRect(x: 600, y: 700, width: 180, height: 180)
+    var c1loc: CGRect = CGRect(x: 420, y: 700, width: 180, height: 180)
+    var b3loc: CGRect = CGRect(x: 780, y: 520, width: 180, height: 180)
+    var b2loc: CGRect = CGRect(x: 600, y: 520, width: 180, height: 180)
+    var b1loc: CGRect = CGRect(x: 420, y: 520, width: 180, height: 180)
+    var a3loc: CGRect = CGRect(x: 780, y: 340, width: 180, height: 180)
+    var a2loc: CGRect = CGRect(x: 600, y: 340, width: 180, height: 180)
+    var a1loc: CGRect = CGRect(x: 420, y: 340, width: 180, height: 180)
+    
+    var tembokLoc: CGRect = CGRect(x: 303, y: 220, width: 770, height: 775)
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         majuInstruksi.isHidden = false
+        failedView.isHidden = true
+        
+//        YourView.bringSubview(toFront: yourelementA)
+        
+
         
         addRectangle()
         addImage()
         move(direction: "")
+        
         
         
         
@@ -86,14 +96,20 @@ class LevelSatuVC: UIViewController {
     }
     
     func addImage() {
-        robot = UIImageView(image: UIImage(named: "2.png"))
+        robot = UIImageView(image: UIImage(named: "depan.png"))
         robot!.frame = a1loc
         self.view.addSubview(robot!)
         self.view.bringSubviewToFront(robot!)
         
+        let tembok = UIImageView(image: UIImage(named: "tembok.png")!)
+        tembok.frame = tembokLoc
+        self.view.addSubview(tembok)
+        
         //instruksi
         self.view.addSubview(majuInstruksi!)
         self.view.bringSubviewToFront(majuInstruksi!)
+        
+        
         
         //obstacle
         let a2Obs = UIImageView(image: UIImage(named: "obstacle.png")!)
@@ -110,6 +126,10 @@ class LevelSatuVC: UIViewController {
         treasure.frame = c1loc
         self.view.addSubview(treasure)
         
+        //failed
+        self.view.addSubview(failedView!)
+        self.view.bringSubviewToFront(failedView!)
+        
     }
     func removeImage() {
         majuInstruksi.isHidden = true
@@ -125,20 +145,20 @@ class LevelSatuVC: UIViewController {
             
         case "forward":
           
-            if robot?.image == UIImage(named: "2.png") {
+            if robot?.image == UIImage(named: "depan.png") {
                 UIView.animate(
                     withDuration: 2, delay: 0, usingSpringWithDamping: 1.9, initialSpringVelocity: 3.0, options: [], animations: {
                         self.robot?.transform = (self.robot?.transform.translatedBy(x: 0, y: 180))!
                         
                     })
                 
-            }else if self.robot?.image == UIImage(named: "1.png") {
+            }else if self.robot?.image == UIImage(named: "kiri.png") {
                 UIView.animate(
                     withDuration: 2, delay: 0, usingSpringWithDamping: 1.9, initialSpringVelocity: 3.0, options: [], animations: {
                         self.robot?.transform = (self.robot?.transform.translatedBy(x: 180, y: 0))!
                         
                     })
-            }else if self.robot?.image == UIImage(named: "3.png") {
+            }else if self.robot?.image == UIImage(named: "kanan.png") {
                 UIView.animate(
                     withDuration: 2, delay: 0, usingSpringWithDamping: 1.9, initialSpringVelocity: 3.0, options: [], animations: {
                         self.robot?.transform = (self.robot?.transform.translatedBy(x: -180, y: 0))!
@@ -148,21 +168,22 @@ class LevelSatuVC: UIViewController {
 
             
         case "left":
-            if robot?.image == UIImage(named: "2.png"){
-                self.robot?.image = UIImage(named: "1.png")
-            }else if robot?.image == UIImage(named: "3.png"){
-                self.robot?.image = UIImage(named: "2.png")
+            if robot?.image == UIImage(named: "depan.png"){
+                self.robot?.image = UIImage(named: "kiri.png")
+            }else if robot?.image == UIImage(named: "kanan.png"){
+                self.robot?.image = UIImage(named: "depan.png")
             }
             
         case "right":
-            if robot?.image == UIImage(named: "2.png"){
-                self.robot?.image = UIImage(named: "3.png")
-            }else if robot?.image == UIImage(named: "1.png"){
-                self.robot?.image = UIImage(named: "2.png")
+            if robot?.image == UIImage(named: "depan.png"){
+                self.robot?.image = UIImage(named: "kanan.png")
+            }else if robot?.image == UIImage(named: "kiri.png"){
+                self.robot?.image = UIImage(named: "depan.png")
             }
+
             
         case "restart":
-            self.robot?.image = UIImage(named: "2.png")
+            self.robot?.image = UIImage(named: "depan.png")
             self.robot?.frame = a1loc
 
             
@@ -171,21 +192,22 @@ class LevelSatuVC: UIViewController {
         }
     }
     
+    func delay(_ delay:Double, closure:@escaping () -> ()) {
+        let when = DispatchTime.now() + delay
+        DispatchQueue.main.asyncAfter(deadline: when, execute: closure)
+    }
+    
     //MARK: -button
     
     @IBAction func oneAction(_ sender: Any) {
         
-        UIView.animate(withDuration: 1, delay: 0) {
-            self.move(direction: "forward")
-            self.removeImage()
-        } completion: { isTrue in
-            UIView.animate(withDuration: 2, delay: 1) {
-                self.checkPoint()
-            }
-        }
-//        move(direction: "forward")
-//        removeImage()
-//        checkPoint()
+        move(direction: "forward")
+        delay(1.2) {
+             self.checkPoint()
+         }
+
+        removeImage()
+
 
     }
     @IBAction func leftAction(_ sender: Any) {
@@ -198,11 +220,19 @@ class LevelSatuVC: UIViewController {
     
     @IBAction func restartAction(_ sender: Any) {
         move(direction: "restart")
+        failedView.isHidden = true
     }
     
     @IBAction func homeAction(_ sender: Any) {
         routeToMain()
+
     }
+    
+    @IBAction func ulangiAction(_ sender: Any) {
+        move(direction: "restart")
+        failedView.isHidden = true
+    }
+    
     
     //MARK: -Checkpoint
     func checkPoint() {
@@ -212,40 +242,41 @@ class LevelSatuVC: UIViewController {
             majuInstruksi.isHidden = false
             print("robot in a1")
         }else if robotPosition == a2loc{
-            routeToFalse()
+            failedView.isHidden = false
             print("robot in a2")
         }else if robotPosition == b1loc{
             print("robot in b1")
         }else if robotPosition == b2loc{
-            routeToFalse()
+            failedView.isHidden = false
             print("robot in b2")
         }else if robotPosition == c1loc{
             routeToSucces()
             print("robot in c1")
         }else {
-            routeToFalse()
+            failedView.isHidden = false
             print("no point")
         }
     }
     
-    func routeToFalse() {
-        guard let window = UIApplication.shared.keyWindow else { return }
-        let falseVC = failedVC()
-        UIView.transition(with: window, duration: 0.3, options: .transitionCrossDissolve, animations: { [weak window] in
-            window?.rootViewController = falseVC
-        }, completion: nil)
-    }
+    
+    
+//    func routeToFalse() {
+//        guard let window = UIApplication.shared.keyWindow else { return }
+//        let falseVC = failedVC()
+//        UIView.transition(with: window, duration: 0.3, options: .transitionCrossDissolve, animations: { [weak window] in
+//            window?.rootViewController = falseVC
+//        }, completion: nil)
+//    }
     func routeToMain() {
-        guard let window = UIApplication.shared.keyWindow else { return }
-        let mainVC = mainVC()
-        UIView.transition(with: window, duration: 0.3, options: .transitionCrossDissolve, animations: { [weak window] in
-            window?.rootViewController = mainVC
-        }, completion: nil)
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let ViewController = storyboard.instantiateViewController(withIdentifier: "ViewController") as! ViewController
+        ViewController.modalPresentationStyle = .fullScreen
+        self.present(ViewController, animated: false, completion: nil)
     }
     
     func routeToSucces() {
         guard let window = UIApplication.shared.keyWindow else { return }
-        let succedVC = succesVC()
+        let succedVC = success2DSatu()
         UIView.transition(with: window, duration: 0.3, options: .transitionCrossDissolve, animations: { [weak window] in
             window?.rootViewController = succedVC
         }, completion: nil)
