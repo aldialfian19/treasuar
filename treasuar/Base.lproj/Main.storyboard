@@ -132,7 +132,7 @@
                                     <constraint firstAttribute="height" constant="80" id="CvY-ja-not"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="64"/>
-                                <color key="textColor" red="0.89411771299999998" green="0.27843138579999999" blue="0.20392158630000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Let's Start Hunting!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ydX-Wb-Lyq">
@@ -195,7 +195,7 @@
         <image name="level2" width="365" height="452"/>
         <image name="level4" width="365" height="452"/>
         <image name="level5" width="365" height="452"/>
-        <image name="logo" width="143" height="103"/>
+        <image name="logo" width="143" height="108"/>
         <image name="setting" width="148" height="149"/>
         <image name="sound" width="149" height="149"/>
         <systemColor name="systemBackgroundColor">
