@@ -235,7 +235,7 @@ class LevelFiveVC: UIViewController {
             // Place object
             placeObject(object: robotEntity!, position: worldPos)
             placeObject(object: startEntity!, position: worldPos)
-            placeObject(object: coinEntity!, position: worldPos + b3pos)
+            placeObject(object: coinEntity!, position: worldPos + simd_float3(x: 0.4, y: 0.02, z: 0.2))
             
             placeObject(object: floorEntitya1!, position: worldPos + a1pos)
             placeObject(object: floorEntitya2!, position: worldPos + a2pos)
@@ -414,7 +414,7 @@ class LevelFiveVC: UIViewController {
     
     func offButton() {
         
-        if actionRobot.count >= 9 {
+        if actionRobot.count >= 13 {
             forwardButton.isEnabled = false
             leftButton.isEnabled = false
             rightButton.isEnabled = false
@@ -607,6 +607,46 @@ class LevelFiveVC: UIViewController {
                                                             }
                                                             self.delay(2) {
                                                                  self.checkPoint()
+                                                                self.delay(0.1) {
+                                                                    if self.actionRobot.count >= 10 {
+                                                                        self.move(direction: "\(self.actionRobot[9])")
+                                                                    }else {
+                                                                        self.move(direction: "\(self.actionRobot[0])")
+                                                                    }
+                                                                    self.delay(2) {
+                                                                         self.checkPoint()
+                                                                        self.delay(0.1) {
+                                                                            if self.actionRobot.count >= 11 {
+                                                                                self.move(direction: "\(self.actionRobot[10])")
+                                                                            }else {
+                                                                                self.move(direction: "\(self.actionRobot[0])")
+                                                                            }
+                                                                            self.delay(2) {
+                                                                                 self.checkPoint()
+                                                                                self.delay(0.1) {
+                                                                                    if self.actionRobot.count >= 12 {
+                                                                                        self.move(direction: "\(self.actionRobot[11])")
+                                                                                    }else {
+                                                                                        self.move(direction: "\(self.actionRobot[0])")
+                                                                                    }
+                                                                                    self.delay(2) {
+                                                                                         self.checkPoint()
+                                                                                        self.delay(0.1) {
+                                                                                            if self.actionRobot.count >= 13 {
+                                                                                                self.move(direction: "\(self.actionRobot[12])")
+                                                                                            }else {
+                                                                                                self.move(direction: "\(self.actionRobot[0])")
+                                                                                            }
+                                                                                            self.delay(2) {
+                                                                                                 self.checkPoint()
+                                                                                             }
+                                                                                         }
+                                                                                     }
+                                                                                 }
+                                                                             }
+                                                                         }
+                                                                     }
+                                                                 }
                                                              }
                                                          }
                                                      }

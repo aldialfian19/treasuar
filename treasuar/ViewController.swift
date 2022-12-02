@@ -11,7 +11,6 @@ class ViewController: UIViewController {
     
     
 //    @IBOutlet var ARButton: UIButton!
-    @IBOutlet var nameLabel: UILabel!
     
     @IBOutlet var buttonSatu: UIButton!
     @IBOutlet var buttonDua: UIButton!
@@ -30,11 +29,7 @@ class ViewController: UIViewController {
     
     
     override func viewDidLoad() {
-        super.viewDidLoad()
-        view.addSubview(imageView)
-        nameLabel.text = "Hi, Steve!"
-        nameLabel.textAlignment = .left
-        nameLabel.font = UIFont(name: "Boldhead", size: 64)
+       
         
       
         // Do any additional setup after loading the view.

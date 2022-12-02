@@ -106,7 +106,10 @@
                         <constraint firstAttribute="height" constant="100" id="VvT-Dy-LJp"/>
                     </constraints>
                     <state key="normal" title="Button"/>
-                    <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                    <buttonConfiguration key="configuration" style="filled">
+                        <backgroundConfiguration key="background" image="trash"/>
+                        <color key="baseBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </buttonConfiguration>
                     <connections>
                         <action selector="trashAction:" destination="-1" eventType="touchUpInside" id="oFJ-fI-vQl"/>
                     </connections>
@@ -132,7 +135,11 @@
                         <constraint firstAttribute="height" constant="100" id="kzJ-LE-pMh"/>
                     </constraints>
                     <state key="normal" title="Button"/>
-                    <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                    <buttonConfiguration key="configuration" style="filled" image="play.fill" catalog="system">
+                        <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="60"/>
+                        <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </buttonConfiguration>
                     <connections>
                         <action selector="runAction:" destination="-1" eventType="touchUpInside" id="PiO-Sf-zOF"/>
                     </connections>
@@ -249,7 +256,9 @@
         <image name="home" width="149" height="149"/>
         <image name="instruksi1" width="588" height="144"/>
         <image name="instruksi2" width="648" height="144"/>
+        <image name="play.fill" catalog="system" width="117" height="128"/>
         <image name="popUpFailed" width="1011" height="646"/>
+        <image name="trash" width="98" height="98"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

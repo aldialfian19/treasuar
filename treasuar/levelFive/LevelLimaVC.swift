@@ -301,9 +301,6 @@ class LevelLimaVC: UIViewController {
     @IBAction func runAction(_ sender: Any) {
         
         runButton.isEnabled = false
-//        self.robot?.frame = a1loc
-//        robot?.image = UIImage(named: "2.png")
-        
         
         UIView.animate(withDuration: 1, delay: 0) {
             if self.actionRobot.count >= 2 {
@@ -381,6 +378,66 @@ class LevelLimaVC: UIViewController {
                                                             } completion: { isTrue14 in
                                                                 UIView.animate(withDuration: 1, delay: 0) {
                                                                     self.finishPoint()
+                                                                } completion: { isTrue15 in
+                                                                    UIView.animate(withDuration: 1, delay: 0) {
+                                                                        if self.actionRobot.count >= 10 {
+                                                                            self.move(direction: "\(self.actionRobot[9])")
+                                                                        }else {
+                                                                            self.move(direction: "\(self.actionRobot[0])")
+                                                                        }
+                                                                    } completion: { isTrue16 in
+                                                                        UIView.animate(withDuration: 1, delay: 0) {
+                                                                            self.finishPoint()
+                                                                        } completion: { isTrue17 in
+                                                                            UIView.animate(withDuration: 1, delay: 0) {
+                                                                                if self.actionRobot.count >= 11 {
+                                                                                    self.move(direction: "\(self.actionRobot[10])")
+                                                                                }else {
+                                                                                    self.move(direction: "\(self.actionRobot[0])")
+                                                                                }
+                                                                            } completion: { isTrue18 in
+                                                                                UIView.animate(withDuration: 1, delay: 0) {
+                                                                                    self.finishPoint()
+                                                                                } completion: { isTrue19 in
+                                                                                    UIView.animate(withDuration: 1, delay: 0) {
+                                                                                        if self.actionRobot.count >= 12 {
+                                                                                            self.move(direction: "\(self.actionRobot[11])")
+                                                                                        }else {
+                                                                                            self.move(direction: "\(self.actionRobot[0])")
+                                                                                        }
+                                                                                    } completion: { isTrue20 in
+                                                                                        UIView.animate(withDuration: 1, delay: 0) {
+                                                                                            self.finishPoint()
+                                                                                        } completion: { isTrue21 in
+                                                                                            UIView.animate(withDuration: 1, delay: 0) {
+                                                                                                if self.actionRobot.count >= 13 {
+                                                                                                    self.move(direction: "\(self.actionRobot[12])")
+                                                                                                }else {
+                                                                                                    self.move(direction: "\(self.actionRobot[0])")
+                                                                                                }
+                                                                                            } completion: { isTrue22 in
+                                                                                                UIView.animate(withDuration: 1, delay: 0) {
+                                                                                                    self.finishPoint()
+                                                                                                } completion: { isTrue23 in
+                                                                                                    UIView.animate(withDuration: 1, delay: 0) {
+                                                                                                        if self.actionRobot.count >= 13 {
+                                                                                                            self.move(direction: "\(self.actionRobot[12])")
+                                                                                                        }else {
+                                                                                                            self.move(direction: "\(self.actionRobot[0])")
+                                                                                                        }
+                                                                                                    } completion: { isTrue24 in
+                                                                                                        UIView.animate(withDuration: 1, delay: 0) {
+                                                                                                            self.finishPoint()
+                                                                                                        }
+                                                                                                    }
+                                                                                                }
+                                                                                            }
+                                                                                        }
+                                                                                    }
+                                                                                }
+                                                                            }
+                                                                        }
+                                                                    }
                                                                 }
                                                             }
                                                         }
@@ -454,7 +511,7 @@ class LevelLimaVC: UIViewController {
     //MARK: -checkpoint
     
     func offButton() {
-        if actionRobot.count >= 9 {
+        if actionRobot.count >= 13 {
             forwardButton.isEnabled = false
             leftButton.isEnabled = false
             rightButton.isEnabled = false

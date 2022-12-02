@@ -179,7 +179,6 @@
                         <outlet property="buttonLima" destination="TKV-zK-cNF" id="UA6-5Y-C7o"/>
                         <outlet property="buttonSatu" destination="tMA-lc-EjH" id="yeB-o9-Plf"/>
                         <outlet property="buttonTiga" destination="P2u-N5-Ulh" id="zEf-qK-CJJ"/>
-                        <outlet property="nameLabel" destination="ASJ-jZ-AVv" id="1uq-dc-FbQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

@@ -199,7 +199,7 @@ class LevelThreeVC: UIViewController {
             // Place object
             placeObject(object: robotEntity!, position: worldPos)
             placeObject(object: startEntity!, position: worldPos)
-            placeObject(object: coinEntity!, position: worldPos + c3pos)
+            placeObject(object: coinEntity!, position: worldPos + simd_float3(x: 0.4, y: 0.02, z: 0.4))
             
             placeObject(object: floorEntitya1!, position: worldPos + a1pos)
             placeObject(object: floorEntitya2!, position: worldPos + a2pos)
