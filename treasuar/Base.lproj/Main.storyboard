@@ -190,7 +190,7 @@
     <resources>
         <image name="Level3" width="365" height="452"/>
         <image name="achievement" width="149" height="149"/>
-        <image name="bg" width="683" height="512"/>
+        <image name="bg" width="1366" height="1024"/>
         <image name="level1" width="365" height="452"/>
         <image name="level2" width="365" height="452"/>
         <image name="level4" width="365" height="452"/>
