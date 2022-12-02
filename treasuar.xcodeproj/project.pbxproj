@@ -31,8 +31,6 @@
 		CBAF6598292F232B0017B554 /* LevelDuaVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBAF6596292F232B0017B554 /* LevelDuaVC.xib */; };
 		CBB4115229280A6E009881DD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB4115129280A6E009881DD /* AppDelegate.swift */; };
 		CBB4115429280A6E009881DD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB4115329280A6E009881DD /* SceneDelegate.swift */; };
-		CBB4115629280A6E009881DD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB4115529280A6E009881DD /* ViewController.swift */; };
-		CBB4115929280A6E009881DD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBB4115729280A6E009881DD /* Main.storyboard */; };
 		CBB4115C29280A6E009881DD /* treasuar.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CBB4115A29280A6E009881DD /* treasuar.xcdatamodeld */; };
 		CBB4115E29280A6F009881DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CBB4115D29280A6F009881DD /* Assets.xcassets */; };
 		CBB4116129280A6F009881DD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBB4115F29280A6F009881DD /* LaunchScreen.storyboard */; };
@@ -101,8 +99,6 @@
 		CBB4114E29280A6E009881DD /* treasuar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = treasuar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBB4115129280A6E009881DD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CBB4115329280A6E009881DD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		CBB4115529280A6E009881DD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		CBB4115829280A6E009881DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CBB4115B29280A6E009881DD /* treasuar.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = treasuar.xcdatamodel; sourceTree = "<group>"; };
 		CBB4115D29280A6F009881DD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CBB4116029280A6F009881DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -213,8 +209,6 @@
 				CBB4118C29281664009881DD /* Experience.rcproject */,
 				CBB4115129280A6E009881DD /* AppDelegate.swift */,
 				CBB4115329280A6E009881DD /* SceneDelegate.swift */,
-				CBB4115529280A6E009881DD /* ViewController.swift */,
-				CBB4115729280A6E009881DD /* Main.storyboard */,
 				CBB4115D29280A6F009881DD /* Assets.xcassets */,
 				CBB4115F29280A6F009881DD /* LaunchScreen.storyboard */,
 				CBB4116229280A6F009881DD /* Info.plist */,
@@ -444,7 +438,6 @@
 				CBB411A52929083D009881DD /* LevelFourVC.xib in Resources */,
 				CBB4118B29280B37009881DD /* floor.usdz in Resources */,
 				CB65D4152930FA2C0040FF8A /* LevelTigaCell.xib in Resources */,
-				CBB4115929280A6E009881DD /* Main.storyboard in Resources */,
 				CB65D42F2933940E0040FF8A /* arFailedVC.xib in Resources */,
 				CBB411A92929086A009881DD /* LevelFiveVC.xib in Resources */,
 			);
@@ -482,7 +475,6 @@
 				CBAF6597292F232B0017B554 /* LevelDuaVC.swift in Sources */,
 				CB65D42E2933940E0040FF8A /* arFailedVC.swift in Sources */,
 				CB564D5C2934899100460BEF /* mainnVC.swift in Sources */,
-				CBB4115629280A6E009881DD /* ViewController.swift in Sources */,
 				CBB411A82929086A009881DD /* LevelFiveVC.swift in Sources */,
 				CBB4115229280A6E009881DD /* AppDelegate.swift in Sources */,
 				CB65D42A293393F90040FF8A /* arSuccesVC.swift in Sources */,
@@ -529,14 +521,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		CBB4115729280A6E009881DD /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CBB4115829280A6E009881DD /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		CBB4115F29280A6F009881DD /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
