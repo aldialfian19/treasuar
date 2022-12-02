@@ -109,15 +109,15 @@ class LevelDuaVC: UIViewController {
         self.view.bringSubviewToFront(kananInstruksi!)
         
         //obstacle
-        let a2Obs = UIImageView(image: UIImage(named: "obstacle.png")!)
+        let a2Obs = UIImageView(image: UIImage(named: "block.png")!)
         a2Obs.frame = a2loc
         self.view.addSubview(a2Obs)
         
-        let c1Obs = UIImageView(image: UIImage(named: "obstacle.png")!)
+        let c1Obs = UIImageView(image: UIImage(named: "block.png")!)
         c1Obs.frame = c1loc
         self.view.addSubview(c1Obs)
         
-        let b3Obs = UIImageView(image: UIImage(named: "obstacle.png")!)
+        let b3Obs = UIImageView(image: UIImage(named: "block.png")!)
         b3Obs.frame = b3loc
         self.view.addSubview(b3Obs)
         

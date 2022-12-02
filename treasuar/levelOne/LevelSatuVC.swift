@@ -112,11 +112,11 @@ class LevelSatuVC: UIViewController {
         
         
         //obstacle
-        let a2Obs = UIImageView(image: UIImage(named: "obstacle.png")!)
+        let a2Obs = UIImageView(image: UIImage(named: "block.png")!)
         a2Obs.frame = a2loc
         self.view.addSubview(a2Obs)
         
-        let b2Obs = UIImageView(image: UIImage(named: "obstacle.png")!)
+        let b2Obs = UIImageView(image: UIImage(named: "block.png")!)
         b2Obs.frame = b2loc
         self.view.addSubview(b2Obs)
         

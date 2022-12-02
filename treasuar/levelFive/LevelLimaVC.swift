@@ -149,23 +149,23 @@ class LevelLimaVC: UIViewController {
         self.view.addSubview(tembok)
         
         //obstacle
-        let a2Obs = UIImageView(image: UIImage(named: "obstacle.png")!)
+        let a2Obs = UIImageView(image: UIImage(named: "block.png")!)
         a2Obs.frame = a2loc
         self.view.addSubview(a2Obs)
         
-        let a4Obs = UIImageView(image: UIImage(named: "obstacle.png")!)
+        let a4Obs = UIImageView(image: UIImage(named: "block.png")!)
         a4Obs.frame = a4loc
         self.view.addSubview(a4Obs)
         
-        let b2Obs = UIImageView(image: UIImage(named: "obstacle.png")!)
+        let b2Obs = UIImageView(image: UIImage(named: "block.png")!)
         b2Obs.frame = b2loc
         self.view.addSubview(b2Obs)
         
-        let c2Obs = UIImageView(image: UIImage(named: "obstacle.png")!)
+        let c2Obs = UIImageView(image: UIImage(named: "block.png")!)
         c2Obs.frame = c2loc
         self.view.addSubview(c2Obs)
         
-        let c3Obs = UIImageView(image: UIImage(named: "obstacle.png")!)
+        let c3Obs = UIImageView(image: UIImage(named: "block.png")!)
         c3Obs.frame = c3loc
         self.view.addSubview(c3Obs)
         
@@ -559,13 +559,7 @@ class LevelLimaVC: UIViewController {
     }
     // MARK: -NAVIGATION
     
-    func routeToFalse() {
-        guard let window = UIApplication.shared.keyWindow else { return }
-        let falseVC = failedVC()
-        UIView.transition(with: window, duration: 0.3, options: .transitionCrossDissolve, animations: { [weak window] in
-            window?.rootViewController = falseVC
-        }, completion: nil)
-    }
+    
     
     func routeToMain() {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)

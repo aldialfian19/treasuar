@@ -109,15 +109,15 @@ class LevelTigaVC: UIViewController {
         self.view.addSubview(tembok)
         
         //obstacle
-        let a2Obs = UIImageView(image: UIImage(named: "obstacle.png")!)
+        let a2Obs = UIImageView(image: UIImage(named: "block.png")!)
         a2Obs.frame = a2loc
         self.view.addSubview(a2Obs)
         
-        let c1Obs = UIImageView(image: UIImage(named: "obstacle.png")!)
+        let c1Obs = UIImageView(image: UIImage(named: "block.png")!)
         c1Obs.frame = c1loc
         self.view.addSubview(c1Obs)
         
-        let b3Obs = UIImageView(image: UIImage(named: "obstacle.png")!)
+        let b3Obs = UIImageView(image: UIImage(named: "block.png")!)
         b3Obs.frame = b3loc
         self.view.addSubview(b3Obs)
         
@@ -491,13 +491,7 @@ class LevelTigaVC: UIViewController {
     
     // MARK: - NAVIGATION
     
-    func routeToFalse() {
-        guard let window = UIApplication.shared.keyWindow else { return }
-        let falseVC = failedVC()
-        UIView.transition(with: window, duration: 0.3, options: .transitionCrossDissolve, animations: { [weak window] in
-            window?.rootViewController = falseVC
-        }, completion: nil)
-    }
+    
     
     func routeToMain() {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)

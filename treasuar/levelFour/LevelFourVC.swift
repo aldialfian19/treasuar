@@ -426,13 +426,7 @@ class LevelFourVC: UIViewController {
     }
     
     //MARK: -route to popup
-    func routeToFalse() {
-        guard let window = UIApplication.shared.keyWindow else { return }
-        let falseVC = arFailedVC()
-        UIView.transition(with: window, duration: 0.0, options: .transitionCrossDissolve, animations: { [weak window] in
-            window?.rootViewController = falseVC
-        }, completion: nil)
-    }
+    
     
     func routeToMain() {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
