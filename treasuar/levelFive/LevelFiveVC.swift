@@ -46,14 +46,45 @@ class LevelFiveVC: UIViewController {
     var floorEntitya2: Entity?
     var floorEntitya3: Entity?
     var floorEntitya4: Entity?
+    var floorEntitya5: Entity?
+    var floorEntitya6: Entity?
+    
     var floorEntityb1: Entity?
     var floorEntityb2: Entity?
     var floorEntityb3: Entity?
     var floorEntityb4: Entity?
+    var floorEntityb5: Entity?
+    var floorEntityb6: Entity?
+    
     var floorEntityc1: Entity?
     var floorEntityc2: Entity?
     var floorEntityc3: Entity?
     var floorEntityc4: Entity?
+    var floorEntityc5: Entity?
+    var floorEntityc6: Entity?
+    
+    var floorEntityd1: Entity?
+    var floorEntityd2: Entity?
+    var floorEntityd3: Entity?
+    var floorEntityd4: Entity?
+    var floorEntityd5: Entity?
+    var floorEntityd6: Entity?
+    
+    var floorEntitye1: Entity?
+    var floorEntitye2: Entity?
+    var floorEntitye3: Entity?
+    var floorEntitye4: Entity?
+    var floorEntitye5: Entity?
+    var floorEntitye6: Entity?
+    
+    var floorEntityz1: Entity?
+    var floorEntityz2: Entity?
+    var floorEntityz3: Entity?
+    var floorEntityz4: Entity?
+    var floorEntityz5: Entity?
+    var floorEntityz6: Entity?
+    
+    var coinEntity: Entity?
     
     var a1pos: SIMD3<Float> = simd_float3(x: 0, y: 0, z: 0)
     var a2pos: SIMD3<Float> = simd_float3(x: 0.2, y: 0, z: 0)
@@ -75,15 +106,29 @@ class LevelFiveVC: UIViewController {
     var d3pos: SIMD3<Float> = simd_float3(x: 0.4, y: 0, z: 0.6)
     var d4pos: SIMD3<Float> = simd_float3(x: 0.6, y: 0, z: 0.6)
     
+    var e1pos: SIMD3<Float> = simd_float3(x: 0, y: 0, z: 0.8)
+    var e2pos: SIMD3<Float> = simd_float3(x: 0.2, y: 0, z: 0.8)
+    var e3pos: SIMD3<Float> = simd_float3(x: 0.4, y: 0, z: 0.8)
+    var e4pos: SIMD3<Float> = simd_float3(x: 0.6, y: 0, z: 0.8)
+    
+    var z1pos: SIMD3<Float> = simd_float3(x: 0, y: 0, z: -0.2)
+    var z2pos: SIMD3<Float> = simd_float3(x: 0.2, y: 0, z: -0.2)
+    var z3pos: SIMD3<Float> = simd_float3(x: 0.4, y: 0, z: -0.2)
+    var z4pos: SIMD3<Float> = simd_float3(x: 0.6, y: 0, z: -0.2)
+    
+    var z5pos: SIMD3<Float> = simd_float3(x: 0.8, y: 0, z: -0.2)
     var a5pos: SIMD3<Float> = simd_float3(x: 0.8, y: 0, z: 0)
     var b5pos: SIMD3<Float> = simd_float3(x: 0.8, y: 0, z: 0.2)
     var c5pos: SIMD3<Float> = simd_float3(x: 0.8, y: 0, z: 0.4)
     var d5pos: SIMD3<Float> = simd_float3(x: 0.8, y: 0, z: 0.6)
+    var e5pos: SIMD3<Float> = simd_float3(x: 0.8, y: 0, z: 0.8)
     
-    var aMinPos: SIMD3<Float> = simd_float3(x: -0.2, y: 0, z: 0)
-    var bMinPos: SIMD3<Float> = simd_float3(x: -0.2, y: 0, z: 0.2)
-    var cMinPos: SIMD3<Float> = simd_float3(x: -0.2, y: 0, z: 0.4)
-    var dMinPos: SIMD3<Float> = simd_float3(x: -0.2, y: 0, z: 0.6)
+    var z6pos: SIMD3<Float> = simd_float3(x: -0.2, y: 0, z: -0.2)
+    var a6pos: SIMD3<Float> = simd_float3(x: -0.2, y: 0, z: 0)
+    var b6pos: SIMD3<Float> = simd_float3(x: -0.2, y: 0, z: 0.2)
+    var c6pos: SIMD3<Float> = simd_float3(x: -0.2, y: 0, z: 0.4)
+    var d6pos: SIMD3<Float> = simd_float3(x: -0.2, y: 0, z: 0.6)
+    var e6pos: SIMD3<Float> = simd_float3(x: -0.2, y: 0, z: 0.8)
     
     
     override func viewDidLoad() {
@@ -95,19 +140,55 @@ class LevelFiveVC: UIViewController {
         
         //load 3d model
         robotEntity = try! Entity.load(named: "robot")
-        toyEntity = try! Entity.load(named: "toy")
         startEntity = try! Entity.load(named: "merah")
+        coinEntity = try! Entity.load(named: "koin")
         
         
-        floorEntitya1 = try! Entity.load(named: "floor")
-        floorEntitya2 = try! Entity.load(named: "floor")
-        floorEntitya3 = try! Entity.load(named: "floor")
-        floorEntityb1 = try! Entity.load(named: "floor")
-        floorEntityb2 = try! Entity.load(named: "floor")
-        floorEntityb3 = try! Entity.load(named: "floor")
-        floorEntityc1 = try! Entity.load(named: "floor")
-        floorEntityc2 = try! Entity.load(named: "floor")
-        floorEntityc3 = try! Entity.load(named: "floor")
+        //load pagar
+        floorEntitye1 = try! Entity.load(named: "balok")
+        floorEntitye2 = try! Entity.load(named: "balok")
+        floorEntitye3 = try! Entity.load(named: "balok")
+        floorEntitye4 = try! Entity.load(named: "balok")
+        floorEntitye5 = try! Entity.load(named: "balok")
+        floorEntitye6 = try! Entity.load(named: "balok")
+        
+        floorEntityz1 = try! Entity.load(named: "balok")
+        floorEntityz2 = try! Entity.load(named: "balok")
+        floorEntityz3 = try! Entity.load(named: "balok")
+        floorEntityz4 = try! Entity.load(named: "balok")
+        floorEntityz5 = try! Entity.load(named: "balok")
+        floorEntityz6 = try! Entity.load(named: "balok")
+        
+        floorEntitya5 = try! Entity.load(named: "balok")
+        floorEntityb5 = try! Entity.load(named: "balok")
+        floorEntityc5 = try! Entity.load(named: "balok")
+        floorEntityd5 = try! Entity.load(named: "balok")
+        floorEntitya6 = try! Entity.load(named: "balok")
+        floorEntityb6 = try! Entity.load(named: "balok")
+        floorEntityc6 = try! Entity.load(named: "balok")
+        floorEntityd6 = try! Entity.load(named: "balok")
+        
+        
+        floorEntitya1 = try! Entity.load(named: "grass")
+        floorEntitya2 = try! Entity.load(named: "balok")
+        floorEntitya3 = try! Entity.load(named: "grass")
+        floorEntitya4 = try! Entity.load(named: "grass")
+        
+        floorEntityb1 = try! Entity.load(named: "grass")
+        floorEntityb2 = try! Entity.load(named: "balok")
+        floorEntityb3 = try! Entity.load(named: "grass")
+        floorEntityb4 = try! Entity.load(named: "grass")
+        
+        floorEntityc1 = try! Entity.load(named: "grass")
+        floorEntityc2 = try! Entity.load(named: "balok")
+        floorEntityc3 = try! Entity.load(named: "balok")
+        floorEntityc4 = try! Entity.load(named: "grass")
+        
+        floorEntityd1 = try! Entity.load(named: "grass")
+        floorEntityd2 = try! Entity.load(named: "grass")
+        floorEntityd3 = try! Entity.load(named: "grass")
+        floorEntityd4 = try! Entity.load(named: "grass")
+        
         
         
         
@@ -119,6 +200,7 @@ class LevelFiveVC: UIViewController {
         
         move(direction: "")
         
+        updateTable()
         failedView.isHidden = true
         tableView.isHidden = true
         instruksiSatu.isHidden = true
@@ -152,24 +234,55 @@ class LevelFiveVC: UIViewController {
             
             // Place object
             placeObject(object: robotEntity!, position: worldPos)
-            placeObject(object: toyEntity!, position: worldPos + a2pos)
             placeObject(object: startEntity!, position: worldPos)
+            placeObject(object: coinEntity!, position: worldPos + b3pos)
             
             placeObject(object: floorEntitya1!, position: worldPos + a1pos)
             placeObject(object: floorEntitya2!, position: worldPos + a2pos)
             placeObject(object: floorEntitya3!, position: worldPos + a3pos)
+            placeObject(object: floorEntitya4!, position: worldPos + a4pos)
+            placeObject(object: floorEntitya5!, position: worldPos + a5pos)
+            placeObject(object: floorEntitya6!, position: worldPos + a6pos)
+            
             placeObject(object: floorEntityb1!, position: worldPos + b1pos)
             placeObject(object: floorEntityb2!, position: worldPos + b2pos)
             placeObject(object: floorEntityb3!, position: worldPos + b3pos)
+            placeObject(object: floorEntityb4!, position: worldPos + b4pos)
+            placeObject(object: floorEntityb5!, position: worldPos + b5pos)
+            placeObject(object: floorEntityb6!, position: worldPos + b6pos)
+            
             placeObject(object: floorEntityc1!, position: worldPos + c1pos)
             placeObject(object: floorEntityc2!, position: worldPos + c2pos)
             placeObject(object: floorEntityc3!, position: worldPos + c3pos)
+            placeObject(object: floorEntityc4!, position: worldPos + c4pos)
+            placeObject(object: floorEntityc5!, position: worldPos + c5pos)
+            placeObject(object: floorEntityc6!, position: worldPos + c6pos)
+            
+            placeObject(object: floorEntityd1!, position: worldPos + d1pos)
+            placeObject(object: floorEntityd2!, position: worldPos + d2pos)
+            placeObject(object: floorEntityd3!, position: worldPos + d3pos)
+            placeObject(object: floorEntityd4!, position: worldPos + d4pos)
+            placeObject(object: floorEntityd5!, position: worldPos + d5pos)
+            placeObject(object: floorEntityd6!, position: worldPos + d6pos)
+            
+            placeObject(object: floorEntitye1!, position: worldPos + e1pos)
+            placeObject(object: floorEntitye2!, position: worldPos + e2pos)
+            placeObject(object: floorEntitye3!, position: worldPos + e3pos)
+            placeObject(object: floorEntitye4!, position: worldPos + e4pos)
+            placeObject(object: floorEntitye5!, position: worldPos + e5pos)
+            placeObject(object: floorEntitye6!, position: worldPos + e6pos)
+            
+            placeObject(object: floorEntityz1!, position: worldPos + z1pos)
+            placeObject(object: floorEntityz2!, position: worldPos + z2pos)
+            placeObject(object: floorEntityz3!, position: worldPos + z3pos)
+            placeObject(object: floorEntityz4!, position: worldPos + z4pos)
+            placeObject(object: floorEntityz5!, position: worldPos + z5pos)
+            placeObject(object: floorEntityz6!, position: worldPos + z6pos)
             
             // Move Object
             move(direction: "")
             
-            toyAnimation()
-            
+            updateTable()
             instruksiDua.isHidden = true
             instruksiSatu.isHidden = false
             tableView.isHidden = false
@@ -253,11 +366,6 @@ class LevelFiveVC: UIViewController {
         }
     }
     
-    func toyAnimation(){
-        toyEntity?.availableAnimations.forEach{
-            toyEntity?.playAnimation($0.repeat())
-        }
-    }
     
     func delay(_ delay:Double, closure:@escaping () -> ()) {
         let when = DispatchTime.now() + delay
@@ -279,15 +387,23 @@ class LevelFiveVC: UIViewController {
             print("robot in a1")
         }else if roundedValue1 == 0.0 && roundedValue2 == 0.2 {
             print("robot in b1")
-        }else if roundedValue1 == 0.2 && roundedValue2 == 0.2 {
-            print("robot in b2")
-        }else if roundedValue1 == 0.2 && roundedValue2 == 0.4 {
-            print("robot in c2")
-        }else if roundedValue1 == 0.4 && roundedValue2 == 0.0 {
-            print("robot in a3")
-        }else if roundedValue1 == 0.4 && roundedValue2 == 0.4 {
+        }else if roundedValue1 == 0.0 && roundedValue2 == 0.4 {
+            print("robot in c1")
+        }else if roundedValue1 == 0.0 && roundedValue2 == 0.6 {
+            print("robot in d1")
+        }else if roundedValue1 == 0.2 && roundedValue2 == 0.6 {
+            print("robot in d2")
+        }else if roundedValue1 == 0.4 && roundedValue2 == 0.6 {
+            print("robot in d3")
+        }else if roundedValue1 == 0.6 && roundedValue2 == 0.6 {
+            print("robot in d4")
+        }else if roundedValue1 == 0.6 && roundedValue2 == 0.4 {
+            print("robot in c4")
+        }else if roundedValue1 == 0.6 && roundedValue2 == 0.2 {
+            print("robot in b4")
+        }else if roundedValue1 == 0.4 && roundedValue2 == 0.2 {
             routeToSucces()
-            print("robot in c3")
+            print("robot in b3")
         }else {
             failedView.isHidden = false
             print("no point")
@@ -340,13 +456,6 @@ class LevelFiveVC: UIViewController {
     }
     
     //MARK: -route to popup
-    func routeToFalse() {
-        guard let window = UIApplication.shared.keyWindow else { return }
-        let falseVC = arFailedVC()
-        UIView.transition(with: window, duration: 0.0, options: .transitionCrossDissolve, animations: { [weak window] in
-            window?.rootViewController = falseVC
-        }, completion: nil)
-    }
     
     func routeToMain() {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
@@ -357,7 +466,7 @@ class LevelFiveVC: UIViewController {
     
     func routeToSucces() {
         guard let window = UIApplication.shared.keyWindow else { return }
-        let succedVC = arSuccesVC()
+        let succedVC = arSuccessLima()
         UIView.transition(with: window, duration: 0.0, options: .transitionCrossDissolve, animations: { [weak window] in
             window?.rootViewController = succedVC
         }, completion: nil)
@@ -378,6 +487,7 @@ class LevelFiveVC: UIViewController {
         actionBox.append("")
         
         tableView.reloadData()
+        
         robotEntity?.orientation = (startEntity?.orientation)!
         
         
@@ -395,6 +505,7 @@ class LevelFiveVC: UIViewController {
         actionBox.append("")
         
         tableView.reloadData()
+        
         robotEntity?.orientation = (startEntity?.orientation)!
         
         onButton()

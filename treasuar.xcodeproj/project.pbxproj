@@ -88,6 +88,9 @@
 		CBCB90742938D15300D089D5 /* OptionFiveVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBCB90722938D15200D089D5 /* OptionFiveVC.xib */; };
 		CBCB90772938F1F800D089D5 /* LevelFiveVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBCB90752938F1F800D089D5 /* LevelFiveVC.swift */; };
 		CBCB90782938F1F800D089D5 /* LevelFiveVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBCB90762938F1F800D089D5 /* LevelFiveVC.xib */; };
+		CBCB907C2939167E00D089D5 /* koin.usdz in Resources */ = {isa = PBXBuildFile; fileRef = CBCB907B2939167E00D089D5 /* koin.usdz */; };
+		CBCB907E293916AA00D089D5 /* balok.usdz in Resources */ = {isa = PBXBuildFile; fileRef = CBCB907D293916AA00D089D5 /* balok.usdz */; };
+		CBCB90822939914200D089D5 /* grass.usdz in Resources */ = {isa = PBXBuildFile; fileRef = CBCB90812939914200D089D5 /* grass.usdz */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -193,6 +196,9 @@
 		CBCB90722938D15200D089D5 /* OptionFiveVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OptionFiveVC.xib; sourceTree = "<group>"; };
 		CBCB90752938F1F800D089D5 /* LevelFiveVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LevelFiveVC.swift; sourceTree = "<group>"; };
 		CBCB90762938F1F800D089D5 /* LevelFiveVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LevelFiveVC.xib; sourceTree = "<group>"; };
+		CBCB907B2939167E00D089D5 /* koin.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = koin.usdz; sourceTree = "<group>"; };
+		CBCB907D293916AA00D089D5 /* balok.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = balok.usdz; sourceTree = "<group>"; };
+		CBCB90812939914200D089D5 /* grass.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = grass.usdz; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -423,6 +429,9 @@
 		CBB411952929076B009881DD /* 3D Asset */ = {
 			isa = PBXGroup;
 			children = (
+				CBCB90812939914200D089D5 /* grass.usdz */,
+				CBCB907D293916AA00D089D5 /* balok.usdz */,
+				CBCB907B2939167E00D089D5 /* koin.usdz */,
 				CBB4118729280B37009881DD /* floor.usdz */,
 				CBB4118629280B37009881DD /* merah.usdz */,
 				CBB4118529280B37009881DD /* robot.usdz */,
@@ -541,6 +550,8 @@
 				24C106B7293908F300DD3C5E /* success2DEmpat.xib in Resources */,
 				CB65D42B293393F90040FF8A /* arSuccesVC.xib in Resources */,
 				CBB4118829280B37009881DD /* toy.usdz in Resources */,
+				CBCB907C2939167E00D089D5 /* koin.usdz in Resources */,
+				CBCB90822939914200D089D5 /* grass.usdz in Resources */,
 				CB65D4262933908D0040FF8A /* failedVC.xib in Resources */,
 				CB65D433293394B50040FF8A /* arMainVC.xib in Resources */,
 				24C10696293903A000DD3C5E /* arSuccessDua.xib in Resources */,
@@ -573,6 +584,7 @@
 				CB9343AD2937EE2C0030D24E /* LevelEmpatVC.xib in Resources */,
 				CBB4118B29280B37009881DD /* floor.usdz in Resources */,
 				CB65D4152930FA2C0040FF8A /* LevelTigaCell.xib in Resources */,
+				CBCB907E293916AA00D089D5 /* balok.usdz in Resources */,
 				CB65D42F2933940E0040FF8A /* arFailedVC.xib in Resources */,
 				24C106A2293906DE00DD3C5E /* arSuccessLima.xib in Resources */,
 			);
@@ -813,7 +825,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 6R9NL6954G;
+				DEVELOPMENT_TEAM = 4M5F5S23L2;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = treasuar/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -841,7 +853,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 6R9NL6954G;
+				DEVELOPMENT_TEAM = 4M5F5S23L2;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = treasuar/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

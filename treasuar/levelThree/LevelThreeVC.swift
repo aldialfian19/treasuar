@@ -43,24 +43,66 @@ class LevelThreeVC: UIViewController {
     var floorEntitya1: Entity?
     var floorEntitya2: Entity?
     var floorEntitya3: Entity?
+    var floorEntitya4: Entity?
+    var floorEntitya6: Entity?
+    
     var floorEntityb1: Entity?
     var floorEntityb2: Entity?
     var floorEntityb3: Entity?
+    var floorEntityb4: Entity?
+    var floorEntityb6: Entity?
+    
     var floorEntityc1: Entity?
     var floorEntityc2: Entity?
     var floorEntityc3: Entity?
+    var floorEntityc4: Entity?
+    var floorEntityc6: Entity?
+    
+    var floorEntityd1: Entity?
+    var floorEntityd2: Entity?
+    var floorEntityd3: Entity?
+    var floorEntityd4: Entity?
+    var floorEntityd6: Entity?
+    
+    var floorEntityz1: Entity?
+    var floorEntityz2: Entity?
+    var floorEntityz3: Entity?
+    var floorEntityz4: Entity?
+    var floorEntityz6: Entity?
+    
+    var coinEntity: Entity?
     
     var a1pos: SIMD3<Float> = simd_float3(x: 0, y: 0, z: 0)
     var a2pos: SIMD3<Float> = simd_float3(x: 0.2, y: 0, z: 0)
     var a3pos: SIMD3<Float> = simd_float3(x: 0.4, y: 0, z: 0)
     var a4pos: SIMD3<Float> = simd_float3(x: 0.6, y: 0, z: 0)
+    
     var b1pos: SIMD3<Float> = simd_float3(x: 0, y: 0, z: 0.2)
     var b2pos: SIMD3<Float> = simd_float3(x: 0.2, y: 0, z: 0.2)
     var b3pos: SIMD3<Float> = simd_float3(x: 0.4, y: 0, z: 0.2)
     var b4pos: SIMD3<Float> = simd_float3(x: 0.6, y: 0, z: 0.2)
+    
     var c1pos: SIMD3<Float> = simd_float3(x: 0, y: 0, z: 0.4)
     var c2pos: SIMD3<Float> = simd_float3(x: 0.2, y: 0, z: 0.4)
     var c3pos: SIMD3<Float> = simd_float3(x: 0.4, y: 0, z: 0.4)
+    var c4pos: SIMD3<Float> = simd_float3(x: 0.6, y: 0, z: 0.4)
+    
+    var d1pos: SIMD3<Float> = simd_float3(x: 0, y: 0, z: 0.6)
+    var d2pos: SIMD3<Float> = simd_float3(x: 0.2, y: 0, z: 0.6)
+    var d3pos: SIMD3<Float> = simd_float3(x: 0.4, y: 0, z: 0.6)
+    var d4pos: SIMD3<Float> = simd_float3(x: 0.6, y: 0, z: 0.6)
+    
+    var z1pos: SIMD3<Float> = simd_float3(x: 0, y: 0, z: -0.2)
+    var z2pos: SIMD3<Float> = simd_float3(x: 0.2, y: 0, z: -0.2)
+    var z3pos: SIMD3<Float> = simd_float3(x: 0.4, y: 0, z: -0.2)
+    var z4pos: SIMD3<Float> = simd_float3(x: 0.6, y: 0, z: -0.2)
+    
+    
+    var z6pos: SIMD3<Float> = simd_float3(x: -0.2, y: 0, z: -0.2)
+    var a6pos: SIMD3<Float> = simd_float3(x: -0.2, y: 0, z: 0)
+    var b6pos: SIMD3<Float> = simd_float3(x: -0.2, y: 0, z: 0.2)
+    var c6pos: SIMD3<Float> = simd_float3(x: -0.2, y: 0, z: 0.4)
+    var d6pos: SIMD3<Float> = simd_float3(x: -0.2, y: 0, z: 0.6)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -75,19 +117,48 @@ class LevelThreeVC: UIViewController {
         
         //load 3d model
         robotEntity = try! Entity.load(named: "robot")
-        toyEntity = try! Entity.load(named: "toy")
         startEntity = try! Entity.load(named: "merah")
+        coinEntity = try! Entity.load(named: "koin")
         
         
-        floorEntitya1 = try! Entity.load(named: "floor")
-        floorEntitya2 = try! Entity.load(named: "floor")
-        floorEntitya3 = try! Entity.load(named: "floor")
-        floorEntityb1 = try! Entity.load(named: "floor")
-        floorEntityb2 = try! Entity.load(named: "floor")
-        floorEntityb3 = try! Entity.load(named: "floor")
-        floorEntityc1 = try! Entity.load(named: "floor")
-        floorEntityc2 = try! Entity.load(named: "floor")
-        floorEntityc3 = try! Entity.load(named: "floor")
+        //load pagar
+        
+        floorEntityz1 = try! Entity.load(named: "balok")
+        floorEntityz2 = try! Entity.load(named: "balok")
+        floorEntityz3 = try! Entity.load(named: "balok")
+        floorEntityz4 = try! Entity.load(named: "balok")
+        floorEntityz6 = try! Entity.load(named: "balok")
+        
+        floorEntitya6 = try! Entity.load(named: "balok")
+        floorEntityb6 = try! Entity.load(named: "balok")
+        floorEntityc6 = try! Entity.load(named: "balok")
+        floorEntityd6 = try! Entity.load(named: "balok")
+        
+        floorEntitya4 = try! Entity.load(named: "balok")
+        floorEntityb4 = try! Entity.load(named: "balok")
+        floorEntityc4 = try! Entity.load(named: "balok")
+        
+        floorEntityd1 = try! Entity.load(named: "balok")
+        floorEntityd2 = try! Entity.load(named: "balok")
+        floorEntityd3 = try! Entity.load(named: "balok")
+        floorEntityd4 = try! Entity.load(named: "balok")
+        
+        
+        //load tile
+        floorEntitya1 = try! Entity.load(named: "grass")
+        floorEntitya2 = try! Entity.load(named: "balok")
+        floorEntitya3 = try! Entity.load(named: "grass")
+        
+        
+        floorEntityb1 = try! Entity.load(named: "grass")
+        floorEntityb2 = try! Entity.load(named: "grass")
+        floorEntityb3 = try! Entity.load(named: "balok")
+        
+        
+        floorEntityc1 = try! Entity.load(named: "balok")
+        floorEntityc2 = try! Entity.load(named: "grass")
+        floorEntityc3 = try! Entity.load(named: "grass")
+        
         
         
         
@@ -127,18 +198,38 @@ class LevelThreeVC: UIViewController {
             
             // Place object
             placeObject(object: robotEntity!, position: worldPos)
-            placeObject(object: toyEntity!, position: worldPos + a2pos)
             placeObject(object: startEntity!, position: worldPos)
+            placeObject(object: coinEntity!, position: worldPos + c3pos)
             
             placeObject(object: floorEntitya1!, position: worldPos + a1pos)
             placeObject(object: floorEntitya2!, position: worldPos + a2pos)
             placeObject(object: floorEntitya3!, position: worldPos + a3pos)
+            placeObject(object: floorEntitya4!, position: worldPos + a4pos)
+            placeObject(object: floorEntitya6!, position: worldPos + a6pos)
+            
             placeObject(object: floorEntityb1!, position: worldPos + b1pos)
             placeObject(object: floorEntityb2!, position: worldPos + b2pos)
             placeObject(object: floorEntityb3!, position: worldPos + b3pos)
+            placeObject(object: floorEntityb4!, position: worldPos + b4pos)
+            placeObject(object: floorEntityb6!, position: worldPos + b6pos)
+            
             placeObject(object: floorEntityc1!, position: worldPos + c1pos)
             placeObject(object: floorEntityc2!, position: worldPos + c2pos)
             placeObject(object: floorEntityc3!, position: worldPos + c3pos)
+            placeObject(object: floorEntityc4!, position: worldPos + c4pos)
+            placeObject(object: floorEntityc6!, position: worldPos + c6pos)
+            
+            placeObject(object: floorEntityd1!, position: worldPos + d1pos)
+            placeObject(object: floorEntityd2!, position: worldPos + d2pos)
+            placeObject(object: floorEntityd3!, position: worldPos + d3pos)
+            placeObject(object: floorEntityd4!, position: worldPos + d4pos)
+            placeObject(object: floorEntityd6!, position: worldPos + d6pos)
+            
+            placeObject(object: floorEntityz1!, position: worldPos + z1pos)
+            placeObject(object: floorEntityz2!, position: worldPos + z2pos)
+            placeObject(object: floorEntityz3!, position: worldPos + z3pos)
+            placeObject(object: floorEntityz4!, position: worldPos + z4pos)
+            placeObject(object: floorEntityz6!, position: worldPos + z6pos)
             
             // Move Object
             move(direction: "")
@@ -306,7 +397,7 @@ class LevelThreeVC: UIViewController {
     
     func routeToSucces() {
         guard let window = UIApplication.shared.keyWindow else { return }
-        let succedVC = arSuccesVC()
+        let succedVC = arSuccessTiga()
         UIView.transition(with: window, duration: 0.0, options: .transitionCrossDissolve, animations: { [weak window] in
             window?.rootViewController = succedVC
         }, completion: nil)

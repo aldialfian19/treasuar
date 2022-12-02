@@ -375,6 +375,66 @@ class LevelEmpatVC: UIViewController {
                                                             } completion: { isTrue14 in
                                                                 UIView.animate(withDuration: 1, delay: 0) {
                                                                     self.finishPoint()
+                                                                } completion: { isTrue15 in
+                                                                    UIView.animate(withDuration: 1, delay: 0) {
+                                                                        if self.actionRobot.count >= 10 {
+                                                                            self.move(direction: "\(self.actionRobot[9])")
+                                                                        }else {
+                                                                            self.move(direction: "\(self.actionRobot[0])")
+                                                                        }
+                                                                    } completion: { isTrue16 in
+                                                                        UIView.animate(withDuration: 1, delay: 0) {
+                                                                            self.finishPoint()
+                                                                        } completion: { isTrue17 in
+                                                                            UIView.animate(withDuration: 1, delay: 0) {
+                                                                                if self.actionRobot.count >= 11 {
+                                                                                    self.move(direction: "\(self.actionRobot[10])")
+                                                                                }else {
+                                                                                    self.move(direction: "\(self.actionRobot[0])")
+                                                                                }
+                                                                            } completion: { isTrue18 in
+                                                                                UIView.animate(withDuration: 1, delay: 0) {
+                                                                                    self.finishPoint()
+                                                                                } completion: { isTrue19 in
+                                                                                    UIView.animate(withDuration: 1, delay: 0) {
+                                                                                        if self.actionRobot.count >= 12 {
+                                                                                            self.move(direction: "\(self.actionRobot[11])")
+                                                                                        }else {
+                                                                                            self.move(direction: "\(self.actionRobot[0])")
+                                                                                        }
+                                                                                    } completion: { isTrue20 in
+                                                                                        UIView.animate(withDuration: 1, delay: 0) {
+                                                                                            self.finishPoint()
+                                                                                        } completion: { isTrue21 in
+                                                                                            UIView.animate(withDuration: 1, delay: 0) {
+                                                                                                if self.actionRobot.count >= 13 {
+                                                                                                    self.move(direction: "\(self.actionRobot[12])")
+                                                                                                }else {
+                                                                                                    self.move(direction: "\(self.actionRobot[0])")
+                                                                                                }
+                                                                                            } completion: { isTrue22 in
+                                                                                                UIView.animate(withDuration: 1, delay: 0) {
+                                                                                                    self.finishPoint()
+                                                                                                } completion: { isTrue23 in
+                                                                                                    UIView.animate(withDuration: 1, delay: 0) {
+                                                                                                        if self.actionRobot.count >= 13 {
+                                                                                                            self.move(direction: "\(self.actionRobot[12])")
+                                                                                                        }else {
+                                                                                                            self.move(direction: "\(self.actionRobot[0])")
+                                                                                                        }
+                                                                                                    } completion: { isTrue24 in
+                                                                                                        UIView.animate(withDuration: 1, delay: 0) {
+                                                                                                            self.finishPoint()
+                                                                                                        }
+                                                                                                    }
+                                                                                                }
+                                                                                            }
+                                                                                        }
+                                                                                    }
+                                                                                }
+                                                                            }
+                                                                        }
+                                                                    }
                                                                 }
                                                             }
                                                         }
@@ -416,7 +476,7 @@ class LevelEmpatVC: UIViewController {
     //MARK: -checkpoint
     
     func offButton() {
-        if actionRobot.count >= 9 {
+        if actionRobot.count >= 13 {
             forwardButton.isEnabled = false
             leftButton.isEnabled = false
             rightButton.isEnabled = false
@@ -436,25 +496,19 @@ class LevelEmpatVC: UIViewController {
         
         if robotPosition == a1loc {
             print("robot in a1")
-        }else if robotPosition == a3loc{
+        }else if robotPosition == a2loc{
             print("robot in a3")
-        }else if robotPosition == b1loc{
+        }else if robotPosition == b2loc{
             print("robot in b1")
-        }else if robotPosition == b4loc{
+        }else if robotPosition == c2loc{
             print("robot in b4")
-        }else if robotPosition == c1loc{
-            print("robot in c1")
-        }else if robotPosition == c4loc{
-            print("robot in c4")
-        }else if robotPosition == d1loc{
-            print("robot in d1")
         }else if robotPosition == d2loc{
-            print("robot in d2")
+            print("robot in c1")
         }else if robotPosition == d3loc{
-            print("robot in d3")
+            print("robot in c4")
         }else if robotPosition == d4loc{
-            print("robot in d4")
-        }else if robotPosition == b3loc{
+            print("robot in d1")
+        }else if robotPosition == c4loc{
             routeToSucces()
             print("robot in b3")
         }else {
@@ -483,7 +537,7 @@ class LevelEmpatVC: UIViewController {
     
     func routeToSucces() {
         guard let window = UIApplication.shared.keyWindow else { return }
-        let succedVC = succesVC()
+        let succedVC = success2DEmpat()
         UIView.transition(with: window, duration: 0.3, options: .transitionCrossDissolve, animations: { [weak window] in
             window?.rootViewController = succedVC
         }, completion: nil)

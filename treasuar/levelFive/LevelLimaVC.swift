@@ -519,7 +519,7 @@ class LevelLimaVC: UIViewController {
     
     func routeToSucces() {
         guard let window = UIApplication.shared.keyWindow else { return }
-        let succedVC = succesVC()
+        let succedVC = Success2DLima()
         UIView.transition(with: window, duration: 0.3, options: .transitionCrossDissolve, animations: { [weak window] in
             window?.rootViewController = succedVC
         }, completion: nil)
