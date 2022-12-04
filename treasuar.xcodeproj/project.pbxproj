@@ -27,6 +27,7 @@
 		24C106BB293908F300DD3C5E /* success2DEmpat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C106B3293908F300DD3C5E /* success2DEmpat.swift */; };
 		24C106BE29390A3400DD3C5E /* Success2DLima.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24C106BC29390A3400DD3C5E /* Success2DLima.xib */; };
 		24C106BF29390A3400DD3C5E /* Success2DLima.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C106BD29390A3400DD3C5E /* Success2DLima.swift */; };
+		24C106C2293CC89B00DD3C5E /* Boldhead.otf in Resources */ = {isa = PBXBuildFile; fileRef = 24C106C1293CC89B00DD3C5E /* Boldhead.otf */; };
 		CB1BBDDD2939F8E100233F79 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1BBDDC2939F8E100233F79 /* ViewController.swift */; };
 		CB564D642936482100460BEF /* LevelLimaVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB564D602936482100460BEF /* LevelLimaVC.swift */; };
 		CB564D662936482100460BEF /* LevelLimaVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB564D622936482100460BEF /* LevelLimaVC.xib */; };
@@ -117,6 +118,7 @@
 		24C106B3293908F300DD3C5E /* success2DEmpat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = success2DEmpat.swift; sourceTree = "<group>"; };
 		24C106BC29390A3400DD3C5E /* Success2DLima.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Success2DLima.xib; sourceTree = "<group>"; };
 		24C106BD29390A3400DD3C5E /* Success2DLima.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Success2DLima.swift; sourceTree = "<group>"; };
+		24C106C1293CC89B00DD3C5E /* Boldhead.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Boldhead.otf; sourceTree = "<group>"; };
 		CB1BBDDC2939F8E100233F79 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = SOURCE_ROOT; };
 		CB564D602936482100460BEF /* LevelLimaVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LevelLimaVC.swift; sourceTree = "<group>"; };
 		CB564D622936482100460BEF /* LevelLimaVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LevelLimaVC.xib; sourceTree = "<group>"; };
@@ -232,6 +234,14 @@
 			path = success2D;
 			sourceTree = "<group>";
 		};
+		24C106C0293CC7EA00DD3C5E /* Boldhead */ = {
+			isa = PBXGroup;
+			children = (
+				24C106C1293CC89B00DD3C5E /* Boldhead.otf */,
+			);
+			path = Boldhead;
+			sourceTree = "<group>";
+		};
 		CB65D41E29338FD30040FF8A /* popUp */ = {
 			isa = PBXGroup;
 			children = (
@@ -264,6 +274,7 @@
 		CBB4115029280A6E009881DD /* treasuar */ = {
 			isa = PBXGroup;
 			children = (
+				24C106C0293CC7EA00DD3C5E /* Boldhead */,
 				CB65D41E29338FD30040FF8A /* popUp */,
 				CBB411952929076B009881DD /* 3D Asset */,
 				CBB4119229290708009881DD /* levelFive */,
@@ -503,6 +514,7 @@
 				CBCB90632938D12900D089D5 /* OptionSatuVC.xib in Resources */,
 				CBCB90742938D15300D089D5 /* OptionFiveVC.xib in Resources */,
 				CBB411A129290823009881DD /* LevelThreeVC.xib in Resources */,
+				24C106C2293CC89B00DD3C5E /* Boldhead.otf in Resources */,
 				CB564D662936482100460BEF /* LevelLimaVC.xib in Resources */,
 				CBB4118929280B37009881DD /* robot.usdz in Resources */,
 				CBAF6594292E339E0017B554 /* LevelSatuVC.xib in Resources */,
@@ -753,7 +765,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 4M5F5S23L2;
+				DEVELOPMENT_TEAM = 6R9NL6954G;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = treasuar/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "";
@@ -783,7 +795,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 4M5F5S23L2;
+				DEVELOPMENT_TEAM = 6R9NL6954G;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = treasuar/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "";
