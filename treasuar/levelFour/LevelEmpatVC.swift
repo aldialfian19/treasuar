@@ -141,25 +141,25 @@ class LevelEmpatVC: UIViewController {
         self.view.addSubview(tembok)
         
         //obstacle
-        let a2Obs = UIImageView(image: UIImage(named: "block.png")!)
-        a2Obs.frame = a2loc
-        self.view.addSubview(a2Obs)
-        
         let a4Obs = UIImageView(image: UIImage(named: "block.png")!)
         a4Obs.frame = a4loc
         self.view.addSubview(a4Obs)
         
-        let b2Obs = UIImageView(image: UIImage(named: "block.png")!)
-        b2Obs.frame = b2loc
-        self.view.addSubview(b2Obs)
+        let b1Obs = UIImageView(image: UIImage(named: "block.png")!)
+        b1Obs.frame = b1loc
+        self.view.addSubview(b1Obs)
         
-        let c2Obs = UIImageView(image: UIImage(named: "block.png")!)
-        c2Obs.frame = c2loc
-        self.view.addSubview(c2Obs)
+        let b3Obs = UIImageView(image: UIImage(named: "block.png")!)
+        b3Obs.frame = b3loc
+        self.view.addSubview(b3Obs)
         
         let c3Obs = UIImageView(image: UIImage(named: "block.png")!)
         c3Obs.frame = c3loc
         self.view.addSubview(c3Obs)
+        
+        let d1Obs = UIImageView(image: UIImage(named: "block.png")!)
+        d1Obs.frame = d1loc
+        self.view.addSubview(d1Obs)
         
         
         //treasure

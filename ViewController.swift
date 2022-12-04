@@ -21,7 +21,7 @@ class ViewController: UIViewController {
    
     private let imageView: UIImageView = {
         let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 460, height: 431))
-        imageView.image = UIImage(named: "SplashLogo")
+        imageView.image = UIImage(named: "LogoLogia.png")
         return imageView
     }()
     
