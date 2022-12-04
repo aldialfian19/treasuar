@@ -17,6 +17,7 @@
                 <outlet property="forwardButton" destination="1gU-Ab-BLA" id="AEm-vv-veH"/>
                 <outlet property="instruksiDua" destination="4rZ-N9-weO" id="voI-Cb-chY"/>
                 <outlet property="instruksiSatu" destination="7An-Q0-Rsz" id="MVW-gR-bH2"/>
+                <outlet property="instruksiTiga" destination="lnd-wq-H03" id="95a-xr-aLN"/>
                 <outlet property="leftButton" destination="01W-jN-RDF" id="Isp-8a-4Uq"/>
                 <outlet property="rightButton" destination="lpe-bN-nfy" id="XMq-3s-JBI"/>
                 <outlet property="runButton" destination="wGR-3G-Ulf" id="jQV-kf-szt"/>
@@ -33,17 +34,24 @@
                     <rect key="frame" x="0.0" y="0.0" width="1366" height="1024"/>
                 </arView>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="instruksi1" translatesAutoresizingMaskIntoConstraints="NO" id="7An-Q0-Rsz">
-                    <rect key="frame" x="390" y="50" width="576" height="132"/>
+                    <rect key="frame" x="421" y="50" width="576" height="132"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="132" id="ELr-aO-LiZ"/>
                         <constraint firstAttribute="width" constant="576" id="OmD-9B-lHg"/>
                     </constraints>
                 </imageView>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="instruksi2" translatesAutoresizingMaskIntoConstraints="NO" id="4rZ-N9-weO">
-                    <rect key="frame" x="395" y="49" width="636" height="132"/>
+                    <rect key="frame" x="395" y="39" width="636" height="132"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="132" id="hfu-ZU-5IF"/>
                         <constraint firstAttribute="width" constant="636" id="jEh-uI-eYp"/>
+                    </constraints>
+                </imageView>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="instruksi1b" translatesAutoresizingMaskIntoConstraints="NO" id="lnd-wq-H03">
+                    <rect key="frame" x="428" y="181" width="576" height="118"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="576" id="hC1-XI-L6f"/>
+                        <constraint firstAttribute="height" constant="118" id="i8b-bW-R9g"/>
                     </constraints>
                 </imageView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1gU-Ab-BLA">
@@ -225,20 +233,22 @@
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="4rZ-N9-weO" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="49" id="1ra-O3-d45"/>
+                <constraint firstItem="lnd-wq-H03" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="428" id="2e0-zl-WOG"/>
                 <constraint firstItem="Iua-yF-gAn" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="261" id="4WM-Gv-NBy"/>
                 <constraint firstItem="7An-Q0-Rsz" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="50" id="BlJ-41-Kqe"/>
                 <constraint firstAttribute="trailing" secondItem="wGR-3G-Ulf" secondAttribute="trailing" constant="68" id="DhP-fi-2zM"/>
                 <constraint firstItem="4rZ-N9-weO" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="395" id="FX5-db-fW8"/>
-                <constraint firstItem="7An-Q0-Rsz" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="390" id="NuJ-HH-obU"/>
                 <constraint firstItem="1gU-Ab-BLA" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="59" id="Pfg-6S-cZN"/>
                 <constraint firstItem="lpe-bN-nfy" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="512" id="Q6a-wL-eCT"/>
+                <constraint firstItem="7An-Q0-Rsz" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="421" id="Tkt-1U-wmz"/>
                 <constraint firstAttribute="bottom" secondItem="0s8-2Y-s7Y" secondAttribute="bottom" id="VYr-Dd-D3t"/>
                 <constraint firstItem="Xhl-0T-sMq" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="59" id="W3K-Y9-BGz"/>
                 <constraint firstItem="2ag-lF-upn" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="19" id="Xtr-o8-QyK"/>
                 <constraint firstItem="0s8-2Y-s7Y" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="cpP-IT-4Qr"/>
+                <constraint firstItem="lnd-wq-H03" firstAttribute="top" secondItem="4rZ-N9-weO" secondAttribute="bottom" constant="10" id="cwt-AV-8sp"/>
                 <constraint firstItem="lpe-bN-nfy" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="59" id="eJy-uR-ZTQ"/>
                 <constraint firstItem="ORX-lG-kjp" firstAttribute="top" secondItem="0s8-2Y-s7Y" secondAttribute="top" id="iNz-Gx-6Mb"/>
+                <constraint firstItem="4rZ-N9-weO" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="39" id="jCm-Uc-un6"/>
                 <constraint firstItem="Iua-yF-gAn" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="259" id="l8x-LN-oiU"/>
                 <constraint firstItem="0s8-2Y-s7Y" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="lcQ-IB-0NU"/>
                 <constraint firstItem="ORX-lG-kjp" firstAttribute="leading" secondItem="0s8-2Y-s7Y" secondAttribute="leading" id="ms0-li-Vt6"/>
@@ -258,10 +268,11 @@
         <image name="arrow.counterclockwise" catalog="system" width="113" height="128"/>
         <image name="arrow.up" catalog="system" width="118" height="128"/>
         <image name="home" width="149" height="149"/>
-        <image name="instruksi1" width="588" height="144"/>
-        <image name="instruksi2" width="648" height="144"/>
+        <image name="instruksi1" width="750" height="144"/>
+        <image name="instruksi1b" width="576" height="118"/>
+        <image name="instruksi2" width="588" height="144"/>
         <image name="play.fill" catalog="system" width="117" height="128"/>
-        <image name="popUpFailed" width="1011" height="646"/>
+        <image name="popUpFailed" width="1019" height="622"/>
         <image name="trash" width="98" height="98"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

@@ -17,6 +17,7 @@
                 <outlet property="forwardButton" destination="1gU-Ab-BLA" id="AEm-vv-veH"/>
                 <outlet property="instruksiDua" destination="ANL-xX-EHs" id="8A4-0m-DTQ"/>
                 <outlet property="instruksiSatu" destination="1Av-Uo-cXu" id="kfd-Pk-dqi"/>
+                <outlet property="instruksiTiga" destination="4IL-qM-8Hd" id="0Hh-Y3-nI1"/>
                 <outlet property="leftButton" destination="01W-jN-RDF" id="Isp-8a-4Uq"/>
                 <outlet property="rightButton" destination="lpe-bN-nfy" id="XMq-3s-JBI"/>
                 <outlet property="runButton" destination="wGR-3G-Ulf" id="jQV-kf-szt"/>
@@ -33,13 +34,24 @@
                     <rect key="frame" x="0.0" y="0.0" width="1366" height="1024"/>
                 </arView>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="instruksi1" translatesAutoresizingMaskIntoConstraints="NO" id="1Av-Uo-cXu">
-                    <rect key="frame" x="395" y="43" width="588" height="144"/>
+                    <rect key="frame" x="421" y="43" width="576" height="132"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="576" id="6OU-fr-24F"/>
+                        <constraint firstAttribute="height" constant="132" id="ZAC-vm-aRD"/>
+                    </constraints>
                 </imageView>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="instruksi2" translatesAutoresizingMaskIntoConstraints="NO" id="ANL-xX-EHs">
-                    <rect key="frame" x="380" y="52" width="636" height="132"/>
+                    <rect key="frame" x="395" y="39" width="636" height="132"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="132" id="oMy-ho-exp"/>
                         <constraint firstAttribute="width" constant="636" id="rq3-Zv-XKc"/>
+                    </constraints>
+                </imageView>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="instruksi1b" translatesAutoresizingMaskIntoConstraints="NO" id="4IL-qM-8Hd">
+                    <rect key="frame" x="428" y="181" width="576" height="118"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="118" id="FXd-ff-Yfb"/>
+                        <constraint firstAttribute="width" constant="576" id="tOZ-2c-lKg"/>
                     </constraints>
                 </imageView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1gU-Ab-BLA">
@@ -221,21 +233,23 @@
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
+                <constraint firstItem="1Av-Uo-cXu" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="421" id="0g1-mh-JUK"/>
                 <constraint firstItem="Iua-yF-gAn" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="261" id="4WM-Gv-NBy"/>
-                <constraint firstItem="ANL-xX-EHs" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="380" id="5SR-C9-Dri"/>
-                <constraint firstItem="1Av-Uo-cXu" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="395" id="9m3-Dr-nxH"/>
-                <constraint firstItem="ANL-xX-EHs" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="52" id="AHW-IP-QFm"/>
                 <constraint firstAttribute="trailing" secondItem="wGR-3G-Ulf" secondAttribute="trailing" constant="68" id="DhP-fi-2zM"/>
                 <constraint firstItem="FTc-Ci-Mln" firstAttribute="leading" secondItem="0s8-2Y-s7Y" secondAttribute="leading" id="IFt-Yp-zpr"/>
                 <constraint firstItem="1gU-Ab-BLA" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="59" id="Pfg-6S-cZN"/>
                 <constraint firstItem="lpe-bN-nfy" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="512" id="Q6a-wL-eCT"/>
+                <constraint firstItem="ANL-xX-EHs" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="39" id="Rya-jp-8rn"/>
                 <constraint firstAttribute="bottom" secondItem="0s8-2Y-s7Y" secondAttribute="bottom" id="VYr-Dd-D3t"/>
                 <constraint firstItem="Xhl-0T-sMq" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="59" id="W3K-Y9-BGz"/>
+                <constraint firstItem="4IL-qM-8Hd" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="428" id="X0D-Vj-smB"/>
                 <constraint firstItem="2ag-lF-upn" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="19" id="Xtr-o8-QyK"/>
+                <constraint firstItem="4IL-qM-8Hd" firstAttribute="top" secondItem="ANL-xX-EHs" secondAttribute="bottom" constant="10" id="chb-xI-ILa"/>
                 <constraint firstItem="0s8-2Y-s7Y" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="cpP-IT-4Qr"/>
                 <constraint firstItem="lpe-bN-nfy" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="59" id="eJy-uR-ZTQ"/>
                 <constraint firstItem="Iua-yF-gAn" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="259" id="l8x-LN-oiU"/>
                 <constraint firstItem="0s8-2Y-s7Y" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="lcQ-IB-0NU"/>
+                <constraint firstItem="ANL-xX-EHs" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="395" id="mbI-YD-tBl"/>
                 <constraint firstItem="wGR-3G-Ulf" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="786" id="oRT-U6-Qp4"/>
                 <constraint firstItem="2ag-lF-upn" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="49" id="spg-FQ-LkT"/>
                 <constraint firstItem="1gU-Ab-BLA" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="246" id="t2A-xk-Enu"/>
@@ -254,10 +268,11 @@
         <image name="arrow.counterclockwise" catalog="system" width="113" height="128"/>
         <image name="arrow.up" catalog="system" width="118" height="128"/>
         <image name="home" width="149" height="149"/>
-        <image name="instruksi1" width="588" height="144"/>
-        <image name="instruksi2" width="648" height="144"/>
+        <image name="instruksi1" width="750" height="144"/>
+        <image name="instruksi1b" width="576" height="118"/>
+        <image name="instruksi2" width="588" height="144"/>
         <image name="play.fill" catalog="system" width="117" height="128"/>
-        <image name="popUpFailed" width="1011" height="646"/>
+        <image name="popUpFailed" width="1019" height="622"/>
         <image name="trash" width="98" height="98"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

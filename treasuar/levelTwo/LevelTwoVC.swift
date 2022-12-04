@@ -22,6 +22,7 @@ class LevelTwoVC: UIViewController {
     @IBOutlet var failedView: UIView!
     @IBOutlet var instruksiSatu: UIImageView!
     @IBOutlet var instruksiDua: UIImageView!
+    @IBOutlet var instruksiTiga: UIImageView!
     
     
     var robotEntity: Entity?
@@ -228,6 +229,7 @@ class LevelTwoVC: UIViewController {
             toyAnimation()
             
             instruksiDua.isHidden = true
+            instruksiTiga.isHidden = true
             instruksiSatu.isHidden = false
             
         }

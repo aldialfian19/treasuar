@@ -256,7 +256,7 @@ class LevelEmpatVC: UIViewController {
     
     @IBAction func forwardAction(_ sender: Any) {
         actionRobot.append("forward")
-        actionBox.append("Maju")
+        actionBox.append("Move Forward")
         
         tableView.reloadData()
         
@@ -266,7 +266,7 @@ class LevelEmpatVC: UIViewController {
     }
     @IBAction func leftAction(_ sender: Any) {
         actionRobot.append("left")
-        actionBox.append("Balik Kiri")
+        actionBox.append("Turn Left")
         
         tableView.reloadData()
         
@@ -276,7 +276,7 @@ class LevelEmpatVC: UIViewController {
     }
     @IBAction func rightAction(_ sender: Any) {
         actionRobot.append("right")
-        actionBox.append("Balik Kanan")
+        actionBox.append("Turn Right")
         
         tableView.reloadData()
         

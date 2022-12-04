@@ -18,6 +18,7 @@ class LevelLimaVC: UIViewController {
     @IBOutlet var loopButton: UIButton!
     
     @IBOutlet var failedView: UIView!
+    @IBOutlet var walkInstruksi: UIImageView!
     
     
     var robot: UIImageView?
@@ -139,6 +140,11 @@ class LevelLimaVC: UIViewController {
     }
     
     func addImage() {
+        
+        //instruksi
+        self.view.addSubview(walkInstruksi!)
+        self.view.bringSubviewToFront(walkInstruksi!)
+        
         robot = UIImageView(image: UIImage(named: "depan.png"))
         robot!.frame = a1loc
         self.view.addSubview(robot!)
@@ -168,6 +174,7 @@ class LevelLimaVC: UIViewController {
         let c3Obs = UIImageView(image: UIImage(named: "block.png")!)
         c3Obs.frame = c3loc
         self.view.addSubview(c3Obs)
+        
         
         
         //treasure
@@ -261,7 +268,7 @@ class LevelLimaVC: UIViewController {
     
     @IBAction func forwardAction(_ sender: Any) {
         actionRobot.append("forward")
-        actionBox.append("Maju")
+        actionBox.append("Move Forward")
         
         tableView.reloadData()
         
@@ -269,7 +276,7 @@ class LevelLimaVC: UIViewController {
     }
     @IBAction func leftAction(_ sender: Any) {
         actionRobot.append("left")
-        actionBox.append("Balik Kiri")
+        actionBox.append("Turn Left")
         
         tableView.reloadData()
         
@@ -278,7 +285,7 @@ class LevelLimaVC: UIViewController {
     }
     @IBAction func rightAction(_ sender: Any) {
         actionRobot.append("right")
-        actionBox.append("Balik Kanan")
+        actionBox.append("Turn Right")
         
         tableView.reloadData()
         
@@ -481,26 +488,29 @@ class LevelLimaVC: UIViewController {
     func addMenu() -> UIMenu {
 
 
-        let lima = UIAction(title: "Ulangi Maju 5 Kali") { action  in
+        let empat = UIAction(title: "Repeat forward 4 times") { action  in
                 print("menu 1")
-                self.actionRobot.append(contentsOf: ["forward","forward","forward","forward","forward"])
-                self.actionBox.append("Ulangi Maju 4 Kali")
-                self.tableView.reloadData()
-                
-            }
-        let empat = UIAction(title: "Ulangi Maju 4 Kali") { action  in
-                print("menu 2")
                 self.actionRobot.append(contentsOf: ["forward","forward","forward","forward"])
                 self.actionBox.append("Ulangi Maju 4 Kali")
                 self.tableView.reloadData()
+                self.walkInstruksi.isHidden = true
+                
             }
-        let tiga = UIAction(title: "Ulangi Maju 3 Kali"){ action  in
-                print("menu 3")
+        let tiga = UIAction(title: "Repeat forward 3 times") { action  in
+                print("menu 2")
                 self.actionRobot.append(contentsOf: ["forward","forward","forward"])
+                self.actionBox.append("Ulangi Maju 4 Kali")
+                self.tableView.reloadData()
+                self.walkInstruksi.isHidden = true
+            }
+        let dua = UIAction(title: "Repeat forward 2 times"){ action  in
+                print("menu 3")
+                self.actionRobot.append(contentsOf: ["forward","forward"])
                 self.actionBox.append("Ulangi Maju 3 Kali")
                 self.tableView.reloadData()
+                self.walkInstruksi.isHidden = true
             }
-        let menuItem = UIMenu(title: "", options: .displayInline, children: [tiga, empat, lima])
+        let menuItem = UIMenu(title: "", options: .displayInline, children: [empat, tiga, dua])
         
         return menuItem
     }

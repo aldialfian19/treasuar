@@ -22,6 +22,7 @@ class LevelOneVC: UIViewController {
     @IBOutlet var failedView: UIView!
     @IBOutlet var instruksiSatu: UIImageView!
     @IBOutlet var instruksiDua: UIImageView!
+    @IBOutlet var instruksiTiga: UIImageView!
     
     
     var robotEntity: Entity?
@@ -226,6 +227,7 @@ class LevelOneVC: UIViewController {
 //            move(direction: "")
             
             instruksiDua.isHidden = true
+            instruksiTiga.isHidden = true
             instruksiSatu.isHidden = false
             
             toyAnimation()
