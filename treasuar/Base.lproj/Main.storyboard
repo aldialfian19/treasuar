@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="ipad12_9rounded" orientation="landscape" layout="fullscreen" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -63,7 +63,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tMA-lc-EjH">
-                                                <rect key="frame" x="66" y="-11" width="389" height="466"/>
+                                                <rect key="frame" x="66" y="-12" width="389" height="468"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" image="level1"/>
                                                 <connections>
@@ -101,7 +101,7 @@
                                 <rect key="frame" x="1077" y="59" width="112" height="85"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sound" translatesAutoresizingMaskIntoConstraints="NO" id="9Sw-Tl-xIM">
-                                <rect key="frame" x="923" y="59" width="149" height="85"/>
+                                <rect key="frame" x="960" y="59" width="112" height="85"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hallo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ASJ-jZ-AVv">
                                 <rect key="frame" x="70" y="219" width="542" height="80"/>
@@ -129,7 +129,7 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="DKg-sk-Uqi" secondAttribute="bottom" constant="852" id="AlS-xI-dq9"/>
                             <constraint firstItem="ASJ-jZ-AVv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="70" id="AqK-LM-6wa"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="mg0-St-EfC" secondAttribute="bottom" constant="860" id="Btg-Aj-7lH"/>
-                            <constraint firstItem="9Sw-Tl-xIM" firstAttribute="leading" secondItem="DKg-sk-Uqi" secondAttribute="trailing" constant="750" id="Da2-mT-HN9"/>
+                            <constraint firstItem="9Sw-Tl-xIM" firstAttribute="leading" secondItem="DKg-sk-Uqi" secondAttribute="trailing" constant="787" id="Da2-mT-HN9"/>
                             <constraint firstItem="u4n-Sc-Qqz" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Fxl-26-YBa"/>
                             <constraint firstItem="u4n-Sc-Qqz" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Gqq-a2-Wne"/>
                             <constraint firstItem="ydX-Wb-Lyq" firstAttribute="top" secondItem="ASJ-jZ-AVv" secondAttribute="bottom" constant="20" id="LZ4-sF-bhg"/>
@@ -164,6 +164,7 @@
                         <outlet property="buttonLima" destination="TKV-zK-cNF" id="UA6-5Y-C7o"/>
                         <outlet property="buttonSatu" destination="tMA-lc-EjH" id="yeB-o9-Plf"/>
                         <outlet property="buttonTiga" destination="P2u-N5-Ulh" id="zEf-qK-CJJ"/>
+                        <outlet property="myLabel" destination="ASJ-jZ-AVv" id="0Fa-Vf-4fV"/>
                         <outlet property="view" destination="8bC-Xf-vdC" id="BiT-lc-LHH"/>
                     </connections>
                 </viewController>
@@ -173,11 +174,11 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Level3" width="365" height="452"/>
+        <image name="Level3" width="368" height="454"/>
         <image name="achievement" width="149" height="149"/>
         <image name="bg" width="1366" height="1024"/>
-        <image name="level1" width="365" height="452"/>
-        <image name="level2" width="365" height="452"/>
+        <image name="level1" width="368" height="454"/>
+        <image name="level2" width="368" height="454"/>
         <image name="level4" width="365" height="452"/>
         <image name="level5" width="365" height="452"/>
         <image name="logo" width="143" height="108"/>

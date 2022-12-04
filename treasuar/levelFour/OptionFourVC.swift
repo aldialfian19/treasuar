@@ -10,9 +10,15 @@ import UIKit
 class OptionFourVC: UIViewController {
 
     
+    @IBOutlet var optionLabel2D4: UILabel!
+    @IBOutlet var optionLabel4: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        optionLabel4.font = UIFont(name: "Boldhead", size: 128)
+        optionLabel4.textColor = .white
+        optionLabel2D4.font = UIFont(name: "Boldhead", size: 128)
+        optionLabel2D4.textColor = .white
 
         // Do any additional setup after loading the view.
     }

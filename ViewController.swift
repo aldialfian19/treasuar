@@ -10,7 +10,8 @@ import UIKit
 class ViewController: UIViewController {
     
     
-//    @IBOutlet var ARButton: UIButton!
+    @IBOutlet var myLabel: UILabel!
+    //    @IBOutlet var ARButton: UIButton!
     
     @IBOutlet var buttonSatu: UIButton!
     @IBOutlet var buttonDua: UIButton!
@@ -41,6 +42,7 @@ class ViewController: UIViewController {
         super.viewDidLayoutSubviews()
         imageView.center = view.center
         animate()
+        myLabel.font = UIFont(name:"Boldhead", size: 64)
         
         DispatchQueue.main.asyncAfter(deadline: .now()+0, execute: {
             self.animate()

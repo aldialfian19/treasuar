@@ -10,9 +10,17 @@ import UIKit
 class OptionSatuVC: UIViewController {
 
     
+    @IBOutlet var optionLabel1: UILabel!
     
+    @IBOutlet var optionLabel2D1: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
+//        optionLabel1.textAlignment = .center
+        optionLabel1.font = UIFont(name: "Boldhead", size: 128)
+        optionLabel1.textColor = UIColor.white
+//        optionLabel2D1.textAlignment = .center
+        optionLabel2D1.font = UIFont(name: "Boldhead", size: 128)
+        optionLabel2D1.textColor = UIColor.white
 
         // Do any additional setup after loading the view.
     }

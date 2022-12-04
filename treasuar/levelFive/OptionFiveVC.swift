@@ -10,9 +10,15 @@ import UIKit
 class OptionFiveVC: UIViewController {
 
     
+    @IBOutlet var optionLabel2D5: UILabel!
+    @IBOutlet var optionLabel5: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        optionLabel5.font = UIFont(name: "Boldhead", size: 128)
+        optionLabel5.textColor = .white
+        optionLabel2D5.font = UIFont(name: "Boldhead", size: 128)
+        optionLabel2D5.textColor = .white
 
         // Do any additional setup after loading the view.
     }

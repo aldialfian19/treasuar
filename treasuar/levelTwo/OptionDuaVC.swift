@@ -9,10 +9,16 @@ import UIKit
 
 class OptionDuaVC: UIViewController {
 
+    @IBOutlet var optionLabel2D2: UILabel!
     
+    @IBOutlet var optionLabel2: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        optionLabel2.font = UIFont(name: "Boldhead", size: 128)
+        optionLabel2.textColor = .white
+        optionLabel2D2.font = UIFont(name: "Boldhead", size: 128)
+        optionLabel2D2.textColor = .white
 
         // Do any additional setup after loading the view.
     }

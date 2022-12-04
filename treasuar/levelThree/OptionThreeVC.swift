@@ -10,9 +10,15 @@ import UIKit
 class OptionThreeVC: UIViewController {
 
     
+    @IBOutlet var optionLabel3: UILabel!
+    @IBOutlet var optionLabel2D3: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        optionLabel3.font = UIFont(name: "Boldhead", size: 128)
+        optionLabel3.textColor = .white
+        optionLabel2D3.font = UIFont(name: "Boldhead", size: 128)
+        optionLabel2D3.textColor = .white
 
         // Do any additional setup after loading the view.
     }
