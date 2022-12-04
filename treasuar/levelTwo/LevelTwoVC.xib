@@ -167,18 +167,15 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="plA-rR-xwF">
-                            <rect key="frame" x="560.5" y="592" width="312" height="53"/>
-                            <color key="backgroundColor" red="0.85882352939999995" green="0.2274509804" blue="0.20392156859999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <rect key="frame" x="536.5" y="594" width="360" height="107"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
-                                <constraint firstAttribute="width" constant="312" id="Oox-Ns-eW3"/>
-                                <constraint firstAttribute="height" constant="53" id="XiW-Pt-cw2"/>
+                                <constraint firstAttribute="width" constant="360" id="Oox-Ns-eW3"/>
+                                <constraint firstAttribute="height" constant="107" id="XiW-Pt-cw2"/>
                             </constraints>
-                            <color key="tintColor" red="0.85882352939999995" green="0.22699999809999999" blue="0.20399999620000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <state key="normal" title="Button"/>
-                            <buttonConfiguration key="configuration" style="filled" title="Ulangi">
-                                <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="32"/>
-                                <color key="baseBackgroundColor" red="0.85882352939999995" green="0.22699999809999999" blue="0.20399999620000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </buttonConfiguration>
+                            <buttonConfiguration key="configuration" style="plain" image="retryLevel"/>
                             <connections>
                                 <action selector="ulangiAction:" destination="-1" eventType="touchUpInside" id="0qj-vJ-hx8"/>
                             </connections>
@@ -195,7 +192,7 @@
                         <constraint firstItem="ZRt-tW-YCS" firstAttribute="centerX" secondItem="plA-rR-xwF" secondAttribute="centerX" id="lYl-KS-9y8"/>
                         <constraint firstAttribute="height" constant="1024" id="m7y-j3-o2G"/>
                         <constraint firstItem="zVc-cz-JQF" firstAttribute="leading" secondItem="LSj-Ye-Wwg" secondAttribute="leading" constant="264" id="n2c-8C-0b4"/>
-                        <constraint firstItem="plA-rR-xwF" firstAttribute="top" secondItem="3Ul-br-Se6" secondAttribute="bottom" constant="96" id="uQU-52-Vsf"/>
+                        <constraint firstItem="plA-rR-xwF" firstAttribute="top" secondItem="3Ul-br-Se6" secondAttribute="bottom" constant="98" id="uQU-52-Vsf"/>
                         <constraint firstItem="zVc-cz-JQF" firstAttribute="top" secondItem="LSj-Ye-Wwg" secondAttribute="top" constant="218" id="xfD-13-4d7"/>
                     </constraints>
                 </view>
@@ -237,6 +234,7 @@
         <image name="instruksi1b" width="576" height="118"/>
         <image name="instruksi2" width="588" height="144"/>
         <image name="popUpFailed" width="1019" height="622"/>
+        <image name="retryLevel" width="410" height="157"/>
         <image name="trash" width="98" height="98"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

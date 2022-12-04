@@ -197,18 +197,15 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4FM-ok-FTD">
-                            <rect key="frame" x="560.5" y="592" width="312" height="53"/>
-                            <color key="backgroundColor" red="0.85882352939999995" green="0.2274509804" blue="0.20392156859999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <rect key="frame" x="536.5" y="592" width="360" height="107"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="53" id="Rcu-um-uF7"/>
-                                <constraint firstAttribute="width" constant="312" id="a4x-UL-3UA"/>
+                                <constraint firstAttribute="height" constant="107" id="Rcu-um-uF7"/>
+                                <constraint firstAttribute="width" constant="360" id="a4x-UL-3UA"/>
                             </constraints>
-                            <color key="tintColor" red="0.85882352939999995" green="0.22699999809999999" blue="0.20399999620000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <state key="normal" title="Button"/>
-                            <buttonConfiguration key="configuration" style="filled" title="Ulangi">
-                                <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="32"/>
-                                <color key="baseBackgroundColor" red="0.85882352939999995" green="0.22699999809999999" blue="0.20399999620000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </buttonConfiguration>
+                            <buttonConfiguration key="configuration" style="plain" image="retryLevel"/>
                             <connections>
                                 <action selector="ulangiAction:" destination="-1" eventType="touchUpInside" id="6UH-2P-Xek"/>
                             </connections>
@@ -273,6 +270,7 @@
         <image name="instruksi2" width="588" height="144"/>
         <image name="play.fill" catalog="system" width="117" height="128"/>
         <image name="popUpFailed" width="1019" height="622"/>
+        <image name="retryLevel" width="410" height="157"/>
         <image name="trash" width="98" height="98"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
