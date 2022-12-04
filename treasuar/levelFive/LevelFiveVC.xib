@@ -157,15 +157,17 @@
                         <constraint firstAttribute="height" constant="616" id="xsN-b7-m1k"/>
                     </constraints>
                 </tableView>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HGK-Ni-Vwe">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HGK-Ni-Vwe">
                     <rect key="frame" x="59" y="654" width="100" height="100"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="100" id="9Wx-cL-L0T"/>
                         <constraint firstAttribute="width" constant="100" id="n3H-bi-2YV"/>
                     </constraints>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                     <state key="normal" title="Button"/>
-                    <buttonConfiguration key="configuration" style="filled">
-                        <backgroundConfiguration key="background" image="loop"/>
+                    <buttonConfiguration key="configuration" style="filled" title="Walk">
+                        <fontDescription key="titleFontDescription" type="boldSystem" pointSize="32"/>
+                        <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </buttonConfiguration>
                     <connections>
@@ -274,11 +276,10 @@
         <image name="arrow.counterclockwise" catalog="system" width="113" height="128"/>
         <image name="arrow.up" catalog="system" width="118" height="128"/>
         <image name="home" width="149" height="149"/>
-        <image name="instruksi1" width="588" height="144"/>
+        <image name="instruksi1" width="648" height="144"/>
         <image name="instruksi2" width="648" height="144"/>
-        <image name="loop" width="200" height="200"/>
         <image name="play.fill" catalog="system" width="117" height="128"/>
-        <image name="popUpFailed" width="1011" height="646"/>
+        <image name="popUpFailed" width="1019" height="622"/>
         <image name="trash" width="98" height="98"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

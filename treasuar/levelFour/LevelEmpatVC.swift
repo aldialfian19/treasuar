@@ -141,6 +141,7 @@ class LevelEmpatVC: UIViewController {
         self.view.addSubview(tembok)
         
         //obstacle
+        
         let a4Obs = UIImageView(image: UIImage(named: "block.png")!)
         a4Obs.frame = a4loc
         self.view.addSubview(a4Obs)
@@ -164,7 +165,7 @@ class LevelEmpatVC: UIViewController {
         
         //treasure
         let treasure = UIImageView(image: UIImage(named: "treasure.png")!)
-        treasure.frame = b3loc
+        treasure.frame = c4loc
         self.view.addSubview(treasure)
         
         //failed
@@ -510,7 +511,7 @@ class LevelEmpatVC: UIViewController {
             print("robot in d1")
         }else if robotPosition == c4loc{
             routeToSucces()
-            print("robot in b3")
+            print("robot in c4")
         }else {
             delay(1) {
                 self.failedView.isHidden = false

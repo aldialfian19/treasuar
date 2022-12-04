@@ -122,11 +122,14 @@
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="instruksi2" translatesAutoresizingMaskIntoConstraints="NO" id="yao-Ii-G1N">
-                    <rect key="frame" x="365" y="52" width="636" height="132"/>
+                    <rect key="frame" x="395" y="39" width="636" height="132"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="636" id="C88-Yd-gTJ"/>
                         <constraint firstAttribute="height" constant="132" id="sDB-aN-BSO"/>
                     </constraints>
+                </imageView>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="instruksi1b" translatesAutoresizingMaskIntoConstraints="NO" id="VzW-UF-R7q">
+                    <rect key="frame" x="428" y="186" width="576" height="118"/>
                 </imageView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LSj-Ye-Wwg">
                     <rect key="frame" x="0.0" y="0.0" width="1366" height="1024"/>
@@ -199,23 +202,25 @@
                 <constraint firstItem="aqL-Rc-Hhv" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="69" id="8oF-k1-WaT"/>
                 <constraint firstItem="opl-FL-czg" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="240" id="Btx-hl-EEp"/>
                 <constraint firstItem="ZoI-iK-yHl" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="69" id="LvP-wK-vft"/>
+                <constraint firstItem="VzW-UF-R7q" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="428" id="PSq-up-gUt"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="2x8-Iv-3S9" secondAttribute="bottom" id="Q85-7x-pBN"/>
                 <constraint firstItem="LSj-Ye-Wwg" firstAttribute="top" secondItem="2x8-Iv-3S9" secondAttribute="top" id="TLl-rk-TWh"/>
+                <constraint firstItem="VzW-UF-R7q" firstAttribute="top" secondItem="yao-Ii-G1N" secondAttribute="bottom" constant="15" id="ZLO-RR-jY5"/>
                 <constraint firstAttribute="trailing" secondItem="2x8-Iv-3S9" secondAttribute="trailing" id="aYx-8J-TMh"/>
+                <constraint firstItem="yao-Ii-G1N" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="395" id="cDd-Qc-psv"/>
                 <constraint firstItem="2x8-Iv-3S9" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="eoX-0M-Z5k"/>
                 <constraint firstItem="2x8-Iv-3S9" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="g1W-Iw-aWf"/>
-                <constraint firstItem="yao-Ii-G1N" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="365" id="ggV-to-atM"/>
-                <constraint firstItem="yao-Ii-G1N" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="52" id="i97-uW-XuP"/>
                 <constraint firstItem="opl-FL-czg" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="69" id="img-4i-m5y"/>
                 <constraint firstItem="aqL-Rc-Hhv" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="528" id="nkQ-r5-cEf"/>
                 <constraint firstItem="LSj-Ye-Wwg" firstAttribute="leading" secondItem="2x8-Iv-3S9" secondAttribute="leading" id="pka-aG-ghA"/>
                 <constraint firstItem="VFu-lW-09V" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="842" id="pqn-Pt-SNe"/>
                 <constraint firstItem="ZoI-iK-yHl" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="384" id="rnF-85-IGA"/>
                 <constraint firstItem="VFu-lW-09V" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="82" id="tYV-he-7AD"/>
+                <constraint firstItem="yao-Ii-G1N" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="39" id="tgB-Qc-jC4"/>
                 <constraint firstItem="i2J-bm-Lg9" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="395" id="tlo-Ys-Weq"/>
                 <constraint firstItem="s01-TQ-JvF" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="46" id="yWd-vq-uTq"/>
             </constraints>
-            <point key="canvasLocation" x="139" y="80"/>
+            <point key="canvasLocation" x="138.79941434846265" y="79.6875"/>
         </view>
     </objects>
     <resources>
@@ -223,9 +228,10 @@
         <image name="arrow.counterclockwise" catalog="system" width="113" height="128"/>
         <image name="arrow.up" catalog="system" width="118" height="128"/>
         <image name="home" width="149" height="149"/>
-        <image name="instruksi1" width="588" height="144"/>
-        <image name="instruksi2" width="648" height="144"/>
-        <image name="popUpFailed" width="1011" height="646"/>
+        <image name="instruksi1" width="750" height="144"/>
+        <image name="instruksi1b" width="576" height="118"/>
+        <image name="instruksi2" width="588" height="144"/>
+        <image name="popUpFailed" width="1019" height="622"/>
         <image name="trash" width="98" height="98"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
