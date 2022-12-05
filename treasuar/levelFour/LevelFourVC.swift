@@ -132,6 +132,7 @@ class LevelFourVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        playSound(sound: "gameplay", type: "mp3")
         // Do any additional setup after loading the view.
         
         // start and initialize
@@ -403,8 +404,10 @@ class LevelFourVC: UIViewController {
         }else if roundedValue1 == 0.6 && roundedValue2 == 0.4 {
             print("robot in c4")
             routeToSucces()
+            playSound(sound: "win", type: "wav")
         }else {
             failedView.isHidden = false
+            playSound(sound: "lose", type: "wav")
             print("no point")
         }
         

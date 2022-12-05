@@ -200,7 +200,7 @@ class LevelFiveVC: UIViewController {
         //add button
         
         move(direction: "")
-        
+        playSound(sound: "gameplay", type: "mp3")
         updateTable()
         failedView.isHidden = true
         tableView.isHidden = true
@@ -406,9 +406,11 @@ class LevelFiveVC: UIViewController {
         }else if roundedValue1 == 0.4 && roundedValue2 == 0.2 {
             routeToSucces()
             print("robot in b3")
+            playSound(sound: "win", type: "wav")
         }else {
             failedView.isHidden = false
             print("no point")
+            playSound(sound: "lose", type: "wav")
         }
         
         
@@ -436,7 +438,7 @@ class LevelFiveVC: UIViewController {
         let empat = UIAction(title: "Repeat forward 4 times") { action  in
                 print("menu 1")
                 self.actionRobot.append(contentsOf: ["forward","forward","forward","forward"])
-                self.actionBox.append("Ulangi Maju 4 Kali")
+                self.actionBox.append("Repeat forward 4 times")
                 self.tableView.reloadData()
                 
                 
@@ -444,14 +446,14 @@ class LevelFiveVC: UIViewController {
         let tiga = UIAction(title: "Repeat forward 3 times") { action  in
                 print("menu 2")
                 self.actionRobot.append(contentsOf: ["forward","forward","forward"])
-                self.actionBox.append("Ulangi Maju 4 Kali")
+                self.actionBox.append("Repeat forward 3 times")
                 self.tableView.reloadData()
                 
             }
         let dua = UIAction(title: "Repeat forward 2 times"){ action  in
                 print("menu 3")
                 self.actionRobot.append(contentsOf: ["forward","forward"])
-                self.actionBox.append("Ulangi Maju 3 Kali")
+                self.actionBox.append("Repeat forward 2 times")
                 self.tableView.reloadData()
                 
             }

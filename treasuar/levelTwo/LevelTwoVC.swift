@@ -102,6 +102,7 @@ class LevelTwoVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        playSound(sound: "gameplay", type: "mp3")
         // Do any additional setup after loading the view.
         
         // start and initialize

@@ -102,6 +102,7 @@ class LevelOneVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        playSound(sound: "gameplay", type: "mp3")
         // Do any additional setup after loading the view.
         
         // start and initialize
@@ -248,6 +249,7 @@ class LevelOneVC: UIViewController {
         
 //        arView.debugOptions = .showAnchorGeometry
         arView.session.run(configuration)
+        playSound(sound: "gameplay", type: "mp3")
         
     }
     
@@ -338,9 +340,11 @@ class LevelOneVC: UIViewController {
         }else if roundedValue1 == 0.0 && roundedValue2 == 0.4 {
             routeToSucces()
             print("robot in c1")
+            playSound(sound: "win", type: "wav")
         }else {
             failedView.isHidden = false
             print("no point")
+            playSound(sound: "lose", type: "wav")
         }
         
         
