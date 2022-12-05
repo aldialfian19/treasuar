@@ -244,25 +244,20 @@ class LevelDuaVC: UIViewController {
             print("robot in a1")
         }else if robotPosition == a2loc{
             failedView.isHidden = false
-            playSound(sound: "lose", type: "wav")
             print("robot in a2")
         }else if robotPosition == a3loc{
             print("robot in a3")
         }else if robotPosition == b1loc{
             kiriInstruksi.isHidden = false
-            playSound(sound: "lose", type: "wav")
             print("robot in b1")
         }else if robotPosition == b2loc{
             kananInstruksi.isHidden = false
-            playSound(sound: "lose", type: "wav")
             print("robot in b2")
         }else if robotPosition == b3loc{
             failedView.isHidden = false
-            playSound(sound: "lose", type: "wav")
             print("robot in b3")
         }else if robotPosition == c1loc{
             failedView.isHidden = false
-            playSound(sound: "lose", type: "wav")
             print("robot in c1")
         }else if robotPosition == c2loc{
             print("robot in c2")
