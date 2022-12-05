@@ -436,7 +436,7 @@ class LevelFiveVC: UIViewController {
         let empat = UIAction(title: "Repeat forward 4 times") { action  in
                 print("menu 1")
                 self.actionRobot.append(contentsOf: ["forward","forward","forward","forward"])
-                self.actionBox.append("Ulangi Maju 4 Kali")
+                self.actionBox.append("Repeat forward 4 times")
                 self.tableView.reloadData()
                 
                 
@@ -444,14 +444,14 @@ class LevelFiveVC: UIViewController {
         let tiga = UIAction(title: "Repeat forward 3 times") { action  in
                 print("menu 2")
                 self.actionRobot.append(contentsOf: ["forward","forward","forward"])
-                self.actionBox.append("Ulangi Maju 4 Kali")
+                self.actionBox.append("Repeat forward 3 times")
                 self.tableView.reloadData()
                 
             }
         let dua = UIAction(title: "Repeat forward 2 times"){ action  in
                 print("menu 3")
                 self.actionRobot.append(contentsOf: ["forward","forward"])
-                self.actionBox.append("Ulangi Maju 3 Kali")
+                self.actionBox.append("Repeat forward 2 times")
                 self.tableView.reloadData()
                 
             }

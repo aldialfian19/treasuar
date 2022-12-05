@@ -230,6 +230,7 @@ class LevelSatuVC: UIViewController {
     
     @IBAction func ulangiAction(_ sender: Any) {
         move(direction: "restart")
+        //matiin lagu gagal
         failedView.isHidden = true
     }
     
@@ -253,6 +254,7 @@ class LevelSatuVC: UIViewController {
             routeToSucces()
             print("robot in c1")
         }else {
+            //masukin lagu gagal
             failedView.isHidden = false
             print("no point")
         }
