@@ -107,6 +107,7 @@ class LevelThreeVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        playSound(sound: "gameplay", type: "mp3")
         // Do any additional setup after loading the view.
         
         tableView.isHidden = true
@@ -356,8 +357,10 @@ class LevelThreeVC: UIViewController {
         }else if roundedValue1 == 0.4 && roundedValue2 == 0.4 {
             routeToSucces()
             print("robot in c3")
+            playSound(sound: "win", type: "wav")
         }else {
             failedView.isHidden = false
+            playSound(sound: "lose", type: "wav")
             print("no point")
         }
         

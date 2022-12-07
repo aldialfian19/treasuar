@@ -24,15 +24,8 @@
                     <rect key="frame" x="-16" y="-16" width="1413" height="1073"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="best" translatesAutoresizingMaskIntoConstraints="NO" id="jXb-c6-F4g">
-                    <rect key="frame" x="409" y="208" width="548" height="548"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="548" id="BJQ-Jk-f4U"/>
-                        <constraint firstAttribute="width" constant="548" id="HUL-xt-C56"/>
-                    </constraints>
-                </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="CONGRATULATION" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n4I-5U-oAb">
-                    <rect key="frame" x="540" y="702" width="286" height="38"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="CONGRATULATIONS!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n4I-5U-oAb">
+                    <rect key="frame" x="376" y="699" width="615" height="38"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="32"/>
                     <nil key="textColor"/>
@@ -57,11 +50,18 @@
                         <action selector="mainMenusatu:" destination="-1" eventType="touchUpInside" id="FXq-jD-dkZ"/>
                     </connections>
                 </button>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="best" translatesAutoresizingMaskIntoConstraints="NO" id="jXb-c6-F4g">
+                    <rect key="frame" x="409" y="189" width="548" height="548"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="548" id="BJQ-Jk-f4U"/>
+                        <constraint firstAttribute="width" constant="548" id="HUL-xt-C56"/>
+                    </constraints>
+                </imageView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="jXb-c6-F4g" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="184" id="2bE-ZY-UK3"/>
+                <constraint firstItem="jXb-c6-F4g" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="165" id="2bE-ZY-UK3"/>
                 <constraint firstItem="jXb-c6-F4g" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="409" id="4YQ-qA-djl"/>
                 <constraint firstItem="NWP-DN-KbN" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="511" id="Kk0-jG-dZX"/>
                 <constraint firstItem="NWP-DN-KbN" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="845" id="hME-dY-baK"/>

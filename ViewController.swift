@@ -6,8 +6,10 @@
 //
 
 import UIKit
+import AVFoundation
 
 class ViewController: UIViewController {
+    
     
     
     @IBOutlet var myLabel: UILabel!
@@ -18,25 +20,22 @@ class ViewController: UIViewController {
     @IBOutlet var buttonTiga: UIButton!
     @IBOutlet var buttonEmpat: UIButton!
     @IBOutlet var buttonLima: UIButton!
+
     
-   
+    
     private let imageView: UIImageView = {
         let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 460, height: 431))
         imageView.image = UIImage(named: "LogoLogia.png")
         return imageView
     }()
     
-    
-    
-    
     override func viewDidLoad() {
-       
+        playSound(sound: "menu", type: "mp3")
         
-      
-        // Do any additional setup after loading the view.
+        
     }
     
-
+    
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
@@ -110,7 +109,7 @@ class ViewController: UIViewController {
         }, completion: nil)
     }
     
-
+    
     @IBAction func oneAction(_ sender: Any) {
         routeToLevelOne()
     }
@@ -130,9 +129,9 @@ class ViewController: UIViewController {
         routeToLevelFive()
     }
     
-//    func routeToLevelTwo() {
-//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-//        let OptionDuaVC = storyboard.instantiateViewController(withIdentifier: "OptionDuaVC") as! OptionDuaVC()
-//        self.present(OptionDuaVC, animated: true, completion: nil)
-//    }
+    //    func routeToLevelTwo() {
+    //        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+    //        let OptionDuaVC = storyboard.instantiateViewController(withIdentifier: "OptionDuaVC") as! OptionDuaVC()
+    //        self.present(OptionDuaVC, animated: true, completion: nil)
+    //    }
 }

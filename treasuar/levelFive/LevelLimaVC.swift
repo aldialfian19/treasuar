@@ -47,7 +47,7 @@ class LevelLimaVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        playSound(sound: "gameplay", type: "mp3")
         addRectangle()
         addImage()
         move(direction: "")
@@ -561,9 +561,11 @@ class LevelLimaVC: UIViewController {
         }else if robotPosition == b3loc{
             routeToSucces()
             print("robot in b3")
+            playSound(sound: "win", type: "wav")
         }else {
             delay(1) {
                 self.failedView.isHidden = false
+                playSound(sound: "lose", type: "wav")
              }
         }
     }

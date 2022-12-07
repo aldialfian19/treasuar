@@ -200,7 +200,7 @@ class LevelFiveVC: UIViewController {
         //add button
         
         move(direction: "")
-        
+        playSound(sound: "gameplay", type: "mp3")
         updateTable()
         failedView.isHidden = true
         tableView.isHidden = true
@@ -406,9 +406,11 @@ class LevelFiveVC: UIViewController {
         }else if roundedValue1 == 0.4 && roundedValue2 == 0.2 {
             routeToSucces()
             print("robot in b3")
+            playSound(sound: "win", type: "wav")
         }else {
             failedView.isHidden = false
             print("no point")
+            playSound(sound: "lose", type: "wav")
         }
         
         

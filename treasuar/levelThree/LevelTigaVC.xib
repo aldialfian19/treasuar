@@ -130,7 +130,7 @@
                         <constraint firstAttribute="width" constant="305" id="YLr-gX-b55"/>
                     </constraints>
                 </imageView>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="instruksi" translatesAutoresizingMaskIntoConstraints="NO" id="d8r-Cd-8PG">
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="d8r-Cd-8PG">
                     <rect key="frame" x="395" y="69" width="576" height="132"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="576" id="2MP-6P-Idm"/>
@@ -257,7 +257,6 @@
         <image name="arrow.up" catalog="system" width="118" height="128"/>
         <image name="box" width="313" height="657"/>
         <image name="home" width="149" height="149"/>
-        <image name="instruksi" width="648" height="144"/>
         <image name="play.fill" catalog="system" width="117" height="128"/>
         <image name="popUpFailed" width="1019" height="622"/>
         <image name="retryLevel" width="410" height="157"/>

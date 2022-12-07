@@ -28,9 +28,12 @@
 		24C106BE29390A3400DD3C5E /* Success2DLima.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24C106BC29390A3400DD3C5E /* Success2DLima.xib */; };
 		24C106BF29390A3400DD3C5E /* Success2DLima.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C106BD29390A3400DD3C5E /* Success2DLima.swift */; };
 		24C106C2293CC89B00DD3C5E /* Boldhead.otf in Resources */ = {isa = PBXBuildFile; fileRef = 24C106C1293CC89B00DD3C5E /* Boldhead.otf */; };
+		C37243E7293DF28B0052E02D /* PlaySound.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37243E6293DF28B0052E02D /* PlaySound.swift */; };
+		C39C41A1293DE85300473928 /* win.wav in Resources */ = {isa = PBXBuildFile; fileRef = C39C419D293DE85300473928 /* win.wav */; };
+		C39C41A2293DE85300473928 /* lose.wav in Resources */ = {isa = PBXBuildFile; fileRef = C39C419E293DE85300473928 /* lose.wav */; };
+		C39C41A3293DE85300473928 /* gameplay.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C39C419F293DE85300473928 /* gameplay.mp3 */; };
+		C39C41A4293DE85300473928 /* menu.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C39C41A0293DE85300473928 /* menu.mp3 */; };
 		CB1BBDDD2939F8E100233F79 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1BBDDC2939F8E100233F79 /* ViewController.swift */; };
-		CB3CCA64293F27CC0083EEFD /* robot.usdz in Resources */ = {isa = PBXBuildFile; fileRef = CB3CCA63293F27CC0083EEFD /* robot.usdz */; };
-		CB3CCA66293F2A260083EEFD /* grass.usdz in Resources */ = {isa = PBXBuildFile; fileRef = CB3CCA65293F2A260083EEFD /* grass.usdz */; };
 		CB564D642936482100460BEF /* LevelLimaVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB564D602936482100460BEF /* LevelLimaVC.swift */; };
 		CB564D662936482100460BEF /* LevelLimaVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB564D622936482100460BEF /* LevelLimaVC.xib */; };
 		CB65D408292FA4900040FF8A /* LevelTigaVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB65D406292FA4900040FF8A /* LevelTigaVC.swift */; };
@@ -54,6 +57,7 @@
 		CBB4117629280A6F009881DD /* treasuarUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB4117529280A6F009881DD /* treasuarUITests.swift */; };
 		CBB4117829280A6F009881DD /* treasuarUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB4117729280A6F009881DD /* treasuarUITestsLaunchTests.swift */; };
 		CBB4118829280B37009881DD /* toy.usdz in Resources */ = {isa = PBXBuildFile; fileRef = CBB4118429280B36009881DD /* toy.usdz */; };
+		CBB4118929280B37009881DD /* robot.usdz in Resources */ = {isa = PBXBuildFile; fileRef = CBB4118529280B37009881DD /* robot.usdz */; };
 		CBB4118A29280B37009881DD /* merah.usdz in Resources */ = {isa = PBXBuildFile; fileRef = CBB4118629280B37009881DD /* merah.usdz */; };
 		CBB4118B29280B37009881DD /* floor.usdz in Resources */ = {isa = PBXBuildFile; fileRef = CBB4118729280B37009881DD /* floor.usdz */; };
 		CBB4118D29281664009881DD /* Experience.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = CBB4118C29281664009881DD /* Experience.rcproject */; };
@@ -78,6 +82,7 @@
 		CBCB90782938F1F800D089D5 /* LevelFiveVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBCB90762938F1F800D089D5 /* LevelFiveVC.xib */; };
 		CBCB907C2939167E00D089D5 /* koin.usdz in Resources */ = {isa = PBXBuildFile; fileRef = CBCB907B2939167E00D089D5 /* koin.usdz */; };
 		CBCB907E293916AA00D089D5 /* balok.usdz in Resources */ = {isa = PBXBuildFile; fileRef = CBCB907D293916AA00D089D5 /* balok.usdz */; };
+		CBCB90822939914200D089D5 /* grass.usdz in Resources */ = {isa = PBXBuildFile; fileRef = CBCB90812939914200D089D5 /* grass.usdz */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -119,9 +124,12 @@
 		24C106BC29390A3400DD3C5E /* Success2DLima.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Success2DLima.xib; sourceTree = "<group>"; };
 		24C106BD29390A3400DD3C5E /* Success2DLima.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Success2DLima.swift; sourceTree = "<group>"; };
 		24C106C1293CC89B00DD3C5E /* Boldhead.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Boldhead.otf; sourceTree = "<group>"; };
+		C37243E6293DF28B0052E02D /* PlaySound.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaySound.swift; sourceTree = "<group>"; };
+		C39C419D293DE85300473928 /* win.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = win.wav; sourceTree = "<group>"; };
+		C39C419E293DE85300473928 /* lose.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = lose.wav; sourceTree = "<group>"; };
+		C39C419F293DE85300473928 /* gameplay.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = gameplay.mp3; sourceTree = "<group>"; };
+		C39C41A0293DE85300473928 /* menu.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = menu.mp3; sourceTree = "<group>"; };
 		CB1BBDDC2939F8E100233F79 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = SOURCE_ROOT; };
-		CB3CCA63293F27CC0083EEFD /* robot.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = robot.usdz; sourceTree = "<group>"; };
-		CB3CCA65293F2A260083EEFD /* grass.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = grass.usdz; sourceTree = "<group>"; };
 		CB564D602936482100460BEF /* LevelLimaVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LevelLimaVC.swift; sourceTree = "<group>"; };
 		CB564D622936482100460BEF /* LevelLimaVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LevelLimaVC.xib; sourceTree = "<group>"; };
 		CB65D406292FA4900040FF8A /* LevelTigaVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelTigaVC.swift; sourceTree = "<group>"; };
@@ -149,6 +157,7 @@
 		CBB4117529280A6F009881DD /* treasuarUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = treasuarUITests.swift; sourceTree = "<group>"; };
 		CBB4117729280A6F009881DD /* treasuarUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = treasuarUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		CBB4118429280B36009881DD /* toy.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = toy.usdz; sourceTree = "<group>"; };
+		CBB4118529280B37009881DD /* robot.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = robot.usdz; sourceTree = "<group>"; };
 		CBB4118629280B37009881DD /* merah.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = merah.usdz; sourceTree = "<group>"; };
 		CBB4118729280B37009881DD /* floor.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = floor.usdz; sourceTree = "<group>"; };
 		CBB4118C29281664009881DD /* Experience.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = Experience.rcproject; sourceTree = "<group>"; };
@@ -173,6 +182,7 @@
 		CBCB90762938F1F800D089D5 /* LevelFiveVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LevelFiveVC.xib; sourceTree = "<group>"; };
 		CBCB907B2939167E00D089D5 /* koin.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = koin.usdz; sourceTree = "<group>"; };
 		CBCB907D293916AA00D089D5 /* balok.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = balok.usdz; sourceTree = "<group>"; };
+		CBCB90812939914200D089D5 /* grass.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = grass.usdz; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -242,6 +252,25 @@
 			path = Boldhead;
 			sourceTree = "<group>";
 		};
+		C37243E5293DF2560052E02D /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				C37243E6293DF28B0052E02D /* PlaySound.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		C39C419C293DE85300473928 /* SFX */ = {
+			isa = PBXGroup;
+			children = (
+				C39C419D293DE85300473928 /* win.wav */,
+				C39C419E293DE85300473928 /* lose.wav */,
+				C39C419F293DE85300473928 /* gameplay.mp3 */,
+				C39C41A0293DE85300473928 /* menu.mp3 */,
+			);
+			path = SFX;
+			sourceTree = "<group>";
+		};
 		CB65D41E29338FD30040FF8A /* popUp */ = {
 			isa = PBXGroup;
 			children = (
@@ -274,6 +303,8 @@
 		CBB4115029280A6E009881DD /* treasuar */ = {
 			isa = PBXGroup;
 			children = (
+				C37243E5293DF2560052E02D /* Helper */,
+				C39C419C293DE85300473928 /* SFX */,
 				24C106C0293CC7EA00DD3C5E /* Boldhead */,
 				CB65D41E29338FD30040FF8A /* popUp */,
 				CBB411952929076B009881DD /* 3D Asset */,
@@ -382,12 +413,12 @@
 		CBB411952929076B009881DD /* 3D Asset */ = {
 			isa = PBXGroup;
 			children = (
-				CB3CCA65293F2A260083EEFD /* grass.usdz */,
-				CB3CCA63293F27CC0083EEFD /* robot.usdz */,
+				CBCB90812939914200D089D5 /* grass.usdz */,
 				CBCB907D293916AA00D089D5 /* balok.usdz */,
 				CBCB907B2939167E00D089D5 /* koin.usdz */,
 				CBB4118729280B37009881DD /* floor.usdz */,
 				CBB4118629280B37009881DD /* merah.usdz */,
+				CBB4118529280B37009881DD /* robot.usdz */,
 				CBB4118429280B36009881DD /* toy.usdz */,
 			);
 			path = "3D Asset";
@@ -502,6 +533,7 @@
 				24C106B7293908F300DD3C5E /* success2DEmpat.xib in Resources */,
 				CBB4118829280B37009881DD /* toy.usdz in Resources */,
 				CBCB907C2939167E00D089D5 /* koin.usdz in Resources */,
+				CBCB90822939914200D089D5 /* grass.usdz in Resources */,
 				24C10696293903A000DD3C5E /* arSuccessDua.xib in Resources */,
 				24C1069D293904D700DD3C5E /* arSuccessEmpat.xib in Resources */,
 				CBB4118A29280B37009881DD /* merah.usdz in Resources */,
@@ -512,10 +544,11 @@
 				24C106AB293907CA00DD3C5E /* success2DSatu.xib in Resources */,
 				CBCB90632938D12900D089D5 /* OptionSatuVC.xib in Resources */,
 				CBCB90742938D15300D089D5 /* OptionFiveVC.xib in Resources */,
-				CB3CCA66293F2A260083EEFD /* grass.usdz in Resources */,
 				CBB411A129290823009881DD /* LevelThreeVC.xib in Resources */,
 				24C106C2293CC89B00DD3C5E /* Boldhead.otf in Resources */,
 				CB564D662936482100460BEF /* LevelLimaVC.xib in Resources */,
+				C39C41A4293DE85300473928 /* menu.mp3 in Resources */,
+				CBB4118929280B37009881DD /* robot.usdz in Resources */,
 				CBAF6594292E339E0017B554 /* LevelSatuVC.xib in Resources */,
 				CBB4116129280A6F009881DD /* LaunchScreen.storyboard in Resources */,
 				CBCB90702938D14600D089D5 /* OptionFourVC.xib in Resources */,
@@ -529,10 +562,12 @@
 				24C106B6293908F300DD3C5E /* success2DDua.xib in Resources */,
 				CBB4119D292907EA009881DD /* LevelTwoVC.xib in Resources */,
 				CB9343AD2937EE2C0030D24E /* LevelEmpatVC.xib in Resources */,
-				CB3CCA64293F27CC0083EEFD /* robot.usdz in Resources */,
+				C39C41A1293DE85300473928 /* win.wav in Resources */,
+				C39C41A3293DE85300473928 /* gameplay.mp3 in Resources */,
 				CBB4118B29280B37009881DD /* floor.usdz in Resources */,
 				CB65D4152930FA2C0040FF8A /* LevelTigaCell.xib in Resources */,
 				CBCB907E293916AA00D089D5 /* balok.usdz in Resources */,
+				C39C41A2293DE85300473928 /* lose.wav in Resources */,
 				24C106A2293906DE00DD3C5E /* arSuccessLima.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -567,6 +602,7 @@
 				CBB4118D29281664009881DD /* Experience.rcproject in Sources */,
 				24C106BA293908F300DD3C5E /* success2DDua.swift in Sources */,
 				24C10695293903A000DD3C5E /* arSuccessDua.swift in Sources */,
+				C37243E7293DF28B0052E02D /* PlaySound.swift in Sources */,
 				24606F7E2938F74D004FFAD0 /* arSuccessSatu.swift in Sources */,
 				24C106992939043C00DD3C5E /* arSuccessTiga.swift in Sources */,
 				CB65D4142930FA2C0040FF8A /* LevelTigaCell.swift in Sources */,
@@ -765,7 +801,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 4M5F5S23L2;
+				DEVELOPMENT_TEAM = 6R9NL6954G;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = treasuar/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "";
@@ -795,7 +831,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 4M5F5S23L2;
+				DEVELOPMENT_TEAM = 6R9NL6954G;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = treasuar/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "";

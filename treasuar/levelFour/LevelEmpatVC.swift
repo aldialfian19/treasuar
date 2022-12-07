@@ -47,7 +47,7 @@ class LevelEmpatVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        playSound(sound: "gameplay", type: "mp3")
         addRectangle()
         addImage()
         move(direction: "")
@@ -512,9 +512,11 @@ class LevelEmpatVC: UIViewController {
         }else if robotPosition == c4loc{
             routeToSucces()
             print("robot in c4")
+            playSound(sound: "win", type: "wav")
         }else {
             delay(1) {
                 self.failedView.isHidden = false
+                playSound(sound: "lose", type: "wav")
              }
         }
     }

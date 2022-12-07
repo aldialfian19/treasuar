@@ -37,7 +37,7 @@ class LevelDuaVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        playSound(sound: "gameplay", type: "mp3")
         kiriInstruksi.isHidden = true
         kananInstruksi.isHidden = true
         failedView.isHidden = true
@@ -264,8 +264,10 @@ class LevelDuaVC: UIViewController {
         }else if robotPosition == c3loc{
             routeToSucces()
             print("robot in c3")
+            playSound(sound: "win", type: "wav")
         }else {
             failedView.isHidden = false
+            playSound(sound: "lose", type: "wav")
         }
     }
     

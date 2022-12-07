@@ -39,7 +39,7 @@ class LevelTigaVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        playSound(sound: "gameplay", type: "mp3")
         addRectangle()
         addImage()
         move(direction: "")
@@ -470,11 +470,13 @@ class LevelTigaVC: UIViewController {
         }else if robotPosition == b3loc{
             delay(1) {
                 self.failedView.isHidden = false
+                playSound(sound: "lose", type: "wav")
              }
             print("robot in b3")
         }else if robotPosition == c1loc{
             delay(1) {
                 self.failedView.isHidden = false
+                playSound(sound: "lose", type: "wav")
              }
             print("robot in c1")
         }else if robotPosition == c2loc{
@@ -482,9 +484,11 @@ class LevelTigaVC: UIViewController {
         }else if robotPosition == c3loc{
             routeToSucces()
             print("robot in c3")
+            playSound(sound: "win", type: "wav")
         }else {
             delay(1) {
                 self.failedView.isHidden = false
+                playSound(sound: "lose", type: "wav")
              }
         }
     }

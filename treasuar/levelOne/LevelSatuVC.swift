@@ -37,7 +37,7 @@ class LevelSatuVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        playSound(sound: "gameplay", type: "mp3")
         majuInstruksi.isHidden = false
         failedView.isHidden = true
         
@@ -241,21 +241,26 @@ class LevelSatuVC: UIViewController {
         
         if robotPosition == a1loc {
             majuInstruksi.isHidden = false
+            playSound(sound: "lose", type: "wav")
             print("robot in a1")
         }else if robotPosition == a2loc{
             failedView.isHidden = false
+            playSound(sound: "lose", type: "wav")
             print("robot in a2")
         }else if robotPosition == b1loc{
             print("robot in b1")
         }else if robotPosition == b2loc{
             failedView.isHidden = false
+            playSound(sound: "lose", type: "wav")
             print("robot in b2")
         }else if robotPosition == c1loc{
             routeToSucces()
             print("robot in c1")
+            playSound(sound: "win", type: "wav")
         }else {
             //masukin lagu gagal
             failedView.isHidden = false
+            playSound(sound: "lose", type: "wav")
             print("no point")
         }
     }
